@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助中心</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/help/home/src/home.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2>帮助中心</h2>
+    </div>
+    
+	<div class="main clearfix">
+    	<!-- 购物流程 -->
+    	<div class="helpModule ptb36 clearfix">
+        	<div class="helpModule-head clearfix">
+            	<span class="f18">购物流程</span><span class="color-999 plr12">|</span><a class="color-999" href="../contents/flow.html" target="_self">查看流程</a>
+            </div>
+            
+            <div class="helpModule-body clearfix">
+            	<ul class="mt48 f13 clearfix">
+                	<li class="help-icon-item tc fl">
+                    	<a href="../contents/flow.html#flow1" class="block pr iconw">
+                            <span class="help-icon-login icons"></span>
+                            <h6 class="pt12">登录喜地</h6>
+                        </a>                    	
+                    </li>
+                    
+                    <li class="help-icon-gt plr24 simsun fl"></li>
+                    
+                	<li class="help-icon-item tc fl">
+                    	<a href="../contents/flow.html#flow2" class="block pr iconw">
+                            <span class="help-icon-product icons"></span>
+                            <h6 class="pt12">挑选商品</h6>
+                        </a>                    	
+                    </li>
+                    
+                    <li class="help-icon-gt plr24 simsun fl"></li>
+                    
+                	<li class="help-icon-item tc fl">
+                    	<a href="../contents/flow.html#flow3" class="block pr iconw">
+                            <span class="help-icon-cart icons"></span>
+                            <h6 class="pt12">加入购物车</h6>
+                        </a>                    	
+                    </li>
+                    
+                    <li class="help-icon-gt plr24 simsun fl"></li>
+                    
+                	<li class="help-icon-item tc fl">
+                    	<a href="../contents/flow.html#flow4" class="block pr iconw">
+                            <span class="help-icon-info icons"></span>
+                            <h6 class="pt12 tl">填写收货信息和发票类型</h6>
+                        </a>                    	
+                    </li>
+                    
+                    <li class="help-icon-gt plr24 simsun fl"></li>
+                    
+                	<li class="help-icon-item tc fl">
+                    	<a href="../contents/flow.html#flow5" class="block pr iconw">
+                            <span class="help-icon-pay icons"></span>
+                            <h6 class="pt12">支付货款</h6>
+                        </a>                    	
+                    </li>
+                    
+                    <li class="help-icon-gt plr24 simsun fl"> </li>
+                    
+                	<li class="help-icon-item tc fl">
+                    	<a href="../contents/flow.html#flow6" class="block pr iconw">
+                            <span class="help-icon-comment icons"></span>
+                            <h6 class="pt12">收货评价</h6>
+                        </a>                    	
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="dotted-bottom cb"></div>
+        
+    	<!-- 常见问题 -->
+    	<div class="helpModule ptb36 clearfix">
+        	<div class="helpModule-head clearfix">
+            	<span class="f18">常见问题</span><span class="color-999 plr12">|</span><a class="color-999" href="../contents/faq.html" target='_self'>查看所有问题</a>
+            </div>
+            
+            <div class="helpModule-body hidden clearfix">
+            	<div class="helpModule-ques clearfix">
+                    <div class="helpModule-list mt36 mr24 fl">
+                        <h6 class="f14">购物类</h6>
+                        <ul class="mt12 clearfix">
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#shop1" target="_self" class="pl12">订单提交成功后还可以修改订单信息吗？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#shop2" target="_self" class="pl12">订单拒收后，退款什么时候返还？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#shop3" target="_self" class="pl12">商品包装是否有保证？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#shop4" target="_self" class="pl12">为什么我的订单总是无法提交成功？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#shop5" target="_self" class="pl12">在加入购物车后，是不是该商品已经被我预定了？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#shop6" target="_self" class="pl12">支付不成功的原因有哪些？</a><strong class="pa simsun help-icon"> </strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="helpModule-list mt36 mr24 fl">
+                        <h6 class="f14">配送类</h6>
+                        <ul class="mt12 clearfix">
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#delivery1" target="_self" class="pl12">订单已提交成功，什么时候可以发货？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#delivery2" target="_self" class="pl12">订单已提交成功，可以改送到其他地方吗？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#delivery3" target="_self" class="pl12">请问如何联系到给我送货的快递员？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#delivery4" target="_self" class="pl12">签收后可以当场验收商品吗？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#delivery5" target="_self" class="pl12">签收时发现商品包装破损，该如何处理？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#delivery6" target="_self" class="pl12">如若发生退货的情况，之前的运费会退给客户吗？</a><strong class="pa simsun help-icon"> </strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="helpModule-list mt36 mr24 fl">
+                        <h6 class="f14">退款/退货类</h6>
+                        <ul class="mt12 clearfix">
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#refund1" target="_self" class="pl12">喜地所售商品是否都支持7天无理由退货？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#refund2" target="_self" class="pl12">购买的商品出现质量问题或发错货如何处理？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#refund3" target="_self" class="pl12">为什么退款/退货申请没有审核通过？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#refund4" target="_self" class="pl12">网上退货申请提交后发现出错如何修改？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#refund5" target="_self" class="pl12">退货运费是如何收取的？</a><strong class="pa simsun help-icon"> </strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="helpModule-list mt36 mr24 fl">
+                        <h6 class="f14">账户类</h6>
+                        <ul class="mt12 clearfix">
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#account1" target="_self" class="pl12">如何注册喜地？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#account2" target="_self" class="pl12">如何提高我的账户安全性？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#account3" target="_self" class="pl12">登录时显示账户异常怎么回事？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#account4" target="_self" class="pl12">密码设置技巧有哪些？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#account5" target="_self" class="pl12">验证邮箱手机的好处有哪些？</a><strong class="pa simsun help-icon"> </strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="helpModule-list mt36 mr24 fl">
+                        <h6 class="f14">发票类</h6>
+                        <ul class="mt12 clearfix">
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#billing1" target="_self" class="pl12">如何获取发票？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#billing2" target="_self" class="pl12">如何设置发票信息？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#billing3" target="_self" class="pl12">开发票的注意事项？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#billing4" target="_self" class="pl12">怎么换发票？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#billing5" target="_self" class="pl12">开具增值税专用发票需要哪些条件呢？</a><strong class="pa simsun help-icon"> </strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="helpModule-list mt36 mr24 fl">
+                        <h6 class="f14">客服类</h6>
+                        <ul class="mt12 clearfix">
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#service1" target="_self" class="pl12">如果我有问题或建议如何向喜地反馈？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#service1" target="_self" class="pl12">客服电话的工作时间是？</a><strong class="pa simsun help-icon"> </strong></li>
+                            <li class="pr lh32 ellipsis"><a href="../contents/faq.html#service1" target="_self" class="pl12">如何联系在线客服？</a><strong class="pa simsun help-icon"> </strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dotted-bottom cb"></div>
+        
+    	<!-- 支付配送 -->
+    	<div class="helpModule pt36 clearfix f14">
+        	<div class="helpModule-outer fl">
+                <div class="helpModule-head clearfix">
+                    <span class="f18" href="../contents/faq.html#delivery">支付配送</span>
+                </div>
+                
+                <div class="helpModule-body mt24 clearfix">
+                    <div class="helpModule-box fl">
+                        <a href="../contents/pay.html" class="hicon">
+                        	<p class="icon-help_hand icon"></p>
+                            <p class="mt12">支付方式</p>
+                        </a>
+                    </div>
+                    
+                    <div class="helpModule-box fr">
+                        <a href="../contents/delivery.html" class="hicon">
+                        	<p class="icon-help_car icon"></p>
+                            <p class="mt12">配送方式</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        	
+            <div class="helpModule-outer fr">
+                <div class="helpModule-head clearfix">
+                    <span class="f18" href="../contents/faq.html#service">售后服务</span>
+                </div>
+                
+                <div class="helpModule-body mt24 clearfix">
+                    <div class="helpModule-box fl">
+                        <a href="../contents/return.html" class="hicon">
+                        	<p class="icon-help_package icon"></p>
+                            <p class="mt12">退货规则</p>
+                        </a>
+                    </div>
+                    
+                    <div class="helpModule-box fr">
+                        <a href="../contents/refund.html" class="hicon">
+                        	<p class="icon-help_dollar icon"></p>
+                            <p class="mt12">退款规则</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cb"></div>
+            
+            <p class="mt24 f13">需要更多帮助请联系客服：<a href="../../system/about/contact.html" target="_self" class="color-blue">在线客服</a><span class="plr12 color-999">|</span>客服电话 400-0066-200<span class="plr12 color-999">|</span>客服邮箱 <a href="" class="color-blue email"></a></p>
+        </div>
+    </div>
+</div>
+
+<div class="float_sidebar">
+    <ul>
+        <li class="top"></li>
+        <li class="service"></li>
+        <li class="feedback"></li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+var mt='mailto:',s='service',m='market',b='brands',me='media',a='@',d='xidibuy.com';
+    $('.email').text('service@xidibuy.com').attr('href',mt+s+a+d);
+</script>
+
+</body>
+</html>

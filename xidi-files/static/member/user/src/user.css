@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :users
+------------------------------------------------------------ */
+
+/* 我的喜地 --> 空空如也
+------------------------------------------------------------ */
+.user-empty{
+	margin:36px auto 0;
+	width:145px;
+}
+.user-empty-icon{
+	margin:0 auto;
+	width:78px;
+	height:78px;
+	background-color:#000;
+	border:1px solid #C9C9C9;
+}
+.user-empty-top,
+.user-empty-right,
+.user-empty-bottom,
+.user-empty-left{
+	position:absolute;
+	width:0;
+	height:0;
+	overflow:hidden;
+	border:39px solid transparent;
+}
+.user-empty-top{
+	left:0;
+	top:0;
+	border-top-color:#FFF;
+}
+.user-empty-right{
+	right:0;
+	top:0;
+	border-right-color:#FFF;
+}
+.user-empty-bottom{
+	left:0;
+	bottom:0;
+	border-bottom-color:#FFF;
+}
+.user-empty-left{
+	left:0;
+	top:0;
+	border-left-color:#FFF;
+}
+
+/* 我的喜地 --> 用户信息
+------------------------------------------------------------ */
+.userInfo-article{
+	width:495px;
+}
+.userInfo-order{
+}
+.userInfo-item{
+	margin-left:-1px;
+	height:48px;
+	border-left:1px dotted #D3D7D7;
+}
+.userInfo-item a:hover{
+	text-decoration:none;
+}
+.userInfo-item a:hover p{
+	text-decoration:underline;
+}
+
+/* 我的喜地 --> 交易提醒
+------------------------------------------------------------ */
+.user-section{
+	border-top:1px solid #DDD;
+}
+.trading-order{
+	width:590px;
+	border-right:1px dotted #D3D7D7;
+}
+.trading-order,
+.favorite-bd{
+	/*min-height:200px;*/
+}
+.trading-cart{
+	margin-left:-1px;
+	width:297px;
+	border-left:1px dotted #D3D7D7;
+}
+.trading-item{
+	margin-top:-1px;
+	height:114px;
+	border-top:1px dotted #D1D6D6;
+}
+.trading-cart .trading-item{
+	border-color:#FFF;	
+}
+.tradingItem-des{
+	width:348px;
+}
+.trading-cart .tradingItem-des{
+	width:159px;
+}
+.tradingItem-oper{
+	width:80px;
+}
+
+/* 我的喜地 --> 我的喜欢
+------------------------------------------------------------ */
+.favorite-list{
+	margin-left:-24px;
+}
+.favorite-pic{
+	border-bottom:1px dotted #C4CACA;
+}
+.favorite-name{
+	padding-top:8px;
+}

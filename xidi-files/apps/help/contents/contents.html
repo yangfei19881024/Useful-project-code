@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助中心</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/help/contents/src/contents.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2>帮助中心&nbsp;&gt;&nbsp;退款规则</h2>
+    </div>
+    
+	<div class="main mt36 clearfix">
+    	<div class="help-aside fl">
+        	<div class="plr12 clearfix">
+            	<ul class="pt12 pb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="" class="block pr">
+                            <span class="help-icon-question"></span>
+                            <h6>常见问题</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="" class="block pr">
+                            <span class="help-icon-progress"></span>
+                            <h6>购物流程</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+            	<ul class="ptb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="" class="block pr">
+                            <span class="help-icon-payType"></span>
+                            <h6>支付方式</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="" class="block pr">
+                            <span class="help-icon-shipping"></span>
+                            <h6>配送方式</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+            	<ul class="ptb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="" class="block pr">
+                            <span class="help-icon-returnGoods"></span>
+                            <h6>退货规则</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="" class="block pr">
+                            <span class="help-icon-refund"></span>
+                            <h6>退款规则</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 每一个 help-section-body 里面应该放一个 自定义编辑器 -->
+        <div class="help-section ml48 fl">
+        	<div class="help-section-head clearfix">
+            	<h3 class="f18">退款规则</h3>
+            </div>
+            
+        	<div class="help-section-body mt24 clearfix">
+            	<ul class="ml24 f13 clearfix">
+                	<li class="pb36 decimal">仅退款：收货发现有漏发的商品时，可在“我的订单”针对少发的商品申请仅退款，喜地审核通过。</li>
+                	<li class="pb36 decimal">退货退款：喜地对收到的商品需进行验货入库，对审核合格的商品完成退货流程。</li>
+                	<li class="pb36 decimal">完成上述仅退款或退货退款流程之后，系统将会自动把所需退还的费用，通过您原来的支付方式反流程操作，退款到您的原支付账号内。</li>
+                	<li class="pb36 decimal">退款指令完成后，到账时间需要银行及第三方支付平台确认操作，一般处理时间为1-7个工作日。</li>
+                	<li class="decimal">退款到账时间详见下表，此表仅供参考，实际退款日期以银行为准。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

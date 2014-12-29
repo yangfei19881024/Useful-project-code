@@ -1,0 +1,15 @@
+{
+	"family": "static/system",
+	"name": "about",
+	"version": "1.0.0",
+	"author": "latpaw",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"about.css"
+		]
+	}
+}

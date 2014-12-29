@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :account
+------------------------------------------------------------ */
+
+/* 账户管理 --> 个人基本信息
+------------------------------------------------------------ */
+
+
+/* 账户管理 --> 安全设置/帐号绑定
+------------------------------------------------------------ */
+.safe-box{
+	width:314px;
+	border:1px solid #DDD;
+}
+.safeBox-des{
+	height:44px;
+}
+.birthday{
+	position:relative;
+	z-index:10;
+	background-color:transparent;
+}
+.safe-section{
+	width:590px;
+	border-right:1px dotted #D2D7D7;
+}
+.safe-aside{
+	margin-left:-1px;
+	width:333px;
+	border-left:1px dotted #D2D7D7;
+}
+.mobile{
+	width:222px
+}
+.code{
+	width:80px;
+}
+.account-right{
+	background: url(../../../global/images/1.0.0/sprites.png);
+	width:29px;
+	height: 22px;
+	background-position: -44px -511px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#chNewEmail-email{
+	height: auto;
+}
+#addNewEmail-email{
+	height:auto;
+}

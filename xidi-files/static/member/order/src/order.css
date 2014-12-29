@@ -1,0 +1,342 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :order
+  quote :整理自 原郑州前端 做的 personal.css
+------------------------------------------------------------ */
+
+/* 订单 --> 列表
+------------------------------------------------------------ */
+.pageTur{ /* 基于 common.css 中的分页模块 */
+	right:0;
+	top:56px;
+	z-index:2;
+	width:46px;
+}
+.pageTur .page-button{
+	margin:0;
+	width:18px;
+	height:18px;
+	line-height:18px;
+}
+.order-list{
+}
+.order-select .plugs-select{ /* 继承自 common.css */
+	width:115px;
+	height:26px;
+	line-height:26px;
+}
+.order-select .plugs-select-hd{ /* 继承自 common.css */
+	margin:2px 10px;
+}
+.order-select .plugs-select-option{ /* 继承自 common.css */
+	padding:2px 10px;
+}
+.order-select .plugs-select-bd{ /* 继承自 common.css */
+	max-height:104px;
+}
+.order-list .icon-mail{ /* 继承自 common.css */
+	margin:0 0 2px 5px;
+}
+.order-bdb{
+	border-bottom:1px dotted #DCDCDC;
+}
+.order-bdl{
+	border-left:1px dotted #DCDCDC;
+}
+.order-bdr{
+	border-right:1px dotted #DCDCDC;
+}
+.set-row{
+	height:24px;
+}
+.order-titleBox{
+	padding-top:7px;
+	padding-bottom:7px;
+	overflow:hidden;
+}
+
+.w145{
+	width:145px;
+}
+.w200{
+	width:200px;
+}
+.w90{
+	width:90px;
+}
+.w70{
+	width:70px;
+}
+.w135{
+	width:135px;
+}
+.w110{
+	width:109px;
+	border-left:1px dotted #DDD;
+}
+.w130{
+	width:129px;
+	border-right:1px dotted #DDD;
+}
+.w116{
+	width:116px;
+}
+.order-head{
+	padding:7px 0;
+	border-bottom:1px solid #DDD;
+}
+.order-title{
+	border-bottom:1px solid #DDD;
+}
+.order-body{
+	border-bottom:1px dotted #DDD;
+}
+.order-height{
+	position:relative;
+	margin-bottom:-9999px;
+	padding-bottom:9999px;
+}
+.order-pro{
+	margin-top:-1px;
+	border-top:1px dotted #DDD;
+}
+.order-agent-head{
+	position:relative;
+	margin-top:-1px;
+	padding:7px 0;
+	background-color:#FFF;
+	border-top:1px dotted #DDD;
+	border-bottom:1px dotted #DDD;
+	border-right:1px dotted #DDD;
+}
+
+/* 订单详情 --> 订单步骤完成时间
+------------------------------------------------------------ */
+.orderState-time{
+	height:39px;
+	line-height:34px;
+	text-align:center;
+	color:#C3C3C3;
+}
+.orderState-time li{
+	width:24.9999%;
+}
+.orderState-time li em{
+	padding-left:12px;
+	color:#FF4E4E;
+}
+
+/* 订单详情 --> 订单信息
+------------------------------------------------------------ */
+.order-page{
+}
+
+/* 订单 --> 付款确认弹框
+------------------------------------------------------------ */
+.payRst{
+	position:relative;
+	margin:24px 0 0 12px;
+	overflow:hidden;
+	*zoom:1;
+}
+.payRst-item{
+	margin-left:-1px;
+	width:270px;
+	min-height:120px;
+	_height:120px;
+	border-left:1px solid #DDD;
+}
+.payRst-outer{
+	padding-left:13px;
+}
+.payRst-outer dt{
+	height:36px;
+	line-height:36px;
+	font-size:16px;
+	margin-bottom:6px;
+}
+.payRst-outer dd{
+	line-height:24px;
+}
+
+/* 订单 --> 订单状态
+------------------------------------------------------------ */
+.orderState-dtl{
+	border:1px solid #ddd;
+	padding:24px;
+}
+.state-dtlTxt{
+}
+.state-dtlTxt dl{
+	float:left;
+	margin-left:12px;
+}
+.state-dtlTxt dt{
+	height:36px;
+	line-height:36px;
+	font-size:21px;
+	margin-bottom:12px;
+}
+.state-dtlTxt dd{
+	line-height:22px;
+}
+.orderState-pay{
+	margin:24px 0 0 48px;
+}
+
+/* 订单详细 --> 购物清单 --> 商品价格信息
+------------------------------------------------------------ */
+.cart-bottomTotal{
+	background-color:#f9f9f9;
+}
+.subTotal{
+}
+.subTotal-outer{
+}
+.subTotal-outer dt{
+	width:120px;
+}
+.subTotal-outer dd{
+	width:140px;
+}
+.totalPay{
+	border-top:1px dotted #ddd;
+}
+
+/* 订单 --> 收货信息
+------------------------------------------------------------ */
+.sendAddress{
+	margin-top:36px;
+}
+.sendAddress .address-list{ /* 引用自 layout.css */
+	height:183px;
+}
+
+/* 订单 --> 支付方式
+------------------------------------------------------------ */
+.orderPay{
+	margin-top:24px;
+}
+.payMothed{
+}
+.payMothed dl{
+	margin-top:24px;
+	text-align:left;
+}
+.payMothed dt{
+	padding-left:8px;
+	font-size:13px;
+}
+.payMothed dd{
+	padding-left:20px;
+}
+.payMothed li{
+	float:left;
+	width:220px;
+	height:72px;
+	line-height:72px;
+	cursor:pointer;
+}
+.payMothed li input{
+	vertical-align:middle;
+}
+.payMothed li img{
+	vertical-align:middle;
+	cursor:pointer;
+}
+.oderPay-left{
+	padding-bottom:12px;
+	width:680px;
+	border-right:1px solid #DDD;
+}
+.oderPay-right{
+	margin-left:-1px;
+	padding:0 0 12px 24px;
+	width:290px;
+	border-left:1px solid #DDD;
+}
+
+/* 订单 --> 发票信息
+------------------------------------------------------------ */
+.invoice{
+	
+}
+.invoice dl{
+	font-size:13px;
+	margin-top:24px;
+	line-height:28px;
+}
+.invoice dt{
+	float:left;
+}
+.invoice dd{
+	float:left;
+}
+.invoice li{
+	height:32px;
+	line-height:32px;
+}
+.companyTxt{
+	margin-left:12px;
+	padding:8px 5px;
+	width:134px;
+	height:14px;
+	border:1px solid #ddd;
+	line-height:14px;
+}
+
+/* 订单 --> 底部结算（收货信息等）
+------------------------------------------------------------ */
+.receipt-info{
+	margin-top:24px;
+}
+.total-info dt .color-blue:hover{
+	text-decoration:none;
+}
+
+/* 订单 --> 提交订单的运费 了解更多
+------------------------------------------------------------ */
+.order-more-content{
+	display:none;
+	z-index:9;
+	width:240px;
+	background-color:#FFF;
+	border:1px solid #DDD;
+}
+
+.tip-box{
+	right:75px;
+	top:-5px;
+	width:10px;
+	height:6px;
+	overflow:hidden;
+	background-color:#FFF;
+}
+.tip-top,
+.tip-bot{
+	position:absolute;
+	left:0;
+	width:0;
+	height:0;
+	overflow:hidden;
+	border-width:5px;
+	border-style:solid;
+	border-color:transparent;
+	content:'.';
+}
+.tip-top{
+	z-index:2;
+	bottom:0;
+	border-bottom-color:#FFF;
+}
+.tip-bot{
+	z-index:1;
+	bottom:1px;
+	border-bottom-color:#DDD;
+}

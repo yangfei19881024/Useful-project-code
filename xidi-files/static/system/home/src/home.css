@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :list
+------------------------------------------------------------ */
+
+/* 首页
+------------------------------------------------------------ */
+.banner{
+	margin:0 -56px;
+	padding:0 56px;
+	width:996px;
+	height:405px;
+}
+.banner .control-pre,
+.banner .control-next{
+	display:block;
+}
+.banner-preview{
+	width:996px;
+	height:380px;
+	overflow:hidden;
+}
+.banner-list{
+	position:relative;
+	width:996px;
+	height:380px;
+	overflow:hidden;
+}
+
+.recommend-outer{
+	border-bottom:1px solid #ddd;
+}
+.recommend-list{
+	width:888px;
+}
+.border-d{
+	border:1px solid #DDD;
+}
+
+.countryInfo{
+	z-index:9;
+	width:240px;
+	background-color:#FFF;
+	border:1px solid #DDD;
+}
+
+.tip-box{
+	margin-left:-5px;
+	top:-5px;
+	width:10px;
+	height:6px;
+	overflow:hidden;
+	background-color:#FFF;
+}
+.tip-top,
+.tip-bot{
+	position:absolute;
+	left:0;
+	width:0;
+	height:0;
+	overflow:hidden;
+	border-width:5px;
+	border-style:solid;
+	border-color:transparent;
+	content:'.';
+}
+.tip-top{
+	z-index:2;
+	bottom:0;
+	border-bottom-color:#FFF;
+}
+.tip-bot{
+	z-index:1;
+	bottom:1px;
+	border-bottom-color:#DDD;
+}
+
+.ttip{
+	position:absolute;
+	left:0;
+	top:-10px;
+}
+.navBar{
+	border-bottom: 1px solid #fff;
+}

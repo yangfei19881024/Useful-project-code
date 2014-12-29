@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助中心</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/help/contents/src/contents.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">            
+        <div class="searchBox fl">                
+            <div class="search-bar">
+                <div class="searchsugbox none">
+                    <ul class="search-sug">
+                        <li class="graysug">最近搜索<i class="searchicons"></i></li>
+                    </ul>
+                    <ul class="search-interest">
+                        <li class="graysug">您可能感兴趣</li>
+                    </ul>
+                </div>
+                
+                <input type="text" class="searchkey anim-all fl" />
+                <input type="button" class="search-button anim-all sprites fr" />
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2><a href="../home/home.html">帮助中心</a>&nbsp;&gt;&nbsp;购物流程</h2>
+    </div>
+    
+	<div class="main mt36 clearfix">
+    	<div class="help-aside fl">
+            <div class="plr12 clearfix">
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="faq.html" class="block pr iconw">
+                            <span class="help-icon-question icons"></span>
+                            <h6>常见问题</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="flow.html" class="block pr iconw">
+                            <span class="help-icon-progress icons"></span>
+                            <h6>购物流程</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="ptb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="pay.html" class="block pr iconw">
+                            <span class="help-icon-payType icons"></span>
+                            <h6>支付方式</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="delivery.html" class="block pr iconw">
+                            <span class="help-icon-shipping icons"></span>
+                            <h6>配送方式</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="ptb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="return.html" class="block pr iconw">
+                            <span class="help-icon-returnGoods icons"></span>
+                            <h6>退货规则</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="refund.html" class="block pr iconw">
+                            <span class="help-icon-refund icons"></span>
+                            <h6>退款规则</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 每一个 help-section-body 里面应该放一个 自定义编辑器 -->
+        <div class="help-section fl">
+            
+        	<div class="help-section-body2 mt24 clearfix">
+            	<div class="helpModule-body clearfix">
+                    <ul class="mt48 f13 ml36 clearfix">
+                        <li class="help-icon-item tc fl">
+                            <a href="#flow1" class="block pr iconw2">
+                                <span class="help-icon-login icons2"></span>
+                                <h6 class="pt12">登录喜地</h6>
+                            </a>                        
+                        </li>
+                        
+                        <li class="help-icon-gt  simsun fl"></li>
+                        
+                        <li class="help-icon-item tc fl">
+                            <a href="#flow2" class="block pr iconw2">
+                                <span class="help-icon-product icons2"></span>
+                                <h6 class="pt12">挑选商品</h6>
+                            </a>                        
+                        </li>
+                        
+                        <li class="help-icon-gt  simsun fl"></li>
+                        
+                        <li class="help-icon-item tc fl">
+                            <a href="#flow3" class="block pr iconw2" >
+                                <span class="help-icon-cart icons2"></span>
+                                <h6 class="pt12">加入购物车</h6>
+                            </a>                        
+                        </li>
+                        
+                        <li class="help-icon-gt  simsun fl"></li>
+                        
+                        <li class="help-icon-item tc fl">
+                            <a href="#flow4" class="block pr iconw2">
+                                <span class="help-icon-info icons2"></span>
+                                <h6 class="pt12 tl">填写收货信息和发票类型</h6>
+                            </a>                        
+                        </li>
+                        
+                        <li class="help-icon-gt  simsun fl"></li>
+                        
+                        <li class="help-icon-item tc fl">
+                            <a href="#flow5" class="block pr iconw2" >
+                                <span class="help-icon-pay icons2"></span>
+                                <h6 class="pt12">支付货款</h6>
+                            </a>                        
+                        </li>
+                        
+                        <li class="help-icon-gt  simsun fl"> </li>
+                        
+                        <li class="help-icon-item tc fl">
+                            <a href="#flow6" class="block pr iconw2">
+                                <span class="help-icon-comment icons2"></span>
+                                <h6 class="pt12">收货评价</h6>
+                            </a>                        
+                        </li>
+                    </ul>
+                </div> 
+                <div class="dotted-bottom" id="flow1">
+                    <h3 class="f18 pt60 mb36">登录喜地</h3>
+                    <p class="f13 mb48">点击页顶<a href="http://www.xidibuy.com/user/login" target="_blank" class="color-blue">登录</a>进入登录界面。没有账号的海客请先<a href="http://www.xidibuy.com/signup/index" target="_blank" class="color-blue">注册</a>。</p>
+                </div>
+                <div class="dotted-bottom" id="flow2">
+                    <h3 class="f18 pt60 mb36">挑选商品</h3>
+                    <p class="f13">喜地为您精心挑选了10个国家的优质品牌，您可以进入国家馆，挑选您喜欢的国家和特色商品。</p>
+                    <img class="mt6" src="../../../static/global/images/src/flow_03.png" alt="" />
+                    <p class="f13 mb36"><span class="inline-block tiaoxuan"> 通过喜地的商品分类直接查找您需要的商品类别。</span><span class="inline-block"> 直接搜索您需要的商品。</span></p>
+                </div>
+                <div class="dotted-bottom" id="flow3">
+                    <h3 class="f18 pt60 mb36">加入购物车</h3>
+                    <p class="f13">挑选商品后，在列表页或商品详情页面点击 <img src="../../../static/global/images/src/flow_07.png" alt="" class="vm"  /> 按钮，将商品放入购物车中。</p>
+                    <div class="jiarugouwu mt36 f13 mb36">
+                        <p>在购物车中，您可以直接查看到商品的名称、价格及其他相关信息。</p>
+                        <p>系统默认每件商品的订购数量为1件，如果您想购买多件商品，可修改购买数量。 </p>
+                        <p>您可以将商品加入收藏夹，或是选择移除。</p>
+                    </div>
+                </div>
+                <div class="dotted-bottom" id="flow4">
+                    <h3 class="f18 pt60 mb36">填写收货信息和发票类型</h3>
+                    <img src="../../../static/global/images/src/flow_15.png" alt="" />
+                    <div class="fapiao f13 mb36">
+                        <p class="inline-block">
+                            请详细准确填写收货信息（收货人姓名、联系方式、收货地址），否则将会影响您订单的处理或配送。 填写过的地址，下次购物为默认地址，如若更换，您可以继续添加其他收货地址。
+                        </p>
+                        <p class="inline-block">
+                            喜地默认开具个人发票，您可以选择填写其他类型。<br />
+                            <a href="javascript:void(0);" class="color-blue billpop"> 查看发票制度</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="dotted-bottom" id="flow5">
+                    <h3 class="f18 pt60 mb36">支付货款</h3>
+                    <p class="f13 mb12">成功提交订单后，需3小时内完成付款，喜地支持支付宝和银联第三方支付平台支付。</p>
+                    <img src="../../../static/global/images/src/flow_18.png" alt="" />
+                    <p class="f13 mb36"></p>
+                </div>
+                <div class="list pl36 pr36" id="flow6">
+                    <h3 class="f18 pt60 mb36">收货评价</h3>
+                    <p class="f13">收到商品后，您就可以进行评价了。</p>
+                    <img src="../../../static/global/images/src/flow_22.png" alt="" />
+                    <p class="f13 mb36"></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dialogContent f13">
+    <p class="f14 help_p mt24"><span class="list_suo">1</span><span class=" fb">如何取得发票</span></p>
+    <p class="help_p2 mt12"><span class="list_suo2">( 1 )</span>本网站所售商品都是正品行货，并由喜地电商平台统一为所销商品开具发票， 可用作单位报销凭证；</p>
+    <p class="help_p2"><span class="list_suo2">( 2 )</span>由于喜地平台实现不包邮政策，支付时向您收取的配送费实际收取方为快递公司，平台只有具商品发票，因此您收到的发票金额不含配送费金额；</p>
+    <p class="help_p2"><span class="list_suo2">( 3 )</span>您每次在喜地购买的商品，不论是否来自同一供应商，在无特殊情况下将由同一包裹发货，对应一张发票，发票金额为订单总金额；</p>
+    <p class="help_p2"><span class="list_suo2">( 4 )</span>特殊情况下，如发生商品缺货，您将可以选择先发送有货商品，此时发票将对应该次实际发货的商品；您也可以选择待缺货商品补货后统一发货，此时发票将对应订单内的所有商品；</p>
+    <p class="help_p2"><span class="list_suo2">( 5 )</span>发票将和您所购商品一同邮寄，请您在签收商品的同时不要遗忘发票。</p>
+
+    <p class="f14 help_p mt24"><span class="list_suo">2</span><span class="fb">发票设置</span></p>
+    <p class="help_p2 mt12"><span class="list_suo2">( 1 )</span>为了向顾客提供更好的质保服务，我们将按商品明细开具发票，包括但不限于商品名称、计量单位、数量、单价、大小写金额等项目，例：您在喜地购买了白雪牌中性笔G-909 0.38号中性笔（整盒装）1盒，发票内容将为“商品名称-白雪牌中性笔G-909 0.38号中性笔（整盒装），单位-盒，数量-1，单价-12.00”等。</p>
+    <p class="help_p2"><span class="list_suo2">( 2 )</span>默认状态下我们将为您开具普通-个人发票。</p>
+    <p class="help_p2"><span class="list_suo2">( 3 )</span>如需开具普通-单位发票，请在"单位名称"一项填写正确的公司抬头，抬头不能为空。</p>
+    <p class="help_p2"><span class="list_suo2">( 4 )</span>如需开具增值税专用发票，请拨打客服热线 400-0066-200 了解相关规则流程。</p>
+    <p class="help_p2"><span class="list_suo2">( 5 )</span>零售的烟、酒、食品、服装、鞋帽（不含劳保）、化妆品等消费品不能取得增值税专用发票（国税发 [2006] 156号）。</p>
+
+    <p class="f14 help_p mt24"><span class="list_suo">3</span><span class="fb">售后涉票事宜</span></p>
+    <p class="help_p2 mt12"><span class="list_suo2">( 1 )</span> 收到发票后如发现发票抬头、内容或金额等与您下单时所填写的项目不符，请先与平台客服联系（点击申请换发票），换发申请审核通过后，客服人员将安排快递人员上门取回原发票，收到原件后，我们会在7个工作日内为您重新开具发票并寄出，来往邮寄费将由我们承担。</p>
+    <p class="help_p2"><span class="list_suo2">( 2 )</span>如发生商品退货，无论是订单整单退货还是订单中某单一商品的退货，请将发票随同商品包裹一并寄回，以免给您退货带来不便。</p>
+</div>
+
+<div class="float_sidebar">
+    <ul>
+        <li class="top"></li>
+        <li class="service"></li>
+        <li class="feedback"></li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+</script>
+
+<script>
+    // var control = $('.helpModule-body');
+    // var position = control.offset().top;
+  
+    // $(document).on('scroll',function(){
+    //     var scroll=window.scrollY;
+    //     if(scroll-position >= -30){//control position
+    //         control.addClass('flow_fixed');
+    //     }else{
+    //         control.removeClass('flow_fixed')
+    //     }
+
+
+    // })
+$('.billpop').click(function(){
+    $("body").append('<div class="mask"></div>');
+    if($('.dialog').length<1){
+        $('body').append('<div class="dialog"></div>');
+    }else{
+        $('.dialog').show();
+    }
+    
+    $('.dialog').html($('.dialogContent'))
+    $('.dialog').prepend('<h3 class="f16 mt24 ml36 mb12">发票制度</h3><p class="dialog_close"> </p>')
+    $('.dialog').css('top',($(window).height()-560)/2)
+    $('.dialog').css('left',($(window).width()-741)/2)
+})
+$('.dialog_close').live('click',dialog_close);
+$('.mask').live('click',dialog_close);
+function dialog_close(){
+    $('.mask').remove();$('.dialog').hide();
+}
+    
+</script>
+
+</body>
+</html>

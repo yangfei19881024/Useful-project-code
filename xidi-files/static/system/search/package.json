@@ -1,0 +1,15 @@
+{
+	"family": "static/system",
+	"name": "search",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"search.css"
+		]
+	}
+}

@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :home
+------------------------------------------------------------ */
+
+/* 帮助中心 - 首页
+------------------------------------------------------------ */
+.dotted-bottom{
+	border-bottom:1px dotted #D1D6D6;
+}
+.helpModule-outer{
+	width:486px;
+}
+.content{padding-bottom: 24px;}
+.helpModule-list{
+	width:316px;
+	height:225px;
+}
+.helpModule-list h6{
+	font-weight:bold;
+}
+.help-icon{
+	left:0;
+	color:#888;
+}
+.helpModule-ques{
+	width:1020px;
+}
+.help-icon-item{
+	width:80px;
+	line-height:16px;
+}
+.help-icon-gt{
+	height:55px;
+	font-size:22px;
+	line-height:55px;
+	color:#DDD;
+	background: url(../../../global/images/1.0.0/help-flow.png) center no-repeat;
+}
+.icons{
+	display:block;
+	margin:0 auto;
+	width:55px;
+	height:55px;
+	overflow:hidden;
+	background:url(../../../global/images/1.0.0/helpIcon.png) no-repeat;
+}
+.iconw:hover{
+	color:#3c9;
+	text-decoration: none;
+}
+.iconw:hover .icons{
+	background:url(../../../global/images/1.0.0/helpIconHover.png) no-repeat;
+}
+.help-icon-login{
+	background-position:0 0!important;
+}
+.help-icon-product{
+	background-position:-55px 0!important;
+}
+.help-icon-cart{
+	background-position:0 -55px!important;
+}
+.help-icon-info{
+	background-position:-55px -55px!important;
+}
+.help-icon-pay{
+	background-position:0 -110px!important;
+}
+.help-icon-comment{
+	background-position:-56px -110px!important;
+}
+
+.hicon .icon{
+ background: url(../../../global/images/1.0.0/sprite_help_home.png);
+}
+.hicon:hover{
+	color:#3c9;
+	text-decoration: none;
+}
+.icon-help_hand {
+  background-position: 0px 0px!important;
+  width: 78px;
+  height: 74px;
+}
+.icon-help_car {
+  background-position: 0px -74px!important;
+  width: 102px;
+  height: 74px;
+}
+.icon-help_package {
+  background-position: 0px -148px!important;
+  width: 79px;
+  height: 74px;
+}
+.icon-help_dollar {
+  background-position: 0px -222px!important;
+  width: 71px;
+  height: 74px;
+}
+.hicon:hover .icon-help_hand{
+	background-position: -102px 0px!important;
+}
+.hicon:hover .icon-help_car{
+	background-position: -102px -74px!important;
+}
+.hicon:hover .icon-help_package {
+	background-position: -102px -148px!important;
+}
+.hicon:hover .icon-help_dollar {
+	background-position: -102px -222px!important;
+}
+.helpModule-box{
+	width:231px;
+	height:231px;
+	background: #f9f9f9;
+	text-align:center;
+}
+.helpModule-box a{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.helpModule-box .icon{
+	margin-top:48px;
+	display: inline-block;
+}
+
+.pa.simsun{background:url(../../../global/images/1.0.0/help-flow2.png) no-repeat left;width:10px;height:30px;}

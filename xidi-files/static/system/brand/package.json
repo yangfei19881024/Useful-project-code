@@ -1,0 +1,16 @@
+{
+	"family": "static/system",
+	"name": "brand",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"brand.css",
+			"brand.js"
+		]
+	}
+}

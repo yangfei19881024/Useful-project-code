@@ -1,0 +1,82 @@
+// @import: _mixin.scss
+//------------------------------------------------------------
+@import "../../../global/base/scss/_mixin.scss";
+
+
+// Want buy
+//------------------------------------------------------------
+.products-section {
+	@extend %center-block;
+
+	width: 996px;
+}
+.products-list {
+	margin: 0 -12px;
+	width: 1020px;
+}
+.products-outer {
+	@extend %products-outer;
+}
+.products-box {
+	@extend %products-box;
+}
+.products-image {
+	@extend %products-image;
+}
+.products-article {
+	@extend %products-article;
+}
+.products-title {
+	@extend %products-title;
+}
+.products-price {
+	@extend %products-price;
+}
+.products-attr-list {
+	@extend %products-attr-list;
+}
+.products-attr-box {
+	@extend %products-attr-box;
+}
+.products-attr-key {
+	@extend %products-attr-key;
+}
+.products-attr-val-list {	
+	@extend %products-attr-val-list;
+}
+.products-attr-val {
+	@extend %products-attr-val;
+}
+.products-attr-select {
+	@extend %products-attr-select;
+}
+.products-pos-box {
+	@extend %products-pos-box;
+}
+.products-tag {
+	@extend %products-tag;
+}
+.products-tag-count {
+	@extend %products-tag-count;
+}
+.products-tag-cate {
+	@extend %products-tag-cate;
+}
+.products-button-box {
+	@extend %products-button-box;
+}
+.products-buy-button {
+	@extend %light-button-231;
+
+	background-color: #ff7765;
+	border-color: #ff7765;
+	&:hover {
+		background-color: #ff8474;
+		border-color: #ff8474;
+	}
+	&:active {
+		background-color: #ff7765;
+		border-color: #ff7765;
+	}
+}
+

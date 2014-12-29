@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :list
+------------------------------------------------------------ */
+
+/* 商品
+------------------------------------------------------------ */
+.search-cate{
+	/*width:898px;*/
+	overflow:hidden;
+	/*border-right:1px solid #DDD;*/
+}
+.search-cate dl{
+	margin-bottom:-12px;
+}
+.search-cate .pro-cate-class{
+	padding-bottom:12px;
+	width:52px;
+}
+.search-cate .pro-cate-list{
+	/*width:846px;*/
+	width:944px;
+}
+.search-cate-shop{
+	width:97px;
+}
+.search-cate-shop .pro-cate-class{
+	width:48px;
+}
+.search-cate-shop .pro-cate-list{
+	width:auto;
+}
+.search-cate-shop .pro-cate-name{
+	margin-right:0;
+}
+
+/* 无
+------------------------------------------------------------ */
+.noResult{
+	padding:72px 0 80px;
+}
+
+/* 店铺
+------------------------------------------------------------ */
+.search-shop{
+}
+.search-shop-pro{
+	border-right:1px solid #DDD;
+}
+.search-shop-item{
+	position:relative;
+	height:180px;
+	border-bottom:1px dotted #C4CACA;
+}
+.search-shop-info{
+	width:286px;
+}
+.search-shop-info a:hover{
+	text-decoration:none;
+}
+.search-shop-info a:hover h6{
+	color:#50B1A2;
+}
+.search-shop-tag{
+	bottom:24px;
+}
+.search-shop-tagLine{
+	margin:4px 12px;
+	width:1px;
+	height:14px;
+	overflow:hidden;
+	background-color:#DDD;
+}
+.search-shop-goods{
+	width:540px;
+}
+.search-shop-goods-item{
+	width:180px;
+}
+.search-shop-goods-outer{
+	padding:1px 12px;
+}
+.search-shop-goods-name{
+}
+.search-shop-goods-item:hover .search-shop-goods-outer{
+	padding:0 11px;
+	border:1px solid #E9E9E9;
+}
+.search-shop-goods-item:hover .search-shop-goods-item{
+	position:relative;
+	margin-bottom:-24px;
+}
+.search-shop-goods-item:hover .search-shop-goods-name{
+	display:block;
+}

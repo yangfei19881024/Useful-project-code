@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>消息中心</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/message/src/message.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">服务中心</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f18 clearfix">
+    	<h2>消息中心</h2>
+    </div>
+    
+    <div class="main clearfix">
+        <!-- 消息列表 -->
+        <div class="message-bd mt24 f13 clearfix" id="messageList">
+            <div class="msg-tabHd plr12 pr clearfix">
+                <span class="msg-tabBtn plr24 inline-block" data-tab="button">服务通知&nbsp;<em class="mTabCount">17</em></span>
+                <span class="msg-tabBtn plr24 inline-block" data-tab="button">公告&nbsp;<em class="mTabCount">17</em></span>
+                <span class="msg-tabBtn plr24 inline-block" data-tab="button">留言&nbsp;<em class="mTabCount">17</em></span>
+                <a href="messageSetting.html" class="icon-setting pa sprites" data-state="setting"></a>
+            </div>
+            
+            <div class="msg-tabContent clearfix">                
+                <!-- 服务通知 -->
+                <div class="msg-tabBox hide clearfix" data-tab="article">
+                	<div class="plugs-select mt24 mb12 clearfix" id="serviceNotice-select">
+                    	<div class="plugs-select-hd" data-state="databutton">
+                        	<h6 class="plugs-select-title" data-id="0" data-state="title" data-value="0">请选择</h6>
+                            
+                            <div class="plugs-select-tip">
+                            	<div class="plugs-select-tip"></div>
+                            </div>
+                        </div>
+                        
+                        <ul class="plugs-select-bd" data-state="datalist">
+                        	<li class="plugs-select-option" data-id="1" data-state="option" data-value="1">所有 <em class="color-888 f12">17</em></li>
+                        	<li class="plugs-select-option" data-id="2" data-state="option" data-value="2">交易 <em class="color-888 f12">12</em></li>
+                        	<li class="plugs-select-option" data-id="3" data-state="option" data-value="3">退款/退货 <em class="color-888 f12">2</em></li>
+                        	<li class="plugs-select-option" data-id="4" data-state="option" data-value="4">投诉建议 <em class="color-888 f12">2</em></li>
+                        	<li class="plugs-select-option" data-id="5" data-state="option" data-value="5">帐号 <em class="color-888 f12">1</em></li>
+                        </ul>
+                        
+                        <input type="hidden" name="plugs-select-value" class="plugs-select-value" value="0" />
+                    </div>
+                    
+                    <ul class="hidden clearfix" id="serviceNoticeList">
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">交易：付款提醒 </dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>订单号：570997286</p>
+                                    <p>请于 29分 : 59秒 内付款，若未及时付款，系统将自动取消订单</p>
+                                    <p><a href="" class="color-blue">立即付款</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507002.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">交易：商家已发货</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>订单号：570997286</p>
+                                    <p>羊皮手套、山羊毛围 等 5 件商品，商家已发货，请耐心等待快递派送</p>
+                                    <p><a href="" class="color-blue">去看看</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">交易：评价回复</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>商家回复了您对 护肤精华 的评价：</p>
+                                    <p class="color-888">您所购买的商品，可能在配送过程中发生变化，请您联系客服，留下联系方式，把货物邮寄回来，我们重新给您发货，邮费由我们承担，欢迎您再次购买。</p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                               <a href=""> <img src="../../../static/temp-images/src/20140507002.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">退款/退货：退款申请未通过</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>您对 Uus休闲短裤 的退款申请未通过</p>
+                                    <p><a href="" class="color-blue">查看详情</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">退款/退货：退款申请已通过</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>商家已同意您 36.00元 退款申请，预计3至5个工作日内退到您的支付帐户</p>
+                                    <p><a href="" class="color-blue">查看详情</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507002.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">退款/退货：退货已收到</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>商家已同意您 36.00元 退款申请，预计3至5个工作日内退到您的支付帐户</p>
+                                    <p><a href="" class="color-blue">查看详情</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">投诉/举报/反馈已收到</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>感谢您的投诉/举报/反馈，喜地会尽快处理</p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507002.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">投诉/举报/反馈已处理</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>感谢您的投诉/举报/反馈，喜地的处理结果：</p>
+                                    <p class="color-888">您所购买的商品，可能在配送过程中发生变化，请您联系客服，留下联系方式，把货物邮寄回来，我们重新给您发货，邮费由我们承担，欢迎您再次购买。</p>
+                                    <p>如有疑问，请 <a href="" class="color-blue">联系客服</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">退款/退货：退款申请已通过</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>商家已同意您 36.00元 退款申请，预计3至5个工作日内退到您的支付帐户</p>
+                                    <p><a href="" class="color-blue">查看详情</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507002.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">退款/退货：退货已收到</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>商家已同意您 36.00元 退款申请，预计3至5个工作日内退到您的支付帐户</p>
+                                    <p><a href="" class="color-blue">查看详情</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">投诉/举报/反馈已收到</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>退款编号：570997286</p>
+                                    <p>感谢您的投诉/举报/反馈，喜地会尽快处理</p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507003.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">密码已修改</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>帐号 x**x 在 2014-4-28 11:43 通过xx验证方式修改了登录密码</p>
+                                    <p>如不是本人操作，请尽快 <a href="" class="color-blue">联系客服</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507004.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">邮箱已修改</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>帐号 x**x 在 2014-4-28 11:43 通过xx验证方式将邮箱修改为x**x@gmail.com</p>
+                                    <p>如不是本人操作，请尽快 <a href="" class="color-blue">联系客服</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507005.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">手机已修改</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>帐号 x**x 在 2014-4-28 11:43 通过xx验证方式将手机修改为186******21</p>
+                                    <p>如不是本人操作，请尽快 <a href="" class="color-blue">联系客服</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <a href=""><img src="../../../static/temp-images/src/20140507005.png" width="132" height="132" class="block" /></a>
+                            </div>
+                            
+                            <dl class="msg-notice mt12 ml24 fl">
+                                <dt class="msg-tit clearfix">手机已绑定</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <p>帐号 x**x 在 2014-4-28 11:43 绑定手机号186******21</p>
+                                    <p>如不是本人操作，请尽快 <a href="" class="color-blue">联系客服</a></p>
+                                </dd>
+                            </dl>
+                            
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 公告 -->
+                <div class="msg-tabBox hide clearfix" data-tab="article">
+                    <ul class="hidden clearfix" id="announcementList">
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140507006.jpg" width="132" height="132" class="block" />
+                            </div>
+                            
+                            <div class="msg-notice table pl24 fl">
+                            	<div class="table-cell">
+                                	<p class="msg-tit clearfix">2014年8月30日之前 购满199元 送双倍积分</p>
+                                    <p class="msg-des pt12 clearfix">大牌的质感，戴起来也非常的抢眼，尽显优雅风范，独特的表盘设计在腕间瞬间提升端庄度。表盘外用运用了超时空的设计，让精湛的工艺得到了很好的体现，绝对是品味的象征。这款手表很适合有点奢华风格的打扮，绝对会让你的美得到很好的延伸。</p>
+                                </div>
+                            </div>
+                                
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140507007.jpg" width="132" height="132" class="block" />
+                            </div>
+                            
+                            <div class="msg-notice table pl24 fl">
+                            	<div class="table-cell">
+                                	<p class="msg-tit clearfix">喜地新版在 2014年7月15日 08:08 上线了</p>
+                                </div>
+                            </div>
+                                
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140507008.jpg" width="132" height="132" class="block" />
+                            </div>
+                            
+                            <div class="msg-notice table pl24 fl">
+                            	<div class="table-cell">
+                                	<p class="msg-tit clearfix">喜地 澳大利亚馆在 20xx年x月x日 xx:xx 上线了</p>
+                                    <p class="clearfix"><a href="" class="color-blue">去看看</a></p>
+                                </div>
+                            </div>
+                                
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140507009.jpg" width="132" height="132" class="block" />
+                            </div>
+                            
+                            <div class="msg-notice table pl24 fl">
+                            	<div class="table-cell">
+                                	<p class="msg-tit clearfix">喜地 澳大利亚馆在 20xx年x月x日 xx:xx 上线了</p>
+                                    <p class="msg-des pt12 clearfix">大牌的质感，戴起来也非常的抢眼，尽显优雅风范，独特的表盘设计在腕间瞬间提升端庄度。表盘外用运用了超时空的设计，让精湛的工艺得到了很好的体现，绝对是品味的象征。这款手表很适合有点奢华风格的打扮，绝对会让你的美得到很好的延伸。</p>
+                                </div>
+                            </div>
+                                
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb12 anim-all pr clearfix">
+                            <div class="ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140507009.jpg" width="132" height="132" class="block" />
+                            </div>
+                            
+                            <div class="msg-notice table pl24 fl">
+                            	<div class="table-cell">
+                                	<p class="msg-tit clearfix">喜地新版在 2014年7月15日 08:08 上线了</p>
+                                </div>
+                            </div>
+                                
+                            <p class="msg-time mt12 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 留言 -->
+                <div class="msg-tabBox hide clearfix" data-tab="article">
+                    <ul class="hidden clearfix" id="MsgListInfo">
+                        <li class="msg-item ptb24 pr anim-all clearfix">
+                            <div class="mt12 mr36 ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140428001.png" width="60" height="60" class="block circle" />
+                                <var class="msg-count tc pa circle">6</var>
+                            </div>
+                            
+                            <dl class="msg-inner fl">
+                                <dt class="msg-tit color-888 clearfix">我对 <a href="" class="color-blue">耐克旗舰店</a> 说</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <a href="message.html" target="_blank" class="no-unl">虽然没有直接证据显示知乎受到了相应的恶意攻击，但出于安全考虑，我们还是建议你修改密码我们也强烈建议你修改其他重要账户的密码，例如网上银行、支付宝等。知乎在第一时间做出了响应迅速升级到了安全的版本。可能影响你的账户安全。当时整个互联网约三分之二的网络流量都受到了此漏洞的影响法文很多</a>
+                                </dd>
+                            </dl>
+                                
+                            <p class="msg-time fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb24 pr anim-all clearfix">
+                            <div class="mt12 mr36 ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140428002.png" width="60" height="60" class="block circle" />
+                                <var class="msg-count tc pa circle">6</var>
+                            </div>
+                            
+                            <dl class="msg-inner fl">
+                                <dt class="msg-tit color-888 clearfix">我对 <a href="" class="color-blue">耐克旗舰店</a> 说 </dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <a href="message.html" target="_blank" class="no-unl">虽然没有直接证据显示知乎受到了相应的恶意攻击，但出于安全考虑，我们还是建议你修改密码我们也强烈建议你修改其他重要账户的密码，例如网上银行、支付宝等。知乎在第一时间做出了响应迅速升级到了安全的版本。可能影响你的账户安全。当时整个互联网约三分之二的网络流量都受到了此漏洞的影响法文很多</a>
+                                </dd>
+                            </dl>
+                                
+                            <p class="msg-time fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb24 pr anim-all clearfix">
+                            <div class="mt12 mr36 ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140428001.png" width="60" height="60" class="block circle" />
+                                <var class="msg-count tc pa circle">6</var>
+                            </div>
+                            
+                            <dl class="msg-inner fl">
+                                <dt class="msg-tit color-888 clearfix">我对 <a href="" class="color-blue">耐克旗舰店</a> 说</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <a href="message.html" target="_blank" class="no-unl">虽然没有直接证据显示知乎受到了相应的恶意攻击，但出于安全考虑，我们还是建议你修改密码我们也强烈建议你修改其他重要账户的密码，例如网上银行、支付宝等。知乎在第一时间做出了响应迅速升级到了安全的版本。可能影响你的账户安全。当时整个互联网约三分之二的网络流量都受到了此漏洞的影响法文很多</a>
+                                </dd>
+                            </dl>
+                                
+                            <p class="msg-time fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb24 pr anim-all clearfix">
+                            <div class="mt12 mr36 ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140428002.png" width="60" height="60" class="block circle" />
+                                <var class="msg-count tc pa circle">6</var>
+                            </div>
+                            
+                            <dl class="msg-inner fl">
+                                <dt class="msg-tit color-888 clearfix">我对 <a href="" class="color-blue">耐克旗舰店</a> 说</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <a href="message.html" target="_blank" class="no-unl">虽然没有直接证据显示知乎受到了相应的恶意攻击，但出于安全考虑，我们还是建议你修改密码我们也强烈建议你修改其他重要账户的密码，例如网上银行、支付宝等。知乎在第一时间做出了响应迅速升级到了安全的版本。可能影响你的账户安全。当时整个互联网约三分之二的网络流量都受到了此漏洞的影响法文很多</a>
+                                </dd>
+                            </dl>
+                                
+                            <p class="msg-time fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                        
+                        <li class="msg-item ptb24 pr anim-all clearfix">
+                            <div class="mt12 mr36 ml12 pr fl">
+                                <img src="../../../static/temp-images/src/20140428001.png" width="60" height="60" class="block circle" />
+                            </div>
+                            
+                            <dl class="msg-inner fl">
+                                <dt class="msg-tit color-888 clearfix">我对 <a href="" class="color-blue">耐克旗舰店</a> 说</dt>
+                                
+                                <dd class="msg-des pt12 clearfix">
+                                    <a href="message.html" target="_blank" class="no-unl">虽然没有直接证据显示知乎受到了相应的恶意攻击，但出于安全考虑，我们还是建议你修改密码我们也强烈建议你修改其他重要账户的密码，例如网上银行、支付宝等。知乎在第一时间做出了响应迅速升级到了安全的版本。可能影响你的账户安全。当时整个互联网约三分之二的网络流量都受到了此漏洞的影响法文很多</a>
+                                </dd>
+                            </dl>
+                                
+                            <p class="msg-time fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                             
+                            <div class="operating pa">
+                                <a href="javascript:;" class="icon-delete sprites" data-state="remove">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page -->
+    <div id="page">
+        <div class="content page tc hide clearfix" id="serviceNoticePage">
+            <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+            <a href="" class="page-button inline-block page-current">1</a>
+            <a href="" class="page-button inline-block">2</a>
+            <a href="" class="page-button inline-block">3</a>
+            <a href="" class="page-button inline-block">4</a>
+            <span class="page-elps inline-block">…</span>
+            <a href="" class="page-button inline-block">10</a>
+            <a href="" class="page-button page-next inline-block">&gt;</a>
+            
+            <div class="pageGoto inline-block">
+                到<span class="page-button inline-block"><input type="text" class="pageNum fl" /><input type="button" class="pageBtn sprites fr" /></span>页
+            </div>
+        </div>
+        
+        <div class="content page tc hide clearfix" id="announcementPage">
+            <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+            <a href="" class="page-button inline-block page-current">1</a>
+            <a href="" class="page-button inline-block">2</a>
+            <a href="" class="page-button inline-block">3</a>
+            <a href="" class="page-button inline-block">4</a>
+            <span class="page-elps inline-block">…</span>
+            <a href="" class="page-button inline-block">10</a>
+            <a href="" class="page-button page-next inline-block">&gt;</a>
+            
+            <div class="pageGoto inline-block">
+                到<span class="page-button inline-block"><input type="text" class="pageNum fl" /><input type="button" class="pageBtn sprites fr" /></span>页
+            </div>
+        </div>
+        
+        <div class="content page tc hide clearfix" id="messageListPage">
+            <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+            <a href="" class="page-button inline-block page-current">1</a>
+            <a href="" class="page-button inline-block">2</a>
+            <a href="" class="page-button inline-block">3</a>
+            <a href="" class="page-button inline-block">4</a>
+            <span class="page-elps inline-block">…</span>
+            <a href="" class="page-button inline-block">10</a>
+            <a href="" class="page-button page-next inline-block">&gt;</a>
+            
+            <div class="pageGoto inline-block">
+                到<span class="page-button inline-block"><input type="text" class="pageNum fl" /><input type="button" class="pageBtn sprites fr" /></span>页
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	CONVERSATION = 100;
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'message': JS_DOMAIN + 'static/member/message/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{message}message'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

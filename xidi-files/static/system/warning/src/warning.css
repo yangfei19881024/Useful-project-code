@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* website warning module code
+------------------------------------------------------------ */
+.warning{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-300px 0 0 -400px;
+	width:800px;
+	height:600px;
+	text-align:center;
+}
+.warning-title{
+	padding:12px 0 24px;
+	font:16px/22px 'Microsoft Yahei';
+}
+.browser{
+	font:0/0 'Arial';
+}
+.ie-browser,
+.firefox-browser,
+.chrome-browser,
+.safari-browser,
+.opera-browser{
+	display:inline-block;
+	*zoom:1;
+	margin:0 10px;
+	width:35px;
+	height:35px;
+	overflow:hidden;
+	background:url(../../../global/images/1.0.0/browser.png) no-repeat;
+}
+.ie-browser,
+.ie-browser:hover{
+	background-position:3px 0;
+}
+.firefox-browser,
+.firefox-browser:hover{
+	background-position:-55px 0;
+}
+.chrome-browser,
+.chrome-browser:hover{
+	background-position:-114px 0;
+}
+.safari-browser,
+.safari-browser:hover{
+	background-position:-173px 0;
+}
+.opera-browser,
+.opera-browser:hover{
+	background-position:-228px 0;
+}

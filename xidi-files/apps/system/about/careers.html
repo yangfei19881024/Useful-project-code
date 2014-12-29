@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于喜地</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/about/src/about.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">            
+        <div class="searchBox fl">                
+            <div class="search-bar">
+                <div class="searchsugbox none">
+                    <ul class="search-sug">
+                        <li class="graysug">最近搜索<i class="searchicons"></i></li>
+                    </ul>
+                    <ul class="search-interest">
+                        <li class="graysug">您可能感兴趣</li>
+                    </ul>
+                </div>
+                
+                <input type="text" class="searchkey anim-all fl" />
+                <input type="button" class="search-button anim-all sprites fr" />
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2>关于喜地&nbsp;&gt;&nbsp;加入我们</h2>
+    </div>
+    
+	<div class="main mt36 clearfix">
+    	<div class="help-aside fl">
+        	<div class="plr12 clearfix">
+            	<ul class="pt12 pb24 tc clearfix">
+                	<li class="clearfix ">
+                    	<a href="info.html" class="block pr iconw">
+                            <span class="icon-about_03 icons"></span>
+                            <h6>了解喜地</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="contact.html" class="block pr iconw">
+                            <span class="icon-about_06 icons"></span>
+                            <h6>联系喜地</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+            	<ul class="pt12 pb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="cooperation.html" class="block pr iconw">
+                            <span class="icon-about_18 icons"></span>
+                            <h6>商户合作</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="careers.html" class="block pr iconw">
+                            <span class="icon-about_20 icons"></span>
+                            <h6>加入我们</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+            	<ul class="pt12 pb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="legal.html" class="block pr iconw">
+                            <span class="icon-about_22 icons"></span>
+                            <h6>法律声明</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 每一个 help-section-body 里面应该放一个 自定义编辑器 -->
+        <div class="help-section fl">
+        	<!-- <div class="help-section-head clearfix">
+            	<h3 class="f18">支付宝</h3>
+            </div> -->
+            
+        	<div class="help-section-body fl clearfix">
+                <div class="list pb48 pl36 pr36">
+                	<p class="f13">
+                        喜地（www.xidibuy.com）新型跨境电子商务平台，致力于为所有热爱生活的朋友提供百分百海外购物享受。我们为您精心挑选海外原产品牌，品牌授权，保证品质。直接联系原产工厂，一站式供应链，减少分销成本，为您提供最为优惠的价格。让您足不出户就能体验世界各国品质生活。
+                    </p>
+                    <p class="f13 mt24">
+                        即将腾飞的喜地，期待您的加盟 <br />
+                        如果您对电子商务感兴趣或者有丰富的电子商务从业经验；<br />
+                        如果您希望与一个年轻的充满活力的团队一起成长；<br />
+                        如果您希望经营海外品牌，对互联网创业有无限的热情和创意；<br />
+                        那么现在就加入喜地吧，你将与顶尖的行业专家和富有激情与创造力的同事在喜地的平台上创造传奇！
+                    </p>
+                </div>
+                <div class="dotted-bottom list pb48 mb36">
+                    <h3 class="f18 pt24 mb36" id="job1">海外招商主管</h3>
+                    <h4 class="f14 mt24 mb12">岗位职责</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>搜集行业信息，对行业内海外客户资料进行整理与完善；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>根据公司业务发展需要，开拓新客户，维护老客户，确保海外招商任务的完成；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>根据项目安排，服务好客户； </li>
+                        <li class="decimal"><span class="list_suo"> 4</span>能独立寻找，发掘海外商家，独立完成商务洽谈并签约。</li>
+                    </ul>
+                    <h4 class="f14 mt36 mb12">任职要求</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>具有良好的沟通和协调能力； </li>
+                        <li class="decimal"><span class="list_suo"> 2</span>性格开朗，善于沟通，亲和力强，具有团队协作精神；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>能吃耐苦，上进心强，有责任心，有一定的承受工作压力的能力；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>良好的英语听、说、读、写能力（小语种韩文优秀者1人）；</li>
+                        <li class="decimal"><span class="list_suo"> 5</span>了解海外市场，有母婴、鞋包、家居、食品行业资源者优先考虑；</li>
+                        <li class="decimal"><span class="list_suo"> 6</span>工作积极，认真主动，乐于与部门其他同事沟通协作，对营销效果负责。</li>
+                    </ul>
+                    <h4 class="f14 mt36 mb12">岗位要求</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>学历要求：本科及以上</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>语言要求：英文优秀</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>专业要求：从事外贸公司采购，招商工作</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>工作年限：有相关工作3年以上经历</li>
+                    </ul>
+                </div>
+                <div class="dotted-bottom list pb48 mb36" >
+                    <h3 class="f18 pt24 mb36" id="job2">数据分析师</h3>
+                    <h4 class="f14 mt24 mb12">岗位职责</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>在网站数据和营销传播两个方向上提供多维数据分析服务，并根据数据分析结果提出业务策略建议；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>负责使用网站分析工具，对全站的流量进行统计、分析和监控，分析流量的来源、关键词、访问深度，停留时间等维度，能得出相应的逻辑给出指导意见；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>根据网站的架构和逻辑，对分类页面和商品单页的用户行为进行统计分析，对站内搜索行为作分析统计，对品类，页面内容的改进做指导；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>对平台的用户行为路径做统计分析，设置转化目标和布局跟踪代码，实时监控转化漏斗的各个环节，并且提出相对应的优化意见；</li>
+                        <li class="decimal"><span class="list_suo"> 5</span>对平台用户的地域分布、年龄比例，性别比例，职业构成等进行统计和分析，给出相应的建议；</li>
+                        <li class="decimal"><span class="list_suo"> 6</span>对已经形成订单的客户和订单管理系统中收集来的数据做整理，按照相应的逻辑进行分类，并配合其他市场人员进行营销和推广；</li>
+                        <li class="decimal"><span class="list_suo"> 7</span>对各个推广平台的数据进行整理，统一优化整个系统的数据资源配合进行全渠道营销。</li>
+                    </ul>
+                    <h4 class="f14 mt36 mb12">任职要求</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>三年以上媒体网站、电商网站、网络营销数据分析岗位相关工作经历，有电商平台工作经历优先考虑；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>熟练使用各种办公软件，如PPT、EXCEL等，能独立撰写数据分析报告；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>熟悉电子商务网站的数据分析模型和用户数据分析模型，了解如何通过数据分析优化电商平台；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>精通至少一种数据分析/挖掘软件操作，如SAS，SPSS等；</li>
+                        <li class="decimal"><span class="list_suo"> 5</span>对数据驱动业务有深入理解，对数据与业务方面有足够敏感性，有较强的逻辑分析能力，有较强的独立思考能力；</li>
+                        <li class="decimal"><span class="list_suo"> 6</span>具备良好的沟通能力和团队合作精神。</li>
+                    </ul>
+                    <h4 class="f14 mt36 mb12">岗位要求</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>学历要求：统计学、计算机等相关专业本科及以上</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>语言要求：普通话</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>工作年限：3年以上</li>
+                    </ul>
+                </div>
+                <div class="dotted-bottom list pb48 mb36" >
+                    <h3 class="f18 pt24 mb36" id="job3">视觉设计师</h3>
+                    <h4 class="f14 mt24 mb12">岗位职责</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>负责电商平台在不同界面（网页或手机）的视觉设计；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>提出设计理念，设计界面、图标、标志、与视觉规范，支持技术开发；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>积极协助项目迭代或改版；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>与信息架构师、产品经理、和程序开发员密切合作；</li>
+                        <li class="decimal"><span class="list_suo"> 5</span>以用户为中心设计。</li>
+                    </ul>
+                    <h4 class="f14 mt36 mb12">任职要求</h4>
+                    <ul class="f13">
+                        <p class="mt12">必备：</p>
+                        <li class="decimal"><span class="list_suo"> 1</span>个人作品集；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>两年以上企业公司设计经验或设计顾问经验；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>网站设计、移动界面设计、图标与标志设计等相关经验；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>深入了解构图，对色彩、字体应用有敏锐眼光，讲究细节与一致性；</li>
+                        <li class="decimal"><span class="list_suo"> 5</span>追求创新、对设计与用户体验有热情，跟进现今设计潮流和技术知识；</li>
+                        <li class="decimal"><span class="list_suo"> 6</span>学习能力强、逻辑性强、沟通能力强、具有强烈的团队合作精神；</li>
+                        <li class="decimal"><span class="list_suo"> 7</span>精通本专业大部分设计软件（Photoshop、Illustrator等）。 </li>
+                        <p class="mt24">最好具备：</p>
+                        <li class="decimal"><span class="list_suo"> 1</span>熟悉User-Centered Design流程；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>平面设计学士学位或相关经验；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>对HTML和CSS有基础了解，熟悉Dreamweaver、Flash等工具；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>具有动画制作知识（如Flash或After Effects）。</li>
+
+                    </ul>
+                    <h4 class="f14 mt36 mb12">岗位要求</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>学历要求：设计等相关专业本科及以上</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>工作年限：有相关工作2年以上经历</li>
+                    </ul>
+                </div>
+                <div class="dotted-bottom list pb48 mb36" >
+                    <h3 class="f18 pt24 mb36" id="job4">微信平台运营</h3>
+                    <h4 class="f14 mt24 mb12">岗位职责</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>负责电商平台、以及相关品牌微信公众账号的策划，建设和运营；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>负责微信后台的购物网站的策划、实施，以及微信商城的优化；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>监控微信运转的情况，提出在微信平台上运营的各种策划方案，并按计划进行实施，完成微信平台关注量，用户粉丝互动等KPI指标；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>时刻了解微信的最新变化和更新，并及时提出相应的应变方案，保持账户活跃度；</li>
+                        <li class="decimal"><span class="list_suo"> 5</span>用户需求的管理，包括用户需求的收集、整理、反馈等，并根据需求（用户需求及营销需求）进行相应的策划；</li>
+                        <li class="decimal"><span class="list_suo"> 6</span>配合公司运营，在微信上面推出相应的活动，并保证相应的效果。</li>
+                    </ul>
+                    <h4 class="f14 mt36 mb12">任职要求</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>本科及以上学历，营销、广告、传播或其他相关专业毕业，至少1年以上微信运营经验；</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>熟悉微信平台的所有功能和相关的接口，了解微信后台购物网站的运营，了解支付流程；</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>能熟练建设微信服务号，熟悉订阅号菜单设置，关键词回复，图文消息等基本操作；</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>有成功运营微信账号吸引大量粉丝的经验，能够根据不同的需求提出相应的运营策略；</li>
+                        <li class="decimal"><span class="list_suo"> 5</span>思维活跃，执行力强，乐于与团队成员进行交流和分享。</li>
+                    </ul>
+                    <h4 class="f14 mt36 mb12">岗位要求</h4>
+                    <ul class="f13">
+                        <li class="decimal"><span class="list_suo"> 1</span>学历要求：新闻、媒体等相关专业本科及以上</li>
+                        <li class="decimal"><span class="list_suo"> 2</span>语言要求：普通话</li>
+                        <li class="decimal"><span class="list_suo"> 3</span>年龄要求：25-35</li>
+                        <li class="decimal"><span class="list_suo"> 4</span>工作年限：4A广告公司或网络营销公司同职位3年以上经验，1年以上微信运营经验</li>
+                    </ul>
+                </div>
+                <div class="list pl36 pr36" id="contact">
+                    <h3 class="f18 pt24 mb24">联系方式</h3>
+                    <p class="f13"> 简历接收邮箱：<a href="" class="email color-blue"></a></p>
+                    <p class="phone f13 mt12"> 联系电话：021-58381557</p>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        <div class="help-aside-right fl f13">
+                <ul>
+                    <li class="c_active" data-id="job1"><i>●</i> <a href="#job1">海外招商主管</a></li>
+                    <li data-id="job2"><i> ● </i> <a href="#job2">数据分析师</a></li>
+                    <li data-id="job3"><i> ● </i> <a href="#job3">视觉设计师</a></li>
+                    <li data-id="job4"><i> ● </i> <a href="#job4">微信平台运营</a></li>
+                    <li data-id="contact"><i> ● </i> <a href="#contact">联系方式</a></li>
+                </ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="float_sidebar">
+    <ul>
+        <li class="top"></li>
+        <li class="service"></li>
+        <li class="feedback"></li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+</script>
+
+<script>
+    var control = $('.help-aside-right');
+    var position = control.offset().top;
+    $('h3','.list').each(function(){
+            $(this).attr('data-top',$(this).offset().top)
+        })
+    $(document).on('scroll',function(){
+        var scroll=window.scrollY;
+        if(scroll-position >= -50){//control position
+            control.addClass('control_fixed');
+        }else{
+            control.removeClass('control_fixed')
+        }
+
+        var ary = [];
+        $('h3','.list').each(function(){
+            ary.push($(this).data('top')-scroll);
+        })
+        console.log(ary)
+        var index,min;
+        $.each(ary,function(i,n){
+            if(n>0){
+                if(index){
+                    if(min>n){
+                        index =i ; min=n;
+                    }else{
+
+                    }
+                }else{
+                    index = i;min = n;
+                }
+            }
+        })
+        if(!index){index=$('.help-aside-right li').last().index()+1;}
+        var id = $('h3','.list').eq(index-1).attr("id");
+
+        $('[data-id='+id+']').addClass('c_active').siblings().removeClass('c_active');
+
+    })
+    var mt='mailto:',h='hr',a='@',d='xidibuy.com';
+    $('.email').text(h+a+d).attr('href',mt+h+a+d);
+</script>
+
+
+</body>
+</html>

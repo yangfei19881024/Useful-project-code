@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :message
+------------------------------------------------------------ */
+
+/* 消息中心 --> 留言列表
+------------------------------------------------------------ */
+.message-bd{
+}
+.msg-tabHd{
+	z-index:3;
+	height:26px;
+	border-bottom:1px solid #DDD;
+	font-size:0;
+}
+.msg-tabBtn{
+	height:26px;
+	font-size:14px;
+	vertical-align:top;
+	line-height:100%;
+	cursor:pointer;
+}
+.msg-tabBtn .mTabCount{
+	font-size:12px;
+	font-weight:500;
+	color:#888;
+}
+.msg-tabCur{
+	position:relative;
+	font-weight:700;
+}
+.msg-tabCur:after,
+.msg-tabCur:before{
+	position:absolute;
+	left:50%;
+	bottom:-1px;
+	width:0;
+	height:0;
+	overflow:hidden;
+	border:6px solid transparent;
+	content:' ';
+}
+.msg-tabCur:after{
+	z-index:2;
+	margin-left:-5px;
+	border-width:5px;
+	border-bottom-color:#FFF;
+}
+.msg-tabCur:before{
+	margin-left:-6px;
+	border-bottom-color:#D2D2D2;
+}
+.msg-tabHd .icon-setting{ /* 基于 common.css 中的 icon-setting 类 */
+	right:0;
+	top:0;
+}
+
+.msg-tabBox{
+	position:relative;
+	border-bottom:1px solid #DDD;
+	line-height:22px;
+}
+.msg-item{
+	margin-top:-1px;
+	border-top:1px dotted #D3D7D7;
+}
+.msg-count{
+	right:-2px;
+	top:-2px;
+	width:20px;
+	height:20px;
+	background-color:#50B1A2;
+	line-height:20px;
+	color:#FFF;
+}
+.msg-inner{
+	width:572px;
+}
+.msg-notice{
+	width:486px;
+}
+.msg-notice.table,
+.msg-notice .table-cell{
+	width:486px;
+}
+.msg-tit{
+}
+.msg-des{
+}
+.msg-des .no-unl{
+	display:block;
+	text-decoration:none;
+}
+.msg-time{
+	padding-right:110px;
+	font-size:12px;
+	color:#CCC;
+}
+.operating{
+	top:26;
+	right:26px;
+	visibility:hidden;
+}
+
+.msg-item:hover{
+	background-color:#F6F6F6;
+}
+.msg-item:hover .operating{
+	visibility:visible;
+}
+
+#serviceNoticeList .msg-item:hover,
+#announcementList .msg-item:hover{
+	background-color:transparent;
+}
+
+.message-outer{
+	width:792px;
+}
+.message-inner .avator-pic{ /* 基于 上面的 avator-pic 类 */
+	width:90px;
+	height:90px;
+}
+.message-outer .msg-tabBox{ /* 基于 上面的 msg-tabBox 类 */
+	margin-top:24px;
+	width:666px;
+	border-bottom:1px dotted #D3D7D7;
+}
+.message-outer .msg-inner{ /* 基于 上面的 msg-inner 类 */
+	width:570px;
+}
+.message-outer .msg-time{ /* 基于 上面的 msg-time 类 */
+	padding-right:0;
+}
+.message-reply .msg-item,
+.message-reply .msg-item:hover{
+	background-color:#FFF;
+}
+
+/* 消息中心 --> 设置
+------------------------------------------------------------ */
+.setting{
+	width:740px;
+}
+.setting-hd{
+	border-bottom:1px solid #DDD;
+}
+.setting-field{
+	width:60px;
+}
+.setting-field-large{
+	width:380px;
+}
+.setting-field-icon{
+	height:32px;
+}
+.setting-hd .icon-bell{ /* 基于 common.css 中的 icon-bell */
+	background-position:0 -413px;
+}
+.setting-hd .icon-phone{ /* 基于 common.css 中的 icon-phone */
+}
+.setting-hd .icon-email{ /* 基于 common.css 中的 icon-email */
+	background-position:-56px -411px;
+}
+.setting-item{
+	border-bottom:1px dotted #D3D7D7;
+}
+.setting-field-merger{
+	margin-top:-1px;
+	width:656px;
+	border-top:1px dotted #D3D7D7;
+}

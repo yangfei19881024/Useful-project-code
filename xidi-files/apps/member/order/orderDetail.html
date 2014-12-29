@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单详情</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/order/src/order.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content clearfix">
+	<!-- 待付款 -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl current">提交订单</li>
+                <li class="step-column-4 pr fl">成功付款</li>
+                <li class="step-column-4 pr fl">商家发货</li>
+                <li class="step-column-4 pr fl">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-warning-36 sprites fl"></div>
+                <dl>
+                    <dt>待付款</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>请于<span class="plr12 color-ff4"> <span class="f21" id="hours">2</span> 小时 <span class="f21" id="minutes">59</span> 分 <span class="f21" id="seconds">59</span> 秒</span>内付款。若未及时付款，系统将自动取消订单。</dd>
+                    <dd class="mtb12">支付方式：<span id="PayMethodText">支付宝</span><a href="" class="color-blue ml12" id="otherPayMothed">选择其他支付方式 <strong class="simsun">&gt;</strong></a></dd>
+                </dl>
+            </div>
+            <div class="ml48 clearfix">
+                <a href="javascript:;" class="button-light-256 anim-all" id="paynow">立即付款</a>
+                <input type="hidden" id="orderAmount" value="100.00" />
+                <input type="hidden" id="orderId" value="467947110" />
+                <input type="hidden" id="payType" value="alipay" />
+            </div>
+            
+            <div class="hide" id="hiddenform"></div>
+        </div>
+    </div>
+    
+    <!-- 付款成功 -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl current">成功付款</li>
+                <li class="step-column-4 pr fl">商家发货</li>
+                <li class="step-column-4 pr fl">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-success-36 sprites fl"></div>
+                <dl>
+                    <dt>付款成功</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>如果商家3天内未发货，您可以 <a href="" class="color-blue">联系商家</a> 了解情况。</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 商家已发货 -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl">成功付款</li>
+                <li class="step-column-4 pr fl current">商家发货</li>
+                <li class="step-column-4 pr fl">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-success-36 sprites fl"></div>
+                <dl>
+                    <dt>商家已发货</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>如果已收到货，且对货物满意，您可以<a href="" class="button-light-80 ml12 anim-all">确认收货</a></dd>
+                    <dd>如果未收到货，您可以申请退款或 <a href="" class="color-blue">联系客服</a></dd>
+                    <dd>如果已收到货，但货物有问题，您可以申请退款/退货 </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 交易成功 -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl">成功付款</li>
+                <li class="step-column-4 pr fl">商家发货</li>
+                <li class="step-column-4 pr fl current">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-success-36 sprites fl"></div>
+                <dl>
+                    <dt>交易成功</dt>
+                    <dd>订单号：220886570</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 交易关闭 -->
+    <div class="orderState mt36 clearfix">
+    	<!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-error-36 sprites fl"></div>
+                <dl>
+                    <dt>交易关闭</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>关闭类型：买家未付款</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 已送达 -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl">成功付款</li>
+                <li class="step-column-4 pr fl">商家发货</li>
+                <li class="step-column-4 pr fl current">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-success-36 sprites fl"></div>
+                <dl>
+                    <dt>已送达</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>您已收到货，请给商家<a href="" class="button-default-80 ml12 anim-all">评价</a> </dd>
+                    <dd>如商品有任何质量问题，您可以申请退款/退货 </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 付款成功（申请退款中） -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl current">成功付款</li>
+                <li class="step-column-4 pr fl">商家发货</li>
+                <li class="step-column-4 pr fl">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00 <em class="color-ff4">冻结</em></li>
+                <li class="step-column-4 fl">&nbsp;</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-warning-36 sprites fl"></div>
+                <dl>
+                    <dt>申请退款中</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>如果您想了解更多的退款详情，请选择退款跟踪 </dd>
+                    <dd>或 <a href="" class="color-blue">联系商家</a> 了解情况</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 已发货（申请退款/退货中） -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl">成功付款</li>
+                <li class="step-column-4 pr fl current">商家发货</li>
+                <li class="step-column-4 pr fl">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00 <em class="color-ff4">冻结</em></li>
+                <li class="step-column-4 fl">&nbsp;</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-warning-36 sprites fl"></div>
+                <dl>
+                    <dt>申请退款/退货中</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>如果您想了解更多的退款/退货详情，请选择退款跟踪 </dd>
+                    <dd>或 <a href="" class="color-blue">联系商家</a> 了解情况</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 已送达（申请退款/退货中） -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl">成功付款</li>
+                <li class="step-column-4 pr fl">商家发货</li>
+                <li class="step-column-4 pr fl current">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00 <em class="color-ff4">冻结</em></li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-warning-36 sprites fl"></div>
+                <dl>
+                    <dt>申请退款/退货中</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>如果您想了解更多的退款/退货详情，请选择退款跟踪 </dd>
+                    <dd>或 <a href="" class="color-blue">联系商家</a> 了解情况</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 交易完成 -->
+    <div class="orderState mt36 clearfix">
+    	<!-- 订单状态 -->
+        <div class="orderState-dtl">
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-success-36 sprites fl"></div>
+                <dl>
+                    <dt>交易完成</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>已成功退款，您可以查看退款金额 </dd>
+                    <dd>如果您想了解更多的退款/退货详情，请选择退款跟踪 </dd>
+                    <dd>或 <a href="" class="color-blue">联系商家</a> 了解情况</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 配货中 -->
+    <div class="orderState mt36 clearfix">
+        <!-- 订单步骤 -->
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-4 pr fl">提交订单</li>
+                <li class="step-column-4 pr fl current">成功付款</li>
+                <li class="step-column-4 pr fl">商家发货</li>
+                <li class="step-column-4 pr fl">确认收货</li>
+            </ul>
+        </div>
+        
+        <!-- 订单步骤完成时间 -->
+        <div class="step-box stepBox-time">
+            <ul class="clearfix">
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">14/01/24 16:25:00</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+                <li class="step-column-4 fl">&nbsp;</li>
+            </ul>
+        </div>
+        
+        <!-- 订单状态 -->
+        <div class="orderState-dtl">
+        	<!-- 订单状态 -->
+            <div class="state-dtlTxt clearfix">
+                <div class="icon-success-36 sprites fl"></div>
+                <dl>
+                    <dt>配货中</dt>
+                    <dd>订单号：220886570</dd>
+                    <dd>如果商家3天内未发货，您可以 <a href="" class="color-blue">联系商家</a> 了解情况。</dd>
+                </dl>
+            </div>
+            
+            <!-- 物流追踪 -->
+            <div class="express" id="logistics">
+                <h3>物流追踪</h3>
+                <div class="expressMsg hide mt12">
+                    <dl class="clearfix">
+                        <dt class="fl">发货方式：</dt>
+                        <dd class="fl">快递</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">物流公司：</dt>
+                        <dd class="fl">圆通速递</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">运单号码：</dt>
+                        <dd class="fl">3444990267</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">物流跟踪：</dt>
+                        <dd class="fl">
+                            <ul>
+                                <li>2013-12-28 19:45:14 江苏省南通市海门市公司已收件</li>
+                                <li>2013-12-28 19:45:14 江苏省南通市海门市公司已发出</li>
+                                <li>2013-12-28 19:45:14 南通运转中心公司已发出</li>
+                                <li>2013-12-28 19:45:14 南通运转中心公司已收入</li>
+                                <li>2013-12-28 19:45:14 上海运转中心公司已收入</li>
+                                <li>2013-12-28 19:45:14 上海运转中心公司已发出</li>
+                                <li>2013-12-28 19:45:14 浦东运转中心公司已收入</li>
+                                <li>2013-12-28 19:45:14 浦东运转中心公司已发出</li>
+                                <li>2013-12-28 19:45:14 上海市浦东新区三林一部公司已收入</li>
+                                <li>2013-12-28 19:45:14 上海市浦东新区三林一部公司派件中</li>
+                                <li class="color-green">2013-12-28 19:45:14 上海市浦东新区三林一部公司已签收</li>
+                            </ul>
+                            
+                            <div class="expressExplan mt12">以上信息由物流公司提供，如无跟踪信息或有疑问，请查询 <a href="" class="color-blue">圆通速递</a> 官方网站或联系其公示电话</div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 订单列表 -->    
+    <div class="order-list order-select mt24 pr clearfix">
+        <div class="order-table clearfix">
+        	<table width="100%" border="0">
+            	<colgroup>
+                	<col width="144" />
+                	<col width="200" />
+                	<col width="180" />
+                	<col width="180" />
+                	<col width="180" />
+                	<col width="" />
+                </colgroup>
+                
+            	<thead>
+                	<tr class="order-title color-888">
+                        <th class="tl fn" colspan="2"><div class="order-titleBox pl12">订单信息</div></th>
+                        <th class="fn"><div class="order-titleBox pl12">单价</div></th>
+                        <th class="fn"><div class="order-titleBox pl12">数量</div></th>
+                        <th class="fn"><div class="order-titleBox pl12">售后</div></th>
+                        <th class="fn"><div class="order-titleBox pl12">小计（元）</div></th>
+                    </tr>
+                </thead>
+                
+                <tbody class="tc mt24">
+                	<tr class="set-row">
+                    	<td colspan="6">&nbsp;</td>
+                    </tr>
+                    
+                    <tr class="order-title">
+                        <td colspan="6">
+                            <div class="order-titleBox">
+                                <div class="fl pl12"><a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a></div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="order-bdb">
+                        <td>
+                        	<div class="pl12 ptb12">
+                                <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="pl12 ptb12 tl">
+                                <p class="f13 pb12"><a href="" class="color-blue">皮革手提包</a></p>
+                                <p class="color-888">EDP持久香型</p>
+                                <p class="color-888">30ml</p>
+                            </div>
+                        </td>
+                        <td><div class="pl12 ptb12">460</div></td>
+                        <td><div class="pl12 ptb12">2</div></td>
+                        <td><div class="pl12 ptb12"><a href="" target="_blank" class="color-blue">退款/退货</a></div></td>
+                        <td><div class="pl12 ptb12 color-green f14">1582.00</div></td>
+                    </tr>
+                    
+                    <tr class="order-bdb">
+                        <td>
+                        	<div class="pl12 ptb12">
+                                <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="pl12 ptb12 tl">
+                                <p class="f13 pb12"><a href="" class="color-blue">皮革手提包</a></p>
+                                <p class="color-888">EDP持久香型</p>
+                                <p class="color-888">30ml</p>
+                            </div>
+                        </td>
+                        <td><div class="pl12 ptb12">460</div></td>
+                        <td><div class="pl12 ptb12">2</div></td>
+                        <td><div class="pl12 ptb12"><a href="" target="_blank" class="color-blue">退款/退货</a></div></td>
+                        <td><div class="pl12 ptb12 color-green f14">1582.00</div></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="tr" colspan="6">
+                        	<div class="pr24 pt12">
+                                合计：<span class="f18 color-green">¥330.00</span>
+                            </div>
+						</td>
+                    </tr>
+                </tbody>
+                
+                <tbody class="tc mt24">
+                	<tr class="set-row">
+                    	<td colspan="6">&nbsp;</td>
+                    </tr>
+                    
+                    <tr class="order-title">
+                        <td colspan="6">
+                            <div class="order-titleBox">
+                                <div class="fl pl12"><a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a></div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="order-bdb">
+                        <td>
+                        	<div class="pl12 ptb12">
+                                <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="pl12 ptb12 tl">
+                                <p class="f13 pb12"><a href="" class="color-blue">皮革手提包</a></p>
+                                <p class="color-888">EDP持久香型</p>
+                                <p class="color-888">30ml</p>
+                            </div>
+                        </td>
+                        <td><div class="pl12 ptb12">460</div></td>
+                        <td><div class="pl12 ptb12">2</div></td>
+                        <td><div class="pl12 ptb12"><a href="" target="_blank" class="color-blue">退款跟踪</a></div></td>
+                        <td><div class="pl12 ptb12 color-green f14">1582.00</div></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="tr" colspan="6">
+                        	<div class="pr24 pt12">
+                                合计：<span class="f18 color-green">¥330.00</span>
+                            </div>
+						</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- 收货信息 -->
+    <div class="mt36 clearfix">
+        <div class="pr24 fr">
+            <p>收货信息：林苏恩 18619900816 上海市静安区北京西路1701号静安大厦18楼C座23室</p>
+            <p>支付方式：支付宝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发票信息：普通发票 个人</p>
+        </div>
+    </div>
+    
+    <!-- 订单价格信息 -->
+    <div class="cart-bottomTotal mt24 p24 clearfix">
+        <div class="subTotal pr fr">
+            <dl class="subTotal-outer mt12 clearfix">
+                <dt class="fl">订单小计：</dt>
+                <dd class="fl f14 tr">&yen;2266.80</dd>
+            </dl>
+            
+            <dl class="subTotal-outer mt12 clearfix">
+                <dt class="fl">运费：</dt>
+                <dd class="fl f14 tr">&yen;8.0</dd>
+            </dl>
+            
+            <dl class="subTotal-outer mt12 clearfix">
+                <dt class="fl">50元平台优惠券：</dt>
+                <dd class="fl f14 tr">- &yen;670.00</dd>
+            </dl>
+            
+            <dl class="subTotal-outer mt12 clearfix">
+                <dt class="fl">2400点积分抵扣：</dt>
+                <dd class="fl f14 tr">- &yen;24.00</dd>
+            </dl>
+            
+            <dl class="subTotal-outer mt12 ptb12 totalPay clearfix">
+                <dt class="fl">支付金额 (不含运费)：</dt>
+                <dd class="fl f24 tr color-green">&yen;1576.80</dd>
+            </dl>
+            <p class="color-888 tr">获得积分：150点</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" alt="" width="1280" height="294" title="" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	PayLastTimeSeconds = 100;
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'order': JS_DOMAIN + 'static/member/order/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{order}order'
+	]);    
+	
+	seajs.flush();
+</script>
+</body>
+</html>

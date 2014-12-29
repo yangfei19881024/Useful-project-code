@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>账户设置</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/account/src/account.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">服务中心</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content mt24 clearfix">
+	<div class="subMenu clearfix">
+    	<ul class="f13 clearfix">
+            <li class="fl"><a href="">个人基本信息</a></li>
+            <li class="mlr36 fl">/</li>
+            <li class="f14 fl"><strong>安全设置</strong></li>
+            <li class="mlr36 fl">/</li>
+            <li class="fl"><a href="">收货地址管理</a></li>
+            <li class="mlr36 fl">/</li>
+            <li class="fl"><a href="">第三方帐号绑定</a></li>
+        </ul>
+    </div>
+	
+    <div class="mt24 f18 clearfix">
+    	<h2>安全设置&nbsp;&gt;&nbsp;修改手机</h2>
+    </div>
+    
+    <div class="main mt24 clearfix">
+        <div class="step-box">
+            <ul class="clearfix">
+                <li class="step-column-3 pr fl">验证身份</li>
+                <li class="step-column-3 pr fl current">设置新手机号码</li>
+                <li class="step-column-3 pr fl">完成</li>
+            </ul>
+        </div>
+        
+        <div class="mt36 clearfix">
+        	<ul class="f13 clearfix">
+            	<li class="userInfo-list pb12 clearfix">
+                	<label for="" class="userInfo-name fl">新手机号码</label>
+                    <div class="ml12 fl">
+                    	<input type="text" name="mobile" data-required="true" class="textBox mobile" placeholder="手机号码" data-type="mobile" />
+                    </div>
+                    <div class="ml12 color-red fl" id="error-warning-mobile">&nbsp;</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">验证码</label>
+                    <div class="ml12 fl"><input type="text" name="code" data-min="4" data-max="4" data-required="true" class="textBox code" data-type="number" /></div>
+                    <div class="ml12 fl"><a href="javascript:;" class="button-default-130 anim-all" data-action="getCode">获取短信验证码</a></div>
+                    <div class="ml12 color-red fl" id="error-warning-code">&nbsp;</div>
+                </li>
+                
+            	<li class="userInfo-list pt24 clearfix">
+                	<label for="" class="userInfo-name fl">&nbsp;</label>
+                    <div class="ml12 fl">
+                    	<a href="editMobile-success.html" class="button-light-130 anim-all" id="bindMobile" data-action="setMobile">下一步</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Upload Avator Container -->
+<div id="userUploadAvatorMain"></div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'account': JS_DOMAIN + 'static/member/account/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{account}account'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>账户设置</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/account/src/account.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/jquery-ui.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">服务中心</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content mt24 clearfix">
+	<div class="subMenu clearfix">
+    	<ul class="f13 clearfix">
+            <li class="f14 fl"><strong>个人基本信息</strong></li>
+            <li class="mlr36 fl">/</li>
+            <li class="fl"><a href="">安全设置</a></li>
+            <li class="mlr36 fl">/</li>
+            <li class="fl"><a href="">收货地址管理</a></li>
+            <li class="mlr36 fl">/</li>
+            <li class="fl"><a href="">第三方帐号绑定</a></li>
+        </ul>
+    </div>
+	
+    <div class="mt24 f18 clearfix">
+    	<h2>个人基本信息</h2>
+    </div>
+    
+    <div class="main mt24 clearfix">
+        <!--
+            如果用户的当前头像是系统默认头像 : data-state="default"
+            如果用户的当前头像是用户上传头像 : data-state="upload"
+        -->
+        <div class="userInfo-avator hidden pr fl circle" id="userAvator" data-state="default" data-image="../../../static/temp-images/src/20140506013.jpg">
+            <img src="../../../static/temp-images/src/20140505001.jpg" width="121" height="121"  />
+            
+            <div class="userAvator-state hide f13 tc pa">&nbsp;</div>
+        </div>
+        
+        <div class="userInfo-section ml24 fl">
+            <ul class="pl36 f13 clearfix">
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">昵称</label>
+                    <div class="ml12 fl">玛格丽特</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">手机号码</label>
+                    <div class="ml12 fl">
+                    	<input type="text" class="textBox" name="mobile" placeholder="手机号码" data-min="11" data-max="11" data-requred="true" />
+                    </div>
+                    <div class="ml12 color-red fl" id="error-warning-mobile">&nbsp;</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">手机号码</label>
+                    <div class="ml12 fl"><span class="pr12">ibabybluemumu@gmail.com&nbsp;</span><span class="icon-success-14 sprites"></span>&nbsp;手机已验证</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">手机号码</label>
+                    <div class="ml12 fl"><span class="pr12">ibabybluemumu@gmail.com&nbsp;</span><span class="icon-wait-14 sprites"></span>&nbsp;<a href="" class="color-blue">手机未验证</a></div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">邮箱地址</label>
+                    <div class="ml12 fl">
+                    	<input type="text" class="textBox" name="email" placeholder="邮箱地址" data-type="mobile" />
+                    </div>
+                    <div class="ml12 color-red fl" id="error-warning-email">&nbsp;</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">邮箱地址</label>
+                    <div class="ml12 fl"><span class="pr12">ibabybluemumu@gmail.com&nbsp;</span><span class="icon-success-14 sprites"></span>&nbsp;邮箱已验证</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">邮箱地址</label>
+                    <div class="ml12 fl"><span class="pr12">ibabybluemumu@gmail.com&nbsp;</span><span class="icon-wait-14 sprites"></span>&nbsp;<a href="" class="color-blue">邮箱未验证</a></div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">性别</label>
+                    <div class="userSex-select ml12 fl" data-section="section">
+                        <label for="man"><span class="radio unradio sprites" data-type="checkbox-radio"><input type="radio" name="sex" class="hide" id="man" value="0" /></span>&nbsp;&nbsp;男</label>
+                        <label for="woman"><span class="radio unradio ml24 sprites" data-type="checkbox-radio"><input type="radio" name="sex" class="hide" id="woman" value="1" /></span>&nbsp;&nbsp;女</label>
+                        <label for="secrecy"><span class="radio ml24 sprites" data-type="checkbox-radio"><input type="radio" name="sex" class="hide" id="secrecy" checked value="2" /></span>&nbsp;&nbsp;保密</label>
+					</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">生日</label>
+                    <div class="ml12 pr fl"><input type="text" name="birthday" class="textBox birthday" id="birthday" /><span class="icon-date sprites"></span></div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix" data-datalist="datalist">
+                	<label for="" class="userInfo-name fl">所在地区</label>
+                    
+                    <div class="plugs-select ml12 fl" id="Province-select">
+                        <div class="plugs-select-hd" data-state="databutton">
+                            <h6 class="plugs-select-title" data-id="-1" data-state="title" data-value="-1">请选择</h6>
+                            
+                            <div class="plugs-select-tip">
+                                <div class="plugs-select-tip"></div>
+                            </div>
+                        </div>
+                        
+                        <ul class="plugs-select-bd" data-state="datalist" data-list="province">
+                        </ul>
+                        
+                        <input type="hidden" name="province" class="plugs-select-value" value="-1" />
+                    </div>
+                    
+                    <div class="plugs-select ml12 fl" id="City-select">
+                        <div class="plugs-select-hd" data-state="databutton">
+                            <h6 class="plugs-select-title" data-id="-1" data-state="title" data-value="-1">请选择</h6>
+                            
+                            <div class="plugs-select-tip">
+                                <div class="plugs-select-tip"></div>
+                            </div>
+                        </div>
+                        
+                        <ul class="plugs-select-bd" data-state="datalist" data-list="city">
+                        </ul>
+                        
+                        <input type="hidden" name="city" class="plugs-select-value" value="-1" />
+                    </div>
+                    
+                    <div class="plugs-select ml12 fl" id="District-select">
+                        <div class="plugs-select-hd" data-state="databutton">
+                            <h6 class="plugs-select-title" data-id="-1" data-state="title" data-value="-1">请选择</h6>
+                            
+                            <div class="plugs-select-tip">
+                                <div class="plugs-select-tip"></div>
+                            </div>
+                        </div>
+                        
+                        <ul class="plugs-select-bd" data-state="datalist" data-list="district">
+                        </ul>
+                        
+                        <input type="hidden" name="district" class="plugs-select-value" value="-1" />
+                    </div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">详细地址</label>
+                    <div class="ml12 fl"><input type="text" name="address" data-min="5" data-max="120" class="textBox w434" placeholder="不需重复填写省市区，5~120个字符" /></div>
+                    <div class="ml12 color-red fl" id="error-warning-address">&nbsp;</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">邮政编码</label>
+                    <div class="ml12 fl"><input type="text" name="zipcode" data-min="6" data-max="6" class="textBox" data-type="number" /></div>
+                    <div class="ml12 color-red fl" id="error-warning-zipcode">&nbsp;</div>
+                </li>
+                
+            	<li class="userInfo-list ptb12 clearfix">
+                	<label for="" class="userInfo-name fl">固定电话</label>
+                    <div class="ml12 fl">
+                    	<input type="text" name="code" class="textBox" placeholder="区号" data-type="number" /><span class="plr12">-</span><input type="text" name="tel" class="textBox" placeholder="电话号码" data-type="number" /><span class="plr12">-</span><input type="text" name="ext" class="textBox" placeholder="分机号" data-type="number" />
+                    </div>
+                    <div class="ml12 color-red fl" id="error-warning-tel">&nbsp;</div>
+                </li>
+                
+            	<li class="userInfo-list pt24 clearfix">
+                	<label for="" class="userInfo-name fl">&nbsp;</label>
+                    <div class="ml12 fl">
+                    	<a href="" class="button-light-146 anim-all" id="saveUserInfo" data-action="saveUserInfo">保存</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Upload Avator Container -->
+<div id="userUploadAvatorMain"></div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: 'http://localhost',
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'user': JS_DOMAIN + 'static/member/user/'+ SEAJS_VERSION +'/',
+			'account': JS_DOMAIN + 'static/member/account/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{common}address',
+		'{user}user',
+		'{account}account'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

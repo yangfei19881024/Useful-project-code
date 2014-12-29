@@ -1,0 +1,1039 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页++</title>
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<script type="text/javascript" src="../../../sea-modules/browser-version/browser-version.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/home/src/home.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/viewport.css" media="(orientation:portrait) or (orientation:landscape)" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            
+            <a href="" class="user-lo">谁是蘑菇头</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+            
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <em class="userCart-text-full sprites fl hide">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span><!--<a href="" class="ml12 f14 color-888">箱包</a>-->
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f16 fl">
+        <a href="" class="ml12 fl english"><p><span></span></p>英国</a>
+        <a href="" class="ml12 fl us"><p><span></span></p>美国</a>
+        <a href="" class="ml12 fl italy"><p><span></span></p>意大利</a>
+        <a href="" class="ml12 fl korea"><p><span></span></p>韩国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content clearfix">
+	<!-- 大图切换 -->
+	<div class="banner pr" data-cate="picture" data-size="{ width:996, height:380}">
+        <div class="banner-preview pr">
+            <ul class="banner-list clearfix" data-list="datalist">
+                <li class="fl"><a href=""><img src="../../../static/temp-images/src/banner1.jpg" width="996" height="380" alt="" class="vt" /></a></li>
+                <li class="fl"><a href=""><img src="../../../static/temp-images/src/banner2.jpg" width="996" height="380" alt="" class="vt" /></a></li>
+                <li class="fl"><a href=""><img src="../../../static/temp-images/src/banner1.jpg" width="996" height="380" alt="" class="vt" /></a></li>
+            </ul>
+        </div>
+        
+        <div class="control-list pt12 clearfix">
+            <a href="javascript:;" class="control-list-button control-list-current"></a>
+            <a href="javascript:;" class="control-list-button"></a>
+            <a href="javascript:;" class="control-list-button"></a>
+        </div>
+        
+        <div class="control-list clearfix" data-button="true">
+            <a href="javascript:;" class="control-pre f30"><strong>&lt;</strong></a>
+            <a href="javascript:;" class="control-next f30"><strong>&gt;</strong></a>
+        </div>
+    </div>
+    
+    <!-- 喜地严选 -->
+    <div class="recommend-outer mt24 clearfix">
+        <div class="fl">
+        	<img src="../../../static/temp-images/src/20140601101.png" width="108" height="259" />
+        </div>
+        
+        <div class="recommend-list fl">
+        	<ul class="pro-list clearfix">                
+                <li class="pro-item-156 p12 fl">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509002.jpg" width="156" height="156" title="" alt="" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item-156 p12 fl">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509003.jpg" width="156" height="156" title="" alt="" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item-156 p12 fl">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509004.jpg" width="156" height="156" title="" alt="" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item-156 p12 fl">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509005.jpg" width="156" height="156" title="" alt="" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item-156 p12 fl">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509004.jpg" width="156" height="156" title="" alt="" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 新西兰 -->
+    <div class="mt36 clearfix">
+    	<div class="category-module-head lh38 clearfix">            	
+            <img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="pt5 fl">
+            <h6 class="pl12 f16 fl">新西兰</h6>
+            <span class="color-c3 pl12 fl">|</span>
+            <ul class="fl">
+                <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+            </ul>
+            
+            <dl class="fr">
+            	<dt class="color-888 fl">特产</dt>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+            </dl>
+        </div>
+        
+        <div class="pt24 clearfix">
+            <ul class="item-preview-list clearfix">
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+                
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+                
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="mt24 clearfix">
+            <ul class="item-preview-list clearfix">
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 韩国 -->
+    <div class="mt36 clearfix">
+    	<div class="category-module-head lh38 clearfix">            	
+            <img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="pt5 fl">
+            <h6 class="pl12 f16 fl">韩国</h6>
+            <span class="color-c3 pl12 fl">|</span>
+            <ul class="fl">
+                <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+            </ul>
+            
+            <dl class="fr">
+            	<dt class="color-888 fl">特产</dt>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+            </dl>
+        </div>
+        
+        <div class="pt24 clearfix">
+            <ul class="item-preview-list clearfix">
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+                
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+                
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 德国 -->
+    <div class="mt36 clearfix">
+    	<div class="category-module-head lh38 clearfix">            	
+            <img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="pt5 fl">
+            <h6 class="pl12 f16 fl">德国</h6>
+            <span class="color-c3 pl12 fl">|</span>
+            <ul class="fl">
+                <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+            </ul>
+            
+            <dl class="fr">
+            	<dt class="color-888 fl">特产</dt>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+            </dl>
+        </div>
+        
+        <div class="mt24 clearfix">
+            <ul class="item-preview-list clearfix">
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+                
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 法国 -->
+    <div class="mt36 clearfix">
+    	<div class="category-module-head lh38 clearfix">            	
+            <img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="pt5 fl">
+            <h6 class="pl12 f16 fl">法国</h6>
+            <span class="color-c3 pl12 fl">|</span>
+            <ul class="fl">
+                <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+            </ul>
+            
+            <dl class="fr">
+            	<dt class="color-888 fl">特产</dt>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+            </dl>
+        </div>
+        
+        <div class="mt24 clearfix">
+            <ul class="item-preview-list clearfix">
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="mlr12 pr fl">
+                    <a href="" class="block">
+                        <img src="../../../static/temp-images/src/Act316.jpg" width="316" height="316" class="block" />
+                        
+                        <dl class="item-preview-info pa">
+                            <dt class="plr24 f16 color-white">韩国最潮女士休闲服</dt>
+                            <dd class="plr24 f13 color-c3">50% Off,最后一周全面五折</dd>
+                        </dl>
+                    </a>
+                </li>
+                
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 意大利 -->
+    <div class="mt36 clearfix">
+    	<div class="category-module-head lh38 clearfix">            	
+            <img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="pt5 fl">
+            <h6 class="pl12 f16 fl">意大利</h6>
+            <span class="color-c3 pl12 fl">|</span>
+            <ul class="fl">
+                <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+            </ul>
+            
+            <dl class="fr">
+            	<dt class="color-888 fl">特产</dt>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+                <dd class="border-d ml12 fl"><a href=""><img src="../../../static/temp-images/src/icon3.png" width="36" height="36" /></a></dd>
+            </dl>
+        </div>
+        
+        <div class="mt24 clearfix">
+            <ul class="item-preview-list clearfix">
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item-outer plr12 fl">
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table item-outer-box anim-all">
+                        <div class="table-row">                        
+                            <div class="table-cell">
+                                <div class="item-outer-inner p24">
+                                    <a href="" class="block">
+                                        <p class="f13">AD男鞋</p>
+                                        <p class="color-green f16">¥520.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="table-cell">
+                                <div class="item-outer-image">
+                                    <a href="" class="block"><img src="../../../static/temp-images/src/Img156_14.jpg" width="156" height="156" class="vt" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <div class="footer_a"><div class="footer_aa">
+        <div class="footer_a_in footer_a_a">
+            <span class="icon-footer icon-footer_03"></span>
+            <div class="footer_a_text">
+                <p class="f16">海外原产</p>
+                <p class="f13 color-999">工厂授权 产地严选</p>
+            </div>
+        </div><div class="footer_a_in footer_a_b">
+            <span class="icon-footer icon-footer_05"></span>
+            <div class="footer_a_text">
+                <p class="f16">良心平价</p>
+                <p class="f13 color-999">整合渠道 平价零售</p>
+            </div>
+        </div><div class="footer_a_in footer_a_c">
+            <span class="icon-footer icon-footer_07"></span>
+            <div class="footer_a_text">
+                <p class="f16">正源正品</p>
+                <p class="f13 color-999">海关监管 品质保证</p>
+            </div>
+        </div><div class="footer_a_in footer_a_d">
+            <span class="icon-footer icon-footer_09"></span>
+            <div class="footer_a_text">
+                <p class="f16">上海起送</p>
+                <p class="f13 color-999">上海发货 便捷送达</p>
+            </div>
+        </div>
+    </div></div>
+    <div class="footer_b">
+        <div class="footer_bb">
+            <div class="footer_b_in footer_b_a">
+                <p class="f16 footer_b_t">购物指南</p>
+                <p class="f13"><a href="/help/faq">常见问题</a></p>
+                <p class="f13"><a href="/help/flow">购物流程</a></p>
+            </div><div class="footer_b_in footer_b_b">
+                <p class="f16 footer_b_t">支付配送</p>
+                <p class="f13"><a href="/help/pay">支付方式</a></p>
+                <p class="f13"><a href="/help/delivery">配送方式</a></p>
+            </div><div class="footer_b_in footer_b_c">
+                <p class="f16 footer_b_t">售后服务</p>
+                <p class="f13"><a href="/help/returns">退货规则</a></p>
+                <p class="f13"><a href="/help/refund">退款规则</a></p>
+                <p class="f13"><a href="/complaint/edit">投诉</a></p>
+            </div><div class="footer_b_in footer_b_d">
+                <p class="f16 footer_b_t">招商合作</p>
+                <p class="f13"><a href="/about/cooperation">入驻喜地</a></p>
+                <p class="f13"><a href="/about/cooperation">推荐商品</a></p>
+            </div><div class="footer_b_in footer_b_f">
+                <p class="f24 footer_b_t footer_tel">400-0066-200</p>
+                <p class="f13">周一至周日 8:00-18:00</p>
+                <p class="f13">仅收市话费</p>
+            </div>
+        </div>
+        <div class="footer_foot">
+            <div class="footer_f_l">
+                <span class="icon-footer_16"></span>
+                <p class="ml12">© 2014 Xidibuy.com 版权所有</p>
+                <p class="ml12">沪ICP备09066290号</p>
+            </div>
+            <div class="footer_f_r">
+                <p><a href="/about/info">了解喜地</a>|</p>
+                <p><a href="/about/careers">加入喜地</a>|</p>
+                <p><a href="/about/legal">法律声明</a>|</p>
+                <p class="footer_last"><a href="/about/contact">联系喜地</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="http://static.xidibuy.com/static/sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="http://static.xidibuy.com/static/sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="http://static.xidibuy.com/static/sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+            'home': JS_DOMAIN + 'static/system/home/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{home}homes'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

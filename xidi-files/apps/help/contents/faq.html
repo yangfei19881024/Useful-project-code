@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助中心</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/help/contents/src/contents.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">            
+        <div class="searchBox fl">                
+            <div class="search-bar">
+                <div class="searchsugbox none">
+                    <ul class="search-sug">
+                        <li class="graysug">最近搜索<i class="searchicons"></i></li>
+                    </ul>
+                    <ul class="search-interest">
+                        <li class="graysug">您可能感兴趣</li>
+                    </ul>
+                </div>
+                
+                <input type="text" class="searchkey anim-all fl" />
+                <input type="button" class="search-button anim-all sprites fr" />
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2><a href="../home/home.html">帮助中心</a>&nbsp;&gt;&nbsp;常见问题</h2>
+    </div>
+    
+	<div class="main mt36 clearfix">
+    	<div class="help-aside fl">
+        	<div class="plr12 clearfix">
+            	<ul class="pt12 pb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="faq.html" class="block pr iconw">
+                            <span class="help-icon-question icons"></span>
+                            <h6>常见问题</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="flow.html" class="block pr iconw">
+                            <span class="help-icon-progress icons"></span>
+                            <h6>购物流程</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+            	<ul class="ptb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="pay.html" class="block pr iconw">
+                            <span class="help-icon-payType icons"></span>
+                            <h6>支付方式</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="delivery.html" class="block pr iconw">
+                            <span class="help-icon-shipping icons"></span>
+                            <h6>配送方式</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+            	<ul class="ptb24 tc clearfix">
+                	<li class="clearfix">
+                    	<a href="return.html" class="block pr iconw">
+                            <span class="help-icon-returnGoods icons"></span>
+                            <h6>退货规则</h6>
+                        </a>
+                    </li>
+                    
+                	<li class="clearfix">
+                    	<a href="refund.html" class="block pr iconw">
+                            <span class="help-icon-refund icons"></span>
+                            <h6>退款规则</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="help-section fl">
+        	<div class="help-section-body clearfix">
+                <div class="dotted-bottom list pb48">
+                	<h3 class="f18"  id="account">账户类</h3>
+                    <div class="faq f13">
+                        <h4 id="account1">如何注册喜地？</h4>
+                        点击页顶的<a href="http://www.xidibuy.com/signup/index" target="_blank" class="color-blue">注册</a>进入注册页面，填写个人信息，点击“同意协议并注册”，完成注册。 <br />
+                        登录个人邮箱，找到标题为“欢迎您加入喜地”的邮件，打开后点击“验证邮箱”即可。<br /><br />
+                        温馨提示 <br />
+                        <p class="help_p"><span class="list_suo">( 1 )</span> 请务必填写正确有效的注册邮箱地址，否则当您忘记注册密码时，将无法成功找回，只能重新注册新用户。</p>
+                        <p class="help_p"><span class="list_suo">( 2 )</span> 注册成功后，您可以修改邮箱地址、昵称、密码等个人信息。 </p>
+                        <p class="help_p"><span class="list_suo">( 3 )</span> 系统会发送验证邮件到您的注册邮箱，若您长时间未收到邮件，请点击“重新发送”。</p>
+                        <p class="help_p"><span class="list_suo">( 4 )</span> 若您使用未验证成功的邮箱登录，点击登录后，系统会重新发送验证邮件到您的邮箱。 </p>
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="account2"> 如何提高我账户的安全性？</h4>
+                        您可以登录喜地账户， 在“我的喜地-账户信息”里，通过经常性修改密码、绑定账户到邮箱和手机的方式增加账户安全系数，保证账户安全。<br />
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="account3"> 登陆时显示账户异常怎么办？</h4>
+                        若您的账户登陆时存在异常，请及时<a href="../../system/about/contact.html" target="_self" class="color-blue">联系客服</a>。<br />
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="account4"> 密码设置技巧有哪些？</h4>
+                        <p>为了您的账户安全，在设置密码时，请参考以下建议：</p>
+                        <p class="help_p"><span class="list_suo">( 1 )</span>密码由6-20位字符组成（字母区分大小写）。</p>
+                        <p class="help_p"><span class="list_suo">( 2 )</span>请使用数字、字母或符号的组合，如：gklfd_157、89712am%&等。</p>
+                        <p class="help_p"><span class="list_suo">( 3 )</span>果设置如下安全性较低的密码，系统会提醒您修改密码以保证安全性：</p>
+                        <p class="help_p2"><span class="list_suo2">a</span>全部由数字组成；</p>
+                        <p class="help_p2"><span class="list_suo2">b</span>全部由字母组成；</p>
+                        <p class="help_p2"><span class="list_suo2">c</span>全部由同一字符组成；</p>
+                        <p class="help_p2"><span class="list_suo2">d</span>与用户名或邮箱相同。</p>
+                        <p class="help_p"><span class="list_suo">( 4 )</span>定期修改密码，并做好记录工作，以免忘记。</p>
+                        <p class="help_p"><span class="list_suo">( 5 )</span>不要将支付密码和登录密码设置为同一密码。</p>
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="account5">验证邮箱手机的好处有哪些？</h4>
+                        验证手机、邮箱后，当您的账户余额发生变动时，我们将第一时间短信或邮件通知您，保障您的资金安全。
+                    </div>
+                </div>
+                <div class="dotted-bottom list pb48">
+                    <h3 class="f18 pt60" id="shop">购物类</h3>
+                    <div class="faq f13">
+                        <h4 id="shop1">订单提交成功后还可以修改订单信息吗？</h4>
+                        很抱歉，订单一旦提交后将无法修改。订单生成后3小时未付款，系统自动取消订单。已付款订单如有紧急问题（如写错地址、电话等）请<a href="../../system/about/contact.html" target="_self" class="color-blue">联系客服</a>。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="shop2">订单拒收后，退款什么时候返还？</h4>
+                        如果订单进行了拒收，需要订单商品入仓后才能办理相关退款，您可以在拒收商品后联系客服进行处理，给您带来的不便请谅解！
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="shop3">商品包装是否有保证？</h4>
+                        我们所发送商品均由专人进行打包，商品在未签收前都由我们负责，如在收到商品时发现包装有破损或是其它方面问题，请直接致电客服热线400-0066-200，客服人员会帮您解决。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="shop4">为什么我的订单总是无法提交成功？</h4>
+                        可能存在以下几种情况：
+                        <p class="help_p"><span class="list_suo">( 1 )</span>订单信息填写不完整；</p>
+                        <p class="help_p"><span class="list_suo">( 2 )</span>订单商品库存不足或者库存无货；</p>
+                        <p class="help_p"><span class="list_suo">( 3 )</span>订单商品不能配送到您所填写的收货地址；</p> 
+                        <p class="help_p"><span class="list_suo">( 4 )</span>网络延时以上各种情况都会在页面中弹出提示信息，可以通过修改订单信息（提示信息）或者稍后再试，即可成功提交订单。</p>
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="shop5">在加入购物车后，是不是该商品已经被我预定了？</h4>
+                        并不是，如果您想订购该商品，请把该商品加入购物车后进行结算。提交订单成功后，货物将在库存中锁定，若已锁定的库存在3小时内未完成支付，库存将重新释放。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="shop6">
+                            支付不成功的原因有哪些？
+                        </h4>
+                        <p class="help_p"><span class="list_suo">( 1 )</span>您的银行卡尚未开通网上银行支付功能，建议您到当地营业厅开通网上银行；</p>
+                        <p class="help_p"><span class="list_suo">( 2 )</span>所用银行卡超出该银行支持地域范围，请您更换银行卡试试；</p>
+                        <p class="help_p"><span class="list_suo">( 3 )</span>银行卡已过期、作废、挂失或者余额不足等，建议您咨询您的开户行；</p>
+                        <p class="help_p"><span class="list_suo">( 4 )</span>输入的银行卡号、密码或证件号等与预置的不符，建议您重新输入正确的卡密码或证件号等，如果您忘记了密码，请您及时与所属银行联系办理密码重置；</p>
+                        <p class="help_p"><span class="list_suo">( 5 )</span>银行系统数据传输可能出现异常，建议您刷新页面或者稍后重启电脑；</p>
+                        <p class="help_p"><span class="list_suo">( 6 )</span>您的网上银行支付有限额，详情请咨询银行客服热线；</p>
+                        <p class="help_p"><span class="list_suo">( 7 )</span>使用支付宝详情请咨询支付宝客服热线。</p>
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="shop7">什么情况下回中止交易？</h4>
+                        <p class="help_p"><span class="list_suo">( 1 )</span>您的订单提交成功后，三个小时内没有付款，默认交易中止；</p>
+                        <p class="help_p"><span class="list_suo">( 2 )</span>如果订单状态在配货中，喜地不支持交易中止，有特殊情况请<a href="../../system/about/contact.html" target="_self" class="color-blue">联系客服</a>；</p>
+                        <p class="help_p"><span class="list_suo">( 3 )</span>发货中如快递原因、天气原因等无法送达的，请<a href="../../system/about/contact.html" target="_self" class="color-blue">联系客服</a>；</p>
+                        <p class="help_p"><span class="list_suo">( 4 )</span>收到货之后，喜地支持7天内退货退款。</p>
+                    </div>
+                </div>
+                <div class="dotted-bottom list pb48">
+                    <h3 class="f18 pt60" id="delivery">配送类</h3>
+                    <div class="faq f13">
+                        <h4 id="delivery1">订单已提交成功，什么时候可以发货？</h4>
+                        订单提交成功后我们会尽快发货，详细进度您可以进入“我的订单”，实时查看订单进度。<br />
+                        <a href="delivery.html#policy" target="_self">查看发货政策</a>
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="delivery2">订单已提交成功，可以改送到其他地方吗？</h4>
+                        订单一旦提交成功，将无法修改。请在提交订单前仔细检查核对。如有紧急问题（如写错地址、电话等）请<a href="../../system/about/contact.html" target="_self" class="color-blue">联系客服</a>。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="delivery3">请问如何联系到给我送货的快递员？</h4>
+                        建议您按照订单跟踪中的运单号在相关物流公司网站查询。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="delivery4">签收后可以当场验收商品吗？</h4>
+                        您签收后，可以当场验收商品，如商品本身有问题请您在“我的订单”中提交退换货申请，将有专业售后人员为您解决。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="delivery5">签收时发现商品包装破损，该如何处理？</h4>
+                        商品签收时如包装有破损，请您直接拒收；商品签收后如商品本身有问题请您在“我的喜地”中提交退换货申请，将有专业售后人员为您解决。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="delivery6">客户订单收取了运费，若后期发生退货的情况，之前的运费会退给客户吗？</h4>
+                        如果是商品因质量问题产生退换货，喜地将返还运费，如果非商品质量问题产生的退换货，运费将不予返还。
+
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="delivery7">快递告知丢件，怎么处理？</h4>
+                        建议客户提交退款申请，如您还需要该商品请重新下单购买。
+                    </div>
+                </div>
+                <div class="dotted-bottom list pb48">
+                    <h3 class="f18 pt60" id="refund"> 退款/退货类</h3>
+                    <div class="faq f13">
+                        <h4 id="refund1">喜地所售商品是否都支持7天无理由退货？</h4>
+                        喜地部分商品不支持7天无理由退货，详情请您查看<a href="" class="color-blue">售后服务</a>。其他符合条件的均默认支持7天无理由退货服务。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="refund2">购买的商品出现质量问题或发错货如何处理？</h4>
+                        喜地承诺符合售后退货规则的商品，由售出之日（以实际收货日期为准）起7日内可以退货，客户可以登陆进入“我的订单”提交退货申请。
+
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="refund3">为什么退款/退货申请没有审核通过？</h4>
+                        您可在退款/退货详情页查看原因。具体请登录喜地账户，在“我的订单”查看相应记录。
+
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="refund4">网上退货申请提交后发现出错如何修改？</h4>
+                        出现此类问题可以拨打客服电话400-0066-200进行咨询，由客服人员给您处理方案。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="refund5">退货运费是如何收取的？</h4>
+                        商品因质量问题发生的退货，由喜地承担退货运费；如果由于您的原因产生退货，需要您自己承担退货运费。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="refund6">什么时候可以收到退款？</h4>
+                        我们会第一时间为您办理退款，具体到款时间根据您的开户行不同略有差异，大概为1-7个工作日，详请联系您开卡行。详情见<a href="refund.html" target="_self" class="color-blue">退款规则。</a>
+                    </div>
+                </div>
+                <div class="dotted-bottom list pb48">
+                    <h3 class="f18 pt60" id="billing">发票类</h3>
+                    <div class="faq f13">
+                        <h4 id="billing1">如何获取发票？</h4>
+                        喜地所售商品都是正品行货，每张订单均自带中文机打的“商品专用发票”，此发票可用作单位报销凭证，下单时可自助开取。发票金额不含配送费金额。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="billing2">如何设置发票信息？</h4>
+                        请您在订单结算时的页面“发票信息”选项中设置发票信息。
+
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="billing3">开发票的注意事项？</h4>
+                        <p class="help_p"><span class="list_suo">( 1 )</span>发票金额不能高于订单商品金额。 <br />
+                        <p class="help_p"><span class="list_suo">( 2 )</span>商品发票开具为明细。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="billing4">怎么换发票？</h4>
+                        您在收到发票后如果发现因喜地原因，票据抬头、内容或金额错误，请您致电客服电话400-0066-200，由客服人员为您办理换发票事宜，往返快递费用由喜地承担。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="billing5">如何开具增值税发票？</h4>
+                        如需开具增值税专用发票，请拨打客服电话400-0066-200，了解相关规则流程。
+                    </div>
+                </div>
+                <div class="pl36 list pr36">
+                    <h3 class="f18 pt60" id="service">客服类</h3>
+                    <div class="faq f13">
+                        <h4 id="service1">如果我有问题或建议如何向喜地反馈？</h4>
+                        如果您对商品或服务有不满，可以提出<a href="../complaints/complaints.html" target="_self" class="color-blue">投诉</a> (仅限注册用户)。如果您对喜地有任何意见或建议，欢迎提交<a href="javascript:void(0);" class="color-blue">意见反馈</a>，或将您姓名、联系方式及相关信息写明，发送至<a href="" class="email color-blue"></a>。喜地会尽快给予答复或处理。
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="service2">客服电话的工作时间是？</h4>
+                        400-0066-200的工作时间是周一至周日8:00-18:00（仅收市话费）。服务范围包括订单自助查询、订单服务、售后服务、意见与建议。未开通400服务地区的客户请拨打021-00000000。
+
+                    </div>
+                    <div class="faq f13">
+                        <h4 id="service3">如何联系在线客服？</h4>
+                        点击页面右侧的客服图标进入在线客服窗口
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="help-aside-right fl f13">
+                <ul>
+                    <li class="c_active" data-id="account"><i>●</i> <a href="#account">账户类</a></li>
+                    <li data-id="shop"><i> ● </i> <a href="#shop">购物类</a></li>
+                    <li data-id="delivery"><i> ● </i> <a href="#delivery">配送类</a></li>
+                    <li data-id="refund"><i> ● </i> <a href="#refund">退款/退货类</a></li>
+                    <li data-id="billing"><i> ● </i> <a href="#billing">发票类</a></li>
+                    <li data-id="service"><i> ● </i> <a href="#service">客服类</a></li>
+                </ul>
+        </div>
+    </div>
+    
+</div>
+
+<div class="float_sidebar">
+    <ul>
+        <li class="top"></li>
+        <li class="service"></li>
+        <li class="feedback"></li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+</script>
+
+<script>
+    var control = $('.help-aside-right');
+    var position = control.offset().top;
+    $('h3','.list').each(function(){
+            $(this).attr('data-top',$(this).offset().top)
+        })
+    $(document).on('scroll',function(){
+        var scroll=window.scrollY;
+        if(scroll-position >= -50){//control position
+            control.addClass('control_fixed');
+        }else{
+            control.removeClass('control_fixed')
+        }
+
+        var ary = [];
+        $('h3','.list').each(function(){
+            ary.push($(this).data('top')-scroll);
+        })
+        var index,min;
+        $.each(ary,function(i,n){
+            if(n>0){
+                if(index){
+                    if(min>n){
+                        index =i ; min=n;
+                    }else{
+
+                    }
+                }else{
+                    index = i;min = n;
+                }
+            }
+        })
+        if(!index){index=$('.help-aside-right li').last().index()+1;}
+        var id = $('h3','.list').eq(index-1).attr("id");
+
+        $('[data-id='+id+']').addClass('c_active').siblings().removeClass('c_active');
+
+    });
+
+    var mt='mailto:',s='service',a='@',d='xidibuy.com';
+    $('.email').attr('href',mt+s+a+d).text(s+a+d);
+    
+</script>
+
+</body>
+</html>

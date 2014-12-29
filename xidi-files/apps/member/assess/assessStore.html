@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>评价管理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/assess/src/assess.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">服务中心</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+   <!--  <div class="assess-hd clearfix">
+    	<h2>评价管理 > 商品评价</h2>
+    </div> -->
+    <div class="store-assess-list">
+        <img src="../../../static/temp-images/src/assess_store.png" alt="" />
+        <div class="store-assess-in">
+                <h2>用户评价<span>(25)</span></h2>
+                <!-- 没有评论的时候只显示这一块儿
+                    <div class="store-assess-detail clearfix">
+                        <div class="sADetailLeft fl">
+                            <p class="grayc">
+                                这个商品还没有评论,赶快来抢沙发~
+                            </p>
+                        </div>
+                    </div>
+                -->
+                <div class="store-assess-detail clearfix">
+                    <div class="sADetailLeft fl">
+                        <p>质感绝佳的上等意大利牛皮,穿起来很舒服,款式也很潮.</p>
+                        <p class="grayc">
+                            12/02/12 &nbsp;&nbsp;|&nbsp;&nbsp; EDP持久香久型 35ml
+                        </p>
+                    </div>
+                    <div class="sADetailRight fr">
+                        <p class="stars">
+                            <img src="../../../static/global/images/src/star.png" />
+                        </p>
+                        <p class="grayc">
+                            张宇
+                        </p>
+                    </div>
+                </div>
+                <div class="store-assess-detail clearfix">
+                    <div class="sADetailLeft fl">
+                        <p>质感绝佳的上等意大利牛皮,穿起来很舒服,款式也很潮.质感绝佳的上等意大利牛皮,穿起来很舒服,款式也很潮质感绝佳的上等意大利牛皮,穿起来很舒服,款式也很潮</p>
+                        <p class="grayc">
+                            12/02/12 &nbsp;&nbsp; | &nbsp;&nbsp;EDP持久香久型 35ml
+                        </p>
+                        <p class="assess-reply"><span>卖家回复:</span>发货和物流都非常快,家里白猫非常爱吃,大猫不肯吃,跟大猫抗争了三天,混着以前的猫粮,大猫现在完全接受了,很爱吃,这代吃光还买你家的,全五分好评</p>
+                        <p class="grayc">
+                            12/03/14
+                        </p>
+
+                    </div>
+                    <div class="sADetailRight fr">
+                        <p class="stars">
+                            <img src="../../../static/global/images/src/star.png" alt="" />
+                        </p>
+                        <p class="grayc">
+                            Cindy
+                        </p>
+                    </div>
+                </div>
+                <div class="store-assess-detail clearfix">
+                    <div class="sADetailLeft fl">
+                        <p>商品不错哦~</p>
+                        <p class="grayc">
+                            12/02/12&nbsp;&nbsp;|&nbsp;&nbsp;Nike球鞋 42码
+                        </p>
+                    </div>
+                    <div class="sADetailRight fr">
+                        <p class="stars">
+                            <img src="../../../static/global/images/src/star.png" alt="" />
+                        </p>
+                        <p class="grayc">
+                            Cindy
+                        </p>
+                    </div>
+                </div>
+                <!-- Page -->
+                 <div class="page tc clearfix">
+                    <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+                    <a href="" class="page-button inline-block page-current">1</a>
+                    <a href="" class="page-button inline-block">2</a>
+                    <a href="" class="page-button inline-block">3</a>
+                    <a href="" class="page-button inline-block">4</a>
+                    <span class="page-elps inline-block">…</span>
+                    <a href="" class="page-button inline-block">10</a>
+                    <a href="" class="page-button page-next inline-block">&gt;</a>
+                </div>
+        </div>
+        <div class="more-product">
+            <h2>更多意大利相关商品</h2>
+            <div class="more-pre"></div>
+            <div class="more-next"></div>
+            <div class="more-product-in">
+                <ul class="clearfix">
+                    <li>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail mPDetail_last">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail mPDetail_last">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                        <div class="mPDetail mPDetail_last">
+                            <a href=""><img src="../../../static/temp-images/src/Img316-2.jpg" /></a>
+                            <p class="mPTtile">
+                                Stella Artois春夏羊皮手提包
+                            </p>
+                            <p class="price">￥468</p>
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+            <p class="mPControl"><span class="current"></span><span></span><span></span></p>
+        </div>
+         
+       
+    </div>
+
+    
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<script language="JavaScript" type="text/javascript" src="<?php echo JS_DOMAIN ?>??js/jquery/jquery1.8.2.min.js,js/jquery/jquery.cookie.js,js/seajs/sea.js,js/seajs/plugin-flush.js,js/common/common.js,js/common/common_func.js"></script>
+
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+    XD = {};
+    DOMAIN = 'http://www.xidibuy.com/';
+    
+    if(location.href.indexOf('dev') > 0)
+    {
+        JS_DOMAIN = '/webfiles/xidi-files/';
+        SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+    
+    seajs.config({
+        base:'http://static.xidibuy.com/',
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+        vars: {
+            'url': JS_DOMAIN + 'static/',
+            'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+            'assess': JS_DOMAIN + 'static/member/assess/'+ SEAJS_VERSION +'/'
+        },
+        paths:{
+            'dev': '../../../static/'
+        }
+    });
+    
+    seajs.use([
+        '{common}common',
+        'static/member/assess/1.0.0/assess'
+    ]);    
+    
+    seajs.flush();
+</script>
+</body>
+</html>

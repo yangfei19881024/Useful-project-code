@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于喜地</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/about/src/about.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">            
+        <div class="searchBox fl">                
+            <div class="search-bar">
+                <div class="searchsugbox none">
+                    <ul class="search-sug">
+                        <li class="graysug">最近搜索<i class="searchicons"></i></li>
+                    </ul>
+                    <ul class="search-interest">
+                        <li class="graysug">您可能感兴趣</li>
+                    </ul>
+                </div>
+                
+                <input type="text" class="searchkey anim-all fl" />
+                <input type="button" class="search-button anim-all sprites fr" />
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2>关于喜地&nbsp;&gt;&nbsp;了解喜地</h2>
+    </div>
+    
+	<div class="main mt36 clearfix">
+    	<div class="help-aside fl">
+            <div class="plr12 clearfix">
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix ">
+                        <a href="info.html" class="block pr iconw">
+                            <span class="icon-about_03 icons"></span>
+                            <h6>了解喜地</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="contact.html" class="block pr iconw">
+                            <span class="icon-about_06 icons"></span>
+                            <h6>联系喜地</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="cooperation.html" class="block pr iconw">
+                            <span class="icon-about_18 icons"></span>
+                            <h6>商户合作</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="careers.html" class="block pr iconw">
+                            <span class="icon-about_20 icons"></span>
+                            <h6>加入我们</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="legal.html" class="block pr iconw">
+                            <span class="icon-about_22 icons"></span>
+                            <h6>法律声明</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 每一个 help-section-body 里面应该放一个 自定义编辑器 -->
+        <div class="help-section fl">
+        	<!-- <div class="help-section-head clearfix">
+            	<h3 class="f18">支付宝</h3>
+            </div> -->
+            
+        	<div class="help-section-body clearfix">
+                <div class="list pb48 pl36 pr36">
+                	<h3 class="f18"  id="">喜地简介</h3>
+                    <p class="faq f13 mt36">
+                       喜地（www.xidibuy.com）是世界工厂网的着力打造的全进口精品商城，致力于让身在中国的海客足不出口即可享受海外高品质的生活方式。本着直面工厂及客户价值最大化的宗旨，喜地严选海外原产商品，在上海自贸区内外自建仓库，以正规国际贸易的方式进口商品，最大程度的压缩中间分销环节，并提供卓越安全的服务体系，为海客呈现工厂价格的高品质商品及便捷舒心的购物体验。
+                    </p>
+                </div>
+                <div class="list pl36 pr36">
+                    <h3 class="f18 pt12 mb36" id="">核心理念</h3>
+                    <ul class="f13">
+                        <li class="know mr60">
+                            <i class="icon-intro_06 inline-block mr12 icons"></i>
+                            <div class="inline-block know_detail mt12">
+                                <h4>海外原产</h4>
+                                <p class="mb12">产地进口 严选精品</p>
+                                <p class="mb12">喜地的商品全部直接来自发达国家的正规海外原产工厂，所有商品均有工厂的品牌授权。</p>
+                            </div>
+                        </li>
+                        <li class="know ml36">
+                            <i class="icon-intro_03 inline-block mr12 icons"></i>
+                            <div class="inline-block know_detail mt24">
+                                <h4>乐享平价</h4>
+                                <p class="mb12">工厂授权 价格更低</p>
+                                <p class="mb12">喜地全力压缩中间费用及分销成本，力求让海客享受最低的工厂价格。</p>
+                            </div>
+                        </li>
+                        <li class="know mt36 mr60">
+                            <i class="icon-intro_13 inline-block mr12 icons"></i>
+                            <div class="inline-block know_detail">
+                                <h4>正品保障</h4>
+                                <p class="mb12">海关监管 渠道合法</p>
+                                <p class="mb12">喜地自建全套供应链体系，以正规、合法的贸易方式进口商品，全程海关监管，保障海客的权益。</p>
+                            </div>
+                        </li>
+                        <li class="know mt36 ml36">
+                            <i class="icon-intro_11 inline-block mr12 icons"></i>
+                            <div class="inline-block know_detail">
+                                <h4>快速送达</h4>
+                                <p class="mb12">国内发货 高效配送</p>
+                                <p class="mb12">喜地自贸区外的仓库直接发货，所有商品已经过海关进口手续，为海客带来全球原产的商品同时，让海客享受国内的配送速度。</p>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="float_sidebar">
+    <ul>
+        <li class="top"></li>
+        <li class="service"></li>
+        <li class="feedback"></li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+</script>
+
+
+</body>
+</html>

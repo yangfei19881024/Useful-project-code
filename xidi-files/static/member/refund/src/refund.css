@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :refund
+------------------------------------------------------------ */
+
+/* 退款/退货管理 列表
+------------------------------------------------------------ */
+.filter-list .textBox{ /* 继承自 common.css */
+	width:145px;
+}
+.filter-list .plugs-select{ /* 继承自 common.css */
+	width:165px;
+}
+.refund-list .plugs-select{ /* 继承自 common.css */
+	width:103px;
+	height:26px;
+	line-height:26px;
+}
+.refund-list .plugs-select-hd{ /* 继承自 common.css */
+	margin:2px 10px;
+}
+.refund-list .plugs-select-option{ /* 继承自 common.css */
+	padding:2px 10px;
+}
+.refund-list .plugs-select-bd{ /* 继承自 common.css */
+	max-height:120px;
+}
+.refund-head{
+	border-bottom:1px solid #DDD;
+}
+.refund-head td{
+	padding-bottom:5px;
+}
+.refund-item{
+	border-bottom:1px dotted #D3D7D7;
+	word-break:break-all;
+}
+
+/* 退款/退货管理 详情（发货前）
+------------------------------------------------------------ */
+.refund-state{
+	margin-top:-1px;
+	border:1px solid #DDD;
+}
+.refund-aside{
+	width:230px;
+	border-right:1px dotted #DDD;
+}
+.refund-section{
+	margin-left:-1px;
+	width:765px;
+	border-left:1px dotted #DDD;
+}
+.refundAside-list{
+	line-height:30px;
+}
+.refundAside-type{
+	width:65px;
+}
+.refundAside-value{
+	width:140px;
+	text-align:right;
+	font-size:14px;
+}
+.refundAside-time{
+	font-size:12px;
+}
+.bdbt{
+	border-top:1px dotted #D3D7D7;
+}
+#refund-orderExpInfo,
+#refund-orderExpInfo .refundAside-type{
+	position:relative;
+}
+#refund-orderExpInfo .refundAside-type{
+	cursor:pointer;
+}
+.refundAside-type:after,
+.refundAside-type:before,
+.refundMorePro .triangle:after,
+.refundMorePro .triangle:before{
+	right:0;
+	top:50%;
+	border-width:5px;
+}
+.refundAside-type:before,
+.refundMorePro .triangle:before{
+	margin-top:-2px;
+	border-top-color:#A0A0A0;
+}
+.refundAside-type:after,
+.refundMorePro .triangle:after{
+	margin-top:-3px;
+	border-top-color:#FFF;
+}
+.refundMorePro-cur .triangle:after,
+.refundMorePro-cur .triangle:before{
+	top:0;
+	margin-top:10px;
+	border-color:transparent;
+}
+.refundMorePro-cur .triangle:before{
+	border-bottom-color:#A0A0A0;
+}
+.refundMorePro-cur .triangle:after{
+	margin-top:11px;
+	border-bottom-color:#FFF;
+}
+.refundAside-list:hover .refundAside-type:after,
+.refundAside-list:hover .refundAside-type:before{
+	top:0;
+	margin-top:8px;
+	border-color:transparent;
+}
+.refundAside-list:hover .refundAside-type:after{
+	margin-top:9px;
+	border-bottom-color:#FFF;
+}
+.refundAside-list:hover .refundAside-type:before{
+	border-bottom-color:#A0A0A0;
+}
+.refundAside-list:hover .expressInfo{
+	display:block;
+}
+.expressInfo{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	z-index:9;
+	padding:12px 12px 24px;
+	width:375px;
+	background-color:#FFF;
+	border:1px solid #DDD;
+}
+.expressInfo:after,
+.expressInfo:before{
+	left:16px;
+	border-width:5px;
+}
+.expressInfo:before{
+	top:-10px;
+	border-bottom-color:#DDD;
+}
+.expressInfo:after{
+	top:-9px;
+	border-bottom-color:#FFF;
+}
+.expressInfo-hd{
+	border-bottom:1px dotted #DDD;
+}
+
+.table-thd{
+	border-bottom:1px solid #DDD;
+}
+.table-lst .table-cell{
+	border-bottom:1px dotted #DDD;
+}
+.icon-mail{
+	margin: 0 0 2px 5px;
+}
+.refund-message{
+	width:666px;
+}
+.msg-item{
+	border-top:1px dotted #D1D6D6;
+}
+
+/* 退款/退货管理 详情（选择退款/退货类型）
+------------------------------------------------------------ */
+.refund-type{
+	padding:1px;
+	width:312px;
+	height:133px;
+	border:1px solid #DDD;
+}
+.refund-type:hover{
+	padding:0;
+	border:2px solid #69AEA1;
+	text-decoration:none;
+}
+.refund-tabBtn{
+	height:40px;
+	border-bottom:1px solid #DDD;
+	line-height:40px;
+}
+.refund-tabBtn .triangle{
+	font-weight:700;
+}
+.refund-tabBtn .triangle:after,
+.refund-tabBtn .triangle:before{
+	left:48px;
+	border-width:5px;
+}
+.refund-tabBtn .triangle:before{
+	bottom:0;
+	border-bottom-color:#CCC;
+}
+.refund-tabBtn .triangle:after{
+	bottom:-1px;
+	border-bottom-color:#FFF;
+}
+.count-text{
+	width:135px;
+}
+.company-select{
+	width:100px;
+}
+.company-input-text{
+	width:104px;
+	margin-left:12px;
+}
+.reason-select{
+	width:155px;
+}
+.reason-select .textError{
+	border-color: #EB6C68;
+}
+.reason-text{
+	width:451px;
+}
+.expr-text{
+	width:218px;
+}
+.refundDescription{
+	width:642px;
+}
+.refundDescription .message-article{
+	width:620px;
+}
+.reason-notice{
+	height:36px;
+	overflow:hidden;
+	line-height:18px;
+}
+
+/* 退款申请弹框
+------------------------------------------------------------ */
+.plugs-apply{
+	top:65%;
+	margin:-207px 0 0 -220px;
+	width:441px;
+	height:366px;
+	
+}
+.plugs-confirm{
+	top:65%;
+	margin:-97px 0 0 -186px;
+	width:372px;
+	height:146px;
+}

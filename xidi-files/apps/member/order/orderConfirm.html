@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>确认订单</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/order/src/order.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content clearfix">
+    <!-- 订单步骤 -->
+    <div class="orderState-Bar mt36">
+        <ul class="clearfix">
+            <li class="pr fl">查看购物车</li>
+            <li class="current pr fl">确认订单信息</li>
+            <li class="pr fl">成功提交订单</li>
+            <li class="pr fl">成功付款</li>
+        </ul>
+    </div>
+    
+    <!-- 收货信息 -->
+    <div class="sendAddress pr">
+        <div class="f16"><strong>收货信息</strong></div>
+        
+        <div class="orderCon hidden pr clearfix">
+        	<div class="clearfix" id="addressForm">
+            	<ul class="pl12 f13 clearfix">
+                    <li class="userInfo-list ptb12 clearfix">
+                        <label for="" class="userInfo-name fl"><span class="color-ff4 fr">*</span>收货人</label>
+                        <div class="ml12 fl"><input type="text" class="textBox" /></div>
+                    </li>
+                    
+                    <li class="userInfo-list ptb12 clearfix">
+                        <label for="" class="userInfo-name fl"><span class="color-ff4 fr">*</span>手机号码</label>
+                        <div class="ml12 fl">
+                            <input type="text" class="textBox" /><span class="plr12">或</span>固定电话<input type="text" class="textBox ml12" />
+                        </div>
+                    </li>
+                    
+                    <li class="userInfo-list ptb12 clearfix">
+                        <label for="" class="userInfo-name fl"><span class="color-ff4 fr">*</span>所在地区</label>
+                        
+                        <div class="plugs-select ml12 fl" id="Province-select">
+                            <div class="plugs-select-hd" data-state="databutton">
+                                <h6 class="plugs-select-title" data-id="0" data-state="title" data-value="0">请选择</h6>
+                                
+                                <div class="plugs-select-tip">
+                                    <div class="plugs-select-tip"></div>
+                                </div>
+                            </div>
+                            
+                            <ul class="plugs-select-bd" data-state="datalist">
+                                <li class="plugs-select-option" data-id="0" data-state="option" data-value="0">请选择</li>
+                                <li class="plugs-select-option" data-id="1" data-state="option" data-value="1">北京</li>
+                                <li class="plugs-select-option" data-id="2" data-state="option" data-value="2">上海</li>
+                                <li class="plugs-select-option" data-id="3" data-state="option" data-value="3">广州</li>
+                                <li class="plugs-select-option" data-id="4" data-state="option" data-value="4">深圳</li>
+                            </ul>
+                            
+                            <input type="hidden" name="province" class="plugs-select-value" value="0" />
+                        </div>
+                        
+                        <div class="plugs-select ml12 fl" id="City-select">
+                            <div class="plugs-select-hd" data-state="databutton">
+                                <h6 class="plugs-select-title" data-id="0" data-state="title" data-value="0">请选择</h6>
+                                
+                                <div class="plugs-select-tip">
+                                    <div class="plugs-select-tip"></div>
+                                </div>
+                            </div>
+                            
+                            <ul class="plugs-select-bd" data-state="datalist">
+                                <li class="plugs-select-option" data-id="0" data-state="option" data-value="0">请选择</li>
+                                <li class="plugs-select-option" data-id="1" data-state="option" data-value="1">北京</li>
+                                <li class="plugs-select-option" data-id="2" data-state="option" data-value="2">上海</li>
+                                <li class="plugs-select-option" data-id="3" data-state="option" data-value="3">广州</li>
+                                <li class="plugs-select-option" data-id="4" data-state="option" data-value="4">深圳</li>
+                            </ul>
+                            
+                            <input type="hidden" name="city" class="plugs-select-value" value="0" />
+                        </div>
+                        
+                        <div class="plugs-select ml12 fl" id="District-select">
+                            <div class="plugs-select-hd" data-state="databutton">
+                                <h6 class="plugs-select-title" data-id="0" data-state="title" data-value="0">请选择</h6>
+                                
+                                <div class="plugs-select-tip">
+                                    <div class="plugs-select-tip"></div>
+                                </div>
+                            </div>
+                            
+                            <ul class="plugs-select-bd" data-state="datalist">
+                                <li class="plugs-select-option" data-id="0" data-state="option" data-value="0">请选择</li>
+                                <li class="plugs-select-option" data-id="1" data-state="option" data-value="1">北京</li>
+                                <li class="plugs-select-option" data-id="2" data-state="option" data-value="2">上海</li>
+                                <li class="plugs-select-option" data-id="3" data-state="option" data-value="3">广州</li>
+                                <li class="plugs-select-option" data-id="4" data-state="option" data-value="4">深圳</li>
+                            </ul>
+                            
+                            <input type="hidden" name="district" class="plugs-select-value" value="0" />
+                        </div>
+                    </li>
+                    
+                    <li class="userInfo-list ptb12 clearfix">
+                        <label for="" class="userInfo-name fl"><span class="color-ff4 fr">*</span>详细地址</label>
+                        <div class="ml12 fl"><input type="text" class="textBox w434" placeholder="不用重复填写省、市、区（45字以内）" /></div>
+                    </li>
+                    
+                    <li class="userInfo-list ptb12 clearfix">
+                        <label for="" class="userInfo-name fl">邮政编码</label>
+                        <div class="ml12 fl"><input type="text" class="textBox" /></div>
+                    </li>
+                    
+                    <li class="userInfo-list pt12 clearfix">
+                        <label for="" class="userInfo-name fl">&nbsp;</label>
+                        <div class="ml12 fl">
+                            <a href="" class="button-light-146 anim-all" data-type="create" data-action="submit">保存收货信息</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="hide clearfix" id="addressList">
+                <ul class="address-list mt24 hidden clearfix">
+                    <li class="address-item mr24 mb24 pr fl address-current">
+                        <div class="address-userInfo mb12 f14">
+                            <strong>林苏恩</strong><span class="plr12">18619900816</span><em class="setDefaultAdress color-c3 f12 hide">默认地址</em>
+                        </div>
+                        
+                        <div class="address-description hidden clearfix">
+                            <p>上海市 浦东新区</p>
+                            <p>建业路416号</p>
+                        </div>
+                        
+                        <div class="address-operating hide pa">
+                            <a href="javascript:;" class="icon-edit sprites fl">修改</a>
+                            <a href="javascript:;" class="icon-delete sprites ml12 fl">删除</a>
+                        </div>
+                        
+                        <div class="defaultAddressIon sprites hide pa"></div>
+                    </li>
+                    
+                    <li class="address-item mr24 mb24 pr fl">
+                        <div class="address-userInfo mb12 f14">
+                            <strong>林苏恩</strong><span class="plr12">18619900816</span><a href="javascript:;" class="setDefaultAdress color-blue f12 hide">设置为默认地址</a>
+                        </div>
+                        
+                        <div class="address-description hidden clearfix">
+                            <p>上海市 静安区</p>
+                            <p>建业路416号</p>
+                        </div>
+                        
+                        <div class="address-operating hide pa">
+                            <a href="javascript:;" class="icon-edit sprites fl">修改</a>
+                            <a href="javascript:;" class="icon-delete sprites ml12 fl">删除</a>
+                        </div>
+                        
+                        <div class="defaultAddressIon sprites hide pa"></div>
+                    </li>
+                    
+                    <li class="address-item mr24 mb24 pr fl">
+                        <div class="address-userInfo mb12 f14">
+                            <strong>林苏恩</strong><span class="plr12">18619900816</span><a href="javascript:;" class="setDefaultAdress color-blue f12 hide">设置为默认地址</a>
+                        </div>
+                        
+                        <div class="address-description hidden clearfix">
+                            <p>上海市 静安区</p>
+                            <p>建业路416号</p>
+                        </div>
+                        
+                        <div class="address-operating hide pa">
+                            <a href="javascript:;" class="icon-edit sprites fl">修改</a>
+                            <a href="javascript:;" class="icon-delete sprites ml12 fl">删除</a>
+                        </div>
+                        
+                        <div class="defaultAddressIon sprites hide pa"></div>
+                    </li>
+                    
+                    <li class="address-item mr24 mb24 pr fl">
+                        <div class="address-userInfo mb12 f14">
+                            <strong>林苏恩</strong><span class="plr12">18619900816</span><a href="javascript:;" class="setDefaultAdress color-blue f12 hide">设置为默认地址</a>
+                        </div>
+                        
+                        <div class="address-description hidden clearfix">
+                            <p>上海市 静安区</p>
+                            <p>建业路416号</p>
+                        </div>
+                        
+                        <div class="address-operating hide pa">
+                            <a href="javascript:;" class="icon-edit sprites fl">修改</a>
+                            <a href="javascript:;" class="icon-delete sprites ml12 fl">删除</a>
+                        </div>
+                        
+                        <div class="defaultAddressIon sprites hide pa"></div>
+                    </li>
+                    
+                    <li class="address-item mr24 mb24 pr fl">
+                        <div class="address-userInfo mb12 f14">
+                            <strong>林苏恩</strong><span class="plr12">18619900816</span><a href="javascript:;" class="setDefaultAdress color-blue f12 hide">设置为默认地址</a>
+                        </div>
+                        
+                        <div class="address-description hidden clearfix">
+                            <p>上海市 静安区</p>
+                            <p>建业路416号</p>
+                        </div>
+                        
+                        <div class="address-operating hide pa">
+                            <a href="javascript:;" class="icon-edit sprites fl">修改</a>
+                            <a href="javascript:;" class="icon-delete sprites ml12 fl">删除</a>
+                        </div>
+                        
+                        <div class="defaultAddressIon sprites hide pa"></div>
+                    </li>
+                    
+                    <li class="address-item mr24 mb24 pr fl">
+                        <div class="address-userInfo mb12 f14">
+                            <strong>林苏恩</strong><span class="plr12">18619900816</span><a href="javascript:;" class="setDefaultAdress color-blue f12 hide">设置为默认地址</a>
+                        </div>
+                        
+                        <div class="address-description hidden clearfix">
+                            <p>上海市 静安区</p>
+                            <p>建业路416号</p>
+                        </div>
+                        
+                        <div class="address-operating hide pa">
+                            <a href="javascript:;" class="icon-edit sprites fl">修改</a>
+                            <a href="javascript:;" class="icon-delete sprites ml12 fl">删除</a>
+                        </div>
+                        
+                        <div class="defaultAddressIon sprites hide pa"></div>
+                    </li>
+                </ul>
+                
+                <div class="address-option pl24">
+                    <a href="" class="color-blue mr12" id="addressAdd">新增地址</a>
+                    <a href="" class="color-blue" id="addressMore">显示全部地址</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 支付方式/发票信息 -->
+    <div class="orderPay order-select clearfix">
+        <div class="oderPay-left fl">
+            <div class="f16"><strong>支付方式</strong></div>
+            
+            <div class="payMothed clearfix">
+                <dl class="clearfix">
+                    <dt class="clearfix">支付平台</dt>
+                    <dd class="clearfix">
+                        <ul class="clearfix">
+                            <li>
+                                <input type="radio" id="paymthd_1" name="pay_platform" value="alipay" checked />
+                                <label for="paymthd_1"><img src="../../../static/global/images/src/pay.png" alt="" width="150" height="37" title="" /></label>
+                            </li>
+                            <li>
+                                <input type="radio" id="paymthd_2" name="pay_platform" value="union" />
+                                <label for="paymthd_2"><img src="../../../static/global/images/src/pay.png" alt="" width="150" height="37" title="" /></label>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        
+        <div class="oderPay-right fl">
+            <div class="f16"><strong>发票信息</strong></div>
+            
+            <div class="orderCon invoice pr">
+                <dl class="clearfix">
+                    <dt>发票抬头：</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <input type="radio" name="invoice-type" id="radio-personal" checked />
+                                <label for="radio-personal">个人</label>
+                            </li>
+                            
+                            <li>
+                                <input type="radio" name="invoice-type" id="radio-company" />
+                                <label for="radio-company">单位</label>
+                                <input type="text" class="companyTxt hide" />
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt>发票内容：</dt>
+                    <dd>
+                        <div class="plugs-select clearfix" id="Invoice-select">
+                            <div class="plugs-select-hd" data-state="databutton">
+                                <h6 class="plugs-select-title" data-id="0" data-state="title" data-value="0">全部订单</h6>
+                                
+                                <div class="plugs-select-tip">
+                                    <div class="plugs-select-tip"></div>
+                                </div>
+                            </div>
+                            
+                            <ul class="plugs-select-bd" data-state="datalist">
+                                <li class="plugs-select-option" data-id="0" data-state="option" data-value="0">办公用品</li>
+                                <li class="plugs-select-option" data-id="1" data-state="option" data-value="1">服装配饰</li>
+                                <li class="plugs-select-option" data-id="2" data-state="option" data-value="2">数码产品</li>
+                                <li class="plugs-select-option" data-id="3" data-state="option" data-value="3">礼品</li>
+                            </ul>
+                            
+                            <input type="hidden" name="Invoice-value" class="plugs-select-value" value="0" />
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 购物清单 -->
+    <div class="pt48 pb12 f16">购物清单</div>
+    <div class="cart-wrap clearfix">
+        <div class="cartHead clearfix">            
+            <div class="cart-image fl">
+                <p class="pl12">商品</p>
+            </div>
+            
+            <div class="cart-check fl">&nbsp;</div>
+            
+            <div class="cart-goods fl">&nbsp;</div>
+            
+            <div class="cart-price fl">
+                单价
+            </div>
+            
+            <div class="cart-count fl">
+                数量
+            </div>
+            
+            <div class="cart-sum fl">
+                <p class="pr24">小计</p>
+            </div>
+        </div>
+        
+        <div class="cartBody clearfix">
+            <div class="cartAgent clearfix">
+                <div class="cartHead clearfix">
+                    <div class="pl12 fl">
+                        <a href="" class="color-blue fl">Stella Aden男装旗舰店</a>
+                        <a href="javascript:;" class="icon-mail sprites fl" data-state="pm"></a>
+                    </div>
+                </div>
+                
+                <div class="cartList table">
+                    <div class="cartGoods table-row">
+                        <div class="cart-image table-cell">
+                            <div class="pl12">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-goods table-cell">
+                            <div class="pl24">
+                                <p class="pb12 f13"><a href="">Stella Aden纯棉休闲短裤</a></p>
+                                <p>颜色：姜黄</p>
+                                <p>尺码：L</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-check table-cell">&nbsp;</div>                        
+                        
+                        <div class="cart-price table-cell">
+                            <p class="price-del f14">500.00</p>
+                            <p class="f14">280.00</p>
+                            <p>双11活动</p>
+                        </div>
+                        
+                        <div class="cart-count table-cell">
+                            <div class="addCartOperBox">
+                                <a href="javascript:;" class="icon-minus sprites fl">-</a>
+                                <input type="text" class="addCartNum fl" data-min="1" data-max="5" value="1">
+                                <a href="javascript:;" class="icon-plus sprites fl">+</a>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-sum table-cell">
+                            <p class="color-green f14 pr12"><var data-class="price">280.00</var></p>
+                            <a href="javascript:;" class="icon-delete sprites" data-class="cart-delete">&nbsp;</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="cartFoot pt12 clearfix">
+                    <p class="fr">店铺合计：<var class="f18 color-green">&yen;2288.00</var></p>
+                </div>
+            </div>
+            
+            <div class="cartAgent clearfix">
+                <div class="cartHead clearfix">
+                    <div class="pl12 fl">
+                        <a href="" class="color-blue fl">Stella Aden男装旗舰店</a>
+                        <a href="javascript:;" class="icon-mail sprites fl" data-state="pm"></a>
+                    </div>
+                </div>
+                
+                <div class="cartList table">
+                    <div class="cartGoods table-row">
+                        <div class="cart-image table-cell">
+                            <div class="pl12">
+                                <a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" /></a>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-goods table-cell">
+                            <div class="pl24">
+                                <p class="pb12 f13"><a href="">Stella Aden纯棉休闲短裤</a></p>
+                                <p>颜色：姜黄</p>
+                                <p>尺码：L</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-check table-cell">&nbsp;</div>   
+                        
+                        <div class="cart-price table-cell">
+                            <p class="price-del f14">500.00</p>
+                            <p class="f14">280.00</p>
+                            <p>双11活动</p>
+                        </div>
+                        
+                        <div class="cart-count table-cell">
+                            <div class="addCartOperBox">
+                                <a href="javascript:;" class="icon-minus sprites fl">-</a>
+                                <input type="text" class="addCartNum fl" data-min="1" data-max="5" value="1">
+                                <a href="javascript:;" class="icon-plus sprites fl">+</a>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-sum table-cell">
+                            <p class="color-green f14 pr12"><var data-class="price">280.00</var></p>
+                            <a href="javascript:;" class="icon-delete sprites" data-class="cart-delete">&nbsp;</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="cartFoot pt12 clearfix">
+                    <p class="fr">店铺合计：<var class="f18 color-green">&yen;2288.00</var></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- 订单价格信息 -->
+    <div class="cart-bottomTotal mt24 p24 clearfix">
+        <div class="subTotal pr fr">
+            <dl class="subTotal-outer mt12 clearfix">
+                <dt class="fl">商品总价 ( 8 件)：</dt>
+                <dd class="fl f14 tr">&yen;2266.80</dd>
+            </dl>
+            
+            <dl class="subTotal-outer mt12 clearfix">
+                <dt class="fl">促销优惠：</dt>
+                <dd class="fl f14 tr">- &yen;670.00</dd>
+            </dl>
+            
+            <dl class="subTotal-outer mt12 clearfix">
+                <dt class="fl">运费：</dt>
+                <dd class="fl f14 tr">&yen;10.00</dd>
+            </dl>
+            
+            <dl class="subTotal-outer mt12 ptb12 totalPay clearfix">
+                <dt class="fl">实付金额：</dt>
+                <dd class="fl f24 tr color-green">&yen;1576.80</dd>
+            </dl>
+        </div>
+    </div>
+    
+    <!-- 收货信息 -->
+    <div class="mt24 clearfix">
+        <div class="fr">
+            <p>收货信息：林苏恩 18619900816 上海市静安区北京西路1701号静安大厦18楼C座23室</p>
+        </div>
+    </div>
+    
+    <div class="pt24 tr clearfix">
+        <a href="" class="color-blue mr24"><strong class="simsun">&lt;&nbsp;</strong>返回购物车</a>
+        <a href="" class="button-light-256 anim-all" id="finalOrderSubmi">提交订单</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" alt="" width="1280" height="294" title="" /></p>
+</div>
+
+<!-- Add Address -->
+<div class="sendAddress pr hide" id="addressFrom">
+    <div class="f16"><strong>新增地址</strong></div>
+    
+    <div class="orderCon pr clearfix">
+        <table class="add-address">
+            <tbody>
+                <tr>
+                    <td class="tdtitle">收货人<span class="red-required">*</span></td>
+                    <td class="tdcontent"><input type="text" value="" id="consignee"/></td>
+                </tr>
+                
+                <tr>
+                    <td class="tdtitle">手机号码<span class="red-required">*</span></td>
+                    <td class="tdcontent"><input type="text" value="" id="mobile"/><span>或 固定电话</span><input type="text" name="tel" value="" id="tel"/></td>
+                </tr>
+                
+                <tr>
+                    <td class="tdtitle">所在地区<span class="red-required">*</span></td>
+                    <td class="tdcontent">
+                        <div id="test2" style="float:left;">
+                            <input type="hidden" class="province" value="010000"/>
+                            <input type="hidden" class="city" value="010100"/>
+                            <input type="hidden" class="district" value="010101"/>
+                            <div name="province" type="selectbox" style="z-index:2;"><div class="opts"></div></div>
+                            <div name="city" type="selectbox" style="z-index:2;"><div class="opts"></div></div>
+                            <div name="district" type="selectbox" style="z-index:2;"><div class="opts"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="tdtitle">详细地址<span class="red-required">*</span></td>
+                    <td class="tdcontent"><input type="text" value="" id="address"/></td>
+                </tr>
+                
+                <tr>
+                    <td class="tdtitle">邮政编码</td>
+                    <td class="tdcontent"><input type="text" value="" id="zipcode"/></td>
+                </tr>
+                
+                <tr>
+                    <td class="tdtitle"></td>
+                    <td class="tdcontent"><span class="checkBox check"></span>设为默认地址</td>
+                </tr>
+                
+                <tr>
+                    <td class="tdtitle"></td>
+                    <td class="tdcontent"><a href="" class="save-address">确定</a><a href="" class="cancel-save">取消</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	PayLastTimeSeconds = 100;
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'order': JS_DOMAIN + 'static/member/order/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{common}address',
+		'{order}order'
+	]);    
+	
+	seajs.flush();
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+	"family": "static/global",
+	"name": "common",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"common.css",
+			"jquery-ui.css",
+			"category.fun.js",
+			"common.fun.js",
+			"common.js",
+			"address.js",
+			"search.js",
+			"jquery.plugs.js",
+			"jquery-ui.js",
+			"avatorUpload.js",
+			"login.js",
+			"lazyload.js"
+		]
+	}
+}

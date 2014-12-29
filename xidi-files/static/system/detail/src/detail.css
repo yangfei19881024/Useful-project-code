@@ -1,0 +1,350 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :detail
+  queto :在原郑州前端做的基础上进行修改
+------------------------------------------------------------ */
+
+/* 商品详情
+------------------------------------------------------------ */
+.detail-self{
+	width:680px;
+	overflow:hidden;
+}
+.pro-description{
+	line-height:22px;
+}
+.pro-description img{
+	display:inline;
+	float:left;
+	margin:24px 24px 0 0;
+}
+.pro-description p{
+	clear:both;
+	padding:24px 24px 0 0;
+}
+.pro-assess{
+	/*height:548px;
+	border:1px solid #DDD;*/
+}
+
+.detail-relate{
+	width:294px;
+}
+.detail-goodsName{
+	line-height:32px;
+}
+.proData-name{
+	width:50px;
+	line-height:24px;
+	color:#888;
+}
+.proData-value{
+	width:244px;
+	overflow:hidden;
+}
+.proData-color-list,
+.proData-size-list{
+	width:254px;
+}
+.proData-item{
+	display:inline;
+	float:left;
+	margin:0 12px 12px 0;
+	overflow:hidden;
+	border:1px solid #DDD;
+}
+.proData-current,
+.proData-item:hover{
+	border:2px solid #50B1A2;
+	text-decoration:none;
+}
+.proData-item:hover{
+	border-color:#33CC99;
+}
+.proData-disabled,
+.proData-disabled:hover{
+	border:1px solid #E5E5E5;
+	opacity:0.5;
+	filter:alpha(opacity:50);
+	cursor:not-allowed;
+}
+.proData-color-list .proData-item{
+	padding:1px;
+	width:66px;
+	height:66px;
+	font-size:0;
+}
+.proData-color-list .proData-current,
+.proData-color-list .proData-item:hover{
+	padding:0;
+}
+.proData-color-list .proData-disabled,
+.proData-color-list .proData-disabled:hover{
+	padding:1px;
+}
+.proData-size-list .proData-item{
+	padding:1px 11px;
+}
+.proData-size-list .proData-current,
+.proData-size-list .proData-item:hover{
+	padding:0 10px;
+}
+.proData-size-list .proData-disabled,
+.proData-size-list .proData-disabled:hover{
+	padding:1px 11px;
+}
+.rel-material{
+	margin:54px 0 24px;
+	padding-bottom:12px;
+	border-bottom:1px solid #e7e7e7;
+}
+.material-name{
+	padding-bottom:12px;
+	font-size:14px;
+	line-height:28px;
+}
+.material-icon,
+.material-icon img{
+	width:40px;
+	height:28px;
+}
+.material-icon{
+	margin-right:12px;
+	overflow:hidden;
+}
+.material-intro{
+	color:#888;
+}
+.rel-sup,
+.rel-sup-icon,
+.snap{
+	margin-bottom:12px;
+}
+.detail-more-item{
+	margin-bottom:24px;
+}
+.detail-more-item a{
+	margin-right:12px;
+}
+.snap{
+	overflow:hidden;
+}
+.snap-list{
+	margin-left:-12px;
+}
+.snap-item{
+	margin:0 0 12px 12px;
+	cursor:pointer;
+}
+.snap-item img{
+	vertical-align:top;
+}
+.detail-snap-wrap, .detail-snap-list, .detail-snap-list li{
+	position:relative;
+	z-index:1;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.detail-snap-list li, .detail-snap-wrap .snap-prev, .detail-snap-wrap .snap-next{
+	position:absolute;
+}
+.detail-snap-wrap .snap-prev, .detail-snap-wrap .snap-next{
+	top:50%;
+	z-index:9;
+	margin-top:-18px;
+	width:36px;
+	height:36px;
+	overflow:hidden;
+	font:16px/36px 'Simsun';
+	text-align:center;
+	color:#FFF;
+	cursor:pointer;
+	background-color:rgba(0, 0, 0, .5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#88000000, endColorstr=#88000000);
+}
+.detail-snap-wrap .snap-prev{
+	left:0;
+}
+.detail-snap-wrap .snap-next{
+	right:0;
+}
+.detail-snap-wrap .snap-disabled{
+	cursor:default;
+	background-color:rgba(0, 0, 0, .3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000000, endColorstr=#44000000);
+}
+.proOper{
+	border-top:1px solid #E7E7E7;
+}
+.proOper-list{
+	padding-top:24px;
+}
+
+.relatedPrd .pro-item:hover .pro-outer{
+	border-color:#FFF;
+}
+
+.relPrd-box{
+	position:relative;
+	margin-left:-12px;
+}
+.relPrd-con{
+	margin:0 auto;
+	width:1020px;
+	height:304px;
+	overflow:hidden;
+}
+.relPrd-box .control-pre,
+.relPrd-box .control-next{
+	display:block;
+	margin-top:-30px;
+}
+.relPrd-box .control-pre{
+	left:-35px;
+}
+.relPrd-box .control-next{
+	right:-35px;
+}
+
+.detail-snap-outer{
+	background-color:#f9f9f9;
+}
+.gotoDtl{
+	margin-top:12px;
+}
+
+/********* --------------卖场评价---------------************/
+
+.store-assess-in{
+    margin-top: 36px;
+    width:588px;
+    border:1px #c3c3c3 solid;
+    padding:36px;
+}
+.store-assess-in h2,.more-product h2{
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom: 12px;
+}
+.store-assess-in h2 span{
+    color:#888;
+    font-size:12px;
+    display:inline-block;
+    margin-left:6px;
+    font-weight:normal;
+}
+.store-assess-detail{
+    margin-top:36px;
+}
+.sADetailLeft{
+    width:456px;
+    line-height:22px;
+    font-size:13px;
+    display: inline;float:left;
+}
+.sADetailLeft .grayc{
+    font-size:12px;
+}
+.sADetailRight{
+    line-height: 22px;
+    width:84px;
+    float:right;
+    display: inline;
+}
+.sADetailLeft .assess-reply{
+    color:#888;
+    width:456px;
+    margin-top:12px;
+}
+.store-assess-in .page-current{
+    background:#fff;
+    color: #333;
+    font-size:13px;
+    border:1px solid #fff;
+    font-weight:bold;
+}
+.store-assess-in .page-current:hover{
+    text-decoration:none;
+}
+.store-assess-in .page-button,.store-assess-in .page-elps{
+    width:19px;
+    height:19px;
+    line-height:19px;
+    margin:0;
+}
+.store-assess-in .page-prev{margin-right:18px;}
+.store-assess-in .page-next{margin-left:18px;}
+.clearfix:after{
+    clear:both;
+    display:block;
+    height:0;
+    visibility:hidden;
+    line-height:0;
+    content:'\20';
+}
+.clearfix{
+    *display:table;
+    *zoom:1;
+}
+.stars span{padding-right:4px;}
+.gray8{
+    color:#888;
+}
+.grayc{
+    color:#c3c3c3;
+}
+.pagination{padding-top:36px;text-align:center;}
+.pagination li{display: inline-block;}
+
+
+.store-assess-in .page-current{
+    background:#fff;
+    color: #333;
+    font-size:13px;
+    border:1px solid #fff;
+    font-weight:bold;
+}
+.store-assess-in .page-current:hover{
+    text-decoration:none;
+}
+.store-assess-in .num a,.store-assess-in .page-elps{
+    width:19px;
+    height:19px;
+    line-height:19px;
+    margin:0;
+    display: inline-block;
+    border:1px solid #fff;
+    color:#888;
+}
+.store-assess-in .page-elps:hover{
+    color:#888;text-decoration: none;cursor:default;
+}
+.store-assess-in .page-current a{
+    color:#333!important;
+}
+.store-assess-in .page-current a:hover{
+    border:1px #fff solid!important;
+    cursor:default;
+}
+.store-assess-in .firstPage,.store-assess-in .lastPage{
+    border:1px solid #ddd;
+    width:19px;
+    height:19px;
+    line-height:19px;
+    margin:0;
+    display: inline-block;
+}
+.store-assess-in .num a:hover{
+    border:#ddd 1px solid;text-decoration: none;color:#333;
+}
+.store-assess-in .firstPage{margin-right:18px;}
+.store-assess-in .lastPage{margin-left:18px;}
+.store-assess-in .disabled a{color:#888;cursor:default;}
+.store-assess-in .disabled a:hover{text-decoration: none;}

@@ -1,0 +1,172 @@
+.icons{
+  background: url(../../../global/images/1.0.0/sprite_about.png) no-repeat;
+}
+.iconw:hover{
+  color:#3c9;
+  text-decoration: none;
+}
+
+.icon-about_03 {
+  background-position: 0px -23px!important;
+  width: 33px;
+  height: 24px;
+}
+.icon-about_06 {
+  background-position: 0px 0px!important;
+  width: 33px;
+  height: 23px;
+}
+.icon-about_08 {
+  background-position: 0px -128px!important;
+  width: 32px;
+  height: 40px;
+}
+.icon-about_10 {
+  background-position: 0px -168px!important;
+  width: 40px;
+  height: 40px;
+}
+.icon-about_12 {
+  background-position: 0px -208px!important;
+  width: 38px;
+  height: 40px;
+}
+.icon-about_18 {
+  background-position: 0px -98px!important;
+  width: 33px;
+  height: 30px;
+}
+.icon-about_20 {
+  background-position: 0px -72px!important;
+  width: 33px;
+  height: 26px;
+}
+.icon-about_22 {
+  background-position: 0px -47px!important;
+  width: 33px;
+  height: 25px;
+}
+.icon-about_24 {
+  background-position: 0px -248px!important;
+  width: 46px;
+  height: 46px;
+}
+.icon-about_26 {
+  background-position: 0px -294px!important;
+  width: 47px;
+  height: 46px;
+}
+.icon-about_28 {
+  background-position: 0px -340px!important;
+  width: 46px;
+  height: 46px;
+}
+.icon-intro_01 {
+  background-position: -72px -390px!important;
+  width: 45px;
+  height: 41px;
+  margin-top:48px!important;
+}
+.icon-intro_03 {
+  background-position: -68px -482px!important;
+  width: 42px;
+  height: 41px;
+  margin-left:26px;
+}
+.icon-intro_new03 {
+  background-position: 0 -582px!important;
+  width: 44px;
+  height: 60px;
+  margin-left:0;
+  margin-top:28px;
+}
+.icon-intro_06 {
+  background-position: -68px -435px!important;
+  width: 38px;
+  height: 46px;
+  margin-left: 6px;
+}
+.icon-intro_11 {
+  background-position: -68px -569px!important;
+  width: 69px;
+  height: 44px;
+}
+.icon-intro_13 {
+  background-position: -68px -526px!important;
+  width: 44px;
+  height: 43px;
+}
+.icon-spoon_03 {
+  background-position: 0px -529px!important;
+  width: 53px;
+  height: 53px;
+  margin-top:36px;
+}
+
+.iconw:hover .icon-about_03 {  background-position: -70px -23px!important;}
+.iconw:hover .icon-about_06 {  background-position: -70px 0px!important;}
+.iconw:hover .icon-about_08 {  background-position: -70px -128px!important;}
+.iconw:hover .icon-about_10 {  background-position: -70px -168px!important;}
+.iconw:hover .icon-about_12 {  background-position: -70px -208px!important;}
+.iconw:hover .icon-about_18 {  background-position: -70px -98px!important;}
+.iconw:hover .icon-about_20 {  background-position: -70px -72px!important;}
+.iconw:hover .icon-about_22 {  background-position: -70px -47px!important;}
+.iconw:hover .icon-about_24 {  background-position: -70px -248px!important;}
+.iconw:hover .icon-about_26 {  background-position: -70px -294px!important;}
+.iconw:hover .icon-about_28 {  background-position: -70px -340px!important;}
+
+
+.help-aside span{display: inline-block;margin:12px auto 0;}
+.dotted-bottom{
+  border-bottom:1px dotted #D1D6D6;
+  padding-left:36px;
+  padding-right:36px;
+}
+.help-aside{
+  width:146px;
+  border:1px solid #E4E4E4;
+}
+.help-section-body{
+  width:741px;
+  margin-left: 12px;
+}
+.help_p,.decimal{position:relative;padding-left:24px;}
+.list_suo{width:24px;position:absolute;left:0;padding-left:6px;}
+.know{
+  display: inline-block;
+}
+.know_detail{
+  width:207px;
+}
+.know_detail h4{
+  font-size:16px;
+}
+.know i{vertical-align: top;}
+.contact_wrapper{border-bottom:1px dotted #D1D6D6;width:705px;padding-left: 36px;}
+.contact_wrapper2{width:741px;padding-left: 36px;}
+.contact{background:#f9f9f9;width:205px;height:218px;text-align:center;vertical-align: middle;display: inline-block; }
+.contact2{width:152px;height:148px;text-align:center;vertical-align: middle;display: inline-block; }
+.contact a,.contact2 a{display: block;width:100%;height:100%;}
+.contact a:hover,.contact2 a:hover{color:#3c9;text-decoration: none}
+.contact .icons,.contact2 .icons{margin-top:48px;}
+.ml108{margin-left:108px;}
+.service-button{width:156px;padding:6px;}
+.join_left{width:207px;vertical-align: top}
+.join_center{width:207px;vertical-align: top}
+.join_right{width:207px;}
+.join_logo{width:100%;border:1px solid #c3c3c3;height:156px;}
+.join_logo .icon-intro_03{margin-left:0;}
+.join_logo a{width:100%;height:100%;display: block;}
+.help-aside-right li{font-size:18px;color:#e6e6e6;margin-bottom:12px;}
+.help-aside-right li.c_active{color:#999;}
+.help-aside-right li a{font-size:13px;}
+.help-aside-right{position:absolute;margin-left:12px;width:100px;}
+.control_fixed{position:fixed;top:50px;margin-top:0;}
+.list h3{font-weight:bold;}
+.fb{font-weight:bold;}
+h4{font-weight:bold;}
+.help-section-body p{text-align:justify; text-justify:inter-ideograph;word-break:break-word;}
+.contact p{text-align:center;}
+.mt6{margin-top:6px;}
+.content{padding-bottom: 24px;}
+.content .main{min-height:100px;}

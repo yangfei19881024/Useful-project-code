@@ -1,0 +1,16 @@
+{
+	"family": "static/member",
+	"name": "favorite",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"favorite.css",
+			"favorite.js"
+		]
+	}
+}

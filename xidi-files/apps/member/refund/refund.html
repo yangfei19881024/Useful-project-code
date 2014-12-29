@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>退款/退货管理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/refund/src/refund.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/jquery-ui.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">退款/退货管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f18 clearfix">
+    	<h2>退款/退货管理</h2>
+    </div>
+    
+	<div class="main mt24 clearfix">
+    	<ul class="filter-list f13 clearfix">
+        	<li class="pb24 fl">
+            	<label class="lh36 fl">订单编号</label>
+                <div class="ml12 fl">
+                	<input type="text" name="orderNumber" class="textBox" data-type="number" />
+                </div>
+            </li>
+            
+        	<li class="pb24 ml24 fl">
+            	<label class="lh36 fl">申请时间</label>
+                <div class="ml12 pr fl">
+                	<input type="text" name="applyTimeFrom" class="textBox" id="startTime" />
+                    <span class="icon-date sprites"></span>
+                </div>
+                
+            	<label class="ml12 lh36 fl">至</label>
+                <div class="ml12 pr fl">
+                	<input type="text" name="applyTimeTo" class="textBox" id="endTime" />
+                    <span class="icon-date sprites"></span>
+                </div>
+            </li>
+            
+        	<li class="pb24 ml24 fl">
+            	<a href="javascript:;" class="button-default-100 anim-all">查询</a>
+            </li>
+            
+        	<li class="fl">
+            	<label class="lh36 fl">申请单号</label>
+                <div class="ml12 fl">
+                	<input type="text" name="applyNumber" class="textBox" data-type="number" />
+                </div>
+            </li>
+            
+        	<li class="ml24 fl">
+            	<label class="lh36 fl">退款状态</label>
+                <div class="plugs-select ml12 fl" id="refundState">
+                    <div class="plugs-select-hd" data-state="databutton">
+                        <h6 class="plugs-select-title" data-id="-1" data-state="title" data-value="-1">退款状态</h6>
+                        
+                        <div class="plugs-select-tip">
+                            <div class="plugs-select-tip"></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="plugs-select-bd" data-state="datalist">
+                    	<li class="plugs-select-option" data-state="option" data-id="-1" data-value="-1">退款状态</li>
+                    	<li class="plugs-select-option" data-state="option" data-id="1" data-value="1">处理中</li>
+                    	<li class="plugs-select-option" data-state="option" data-id="2" data-value="2">已拒绝</li>
+                    	<li class="plugs-select-option" data-state="option" data-id="3" data-value="3">已退款</li>
+                    	<li class="plugs-select-option" data-state="option" data-id="4" data-value="4">已取消</li>
+                    </ul>
+                    
+                    <input type="hidden" name="refundState" class="plugs-select-value" value="-1" key="退款状态">
+                </div>
+            </li>
+        </ul>
+    	
+        <ul class="filter-list mt36 f13 clearfix">
+        	<li class="fl">
+                <div class="plugs-select fl" id="orderFilter">
+                    <div class="plugs-select-hd" data-state="databutton">
+                        <h6 class="plugs-select-title" data-id="-1" data-state="title" data-value="-1">三个月内申请的订单</h6>
+                        
+                        <div class="plugs-select-tip">
+                            <div class="plugs-select-tip"></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="plugs-select-bd" data-state="datalist">
+                    	<li class="plugs-select-option" data-state="option" data-id="1" data-value="1">三个月内申请的订单</li>
+                    	<li class="plugs-select-option" data-state="option" data-id="2" data-value="2">三个月前申请的订单</li>
+                    </ul>
+                    
+                    <input type="hidden" name="refundState" class="plugs-select-value" value="-1" key="退款状态">
+                </div>
+            </li>
+        </ul>
+        
+        <div class="refund-list pt24 clearfix">
+        	<table width="100%" border="0">
+            	<colgroup>
+                	<col width="115" />
+                	<col width="70" />
+                	<col width="175" />
+                	<col width="125" />
+                	<col width="90" />
+                	<col width="85" />
+                	<col width="90" />
+                	<col width="80" />
+                	<col width="105" />
+                	<col width="" />
+                </colgroup>
+                
+            	<thead class="refund-head color-888">
+                    <tr>
+                        <td>申请单号</td>
+                        <td>退款商品</td>
+                        <td>&nbsp;</td>
+                        <td>品牌</td>
+                        <td class="tc">交易金额</td>
+                        <td class="tc">退款金额</td>
+                        <!--
+                        	sort-up 箭头向上
+                            sort-down 箭头向下
+                        -->
+                        <td class="tc"><div class="pointer">申请时间&nbsp;<span class="sort-down sprites"></span></div></td>
+                        <td class="tc">到期时间</td>
+                        <td>
+                            <div class="plugs-select fl" id="refundListState">
+                                <div class="plugs-select-hd" data-state="databutton">
+                                    <h6 class="plugs-select-title" data-id="-1" data-state="title" data-value="-1">退款状态</h6>
+                                    
+                                    <div class="plugs-select-tip">
+                                        <div class="plugs-select-tip"></div>
+                                    </div>
+                                </div>
+                                
+                                <ul class="plugs-select-bd" data-state="datalist">
+                                    <li class="plugs-select-option" data-state="option" data-id="-1" data-value="-1">退款状态</li>
+                                    <li class="plugs-select-option" data-state="option" data-id="1" data-value="1">处理中</li>
+                                    <li class="plugs-select-option" data-state="option" data-id="2" data-value="2">已拒绝</li>
+                                    <li class="plugs-select-option" data-state="option" data-id="3" data-value="3">已退款</li>
+                    				<li class="plugs-select-option" data-state="option" data-id="4" data-value="4">已取消</li>
+                                </ul>
+                                
+                                <input type="hidden" name="refundState" class="plugs-select-value" value="-1" key="退款状态">
+                            </div>
+                        </td>
+                        <td class="tc">操作</td>
+                    </tr>
+                </thead>                
+                
+                <tbody>
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>                        	
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>                        	
+                        </td>
+                        <td class="tc">
+                        	<p class="color-db">——</p>
+                        </td>
+                        <td class="tc">
+                        	<p>退款中</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>                        	
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>
+                        </td>
+                        <td class="tc">
+                        	<p>退货中</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>                        	
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>                        	
+                        </td>
+                        <td class="tc">
+                        	<p class="color-db">——</p>
+                        </td>
+                        <td class="tc">
+                        	<p>退款中</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>                        	
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>                        	
+                        </td>
+                        <td class="tc">
+                        	<p class="color-db">——</p>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">已取消</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>                        	
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>                        	
+                        </td>
+                        <td class="tc">
+                        	<p class="color-db">——</p>
+                        </td>
+                        <td class="tc">
+                        	<p>待处理</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>                        	
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>                        	
+                        </td>
+                        <td class="tc">
+                        	<p class="color-db">——</p>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">已退款</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>                        	
+                        </td>
+                        <td class="tc">
+                        	<p class="color-db">——</p>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">已拒绝</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="refund-item">
+                        <td>
+                        	<p>1234567890123</p>
+                        </td>
+                        <td>
+                        	<div class="ptb24">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="70" height="70" /></a>
+                            </div>                        	
+                        </td>
+                        <td>
+                        	<div class="pl24">
+                            	<p>订单号：<a href="" target="_blank" class="color-blue">3234567544</a></p>
+                            	<p>共 5 件</p>
+                            </div>
+                        </td>
+                        <td>
+                        	<div class="color-blue">
+                            	<a href="" target="_blank"  class="color-blue">The Australian Ceramic Knife Co </a>
+                            </div>
+                        </td>
+                        <td class="tc">
+                        	<var class="f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<var class="color-green f14">786.00</var>
+                        </td>
+                        <td class="tc">
+                        	<p class="color-888">12/05/04<br/>10:30:25</p>                        	
+                        </td>
+                        <td class="tc">
+                        	<p class="color-db">——</p>
+                        </td>
+                        <td class="tc">
+                        	<p>退款中</p>
+                        </td>
+                        <td class="tc">
+                        	<a href="" target="_blank" class="color-blue">退款详情</a>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    
+    <!-- Page -->
+    <div class="content page tc clearfix">
+        <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+        <a href="" class="page-button inline-block page-current">1</a>
+        <a href="" class="page-button inline-block">2</a>
+        <a href="" class="page-button inline-block">3</a>
+        <a href="" class="page-button inline-block">4</a>
+        <span class="page-elps inline-block">…</span>
+        <a href="" class="page-button inline-block">10</a>
+        <a href="" class="page-button page-next inline-block">&gt;</a>
+        
+        <div class="pageGoto inline-block">
+            到<span class="page-button inline-block"><input type="text" class="pageNum fl"><input type="button" class="pageBtn sprites fr"></span>页
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'refund': JS_DOMAIN + 'static/member/refund/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{refund}refund'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

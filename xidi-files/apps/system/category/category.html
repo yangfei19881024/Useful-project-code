@@ -1,0 +1,933 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>类目页</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span><!--<a href="" class="ml12 f14 color-888">箱包</a>-->
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">    
+	<!-- 商品列表 -->
+	<div class="main clearfix">
+    	<div class="category-class clearfix">
+        	<h1 class="f21">羊皮箱包</h1>
+        </div>
+        
+    	<div class="category-module ptb24 clearfix">
+        	<div class="category-module-head lh28 clearfix">            	
+            	<img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="fl" />
+                <h6 class="pl12 f16 fl">新西兰</h6>
+                <span class="color-c3 pl12 fl">|</span>
+                <ul class="fl">
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+                </ul>
+            </div>
+            
+            <ul class="pro-list clearfix">
+                <li class="pro-item pro-item-2 m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:486, height:486}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509002.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509003.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509004.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509005.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="category-module ptb24 clearfix">
+        	<div class="category-module-head lh28 clearfix">            	
+            	<img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="fl" />
+                <h6 class="pl12 f16 fl">法国</h6>
+                <span class="color-c3 pl12 fl">|</span>
+                <ul class="fl">
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+                </ul>
+            </div>
+            
+            <ul class="pro-list clearfix">
+                <li class="pro-item pro-item-2 m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:486, height:486}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509002.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509003.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509004.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509005.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="category-module ptb24 clearfix">
+        	<div class="category-module-head lh28 clearfix">            	
+            	<img src="../../../static/temp-images/src/NewZealand.png" width="40" height="28" class="fl" />
+                <h6 class="pl12 f16 fl">意大利</h6>
+                <span class="color-c3 pl12 fl">|</span>
+                <ul class="fl">
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮手提包</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮钱包</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">羊皮旅行箱</a></li>
+                    <li class="pl12 fl"><a href="" class="color-888">更多</a></li>
+                </ul>
+            </div>
+            
+            <ul class="pro-list clearfix">
+                <li class="pro-item pro-item-2 m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:486, height:486}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/Img486.jpg" width="486" height="486" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509002.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509003.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509004.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="pro-item m12 fl" data-item="123456">
+                    <div class="pro-outer pr">
+                        <div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                            <div class="pro-imageList" data-list="datalist">
+                                <a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140509005.jpg" width="231" height="231" title="" alt="" /></a>
+                            </div>
+                            
+                            <div class="pro-control hide" data-button="true">
+                                <a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                                <a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-name f13">
+                            <a href="" target="_blank" title="">拼色皮革手提包</a>
+                        </div>
+                        
+                        <div class="pro-price f16">
+                            <var class="color-green">¥468.00</var>
+                        </div>
+                        
+                        <div class="add-favorite hide pa">
+                            <a href="javascript:;" class="icon-favorite sprites" data-state="favorite"></a>
+                        </div>
+                        
+                        <div class="add-cart hide clearfix">
+                            <dl class="pro-param ptb12 color-888 clearfix">
+                                <dt class="proParam-name pr12 fl">尺码</dt>
+                                <dd class="proParam-list fl">
+                                    <a href="javascript:;" class="param-select mr12 fl">小号</a>
+                                    <a href="javascript:;" class="mr12 fl">中号</a>
+                                    <a href="javascript:;" class="mr12 fl">大号</a>
+                                </dd>
+                            </dl>
+                            
+                            <div class="addCart-button clearfix">
+                                <a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="tc clearfix">
+        	<a href="" class="button-light-256 anim-all">全部羊皮箱包</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'list': JS_DOMAIN + 'static/system/list/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{list}list'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

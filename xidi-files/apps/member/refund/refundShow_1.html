@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>退款/退货管理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/refund/src/refund.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">退款/退货管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f18 clearfix">
+    	<h2>退款/退货管理&nbsp;&gt;&nbsp;退款/退货详情</h2>
+    </div>
+    
+	<div class="main clearfix">
+    	<!-- 客服处理退款申请 -->
+    	<div class="mt24 clearfix">
+            <div class="step-box">
+                <ul class="clearfix">
+                    <li class="step-column-3 pr fl">申请退款</li>
+                    <li class="step-column-3 pr fl current">客服处理退款申请</li>
+                    <li class="step-column-3 pr fl">退款完成</li>
+                </ul>
+            </div>
+            
+            <div class="step-box stepBox-time">
+                <ul class="clearfix">
+                    <li class="step-column-3 pr fl">14/02/24&nbsp;&nbsp;16:25:00</li>
+                    <li class="step-column-3 pr fl">14/02/24&nbsp;&nbsp;16:25:00</li>
+                    <li class="step-column-3 pr fl">&nbsp;</li>
+                </ul>
+            </div>
+            
+            <div class="refund-state p24 clearfix">
+                <div class="state-dtlTxt clearfix">
+                    <div class="icon-warning-36 sprites fl"></div>
+                    <dl class="pl12 fl">
+                        <dt class="f21 lh36">客服同意退款申请，退款中...</dt>
+                        <dd>查看 <a href="" target="_blank" class="color-blue">退款/退货相关归则</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        
+    	<!-- 退款完成 -->
+        <div class="mt24 clearfix">
+            <div class="step-box">
+                <ul class="clearfix">
+                    <li class="step-column-3 pr fl">申请退款</li>
+                    <li class="step-column-3 pr fl">客服处理退款申请</li>
+                    <li class="step-column-3 pr fl current">退款完成</li>
+                </ul>
+            </div>
+            
+            <div class="step-box stepBox-time">
+                <ul class="clearfix">
+                    <li class="step-column-3 pr fl">14/02/24&nbsp;&nbsp;16:25:00</li>
+                    <li class="step-column-3 pr fl">14/02/24&nbsp;&nbsp;16:25:00</li>
+                    <li class="step-column-3 pr fl">14/02/24&nbsp;&nbsp;16:25:00</li>
+                </ul>
+            </div>
+            
+            <div class="refund-state p24 clearfix">
+                <div class="state-dtlTxt clearfix">
+                    <div class="icon-success-36 sprites fl"></div>
+                    <dl class="pl12 fl">
+                        <dt class="f21 lh36">已退款</dt>
+                        <dd>查看 <a href="" target="_blank" class="color-blue">退款/退货相关归则</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        
+    	<!-- 退款信息 -->
+        <div class="mt36 clearfix">
+        	<div class="refund-aside fl">
+            	<div class="pr24 clearfix">
+                	<h4 class="pb12 f16">订单信息</h4>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">订单编号：</dt>
+                        <dd class="refundAside-value tr fr">3981031030103</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">订单状态：</dt>
+                        <dd class="refundAside-value tr fr">待发货</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">商品总价：</dt>
+                        <dd class="refundAside-value f14 tr fr">¥5542.80</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">运费：</dt>
+                        <dd class="refundAside-value f14 tr fr">¥10.00</dd>
+                    </dl>
+                    
+                    <div class="mt12 bdbt">&nbsp;</div>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">订单总计：</dt>
+                        <dd class="refundAside-value f14 tr fr">¥5552.80</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">实付金额：</dt>
+                        <dd class="refundAside-value color-green f14 tr fr">¥5552.80</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list pt36 clearfix">
+                        <dt class="refundAside-type fl">成交时间：</dt>
+                        <dd class="refundAside-value tr fr">14/04/06 15:38</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list pr clearfix">
+                        <dt class="refundAside-type pointer triangle pr">发货详情</dt>
+                        
+                        <dd class="expressInfo triangle plr24 pb24 pt12 hide pa">
+                        	<div class="expressInfo-hd clearfix">
+                            	<p>发货方式：快递<span class="pl24">物流公司：圆通速递</span><span class="pl24">运单号码：3444990267</span></p>
+                            </div>
+                            
+                            <ul class="pt12 clearfix">
+                            	<li class="color-green lh22">13/12/29 12:20:52  上海市浦东新区三林一部公司已签收</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="refund-section fl">
+            	<div class="pl48 clearfix">
+                	<h4 class="pb12 f16">已选择退款商品</h4>
+                    
+                    <div class="table-thd lh36 color-888 clearfix">
+                        <div class="w132 fl">已选择退款商品</div>
+                        <div class="w210 fl">&nbsp;</div>
+                        <div class="w150 tc fl">单价</div>
+                        <div class="w150 tc fl">数量</div>
+                        <div class="w75 tc fl">小计</div>
+                    </div>
+                    
+                    <div class="clearfix">
+                        <!-- 每个店铺开始 -->
+                        <div class="shop-module clearfix">
+                            <div class="table-thd pt24 lh36 color-888 clearfix">
+                                <a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a>
+                            </div>
+                            
+                            <!-- 每个商品开始 -->
+                            <div class="table table-lst">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 每个商品开始 -->
+                            
+                            <div class="table table-lst">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table table-lst">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                        <!-- 每个店铺结束 -->
+                        
+                        <!-- 每个店铺开始 -->
+                        <div class="shop-module clearfix">
+                            <div class="table-thd pt24 lh36 color-888 clearfix">
+                                <a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a>
+                            </div>
+                            
+                            <!-- 每个商品开始 -->
+                            <div class="table table-lst">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 每个商品开始 -->
+                            
+                            <div class="table table-lst">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table table-lst hide" data-state="hidden">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 每个店铺结束 --
+                        
+                        <!-- 每个店铺开始 -->
+                        <div class="shop-module hide clearfix" data-state="hidden">
+                            <div class="table-thd pt24 lh36 color-888 clearfix">
+                                <a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a>
+                            </div>
+                            
+                            <!-- 每个商品开始 -->
+                            <div class="table table-lst hide" data-state="hidden">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 每个商品开始 -->
+                            
+                            <div class="table table-lst hide" data-state="hidden">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 每个店铺结束 -->
+                    </div>
+                    
+                    <div class="refundMorePro lh36 clearfix">
+                        <div class="pointer triangle pr12 pr fr">
+                            <span class="color-888">查看更多&nbsp;&nbsp;</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 退款说明 -->
+                    <div class="mt24 clearfix">
+                    	<h4 class="pb12 f16">退款说明</h4>
+                        
+                        <div class="refund-des clearfix">
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">申请单号</dt>
+                                <dd class="w625 fr">6144503494839</dd>
+                            </dl>
+                            
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">申请时间</dt>
+                                <dd class="w625 fr">12/05/23 19:00</dd>
+                            </dl>
+                            
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">退款状态</dt>
+                                <dd class="w625 fr">买家申请退款，等待处理</dd>
+                            </dl>
+                            
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">退款商品数量</dt>
+                                <dd class="w625 fr">20</dd>
+                            </dl>
+                            
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">退款金额</dt>
+                                <dd class="w625 fr"><var class="color-green f14">¥1582.00</var></dd>
+                            </dl>
+                            
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">退款类型</dt>
+                                <dd class="w625 fr">仅退款</dd>
+                            </dl>
+                            
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">退款理由</dt>
+                                <dd class="w625 fr">商品质量问题</dd>
+                            </dl>
+                            
+                        	<dl class="lh30 clearfix">
+                            	<dt class="w90 fl">退款说明</dt>
+                                <dd class="w625 fr">质量太差了，东西和描述的不一致，质量太差了</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    
+                    <!-- 退款留言记录 -->
+                    <div class="refund-message mt36 clearfix">
+                    	<h4 class="pb12 f16">退款/退货留言</h4>
+                        
+                        <dl class="pt12 clearfix" id="refundMessageForm">
+                            <dt class="f13"><textarea name="message" class="message-article" data-min="0" data-max="500" data-required="true" placeholder="请在此输入留言，字数不超过500个字"></textarea></dt>
+                            <dd class="color-888 tr" data-type="message-count">500</dd>
+                            <dd class="ml12 color-red fl hide" id="error-warning-message">&nbsp;</dd>
+                            <dd class="color-333">上传凭证</dd>
+                            <dd class="clearfix">
+                            	<ul class="certificate-list clearfix">
+                                	<li class="certificate-item mr12 pr fl">
+                                        <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                        
+                                        <div class="certificate-oper hide pa">
+                                            <span class="icon-remove sprites" data-action="remove"></span>
+                                        </div>
+                                    </li>
+                                    
+                                	<li class="certificate-item mr12 pr fl">
+                                        <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                        
+                                        <div class="certificate-oper hide pa">
+                                            <span class="icon-remove sprites" data-action="remove"></span>
+                                        </div>
+                                    </li>
+                                    
+                                	<li class="certificate-item mr12 pr fl">
+                                        <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                        
+                                        <div class="certificate-oper hide pa">
+                                            <span class="icon-remove sprites" data-action="remove"></span>
+                                        </div>
+                                    </li>
+                                    
+                                	<li class="certificate-item certificate-item-upload mr12 pr fl">
+                                                    <div class="icon-add-button sprites"></div>
+                                                    <input type="file" name="file" class="uploadCertificate pointer pa" />
+                                                </li>
+                                    
+                                    <li class="certificate-item certificate-item-notice mr12 pr fl"><span class="color-red f12 pa">图片出错</span></li>
+                                </ul>
+                            </dd>
+                            <dd class="color-888">仅支持JPG、GIF、PNG图片文件，且文件小于5M，最多5张</dd>
+                            <dd class="message-button pt24">
+                                <a href="javascript:;" class="button-light-100 anim-all" data-action="submit">发表留言凭证</a>
+                            </dd>
+                        </dl>
+                        
+                        <ul class="mt24 clearfix">
+                            <li class="msg-item ptb24 clearfix">
+                                <div class="mr36 fl">
+                                    <img src="../../../static/temp-images/src/20140428001.png" width="60" height="60" class="vt circle">
+                                </div>
+                                
+                                <dl class="w570 f13 fr">
+                                    <dt class="msg-tit clearfix">
+                                        <cite class="fl"><a href="" target="_blank" class="color-blue">品牌店</a></cite>
+                                        <p class="color-c3 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                                    </dt>
+                                    
+                                    <dd class="pt12 f12 clearfix">我没什么关注，这篇日记可能像往常一样没人看 ，但是我必须写出来</dd>
+                                </dl>
+                            </li>
+                            
+                            <li class="msg-item ptb24 clearfix">
+                                <div class="mr36 fl">
+                                    <img src="../../../static/temp-images/src/20140428001.png" width="60" height="60" class="vt circle">
+                                </div>
+                                
+                                <dl class="w570 f13 fr">
+                                    <dt class="msg-tit clearfix">
+                                        <cite class="fl">我</cite>
+                                        <p class="color-c3 fr">14/03/18&nbsp;&nbsp;17:03:39</p>
+                                    </dt>
+                                    
+                                    <dd class="pt12 f12 clearfix">
+                                    	<p>于 14/01/24 13:02:00 创建了退款申请</p>
+                                        <p>退款类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;仅退款</p>
+                                        <p>退款金额&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3000元</p>
+                                        <p>退款理由&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品质量问题</p>
+                                        <p>退款说明&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;质量太差了，东西和描述的不一致，质量太差了</p>
+                                        
+                                        <ul class="certificate-list pt12 clearfix">
+                                            <li class="certificate-item mr12 fl">
+                                                <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                            </li>
+                                            
+                                            <li class="certificate-item mr12 fl">
+                                                <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                            </li>
+                                            
+                                            <li class="certificate-item mr12 fl">
+                                                <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                            </li>
+                                            
+                                            <li class="certificate-item mr12 fl">
+                                                <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                            </li>
+                                            
+                                            <li class="certificate-item mr12 fl">
+                                                <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'refund': JS_DOMAIN + 'static/member/refund/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{refund}refund'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

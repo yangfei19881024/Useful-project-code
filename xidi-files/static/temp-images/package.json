@@ -1,0 +1,17 @@
+{
+	"family": "static/",
+	"name": "temp-images",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"*.jpg",			
+			"*.png",
+			"*.gif"
+		]
+	}
+}

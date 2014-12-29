@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品搜索</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/search/src/search.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-his fl" data-class="search-his-int">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr" data-class="search-his-int">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-sug clearfix hide" data-class="search-sug">
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+	<!-- 搜索提示 -->
+    <div class="search-tip pb36 clearfix">
+    	<p class="f14"><strong>“羊皮手提包 新西兰”</strong> 搜索结果</p>
+    </div>
+    
+	<!-- 分类 -->
+	<div class="pro-category pb12 f14 clearfix">
+    	<div class="search-cate fl">
+            <dl class="clearfix">
+                <dt class="pro-cate-class fl"><em class="plr12">产地</em></dt>
+                <dd class="pro-cate-list fl">
+                    <a href="" class="pro-cate-name pro-cate-current fl">新西兰 <var class="color-888 f12">2898</var></a>
+                    <a href="" class="pro-cate-name fl">澳大利亚 <var class="color-888 f12">2898</var></a>
+                    <a href="" class="pro-cate-name fl">美国 <var class="color-888 f12">2898</var></a>
+                    <a href="" class="pro-cate-name fl">意大利 <var class="color-888 f12">2898</var></a>
+                    <a href="" class="pro-cate-name fl">韩国 <var class="color-888 f12">2898</var></a>
+                    <a href="" class="pro-cate-name fl">丹麦 <var class="color-888 f12">2898</var></a>
+                    <a href="" class="pro-cate-name fl">法国 <var class="color-888 f12">2898</var></a>
+                </dd>
+            </dl>
+        </div>
+        
+    	<div class="search-cate-shop fr">
+            <dl class="fr">
+                <dt class="pro-cate-class fl hide">店铺</dt>
+                <dd class="pro-cate-list fl">
+                    <a href="" class="pro-cate-name fl">店铺 <var class="color-888 f12">2898</var></a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
+    <!-- 排序 -->
+    <div class="pt12 clearfix">
+    	 <div class="sort-list fl">
+         	<a href="" class="sort-item plr12 mr12 fl sort-cur">默认</a>
+             <a href="" class="sort-item plr12 mr12 fl">销量&nbsp;&nbsp;<span class="sort-up sprites"></span></a>
+             <a href="" class="sort-item plr12 mr12 fl">价格&nbsp;&nbsp;<span class="sort-down sprites"></span></a>
+         </div>
+         
+         <div class="sort-page fr">
+         	<a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+            <a href="" class="page-button page-next inline-block">&gt;</a>
+         </div>
+    </div>
+    
+	<!-- 商品列表 -->
+	<div class="main mt12 clearfix">
+    	<ul class="pro-list clearfix">
+        	<li class="pro-item m12 fl" data-item="123456">
+            	<div class="pro-outer pr">
+                	<div class="pro-image hidden pr" data-cate="picture" data-size="{ width:231, height:231}">
+                        <div class="pro-imageList" data-list="datalist">
+                    		<a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140522002.jpg" width="231" height="231" title="" alt="" /></a>
+                    		<a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140522003.jpg" width="231" height="231" title="" alt="" /></a>
+                    		<a href="" class="fl" title=""><img src="../../../static/temp-images/src/20140522004.jpg" width="231" height="231" title="" alt="" /></a>
+                        </div>
+                        
+                        <div class="pro-control hide" data-button="true">
+                        	<a href="javascript:;" class="icon-prev sprites pa" data-control="previous"></a>
+                    		<a href="javascript:;" class="icon-next sprites pa" data-control="next"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="pro-name f13">
+                    	<a href="" target="_blank" title="">拼色皮革手提包</a>
+                    </div>
+                    
+                    <div class="pro-price f16">
+                    	<var class="color-green">¥468.00</var>
+                    </div>
+                    
+                    <div class="add-favorite hide pa">
+                    	<a href="javascript:;" class="icon-favorite icon-unfavorite sprites" data-state="favorite"></a>
+                    </div>
+                    
+                    <div class="add-cart hide clearfix">
+                    	<dl class="pro-param ptb12 color-888 clearfix">
+                        	<dt class="proParam-name pr12 fl">尺码</dt>
+                            <dd class="proParam-list fl">
+                            	<a href="javascript:;" class="param-select mr12 fl">小号</a>
+                            	<a href="javascript:;" class="mr12 fl">中号</a>
+                            	<a href="javascript:;" class="mr12 fl">大号</a>
+                            </dd>
+                        </dl>
+                        
+                        <div class="addCart-button clearfix">
+                        	<a href="" class="button-light-231 anim-all"><span class="icon-cart-small mr12 sprites"></span>加入购物车</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Page -->
+    <div class="content page tc clearfix">
+        <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+        <a href="" class="page-button inline-block page-current">1</a>
+        <a href="" class="page-button inline-block">2</a>
+        <a href="" class="page-button inline-block">3</a>
+        <a href="" class="page-button inline-block">4</a>
+        <span class="page-elps inline-block">…</span>
+        <a href="" class="page-button inline-block">10</a>
+        <a href="" class="page-button page-next inline-block">&gt;</a>
+        
+        <div class="pageGoto inline-block">
+            到<span class="page-button inline-block"><input type="text" class="pageNum fl"><input type="button" class="pageBtn sprites fr"></span>页
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'search': JS_DOMAIN + 'static/system/search/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{search}search'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

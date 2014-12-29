@@ -1,0 +1,372 @@
+// @Mixins
+// ------------------------------------------------------------
+@mixin css3($attr: transition, $val: ease-out .25s) {
+	-webkit-#{$attr}: $val;
+	   -moz-#{$attr}: $val;
+		 -o-#{$attr}: $val;
+		    #{$attr}: $val;
+}
+
+@mixin opacity($opacity: 100) {
+	opacity: $opacity / 100;
+	filter: alpha(opacity=$opacity);
+}
+
+@mixin position($position: absolute, $top: none, $right: none, $bottom: none, $left: none) {
+	position: $position;
+
+	@if $top != none {
+		top: $top;
+	}
+
+	@if $right != none {
+		right: $right;
+	}
+
+	@if $bottom != none {
+		bottom: $bottom;
+	}
+
+	@if $left != none {
+		left: $left;
+	}
+}
+
+@mixin triangle($direction, $size, $borderColor) {
+	content:".";
+	height: 0;
+	width: 0;
+
+	@if $direction == top {
+		border-bottom: $size solid $borderColor;
+		border-left: $size dashed transparent;
+    	border-right: $size dashed transparent;
+  	} 
+	@else if $direction == right {
+    	border-left: $size solid $borderColor;
+    	border-top: $size dashed transparent;
+    	border-bottom: $size dashed transparent;
+  	} 
+    @else if $direction == bottom {
+  		border-top: $size solid $borderColor;
+    	border-left: $size dashed transparent;
+    	border-right: $size dashed transparent;
+    } 
+    @else if $direction == left {
+    	border-right: size solid $borderColor;
+    	border-top: $size dashed transparent;
+    	border-bottom: $size dashed transparent;
+  }
+}
+
+// %Placeholders
+// ------------------------------------------------------------
+%clearfix:after {
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+	line-height: 0;
+	content: '\20';
+}
+%clearfix {
+	*display: table;
+	*zoom: 1;
+}
+%fl {
+	display: inline;
+	float: left;
+}
+%fr {
+	display: inline;
+	float: right;
+}
+%hidden {
+	position: relative;
+	overflow: hidden;
+}
+%inline-block {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+%ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+%circle {
+	overflow: hidden;
+	border-radius: 50%;
+}
+%justify {
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+%center-block {
+	margin-left: auto;
+	margin-right: auto;
+}
+%middle-block {	
+	display: inline-block;
+	width: 1px;
+	height: 1px;
+	margin-left: -1px;
+	line-height: 0;
+	vertical-align: middle;
+	*zoom: 1;
+	*display: inline;
+}
+%anim {
+	@include css3(transition, ease-out .25s);
+}
+%sprites {
+	background-image: url(../../images/1.0.0/sprites.png);
+	background-repeat: no-repeat;
+}
+
+// Margin, Padding
+// ------------------------------------------------------------
+@for $i from 0 through 90 {
+	%m#{$i * 6} {
+		margin: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%mt#{$i * 6} {
+		margin-top: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%mr#{$i * 6} {
+		margin-right: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%mb#{$i * 6} {
+		margin-bottom: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%ml#{$i * 6} {
+		margin-left: #{$i * 6}px;
+	}
+}
+
+@for $i from 0 through 90 {
+	%p#{$i * 6} {
+		padding: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%pt#{$i * 6} {
+		padding-top: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%pr#{$i * 6} {
+		padding-right: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%pb#{$i * 6} {
+		padding-bottom: #{$i * 6}px;
+	}
+}
+@for $i from 0 through 90 {
+	%pl#{$i * 6} {
+		padding-left: #{$i * 6}px;
+	}
+}
+
+// Buttons
+// ------------------------------------------------------------
+$button-size: (50, 24, 12), (80, 32, 12), (100, 36, 13), (130, 36, 13), (146, 36, 13), (231, 36, 13), (256, 48, 16), (291, 48, 16);
+@each $width, $height, $fontSize in $button-size {
+	%button-#{$width} {
+		@extend %inline-block;
+
+		width: #{$width - 2}px;
+		height: #{$height - 2}px;
+		line-height: #{$height - 2}px;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 2px;
+		text-align: center;
+		font-size: #{$fontSize}px;
+	}
+}
+
+@each $width, $height, $fontSize in $button-size {
+	%default-button-#{$width} {
+		@extend %button-#{$width};
+
+		background-color: #fff;
+		border-color: #ddd;
+		color: #333;
+
+		&:hover {
+			border-color: #33CC99;
+			text-decoration: none;
+		}
+
+		&:active {
+			border-color: #37DCA5;
+			color: #37DCA5;
+			text-decoration: none;
+		}
+	}
+}
+
+@each $width, $height, $fontSize in $button-size {
+	%light-button-#{$width} {
+		@extend %button-#{$width};
+
+		background-color: #50B1A2;
+		border-color: #50B1A2;
+		color: #fff;
+
+		&:hover {
+			background-color: #33CC99;
+			border-color: #33CC99;
+			text-decoration: none;
+		}
+
+		&:active {
+			background-color: #37DCA5;
+			border-color: #37DCA5;
+			text-decoration: none;
+		}
+	}
+}
+
+// Inputs
+// ------------------------------------------------------------
+@for $i from 40 through 996 {
+	%input-#{$i} {
+		padding: 5px 11px;
+		width: #{$i - 24}px;
+		height: 24px;
+		line-height: 24px\0;
+		border: 1px solid #ddd;
+		vertical-align: middle;
+
+		&:hover {
+			border-color: #c3c3c3;
+		}
+
+		&:focus {
+			padding: 4px 10px;
+			border-width: 2px;
+			border-color: #08b5a3;
+		}
+	}
+}
+
+// Products ---> List
+// ------------------------------------------------------------
+%products-outer {
+	@extend %fl;
+
+	margin: 0 24px 24px 0;
+	width: 231px;
+	height: 292px;
+
+	&:hover {
+		position: relative;
+		z-index: 9;
+	}
+
+	&:hover %products-box {
+		margin: -12px -12px auto;
+		padding: 10px;
+		background-color: #FFF;
+		border: 2px solid #EBEBEB;
+	}
+
+	&:hover %products-attr-list, 
+	&:hover %products-button-box {
+		display: block;
+	}
+}
+
+%products-box,
+%products-image  {
+	width: inherit;
+}
+%products-box {
+	position: relative;
+}
+%products-image {
+	margin-bottom: 12px;
+	overflow: hidden;
+	border-bottom: 1px dotted #C4CACA;
+}
+%products-article {
+	font-size: 12px;
+}
+%products-title {
+	font-size: 13px;
+}
+%products-price {
+	margin-bottom: 12px;
+	font-size: 16px;
+	color: #50B1A2;
+}
+%products-attr-list {
+	display: none;
+	color: #888;
+}
+%products-attr-box {
+	@extend %clearfix;
+}
+%products-attr-key {
+	@extend %fl;
+	@extend %mr12;
+	@extend %mb12;
+}
+%products-attr-val-list {	
+	@extend %fl;
+}
+%products-attr-val {
+	@extend %fl;
+	@extend %mr12;
+	@extend %mb12;
+
+	padding: 0 11px;
+	height: 22px;
+	border: 1px solid #C3C3C3;
+	color: #888;
+}
+%products-attr-val:hover,
+%products-attr-select,
+%products-attr-select:hover {
+	background-color: #333;
+	border-color: #333;
+	text-decoration: none;
+	color: #FFF;
+}
+%products-pos-box {
+	@include position(absolute, 10px, 10px);
+
+	z-index: 9;
+}
+%products-tag {
+	@extend %clearfix;
+
+	color: #888;
+}
+%products-tag-count {
+	@extend %fl;
+	@extend %mb12;
+}
+%products-tag-cate {
+	@extend %fr;
+
+	color: #598ab3;
+}
+%products-button-box {
+	@extend %clearfix;
+
+	display: none;
+}

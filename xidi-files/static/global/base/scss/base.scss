@@ -1,0 +1,42 @@
+// @import: reset.scss
+//------------------------------------------------------------
+@import "reset.scss";
+
+// Base
+//------------------------------------------------------------
+html, body {
+	line-height: 22px;
+	font-family: 'Avenir', 'Arial', 'Hiragino Sans GB', 'Microsoft YaHei', 'SimSun', 'sans-serif';
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+html, a {
+	color:#333;
+}
+.cb {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+// @import: _mixin.scss
+//------------------------------------------------------------
+@import "_mixin.scss";
+
+.want-buy-btn {
+	@extend %light-button-231;
+
+	background-color: orange;
+	border-color: orange;
+
+	&:hover {
+		background-color: orange;
+		border-color: orange;
+	}
+
+	&:active {
+		background-color: orange;
+		border-color: orange;
+	}
+}
+

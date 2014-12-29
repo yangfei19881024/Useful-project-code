@@ -1,0 +1,16 @@
+{
+	"family": "static/system",
+	"name": "country",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"country.css",
+			"country.js"
+		]
+	}
+}

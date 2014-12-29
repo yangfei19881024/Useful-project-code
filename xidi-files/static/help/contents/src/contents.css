@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :contents
+------------------------------------------------------------ */
+
+/* 帮助中心 - 首页
+------------------------------------------------------------ */
+.dotted-bottom{
+	border-bottom:1px dotted #D1D6D6;
+	padding-left:36px;
+	padding-right:36px;
+}
+.showDialog{
+	overflow:hidden;
+	height:100%;
+}
+.help-aside{
+	width:146px;
+	border:1px solid #E4E4E4;
+}
+.help-section-body{
+	width:741px;
+	margin-left: 12px;
+}
+.content{padding-bottom: 24px;}
+.help-section-body2{width:741px;margin-left: 12px;}
+.iconw:hover .icons{
+	display:block;
+	margin:12px auto 0;
+	width:35px;
+	height:30px;
+	overflow:hidden;
+	background:url(../../../global/images/1.0.0/helpIconHover.png) no-repeat;
+}
+.iconw:hover{
+  color:#3c9;
+  text-decoration: none;
+}
+.icons{
+	display:block;
+	margin:12px auto 0;
+	width:35px;
+	height:30px;
+	overflow:hidden;
+	background:url(../../../global/images/1.0.0/helpIcon.png) no-repeat;
+}
+.help-icon-question{
+	background-position:1px -165px!important;
+}
+.help-icon-progress{
+	background-position:-35px -165px!important;
+}
+.help-icon-payType{
+	background-position:-70px -165px!important;
+}
+.help-icon-shipping{
+	background-position:0 -195px!important;
+}
+.help-icon-returnGoods{
+	background-position:-35px -195px!important;
+}
+.help-icon-refund{
+	background-position:-70px -195px!important;
+}
+
+
+.help_table th{border-bottom:1px solid #ddd;padding:6px 12px;}
+.help_table td{border:1px dotted #ddd;padding:12px;}
+.help_table .bl0{border-left:none;}
+.help_table .br0{border-right:none;}
+h3{font-weight:bold;}
+ h4{font-weight:bold;font-size:14px;padding-top:36px;margin-bottom:12px;}
+
+.help-aside-right li{font-size:18px;color:#e6e6e6;margin-bottom:12px;}
+.help-aside-right li.c_active{color:#999;}
+.help-aside-right li a{font-size:13px;}
+.help-aside-right{position:absolute;margin-left:12px;width:100px;}
+.control_fixed{position:fixed;top:50px;}
+.flow_fixed{position:fixed;top:0;background:#fff;}
+
+/*** flow icons**/
+
+
+.help-icon-item{
+	width:80px;
+	line-height:16px;
+}
+.help-icon-gt{
+	height:55px;
+	font-size:22px;
+	line-height:55px;
+	width:40px;
+	color:#DDD;
+	background: url(../../../global/images/1.0.0/help-flow.png) center no-repeat;
+}
+.icons2{
+	display:block;
+	margin:0 auto;
+	width:55px;
+	height:55px;
+	overflow:hidden;
+	background:url(../../../global/images/1.0.0/helpIcon.png) no-repeat;
+}
+.iconw2:hover .icons2{
+	display:block;
+	margin:0 auto;
+	width:55px;
+	height:55px;
+	overflow:hidden;
+	background:url(../../../global/images/1.0.0/helpIconHover.png) no-repeat;
+}
+a.iconw2:hover{color:#3c9;text-decoration: none;}
+
+.help-icon-login{
+	background-position:0 0!important;
+}
+.help-icon-product{
+	background-position:-55px 0!important;
+}
+.help-icon-cart{
+	background-position:0 -55px!important;
+}
+.help-icon-info{
+	background-position:-55px -55px!important;
+}
+.help-icon-pay{
+	background-position:0 -110px!important;
+}
+.help-icon-comment{
+	background-position:-56px -110px!important;
+}
+
+.tiaoxuan{margin-right:180px;}
+.jiarugouwu{height:208px;background:url(../../../global/images/1.0.0/flow_11.png) bottom left no-repeat;}
+.fapiao p{width:310px;vertical-align: top;text-align: justify;}
+
+.list_suo{width:24px;position:absolute;left:0;}
+.list_suo2{width:30px;position:absolute;left:30px;}
+.help_p{position:relative;padding-left:30px;}
+.decimal{
+	position:relative;padding-left:24px;
+}
+.help_p2{position:relative;padding-left:60px;}
+
+.mask{width:100%;height:100%;position:fixed;left:0;top:0;background: #000;opacity:0.5;}
+.dialog{width:741px;height:560px;position:fixed;background:#fff;z-index:8000;}
+.dialogContent{display:none;padding:0 36px;}
+.dialog .dialogContent{display: block;overflow-y:scroll;height:476px;}
+.dialog_close{position:absolute;right:12px;top:12px;font-size:18px;color:#c3c3c3;cursor:pointer;width:18px;height:18px;background: url(../../../global/images/1.0.0/sprites.png);
+	background-position:-68px -190px;
+}
+.mt6{margin-top:6px;}
+.fb{font-weight: bold}
+.help_table td{text-align:justify;text-justify:inter-ideograph;}
+.help_table.tc td {text-align: center;}
+
+
+
+/*.float_sidebar{width:48px;position:absolute;}
+.float_sidebar ul{list-style:none;}
+.float_sidebar li{width:48px;height:48px;background:url(../../../global/images/src/sidebar.png) no-repeat;cursor:pointer;}
+.float_sidebar .top{background-position:0 0;opacity:1;
+-webkit-transition: opacity .5s linear;
+-moz-transition: opacity .5s linear;
+-ms-transition: opacity .5s linear;
+-o-transition: opacity .5s linear;
+transition: opacity .5s linear;
+}
+.float_sidebar .service{background-position:0 -48px;}
+.float_sidebar .feedback{background-position:0 -96px;}
+.top:hover{background:url(../../../global/images/src/sidebar-top.gif);}
+.feedback:hover{background:url(../../../global/images/src/sidebar-feedback.gif);}
+.service:hover{background:url(../../../global/images/src/sidebar-service.gif);}
+.content{position:relative;}
+#onTheTop{background:#fff;cursor:default;
+-webkit-transition: opacity .5s linear;
+-moz-transition: opacity .5s linear;
+-ms-transition: opacity .5s linear;
+-o-transition: opacity .5s linear;
+transition: opacity .5s linear;
+opacity:0;
+}
+#onTheTop:hover{background:#fff;}*/

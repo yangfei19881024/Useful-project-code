@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :category
+------------------------------------------------------------ */
+
+/* 产地馆
+------------------------------------------------------------ */
+.category-module-head{
+	line-height:28px;
+}
+.country-section{
+	margin-left:-24px;
+	margin-right:-24px;
+	background-color:#FFF;
+}
+.country-menu{
+	padding-top:24px;
+	padding-bottom:12px;
+	height:74px;
+}
+.country-menu-list{
+	margin-left:24px;
+	margin-right:24px;
+	width:996px;
+	height:60px;
+	overflow:hidden;
+}
+.country-menu-list-ul{
+	width:2000%;
+}
+.country-menu-list-item{
+	width:250px;
+}
+.country-menu-list-item dl{
+	padding-top:6px;
+}
+.country-menu-list-item dd{
+	padding-top:3px;
+}
+.control-pre:after,
+.control-next:after,
+.control-pre:before,
+.control-next:before{
+	top:8px;
+	border-width:8px;
+}
+.control-pre:after{
+	left:8px;
+}
+.control-pre:before{
+	left:9px;
+}
+.control-next:after{
+	right:8px;
+}
+.control-next:before{
+	right:9px;
+}
+.country-menu:hover .control-pre,
+.country-menu:hover .control-next{
+	display:block;
+}
+
+.country-cate-box{
+	border:1px solid #DDD;
+}
+.country-cate-item{
+	width:340px;
+	border-right:1px solid #DDD;
+}
+.ctImg{
+	position:relative;
+	margin-top:-12px;
+}
+.country-cate-name{
+	width:228px;
+}
+.country-cate-des{
+	margin-left:-1px;
+	width:620px;
+	border-left:1px solid #DDD;
+}
+.country-cate-art{
+	width:460px;
+}
+.navBar{
+	border-bottom:1px solid #fff;
+}

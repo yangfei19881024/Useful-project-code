@@ -1,0 +1,16 @@
+{
+	"family": "static/member",
+	"name": "assess",
+	"version": "1.0.0",
+	"author": "latpaw",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"assess.css",
+			"assess.js"
+		]
+	}
+}

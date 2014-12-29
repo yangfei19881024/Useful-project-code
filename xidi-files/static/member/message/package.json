@@ -1,0 +1,16 @@
+{
+	"family": "static/member",
+	"name": "message",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"message.css",
+			"message.js"
+		]
+	}
+}

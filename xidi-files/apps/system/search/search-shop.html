@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>店铺搜索</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/search/src/search.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+	<!-- 搜索提示 -->
+    <div class="search-tip pb36 clearfix">
+    	<p class="f14"><strong>“羊皮手提包 新西兰”</strong> 搜索结果</p>
+    </div>
+    
+	<!-- 分类 -->
+	<div class="pro-category pb12 f14 clearfix">
+    	<div class="search-shop-pro fl">
+            <dl class="clearfix">
+                <dt class="pro-cate-class fl hide"><em class="plr12">商品</em></dt>
+                <dd class="pro-cate-list fl">
+                    <a href="" class="pro-cate-name fl">商品</a>
+                </dd>
+            </dl>
+        </div>
+        
+    	<div class="search-cate-shop fl">
+            <dl class="pl12 clearfix">
+                <dt class="pro-cate-class fl hide">店铺</dt>
+                <dd class="pro-cate-list fl">
+                    <a href="" class="pro-cate-name pro-cate-current fl">店铺 <var class="color-888 f12">2898</var></a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
+    <!-- 排序 -->
+    <div class="pt12 clearfix">
+    	 <div class="sort-list fl">
+         	<a href="" class="sort-item plr12 mr12 fl sort-cur">默认</a>
+             <a href="" class="sort-item plr12 mr12 fl">销量&nbsp;&nbsp;<span class="sort-up sprites"></span></a>
+             <a href="" class="sort-item plr12 mr12 fl">价格&nbsp;&nbsp;<span class="sort-down sprites"></span></a>
+         </div>
+         
+         <div class="sort-page fr">
+         	<a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+            <a href="" class="page-button page-next inline-block">&gt;</a>
+         </div>
+    </div>
+    
+    <!-- 店铺 -->
+	<div class="main clearfix">
+    	<ul class="search-shop-list clearfix">
+        	<li class="search-shop-item ptb24 clearfix">
+            	<div class="search-shop-icon fl">
+                	<a href="" target="_blank"><img src="../../../static/temp-images/src/shoplogo1.jpg" width="120" height="120" /></a>
+                </div>
+                
+                <div class="search-shop-info ml24 fl">
+                	<a href="" class="block pr">
+                        <h6 class="f14"><strong>Hoptimis新西兰之心母婴用品专营</strong></h6>
+                        <p class="color-888">咖啡罐子宝贝维尼</p>
+                        <p>主营：Hoptimist 母婴用品 天然纯棉 Hoptimist...</p>
+                        <p>产地：新西兰 澳大利亚 意大利</p>
+                    </a>
+                    
+                    <div class="search-shop-tag color-888 pa">
+                    	<p class="fl">产地风情 4.5</p>
+                        <p class="search-shop-tagLine fl">&nbsp;</p>
+                        <p class="fl">237 件商品</p>
+                    </div>
+                </div>
+                
+                <div class="search-shop-goods ml24 fl">
+                	<ul class="clearfix">
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li class="search-shop-item ptb24 clearfix">
+            	<div class="search-shop-icon fl">
+                	<a href="" target="_blank"><img src="../../../static/temp-images/src/shoplogo1.jpg" width="120" height="120" /></a>
+                </div>
+                
+                <div class="search-shop-info ml24 fl">
+                	<a href="" class="block pr">
+                        <h6 class="f14"><strong>Hoptimis新西兰之心母婴用品专营</strong></h6>
+                        <p class="color-888">咖啡罐子宝贝维尼</p>
+                        <p>主营：Hoptimist 母婴用品 天然纯棉 Hoptimist...</p>
+                        <p>产地：新西兰 澳大利亚 意大利</p>
+                    </a>
+                    
+                    <div class="search-shop-tag color-888 pa">
+                    	<p class="fl">产地风情 4.5</p>
+                        <p class="search-shop-tagLine fl">&nbsp;</p>
+                        <p class="fl">237 件商品</p>
+                    </div>
+                </div>
+                
+                <div class="search-shop-goods ml24 fl">
+                	<ul class="clearfix">
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li class="search-shop-item ptb24 clearfix">
+            	<div class="search-shop-icon fl">
+                	<a href="" target="_blank"><img src="../../../static/temp-images/src/shoplogo1.jpg" width="120" height="120" /></a>
+                </div>
+                
+                <div class="search-shop-info ml24 fl">
+                	<a href="" class="block pr">
+                        <h6 class="f14"><strong>Hoptimis新西兰之心母婴用品专营</strong></h6>
+                        <p class="color-888">咖啡罐子宝贝维尼</p>
+                        <p>主营：Hoptimist 母婴用品 天然纯棉 Hoptimist...</p>
+                        <p>产地：新西兰 澳大利亚 意大利</p>
+                    </a>
+                    
+                    <div class="search-shop-tag color-888 pa">
+                    	<p class="fl">产地风情 4.5</p>
+                        <p class="search-shop-tagLine fl">&nbsp;</p>
+                        <p class="fl">237 件商品</p>
+                    </div>
+                </div>
+                
+                <div class="search-shop-goods ml24 fl">
+                	<ul class="clearfix">
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li class="search-shop-item ptb24 clearfix">
+            	<div class="search-shop-icon fl">
+                	<a href="" target="_blank"><img src="../../../static/temp-images/src/shoplogo1.jpg" width="120" height="120" /></a>
+                </div>
+                
+                <div class="search-shop-info ml24 fl">
+                	<a href="" class="block pr">
+                        <h6 class="f14"><strong>Hoptimis新西兰之心母婴用品专营</strong></h6>
+                        <p class="color-888">咖啡罐子宝贝维尼</p>
+                        <p>主营：Hoptimist 母婴用品 天然纯棉 Hoptimist...</p>
+                        <p>产地：新西兰 澳大利亚 意大利</p>
+                    </a>
+                    
+                    <div class="search-shop-tag color-888 pa">
+                    	<p class="fl">产地风情 4.5</p>
+                        <p class="search-shop-tagLine fl">&nbsp;</p>
+                        <p class="fl">237 件商品</p>
+                    </div>
+                </div>
+                
+                <div class="search-shop-goods ml24 fl">
+                	<ul class="clearfix">
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li class="search-shop-item ptb24 clearfix">
+            	<div class="search-shop-icon fl">
+                	<a href="" target="_blank"><img src="../../../static/temp-images/src/shoplogo1.jpg" width="120" height="120" /></a>
+                </div>
+                
+                <div class="search-shop-info ml24 fl">
+                	<a href="" class="block pr">
+                        <h6 class="f14"><strong>Hoptimis新西兰之心母婴用品专营</strong></h6>
+                        <p class="color-888">咖啡罐子宝贝维尼</p>
+                        <p>主营：Hoptimist 母婴用品 天然纯棉 Hoptimist...</p>
+                        <p>产地：新西兰 澳大利亚 意大利</p>
+                    </a>
+                    
+                    <div class="search-shop-tag color-888 pa">
+                    	<p class="fl">产地风情 4.5</p>
+                        <p class="search-shop-tagLine fl">&nbsp;</p>
+                        <p class="fl">237 件商品</p>
+                    </div>
+                </div>
+                
+                <div class="search-shop-goods ml24 fl">
+                	<ul class="clearfix">
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li class="search-shop-item ptb24 clearfix">
+            	<div class="search-shop-icon fl">
+                	<a href="" target="_blank"><img src="../../../static/temp-images/src/shoplogo1.jpg" width="120" height="120" /></a>
+                </div>
+                
+                <div class="search-shop-info ml24 fl">
+                	<a href="" class="block pr">
+                        <h6 class="f14"><strong>Hoptimis新西兰之心母婴用品专营</strong></h6>
+                        <p class="color-888">咖啡罐子宝贝维尼</p>
+                        <p>主营：Hoptimist 母婴用品 天然纯棉 Hoptimist...</p>
+                        <p>产地：新西兰 澳大利亚 意大利</p>
+                    </a>
+                    
+                    <div class="search-shop-tag color-888 pa">
+                    	<p class="fl">产地风情 4.5</p>
+                        <p class="search-shop-tagLine fl">&nbsp;</p>
+                        <p class="fl">237 件商品</p>
+                    </div>
+                </div>
+                
+                <div class="search-shop-goods ml24 fl">
+                	<ul class="clearfix">
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                        
+                    	<li class="search-shop-goods-item tc fl">
+                        	<div class="search-shop-goods-outer clearfix">
+                            	<a href="" target="_blank"><img src="../../../static/temp-images/src/4.jpg" width="156" height="156" /></a>
+                                <p class="search-shop-goods-name hide"><a href="" target="_blank">Aden Qnais春夏羊皮手提包</a></p>
+                                <p class="color-green">&yen;468</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Page -->
+    <div class="content page tc clearfix">
+        <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+        <a href="" class="page-button inline-block page-current">1</a>
+        <a href="" class="page-button inline-block">2</a>
+        <a href="" class="page-button inline-block">3</a>
+        <a href="" class="page-button inline-block">4</a>
+        <span class="page-elps inline-block">…</span>
+        <a href="" class="page-button inline-block">10</a>
+        <a href="" class="page-button page-next inline-block">&gt;</a>
+        
+        <div class="pageGoto inline-block">
+            到<span class="page-button inline-block"><input type="text" class="pageNum fl"><input type="button" class="pageBtn sprites fr"></span>页
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'search': JS_DOMAIN + 'static/system/search/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{search}search'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

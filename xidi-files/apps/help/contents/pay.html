@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助中心</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/help/contents/src/contents.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">            
+        <div class="searchBox fl">                
+            <div class="search-bar">
+                <div class="searchsugbox none">
+                    <ul class="search-sug">
+                        <li class="graysug">最近搜索<i class="searchicons"></i></li>
+                    </ul>
+                    <ul class="search-interest">
+                        <li class="graysug">您可能感兴趣</li>
+                    </ul>
+                </div>
+                
+                <input type="text" class="searchkey anim-all fl" />
+                <input type="button" class="search-button anim-all sprites fr" />
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2><a href="../home/home.html">帮助中心</a>&nbsp;&gt;&nbsp;支付方式</h2>
+    </div>
+    
+	<div class="main mt36 clearfix">
+    	<div class="help-aside fl">
+            <div class="plr12 clearfix">
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="faq.html" class="block pr iconw">
+                            <span class="help-icon-question icons"></span>
+                            <h6>常见问题</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="flow.html" class="block pr iconw">
+                            <span class="help-icon-progress icons"></span>
+                            <h6>购物流程</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="ptb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="pay.html" class="block pr iconw">
+                            <span class="help-icon-payType icons"></span>
+                            <h6>支付方式</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="delivery.html" class="block pr iconw">
+                            <span class="help-icon-shipping icons"></span>
+                            <h6>配送方式</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="ptb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="return.html" class="block pr iconw">
+                            <span class="help-icon-returnGoods icons"></span>
+                            <h6>退货规则</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="refund.html" class="block pr iconw">
+                            <span class="help-icon-refund icons"></span>
+                            <h6>退款规则</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 每一个 help-section-body 里面应该放一个 自定义编辑器 -->
+        <div class="help-section fl">
+        	<!-- <div class="help-section-head clearfix">
+            	<h3 class="f18">支付宝</h3>
+            </div> -->
+            
+        	<div class="help-section-body clearfix">
+                <div class="dotted-bottom list pb48">
+                	<h3 class="f18"  id="alipay">支付宝</h3>
+                    <ul class="faq f13 mt36">
+                        <li class="decimal pb24"><span class="list_suo"> 1 </span>喜地电子商务网站目前支持的支付宝付款方式为：即时到账付款。</li>
+                        <li class="decimal pb24"><span class="list_suo"> 2 </span> "即时到帐"是支付宝所有付款方式中的一种，即客户自愿通过其支付宝帐户即时向对方支付宝帐户支付的一种方式，客户付款成功后，所支付的款项将立刻进入对方支付宝帐户。</li>
+                        <li class="decimal pb24"><span class="list_suo"> 3 </span> 使用支付宝付款时，您可选择：
+                            <p class="mt12"><b class="help_p"><span class="list_suo">( 1 )</span>使用支付宝钱包扫码完成付款</b></p>
+                            <p class="mt12 help_p"><span class="list_suo"></span><b>已安装支付宝钱包用户</b>：登录支付宝钱包，点击“探索”——“扫码”，扫电脑端收银台显示的二维码，扫码成功后，进入支付宝钱包支付页面，根据提示完成付款即可。</p>
+                            <p class="mt12 help_p"><span class="list_suo"></span><b>未安装支付宝钱包用户</b>：使用扫码工具进行扫码后，提示是否打开此链接，点击“打开”，提示该二维码信息为支付宝钱包，点击“立即下载”，下载成功，进入支付宝钱包完成付款即可。</p>
+                            <p class="mt24"><b class="help_p"><span class="list_suo">( 2 )</span>快捷支付</b></p>
+                            <p class="mt12 help_p"><span class="list_suo"></span>网上购物时只需要一张银行卡，无需办理网银，输入支付宝的支付密码即可完成付款，是最安全、便捷的支付方式。</p>
+                            <p class="mt24"><b class="help_p"><span class="list_suo">( 3 )</span>网上银行</b></p>
+                            <p class="mt12 help_p"><span class="list_suo"></span>开通网上银行即可进行网上付款。网购付款时，需要跳转银行网银页面，按银行要求的信息进行支付.目前已支持包括中国工商银行、中国农业银行、中国建设银行、招商银行、中国银行、交通银行、中国邮政储蓄银行、平安银行、广发银行、中信银行、中国民生银行、兴业银行、中国光大银行、浦发银行、华夏银行等20余家银行。</p>
+                            <p class="mt24"><b class="help_p"><span class="list_suo">( 4 )</span>信用卡支付</b></p>
+                            <p class="mt12 help_p"><span class="list_suo"></span>信用卡付款是支付宝为买家提供的一种支付工具，信用卡开通网上支付功能即可进行付款，并支持大额金额的交易。</p>
+                            <p class="mt12"><b class="help_p"><span class="list_suo">( 5 )</span>支付宝账户余额</b></p>
+                            <p class="mt12 help_p"><span class="list_suo"></span>通过网上银行、网点和消费卡充值到支付宝账户的款项即为支付宝账户余额，交易时只需输入支付宝的支付密码即可完成付款。</p>
+                        </li>
+                        <li class="decimal pb24"><span class="list_suo"> 4 </span>有关如何注册、如何激活、如何充值支付宝流程或您在使用支付宝时遇到问题，建议您直接联系<a href="http://help.alipay.com/lab/210220-233878/0-233878.htm" target="_blank" class="color-blue">支付宝客服中心</a>，或拨打支付宝客服中心电话0571-88156688 。</li>
+                        
+                    </ul>
+                </div>
+                <div class="pl36 list pr36">
+                    <h3 class="f18 pt60" id="unionpay">银联在线</h3>
+                    <ul class="faq f13 mt36">
+                        <li class="decimal pb24"><span class="list_suo"> 1 </span><b>什么是银联在线支付？</b>
+                        <p class="mt12">银联在线支付是中国银联为满足用户网上支付需求而打造的交易转接清算平台。作为国内首个具有金融级预授权担保交易的综合性网上支付平台，银联在线支付通过包括认证支付、快捷支付、储值卡支付、网银支付在内的四种支付方式。其中：认证支付、快捷支付方式支持未开通网上银行功能的支付卡。</p>
+                        </li>
+                        <li class="decimal pb24"><span class="list_suo"> 2 </span><b>使用银联在线支付时，您可选择：</b>
+                            <p class="mt12"><b class="help_p"><span class="list_suo">( 1 )</span>银联在线支付（无卡支付）</b></p>
+                            <p class="mt12  help_p"><span class="list_suo"></span><b>认证支付</b>：该支付方式在普通支付基础上设计的增加验证要素的支付服务。目前银行卡支付仅支持手机验证，即持卡人无需开通网银，在银联在线支付的支付页面输入银行卡信息（即卡号、密码、CVN2等）和手机号码，由发卡银行验证信息并完成支付交易的支付方式。认证支付可以比普通支付有更高的支付限额。</p>
+                            <p class="mt12  help_p"><span class="list_suo"></span><b>快捷支付</b>：指持卡人在银联在线支付的网站完成用户注册并关联银行卡后，通过注册用户信息替代银行卡信息进行支付。它提供给注册用户更为便利的支付流程体验。快捷支付的使用条件是：您已是注册用户且您有绑定的银行卡。在该登录状态下您的快捷支付的支付流程：选择绑定的银行卡→输入短信验证码→支付成功。</p>
+                            <p class="mt12  help_p"><span class="list_suo"></span><b>普通支付</b>：无需开通网银，若您持有借记卡，输入卡号及密码；若您持有信用卡，输入卡号、有效期及CVN2即可完成支付。</p>
+                            <p class="mt12  help_p"><span class="list_suo"></span><b>网银支付</b>：输入卡号及交易密码即可轻松实现支付。选择该支付方式前，必须已经是银行的网银用户。</p>
+                            <p class="mt24"><b class="help_p"><span class="list_suo">( 2 )</span>网上银行支付</b></p>
+                            <p class="mt12 help_p"><span class="list_suo"></span>支持带有“银联”标志且开通网上银行业务的银行卡，目前支持工商银行、农业银行、中国银行、建设银行、交通银行、招商银行、浦发银行、光大银行、华夏银行、民生银行、兴业银行、中信银行、广发银行、深圳发展银行、平安银行、中国邮政储蓄银行等几十家银行。 </p>
+                        </li>
+                        <li class="decimal pb24"><span class="list_suo"> 3 </span>支持的银行卡请查看 <a href="http://online.unionpay.com/static/help/detail_36.html" target="_blank" class="color-blue">银联帮助中心</a></li>
+                        <li class="decimal pb24"><span class="list_suo"> 4 </span>有关银联在线的更多使用问题，建议您直接联系<a href="http://online.unionpay.com/static/help/detail_36.html" target="_blank" class="color-blue">银联在线客服</a>，或拨打7*24小时银联客服电话95516。</li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="help-aside-right fl f13">
+                <ul>
+                    <li class="c_active" data-id="alipay"><i>●</i> <a href="#alipay">支付宝</a></li>
+                    <li data-id="unionpay"><i> ● </i> <a href="#unionpay">银联在线</a></li>
+                </ul>
+        </div>
+    </div>
+</div>
+
+<div class="float_sidebar">
+    <ul>
+        <li class="top"></li>
+        <li class="service"></li>
+        <li class="feedback"></li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+</script>
+
+<script>
+    var control = $('.help-aside-right');
+    var position = control.offset().top;
+    $('h3','.list').each(function(){
+            $(this).attr('data-top',$(this).offset().top)
+        })
+    $(document).on('scroll',function(){
+        var scroll=window.scrollY;
+        if(scroll-position >= -50){//control position
+            control.addClass('control_fixed');
+        }else{
+            control.removeClass('control_fixed')
+        }
+
+        var ary = [];
+        $('h3','.list').each(function(){
+            ary.push($(this).data('top')-scroll);
+        })
+        console.log(ary)
+        var index,min;
+        $.each(ary,function(i,n){
+            if(n>0){
+                if(index){
+                    if(min>n){
+                        index =i ; min=n;
+                    }else{
+
+                    }
+                }else{
+                    index = i;min = n;
+                }
+            }
+        })
+        if(!index){index=$('.help-aside-right li').last().index()+1;}
+        var id = $('h3','.list').eq(index-1).attr("id");
+
+        $('[data-id='+id+']').addClass('c_active').siblings().removeClass('c_active');
+
+    })
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>购物车</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/cart/src/cart.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+	<div class="pt12 clearfix">
+        <ul class="step-box clearfix">
+            <li class="step-column-4 pr fl current">查看购物车</li>
+            <li class="step-column-4 pr fl">确认订单信息</li>
+            <li class="step-column-4 pr fl">成功提交订单</li>
+            <li class="step-column-4 pr fl">成功付款</li>
+        </ul>
+    </div>
+    
+	<div class="main clearfix">
+    	<div class="total-outer total-outer-top clearfix">
+        	<div class="fl">
+            	<span class="color-888">全国包邮</span>
+            </div>
+            
+            <div class="smallTotal pr fr">
+            	<span class="color-666">已选商品（不含运费）：</span>
+                <span class="color-green f16"><var data-class="totalPrice">¥1576.80</var></span>
+                <a href="" class="button-light-50 anim-all ml12">结算</a>
+                
+                <div class="cartTipInfo">
+                	<p>正在转向订单信息页面，请稍候</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-wrap clearfix">
+        	<div class="cartHead clearfix">
+            	<div class="cart-check fl">
+                	<div class="pl12">
+                    	<span class="uncheckbox sprites" data-type="checkbox-radio"><input type="checkbox" class="hide" value="" /></span>
+                    </div>
+                </div>
+                
+            	<div class="cart-image fl">
+                	<p class="pl12">全选</p>
+                </div>
+                
+            	<div class="cart-goods fl">
+                	<p class="pl24">商品</p>
+                </div>
+                
+            	<div class="cart-price fl">
+                	单价
+                </div>
+                
+            	<div class="cart-count fl">
+                	数量
+                </div>
+                
+            	<div class="cart-sum fl">
+                	<p class="pr24">小计</p>
+                </div>
+            </div>
+            
+            <div class="cartBody clearfix">
+            	<div class="cartAgent clearfix">
+                	<div class="cartHead clearfix">
+                        <div class="cart-check fl">
+                            <div class="pl12">
+                                <span class="uncheckbox sprites" data-type="checkbox-radio"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="pl12 fl">
+                            <a href="" class="color-blue fl">Stella Aden男装旗舰店</a>
+                            <a href="javascript:;" class="icon-mail sprites fl" data-state="pm"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="cartList table">
+                    	<div class="cartGoods table-row">
+                        	<div class="cart-check table-cell">
+                                <div class="pl12">
+                                    <span class="uncheckbox sprites" data-type="checkbox-radio"><input type="checkbox" class="hide" value="" /></span>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-image table-cell">
+                            	<div class="pl12">
+                                	<a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" /></a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-goods table-cell">
+                            	<div class="pl24">
+                                   	<p class="pb12 f13"><a href="">Stella Aden纯棉休闲短裤</a></p>
+                                    <p>颜色：姜黄</p>
+                                    <p>尺码：L</p>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-price table-cell">
+                                <p class="price-del f14">500.00</p>
+                                <p class="f14">280.00</p>
+                                <p>双11活动</p>
+                            </div>
+                            
+                        	<div class="cart-count table-cell">
+                                <div class="addCartOperBox">
+                                    <a href="javascript:;" class="icon-minus sprites fl">-</a>
+                                    <input type="text" class="addCartNum fl" data-min="1" data-max="5" value="1">
+                                    <a href="javascript:;" class="icon-plus sprites fl">+</a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-sum table-cell">
+                            	<p class="color-green f14 pr12"><var data-class="price">280.00</var></p>
+                                <a href="javascript:;" class="icon-delete sprites" data-class="cart-delete">&nbsp;</a>
+                            </div>
+                        </div>
+                        
+                        <div class="cartGoods table-row cartGoods-disabled">
+                        	<div class="cart-check table-cell">
+                                <p class="tr">失效</p>
+                            </div>
+                            
+                        	<div class="cart-image table-cell">
+                            	<div class="pl12">
+                                	<a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" /></a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-goods table-cell">
+                            	<div class="pl24">
+                                   	<p class="pb12 f13"><a href="">Stella Aden纯棉休闲短裤</a></p>
+                                    <p>颜色：姜黄</p>
+                                    <p>尺码：L</p>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-price table-cell">
+                                <p class="price-del f14">500.00</p>
+                                <p class="f14">280.00</p>
+                                <p>双11活动</p>
+                            </div>
+                            
+                        	<div class="cart-count table-cell">
+                                <div class="addCartOperBox">
+                                    <a href="javascript:;" class="icon-minus sprites fl">-</a>
+                                    <input type="text" class="addCartNum fl" data-min="1" data-max="5" value="1">
+                                    <a href="javascript:;" class="icon-plus sprites fl">+</a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-sum table-cell">
+                            	<p class="color-green f14 pr12"><var data-class="price">280.00</var></p>
+                                <a href="javascript:;" class="icon-delete sprites" data-class="cart-delete">&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            	<div class="cartAgent clearfix">
+                	<div class="cartHead clearfix">
+                        <div class="cart-check fl">
+                            <div class="pl12">
+                                <span class="uncheckbox sprites" data-type="checkbox-radio"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="pl12 fl">
+                            <a href="" class="color-blue fl">Stella Aden男装旗舰店</a>
+                            <a href="javascript:;" class="icon-mail sprites fl" data-state="pm"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="cartList table">
+                    	<div class="cartGoods table-row">
+                        	<div class="cart-check table-cell">
+                                <div class="pl12">
+                                    <span class="uncheckbox sprites" data-type="checkbox-radio"><input type="checkbox" class="hide" value="" /></span>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-image table-cell">
+                            	<div class="pl12">
+                                	<a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" /></a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-goods table-cell">
+                            	<div class="pl24">
+                                   	<p class="pb12 f13"><a href="">Stella Aden纯棉休闲短裤</a></p>
+                                    <p>颜色：姜黄</p>
+                                    <p>尺码：L</p>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-price table-cell">
+                                <p class="price-del f14">500.00</p>
+                                <p class="f14">280.00</p>
+                                <p>双11活动</p>
+                            </div>
+                            
+                        	<div class="cart-count table-cell">
+                                <div class="addCartOperBox">
+                                    <a href="javascript:;" class="icon-minus sprites fl">-</a>
+                                    <input type="text" class="addCartNum fl" data-min="1" data-max="5" value="1">
+                                    <a href="javascript:;" class="icon-plus sprites fl">+</a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-sum table-cell">
+                            	<p class="color-green f14 pr12"><var data-class="price">280.00</var></p>
+                                <a href="javascript:;" class="icon-delete sprites" data-class="cart-delete">&nbsp;</a>
+                            </div>
+                        </div>
+                        
+                        <div class="cartGoods table-row cartGoods-disabled">
+                        	<div class="cart-check table-cell">
+                                <p class="tr">失效</p>
+                            </div>
+                            
+                        	<div class="cart-image table-cell">
+                            	<div class="pl12">
+                                	<a href=""><img src="../../../static/temp-images/src/20140507001.png" width="132" height="132" /></a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-goods table-cell">
+                            	<div class="pl24">
+                                   	<p class="pb12 f13"><a href="">Stella Aden纯棉休闲短裤</a></p>
+                                    <p>颜色：姜黄</p>
+                                    <p>尺码：L</p>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-price table-cell">
+                                <p class="price-del f14">500.00</p>
+                                <p class="f14">280.00</p>
+                                <p>双11活动</p>
+                            </div>
+                            
+                        	<div class="cart-count table-cell">
+                                <div class="addCartOperBox">
+                                    <a href="javascript:;" class="icon-minus sprites fl">-</a>
+                                    <input type="text" class="addCartNum fl" data-min="1" data-max="5" value="1">
+                                    <a href="javascript:;" class="icon-plus sprites fl">+</a>
+                                </div>
+                            </div>
+                            
+                        	<div class="cart-sum table-cell">
+                            	<p class="color-green f14 pr12"><var data-class="price">280.00</var></p>
+                                <a href="javascript:;" class="icon-delete sprites" data-class="cart-delete">&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cartFoot pt12 clearfix">
+            	<div class="cart-check fl">
+                	<div class="pl12">
+                    	<span class="uncheckbox sprites" data-type="checkbox-radio"><input type="checkbox" class="hide" value="" /></span>
+                    </div>
+                </div>
+                
+            	<div class="fl">
+                	<p class="pl12 fl">全选</p>
+                	<p class="pl24 fl"><a href="javascript:;" class="color-blue">删除</a></p>
+                	<p class="pl24 fl"><a href="javascript:;" class="color-blue">清除失效商品</a></p>
+                </div>
+            </div>            
+        </div>
+        
+    	<div class="total-outer total-outer-bottom clearfix">
+            <div class="total-box hidden fr">
+                <dl class="total-info clearfix">
+                    <dt class="total-attr">商品总价 (<var data-class="count">8</var> 件)：</dt>
+                    <dd class="total-val f14">¥<var data-class="totalPrice">22662266226622662266226622662266.80</var></dd>
+                </dl>
+                
+                <dl class="total-info clearfix">
+                    <dt class="total-attr">总金额 (不含运费)：</dt>
+                    <dd class="total-val f24 color-green">¥<var data-class="totalPrice">2266226622662266226622662266226622662266.80</var></dd>
+                </dl>
+                
+                <dl class="total-info total-info-last clearfix">
+                    <dt class="total-attr">总金额 (不含运费)：</dt>
+                    <dd class="total-val f24 color-green">¥<var data-class="totalPrice">2266226622662266226622662266226622662266.80</var></dd>
+                </dl>
+            </div>
+            <div class="cb"></div>
+            
+            <div class="total-button fr">
+                <a href="" class="color-blue mr24 f14 fl"><strong class="simsun">&lt;</strong>&nbsp;继续购物</a>
+                <a href="" class="button-light-256 anim-all fl">结算</a>
+            
+                <div class="cartTipInfo hide">
+                    <p>正在转向订单信息页面，请稍候</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'cart': JS_DOMAIN + 'static/system/cart/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		//'{common}common',
+		//'{cart}cart'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

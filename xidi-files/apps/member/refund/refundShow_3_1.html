@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>退款/退货管理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/refund/src/refund.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">退款/退货管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f18 clearfix">
+    	<h2>退款/退货管理&nbsp;&gt;&nbsp;退款/退货详情</h2>
+    </div>
+    
+	<div class="main clearfix">
+    	<!-- 申请退款 -->
+    	<div class="mt24 clearfix">
+            <div class="step-box">
+                <ul class="clearfix">
+                    <li class="step-column-4 pr fl current">申请退货</li>
+                    <li class="step-column-4 pr fl">客服处理申请退货申请</li>
+                    <li class="step-column-4 pr fl">买家退给喜地</li>
+                    <li class="step-column-4 pr fl">喜地确认收货，退款完成</li>
+                </ul>
+            </div>
+        </div>
+        
+    	<!-- 退款信息 -->
+        <div class="mt36 clearfix">
+        	<div class="refund-aside fl">
+            	<div class="pr24 clearfix">
+                	<h4 class="pb12 f16">订单信息</h4>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">订单编号：</dt>
+                        <dd class="refundAside-value tr fr">3981031030103</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">订单状态：</dt>
+                        <dd class="refundAside-value tr fr">已送达</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">商品总价：</dt>
+                        <dd class="refundAside-value f14 tr fr">¥5542.80</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">运费：</dt>
+                        <dd class="refundAside-value f14 tr fr">¥10.00</dd>
+                    </dl>
+                    
+                    <div class="mt12 bdbt">&nbsp;</div>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">订单总计：</dt>
+                        <dd class="refundAside-value f14 tr fr">¥5552.80</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list clearfix">
+                        <dt class="refundAside-type fl">实付金额：</dt>
+                        <dd class="refundAside-value color-green f14 tr fr">¥5552.80</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list pt36 clearfix">
+                        <dt class="refundAside-type fl">成交时间：</dt>
+                        <dd class="refundAside-value tr fr">14/04/06 15:38</dd>
+                    </dl>
+                    
+                    <dl class="refundAside-list pr clearfix">
+                        <dt class="refundAside-type pointer triangle pr">发货详情</dt>
+                        
+                        <dd class="expressInfo triangle plr24 pb24 pt12 hide pa">
+                        	<div class="expressInfo-hd clearfix">
+                            	<p>发货方式：快递<span class="pl24">物流公司：圆通速递</span><span class="pl24">运单号码：3444990267</span></p>
+                            </div>
+                            
+                            <ul class="pt12 clearfix">
+                            	<li class="color-green lh22">13/12/29 12:20:52  上海市浦东新区三林一部公司已签收</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            	<li class="lh22">13/12/28 19:45:14 上海市浦东新区三林</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="refund-section fl">
+            	<div class="pl48 clearfix">
+                	<h4 class="pb12 f16">已选择退货退款商品</h4>
+                    
+                    <div class="table-thd lh36 color-888 clearfix">
+                        <div class="w132 fl">已选择退货退款商品</div>
+                        <div class="w210 fl">&nbsp;</div>
+                        <div class="w150 tc fl">单价</div>
+                        <div class="w150 tc fl">数量</div>
+                        <div class="w75 tc fl">小计</div>
+                    </div>
+                    
+                    <div class="clearfix">
+                        <!-- 每个店铺开始 -->
+                        <div class="shop-module clearfix">
+                            <div class="table-thd pt24 lh36 color-888 clearfix">
+                                <a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a>
+                            </div>
+                            
+                            <!-- 每个商品开始 -->
+                            <div class="table table-lst">
+                                <div class="table-row">
+                                    <div class="w132 table-cell">
+                                        <div class="ptb12">
+                                            <a href="" target="_blank"><img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w210 table-cell">
+                                        <div class="ptb12 pl24">
+                                            <p class="pb12 f13"><a href="" target="_blank">Miss Trilogy 沁心天然香水</a></p>
+                                            <p class="color-888">EDP持香久型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var class="f14">786.00</var>
+                                    </div>
+                                    
+                                    <div class="w150 tc table-cell">
+                                        <var>2</var>
+                                    </div>
+                                    
+                                    <div class="w75 tc table-cell">
+                                        <var class="color-green f14">1528.00</var>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 每个商品开始 -->   
+                        </div>                    
+                        <!-- 每个店铺结束 -->
+                    </div>
+                    
+                    <!-- 退款说明 -->
+                    <div class="mt36 clearfix">
+                    	<ul class="refund-tabBtn plr12 f14 clearfix">
+							<li class="plr24 pointer pr fl triangle">我要退货</li>
+							<li class="plr24 pointer pr fl">我要退款（无需退货）</li>
+                        </ul>
+                        
+                        <div class="refund-des clearfix">
+                        	<ul class="f13 clearfix">
+                            	<li class="mt36 clearfix">
+                                	<label for="" class="w75 lh36 fl">退货数量&nbsp;<span class="color-red">*</span></label>
+                                    <div class="fl">
+                                    	<input type="text" name="count" data-min="1" data-required="true" class="textBox count-text" value="2" data-type="number" data-required="true" />
+                                    </div>
+                            		<div class="ml12 color-red fl hide" id="error-warning-count">&nbsp;</div>
+                                </li>
+                                
+                            	<li class="mt36 clearfix">
+                                	<label for="" class="w75 lh36 fl">退款金额&nbsp;<span class="color-red">*</span></label>
+                                    <div class="color-green f14 lh36 fl" data-name="sum" data-type="sum">¥42.80</div>
+                                </li>
+                                
+                            	<li class="mt36 clearfix">
+                                	<label for="" class="w75 lh36 fl">退货理由&nbsp;<span class="color-red">*</span></label>
+                                    <div class="refundDescription fl">
+                                        <div class="plugs-select reason-select fl" id="selectReason">
+                                            <div class="plugs-select-hd" data-state="databutton">
+                                                <h6 class="plugs-select-title" data-id="-1" data-state="title" data-value="-1">请选择退货理由</h6>
+                                                
+                                                <div class="plugs-select-tip">
+                                                    <div class="plugs-select-tip"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <ul class="plugs-select-bd" data-state="datalist">
+                                                <li class="plugs-select-option plugs-select-select" data-state="option" data-id="-1" data-value="-1">请选择退货理由</li>
+                                                <li class="plugs-select-option" data-state="option" data-id="1" data-value="1">七天无理由退货</li>
+                                                <li class="plugs-select-option" data-state="option" data-id="2" data-value="2">商品质量问题</li>
+                                                <li class="plugs-select-option" data-state="option" data-id="3" data-value="3">收到商品破损</li>
+                                                <li class="plugs-select-option" data-state="option" data-id="4" data-value="4">商品错发</li>
+                                                <li class="plugs-select-option" data-state="option" data-id="5" data-value="5">收到商品与描述不符</li>
+                                                <li class="plugs-select-option" data-state="option" data-id="6" data-value="6" >其他</li>
+                                            </ul>
+                                            
+                                            <input type="hidden" name="selectReason" class="plugs-select-value" value="-1" key="退款状态">
+                                        </div>
+                                        
+                                        <div class="reason-notice ml12 f12 hide fl" data-id="1">
+                                            <p class="color-888">申请七天无理由退换货，请注意保持商品的完好，且不影响二次销售。</p>
+                                            <p class="color-888">查看 <a href="" target="_blank" class="color-blue">规则详情</a></p>
+                                        </div>
+                                        
+                                        <div class="ml12 f12 hide fl" data-id="2">
+                                            <p class="lh36 color-888">若您收到的商品存在做工粗糙、商品瑕疵等质量问题时，可申请此原因退货退款。</p>
+                                        </div>
+                                        
+                                        <div class="reason-notice ml12 f12 hide fl" data-id="3">
+                                            <p class="color-888">如您收到商品时就存在破损问题，可选择此项退款原因，并且需要提供有效的物流凭证。</p>
+                                            <p class="color-888">查看 <a href="" target="_blank" class="color-blue">规则详情</a></p>
+                                        </div>
+                                        
+                                        <div class="reason-notice ml12 f12 hide fl" data-id="4">
+                                            <p class="color-888">如商家发错商品，可选择此项退款原因，且您需要提供有效的物流凭证。</p>
+                                            <p class="color-888">查看 <a href="" target="_blank" class="color-blue">规则详情</a></p>
+                                        </div>
+                                        
+                                        <div class="reason-notice ml12 f12 hide fl" data-id="5">
+                                            <p class="color-888">收到的商品与商家或商品详情页面的描述存在不符的情况，并且需要提供有效的凭证。</p>
+                                            <p class="color-888">查看 <a href="" target="_blank" class="color-blue">规则详情</a></p>
+                                        </div>
+                                        
+                                        <div class="ml12 hide fl" data-id="6">
+                                            <input type="text" name="reason" data-min="1" data-max="10" data-required="false" class="textBox reason-text" placeholder="字数不超过10个字" />
+                                        </div>
+                                        <div class="ml12 color-red fl lh36 hide" id="error-warning-selectReason">&nbsp;</div>  
+                                        <div class="ml12 color-red fl lh36 hide" id="error-warning-reason">&nbsp;</div> 
+									</div>
+                                </li>
+                                
+                            	<li class="mt36 clearfix">
+                                	<label for="" class="w75 lh36 fl">退货说明&nbsp;<span class="color-red">*</span></label>
+                                    <dl class="refundDescription fl">
+                                        <dt><textarea name="description" data-min="1" data-max="500" data-required="true" class="message-article" data-min="0" data-max="500" data-required="true" placeholder="请在此输入留言，字数不超过500个字"></textarea></dt>
+                                        <dd class="color-888 tr" data-type="message-count">500</dd>
+                            			<dd class="color-red hide" id="error-warning-description">&nbsp;</dd>
+                                        <dd class="color-333">上传凭证</dd>
+                                        <dd class="clearfix">
+                                            <ul class="certificate-list clearfix">
+                                                <li class="certificate-item mr12 pr fl">
+                                                    <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                                    
+                                                    <div class="certificate-oper hide pa">
+                                                    	<span class="icon-remove sprites" data-action="remove"></span>
+                                                    </div>
+                                                </li>
+                                                
+                                                <li class="certificate-item mr12 pr fl">
+                                                    <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                                    
+                                                    <div class="certificate-oper hide pa">
+                                                    	<span class="icon-remove sprites" data-action="remove"></span>
+                                                    </div>
+                                                </li>
+                                                
+                                                <li class="certificate-item mr12 pr fl">
+                                                    <img src="../../../static/temp-images/src/20140519001.png" width="68" height="68" />
+                                                    
+                                                    <div class="certificate-oper hide pa">
+                                                    	<span class="icon-remove sprites" data-action="remove"></span>
+                                                    </div>
+                                                </li>
+                                                
+                                                <li class="certificate-item certificate-item-upload mr12 pr fl">
+                                                    <div class="icon-add-button sprites"></div>
+                                                    <input type="file" name="file" class="uploadCertificate pointer pa" />
+                                                </li>
+                                                
+                                                <li class="certificate-item certificate-item-notice mr12 pr fl"><span class="color-red f12 pa">图片出错</span></li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="color-888">仅支持JPG、GIF、PNG图片文件，且文件小于5M，最多5张</dd>
+                                    </dl>
+                                </li>
+                                
+                            	<li class="mt12 clearfix">
+                                	<label for="" class="w75 lh18 fl">寄&nbsp;&nbsp;件&nbsp;人<br />手机号码&nbsp;<span class="color-red">*</span></label>
+                                    
+                                    <div class="fl">
+                                    	<input type="text" name="mobile" data-required="true" class="textBox count-text" />
+                                    </div>
+                                    
+                                    <div class="ml12 color-888 lh36 fl">
+                                    	为确保您的货物顺利到达，请认真填写寄件人联系方式
+                                    </div>
+                            		<div class="ml12 color-red fl hide" id="error-warning-mobile">&nbsp;</div>
+                                </li>
+                                
+                                <li class="mt24 clearfix">
+                                	<label for="" class="w75 lh36 fl">&nbsp;</label>
+                                       
+                                    <div class="apply-button">
+                                        <a href="javascript:;" class="button-light-100 anim-all" id="submitApply" data-action="refundOfGoods" data-type="open" data-name="apply">提交申请</a>
+                                        <a href="javascript:;" class="ml12 color-blue" id="tempIn">退款/退货入口已关闭（临时）</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pt36 table-thd"></div>
+                    
+                    <div class="mt24 clearfix">
+                    	<h4 class="pb12 f16">常见问题</h4>
+                        
+                        <dl class="pt12 clearfix">
+                        	<dt class="f14"><strong>1. 买家申请退款后接下来该做什么？</strong></dt>
+                            <dd class="ti1">&nbsp;买家在交易过程中遇到问题，建议积极联系卖家沟通协商。</dd>
+                        </dl>
+                        
+                        <dl class="pt12 clearfix">
+                        	<dt class="f14"><strong>2. 卖家拒绝退款给我怎么办？</strong></dt>
+                            <dd class="ti1">&nbsp;买家在交易过程中遇到问题，建议积极联系卖家辅导书离开三闾大夫楼道口辅导沟通协商。</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- 弹层 -->
+<div class="plugs-infoPopup hide" id="plugs-apply">
+	<div class="plugs-infoPopup-con plugs-apply clearfix hide op0" data-class="apply">
+    	<div class="plugs-infoPopup-hd plr12 pt12 clearfix">
+        	<a href="javascript:;" class="icon-close sprites" data-type="close">关闭</a><h3 class="f18">提交退款/退货申请</h3>
+        </div>
+        
+        <div class="plugs-infoPopup-bd plr12 pb12 clearfix">
+        	<div class="table clearfix">
+            	<div class="table-row">
+                	<div class="w75 table-cell">
+                    	<div class="ptb24 color-666">退货退款商品</div>
+                    </div>
+                    
+                	<div class="w132 table-cell">
+                    	<div class="ptb24">
+                            <img src="../../../static/temp-images/src/20140512001.jpg" width="132" height="132" class="block">
+                        </div>
+                    </div>
+                    
+                	<div class="w210 table-cell">
+                    	<div class="ptb24 pl24">
+                            <p class="pb12 f13">Miss Trilogy 沁心天然香水</p>
+                            <p class="color-888">EDP持香久型</p>
+                            <p class="color-888">30ml</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <dl class="lh30 clearfix">
+                <dt class="w75 fl">退款数量</dt>
+                <dd class="fl">1</dd>
+            </dl>
+            
+            <dl class="lh30 clearfix">
+                <dt class="w75 fl">退款金额</dt>
+                <dd class="color-green f14 fl">¥5542.80</dd>
+            </dl>
+            
+            <dl class="lh30 clearfix">
+                <dt class="w75 fl">退款理由</dt>
+                <dd class="fl">物流没到</dd>
+            </dl>
+            
+            <div class="pt12 clearfix">
+            	<a href="javascript:;" class="button-light-100 anim-all" data-type="submit">确定</a>
+            	<a href="javascript:;" class="button-default-100 ml12 anim-all" data-type="close">取消</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="plugs-infoPopup-con plugs-confirm clearfix hide op0" data-class="alert">
+        <div class="plugs-infoPopup-bd pl24 pr12 ptb24 clearfix">
+        	<div class="clearfix">
+                <div class="icon-warning-36 sprites fl"></div>
+                <dl class="pl12 fl">
+                    <dt class="f18 lh36">很遗憾，退款/退货入口已关闭！</dt>
+                    <dd class="pt24 pl48">
+                    	<a href="javascript:;" class="button-light-100 anim-all" data-action="submit">知道了</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'refund': JS_DOMAIN + 'static/member/refund/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{refund}refund'
+	]);    
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>

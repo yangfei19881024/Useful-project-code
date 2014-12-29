@@ -1,0 +1,15 @@
+{
+	"family": "static/global",
+	"name": "reset",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"reset.css"
+		]
+	}
+}

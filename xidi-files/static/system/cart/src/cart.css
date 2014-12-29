@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :*
+   page :cart
+------------------------------------------------------------ */
+
+/* 购物车
+------------------------------------------------------------ */
+.cart-wrap{
+	min-height:400px;
+}
+.cart-image img{
+	display:block;
+}
+.view_picture{
+	display:none;
+	position:absolute;
+	z-index:99;
+	width:316px;
+	height:316px;
+	border:1px solid #CCC;
+}

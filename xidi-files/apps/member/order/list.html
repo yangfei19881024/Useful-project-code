@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单列表-new</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/member/order/src/order.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="content menu mt24">
+    <ul class="clearfix">
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜地</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all menuCur">我的订单</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">我的喜欢</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">评价管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">服务中心</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">账号管理</a></li>
+        <li class="menu-item fl"><a href="" class="plr24 anim-all">消息中心</a></li>
+    </ul>
+</div>
+
+<!-- Content -->
+<div class="content clearfix">
+	<div class="mt36 f18 clearfix">
+    	<h2>我的订单</h2>
+    </div>
+    
+	<!-- 筛选 -->
+    <div class="plugs-select mtb24 clearfix" id="orderFilter-select">
+        <div class="plugs-select-hd" data-state="databutton">
+            <h6 class="plugs-select-title" data-id="0" data-state="title" data-value="0">三个月内的订单</h6>
+            
+            <div class="plugs-select-tip">
+                <div class="plugs-select-tip"></div>
+            </div>
+        </div>
+        
+        <ul class="plugs-select-bd" data-state="datalist">
+            <li class="plugs-select-option" data-id="0" data-state="option" data-value="0">三个月内的订单</li>
+            <li class="plugs-select-option" data-id="1" data-state="option" data-value="1">三个月前的订单</li>
+        </ul>
+        
+        <input type="hidden" name="orderFilter-value" class="plugs-select-value" value="0" />
+    </div>
+    
+    <!-- 列表 -->
+    <div class="order-list order-select pr clearfix">
+        <!-- Page -->
+        <div class="pageTur pa clearfix">
+            <a href="" class="page-button page-prev fl page-disabled">&lt;</a>
+            <a href="" class="page-button page-next fr">&gt;</a>
+        </div>
+        
+        <div class="order-head color-888 clearfix">
+        	<div class="w145 fl">
+            	<div class="pl12">订单信息</div>
+            </div>
+            
+        	<div class="w200 fl">
+            	<div class="pl12">&nbsp;</div>
+            </div>
+            
+        	<div class="w90 tc fl">
+            	<div class="pl12">单价</div>
+            </div>
+            
+        	<div class="w70 tc fl">
+            	<div class="pl12">数量</div>
+            </div>
+            
+        	<div class="w135 tc fl">
+            	<div class="pl12">售后</div>
+            </div>
+            
+        	<div class="w110 tc fl">
+            	<div class="pl12">小计（元）</div>
+            </div>
+            
+        	<div class="w130 fl">
+            	<div class="plugs-select ml12 clearfix" id="orderState-select">
+                    <div class="plugs-select-hd" data-state="databutton">
+                        <h6 class="plugs-select-title" data-id="0" data-state="title" data-value="0">交易状态</h6>
+                        
+                        <div class="plugs-select-tip">
+                            <div class="plugs-select-tip"></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="plugs-select-bd" data-state="datalist">
+                        <li class="plugs-select-option" data-id="0" data-state="option" data-value="0">交易状态</li>
+                        <li class="plugs-select-option" data-id="1" data-state="option" data-value="1">交易中的订单</li>
+                        <li class="plugs-select-option" data-id="2" data-state="option" data-value="2">交易完毕的订单</li>
+                        <li class="plugs-select-option" data-id="03" data-state="option" data-value="3">退款中的订单</li>
+                    </ul>
+                    
+                    <input type="hidden" name="orderState-value" class="plugs-select-value" value="0" />
+                </div>
+            </div>
+            
+        	<div class="w116 tc fl">
+            	<div class="pl12">操作</div>
+            </div>
+        </div>
+        
+        <div class="order-modules pt24 clearfix">            
+            <!-- 一个订单开始 -->
+        	<div class="order-shop pt24 clearfix">
+            	<!-- 订单号开始 -->
+                <div class="order-head clearfix">
+                    <div class="pl12 fl">订单号：674150339</div>
+                    <div class="fl pl12 color-888">14/05/05 17:15:50</div>
+                    <div class="fl pl12"><a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a></div>
+                    
+                    <div class="fr pr12">支付金额：<span class="color-green f14 pr12">¥330.00</span>(含运费：8.00)</div>
+                </div>
+            	<!-- 订单号结束 -->
+                
+                <div class="order-body hidden clearfix" data-class="order-body">
+                    <div class="order-main fl" data-class="order-main">
+                    	<!-- 一个产品开始 -->
+                        <div class="order-pro clearfix" data-class="order-pro">
+                            <div class="w145 order-height fl" data-class="order-image">
+                                <div class="pl12 ptb12">
+                                    <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="w200 order-height fl" data-class="order-info">
+                                <div class="pl12 ptb12 tl">
+                                    <p class="f13"><a href="" class="color-blue">皮革手提包</a></p>
+                                    <p class="color-888">EDP持久香型</p>
+                                    <p class="color-888">30ml</p>
+                                </div>
+                            </div>
+                            
+                            <div class="w90 order-height tc fl" data-class="order-price">
+                                <div class="pl12 ptb12">460</div>
+                            </div>
+                            
+                            <div class="w70 order-height tc fl" data-class="order-count">
+                                <div class="pl12 ptb12">2</div>
+                            </div>
+                            
+                            <div class="w135 order-height tc fl" data-class="order-after">
+                                <div class="pl12 ptb12">&nbsp;</div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-pro clearfix" data-class="order-pro">
+                            <div class="w145 order-height fl" data-class="order-image">
+                                <div class="pl12 ptb12">
+                                    <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="w200 order-height fl" data-class="order-info">
+                                <div class="pl12 ptb12 tl">
+                                    <p class="f13"><a href="" class="color-blue">皮革手提包</a></p>
+                                    <p class="color-888">EDP持久香型</p>
+                                    <p class="color-888">30ml</p>
+                                </div>
+                            </div>
+                            
+                            <div class="w90 order-height tc fl" data-class="order-price">
+                                <div class="pl12 ptb12">460</div>
+                            </div>
+                            
+                            <div class="w70 order-height tc fl" data-class="order-count">
+                                <div class="pl12 ptb12">2</div>
+                            </div>
+                            
+                            <div class="w135 order-height tc fl" data-class="order-after">
+                                <div class="pl12 ptb12">&nbsp;</div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-pro clearfix" data-class="order-pro">
+                            <div class="w145 order-height fl" data-class="order-image">
+                                <div class="pl12 ptb12">
+                                    <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                                </div>
+                            </div>
+                            
+                            <div class="w200 order-height fl" data-class="order-info">
+                                <div class="pl12 ptb12 tl">
+                                    <p class="f13"><a href="" class="color-blue">皮革手提包</a></p>
+                                    <p class="color-888">EDP持久香型</p>
+                                    <p class="color-888">30ml</p>
+                                </div>
+                            </div>
+                            
+                            <div class="w90 order-height tc fl" data-class="order-price">
+                                <div class="pl12 ptb12">460</div>
+                            </div>
+                            
+                            <div class="w70 order-height tc fl" data-class="order-count">
+                                <div class="pl12 ptb12">2</div>
+                            </div>
+                            
+                            <div class="w135 order-height tc fl" data-class="order-after">
+                                <div class="pl12 ptb12">&nbsp;</div>
+                            </div>
+                        </div>
+                    	<!-- 一个产品结束 -->
+                    </div>
+                    
+                    <div class="w110 order-height tc fl" data-class="order-total">
+                        <div class="pl12 ptb12 color-green f14">1582.00</div>
+                    </div>
+                    
+                    <div class="w130 order-height fl" data-class="order-state">
+                        <div class="pl12 ptb12">等待买家付款</div>
+                    </div>
+                    
+                    <div class="w116 order-height tc fl" data-class="order-oper">
+                        <div class="pl12 ptb12">
+                            <p class="mb6"><a href="javascript:;" class="button-light-80 anim-all">付款</a></p>
+                            <p><a href="" class="color-blue">订单详情</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 一个订单结束 -->
+            
+            <!-- 一个订单开始 -->
+        	<div class="order-shop pt24 clearfix">
+            	<!-- 订单号开始 -->
+                <div class="order-head clearfix">
+                    <div class="pl12 fl">订单号：674150339</div>
+                    <div class="fl pl12 color-888">14/05/05 17:15:50</div>
+                    
+                    <div class="fr pr12">支付金额：<span class="color-green f14 pr12">¥330.00</span>(含运费：8.00)</div>
+                </div>
+            	<!-- 订单号结束 -->
+                
+                <!-- 店铺列表开始 -->
+                <div class="order-body hidden clearfix" data-class="order-body">
+                    <div class="order-agent-list fl">
+                    	<!-- 一个店铺模块开始 -->
+                        <div class="order-agent-head clearfix">
+                            <div class="fl pl12"><a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a></div>
+                        </div> 
+                                              
+                        <div class="order-agent-modules clearfix">
+                            <div class="order-main fl" data-class="order-main">                            	
+                    			<!-- 一个产品模块开始 -->
+                                <div class="order-pro clearfix" data-class="order-pro">
+                                    <div class="w145 order-height fl" data-class="order-image">
+                                        <div class="pl12 ptb12">
+                                            <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w200 order-height fl" data-class="order-info">
+                                        <div class="pl12 ptb12 tl">
+                                            <p class="f13"><a href="" class="color-blue">皮革手提包</a></p>
+                                            <p class="color-888">EDP持久香型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w90 order-height tc fl" data-class="order-price">
+                                        <div class="pl12 ptb12">460</div>
+                                    </div>
+                                    
+                                    <div class="w70 order-height tc fl" data-class="order-count">
+                                        <div class="pl12 ptb12">2</div>
+                                    </div>
+                                    
+                                    <div class="w135 order-height tc fl" data-class="order-after">
+                                        <div class="pl12 ptb12">&nbsp;</div>
+                                    </div>
+                                </div>
+                    			<!-- 一个产品模块结束 -->
+                                
+                                <div class="order-pro clearfix" data-class="order-pro">
+                                    <div class="w145 order-height fl" data-class="order-image">
+                                        <div class="pl12 ptb12">
+                                            <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w200 order-height fl" data-class="order-info">
+                                        <div class="pl12 ptb12 tl">
+                                            <p class="f13"><a href="" class="color-blue">皮革手提包</a></p>
+                                            <p class="color-888">EDP持久香型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w90 order-height tc fl" data-class="order-price">
+                                        <div class="pl12 ptb12">460</div>
+                                    </div>
+                                    
+                                    <div class="w70 order-height tc fl" data-class="order-count">
+                                        <div class="pl12 ptb12">2</div>
+                                    </div>
+                                    
+                                    <div class="w135 order-height tc fl" data-class="order-after">
+                                        <div class="pl12 ptb12">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="w110 order-height tc fl" data-class="order-total">
+                                <div class="pl12 ptb12 color-green f14">1582.00</div>
+                            </div>
+                            
+                            <div class="w130 order-height fl" data-class="order-state">
+                                <div class="pl12 ptb12">等待买家付款</div>
+                            </div>
+                        </div>
+                    	<!-- 一个店铺模块结束 -->
+                        
+                        <div class="order-agent-head clearfix">
+                            <div class="fl pl12"><a href="javascript:;" class="color-blue">喜地一店鞋包配饰</a><a href="javascript:;" class="icon-mail sprites" data-name="PrivateMessage" data-state="pm" data-to="喜地一店鞋包配饰" data-to_id="" data-shop_id="7">&nbsp;</a></div>
+                        </div>
+                        
+                        <div class="order-agent-modules clearfix">
+                            <div class="order-main fl" data-class="order-main">                                
+                                <div class="order-pro clearfix" data-class="order-pro">
+                                    <div class="w145 order-height fl" data-class="order-image">
+                                        <div class="pl12 ptb12">
+                                            <a href=""><img src="../../../static/temp-images/src/20140512001.jpg" alt="" width="132" height="132" class="block" title="" /></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w200 order-height fl" data-class="order-info">
+                                        <div class="pl12 ptb12 tl">
+                                            <p class="f13"><a href="" class="color-blue">皮革手提包</a></p>
+                                            <p class="color-888">EDP持久香型</p>
+                                            <p class="color-888">30ml</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w90 order-height tc fl" data-class="order-price">
+                                        <div class="pl12 ptb12">460</div>
+                                    </div>
+                                    
+                                    <div class="w70 order-height tc fl" data-class="order-count">
+                                        <div class="pl12 ptb12">2</div>
+                                    </div>
+                                    
+                                    <div class="w135 order-height tc fl" data-class="order-after">
+                                        <div class="pl12 ptb12">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="w110 order-height tc fl" data-class="order-total">
+                                <div class="pl12 ptb12 color-green f14">1582.00</div>
+                            </div>
+                            
+                            <div class="w130 order-height fl" data-class="order-state">
+                                <div class="pl12 ptb12">等待买家付款</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="w116 order-height tc fl" data-class="order-oper">
+                        <div class="pl12 ptb12">
+                            <p class="mb6"><a href="javascript:;" class="button-light-80 anim-all">付款</a></p>
+                            <p><a href="" class="color-blue">订单详情</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 店铺列表结束 -->
+            </div>
+            <!-- 一个订单结束 -->
+        </div>
+    </div>
+
+    <!-- Page -->
+    <div class="content page tc clearfix">
+        <a href="" class="page-button page-prev inline-block page-disabled">&lt;</a>
+        <a href="" class="page-button inline-block page-current">1</a>
+        <a href="" class="page-button inline-block">2</a>
+        <a href="" class="page-button inline-block">3</a>
+        <a href="" class="page-button inline-block">4</a>
+        <span class="page-elps inline-block">…</span>
+        <a href="" class="page-button inline-block">10</a>
+        <a href="" class="page-button page-next inline-block">&gt;</a>
+        
+        <div class="pageGoto inline-block">
+            到<span class="page-button inline-block"><input type="text" class="pageNum fl" /><input type="button" class="pageBtn sprites fr" /></span>页
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p class="tc"><img src="../../../static/temp-images/src/footer.png" alt="" width="1280" height="294" title="" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	PayLastTimeSeconds = 100;
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/',
+			'order': JS_DOMAIN + 'static/member/order/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common',
+		'{order}order'
+	]);    
+	
+	seajs.flush();
+</script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于喜地</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/about/src/about.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">            
+        <div class="searchBox fl">                
+            <div class="search-bar">
+                <div class="searchsugbox none">
+                    <ul class="search-sug">
+                        <li class="graysug">最近搜索<i class="searchicons"></i></li>
+                    </ul>
+                    <ul class="search-interest">
+                        <li class="graysug">您可能感兴趣</li>
+                    </ul>
+                </div>
+                
+                <input type="text" class="searchkey anim-all fl" />
+                <input type="button" class="search-button anim-all sprites fr" />
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span>
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="prdSet-aside fr">
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb12 mb24">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav f14 fr">
+        <a href="" class="ml12 fl">新西兰</a>
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+        <a href="" class="ml12 fl">丹麦</a>
+        <a href="" class="ml12 fl">法国</a>
+        <a href="" class="ml12 fl">德国</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content mt36 clearfix">
+    <div class="f21 clearfix">
+    	<h2>关于喜地&nbsp;&gt;&nbsp;法律声明</h2>
+    </div>
+    
+	<div class="main mt36 clearfix">
+    	<div class="help-aside fl">
+            <div class="plr12 clearfix">
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix ">
+                        <a href="info.html" class="block pr iconw">
+                            <span class="icon-about_03 icons"></span>
+                            <h6>了解喜地</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="contact.html" class="block pr iconw">
+                            <span class="icon-about_06 icons"></span>
+                            <h6>联系喜地</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="cooperation.html" class="block pr iconw">
+                            <span class="icon-about_18 icons"></span>
+                            <h6>商户合作</h6>
+                        </a>
+                    </li>
+                    
+                    <li class="clearfix">
+                        <a href="careers.html" class="block pr iconw">
+                            <span class="icon-about_20 icons"></span>
+                            <h6>加入我们</h6>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="dotted-bottom cb"></div>
+                
+                <ul class="pt12 pb24 tc clearfix">
+                    <li class="clearfix">
+                        <a href="legal.html" class="block pr iconw">
+                            <span class="icon-about_22 icons"></span>
+                            <h6>法律声明</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 每一个 help-section-body 里面应该放一个 自定义编辑器 -->
+        <div class="help-section fl">
+        	<!-- <div class="help-section-head clearfix">
+            	<h3 class="f18">支付宝</h3>
+            </div> -->
+            
+        	<div class="help-section-body clearfix">
+                <div class="list pl36 f13 pr36">
+                    <h3 class="f14 mb12" id="">喜地提醒您</h3>
+                    <p>若要访问和使用喜地网站（www.xidibuy.com - 喜地），您必须不加修改地完全接受本协议中所包含的条款、条件和喜地网站即时刊登的通知，并且遵守有关互联网及/或本网站的相关法律、规定与规则。一旦您访问、使用了喜地网站，即表示您同意并接受了所有该等条款、条件及通告。您不得将喜地网站提供的信息和内容用于任何不合法的目的。</p>
+                    <h3 class="f14 mb12 mt48">本网站上的信息</h3>
+                    <p>未经合法权利人的书面许可，任何人严禁在本网站展示产品图片。任何未经授权便在本网站上使用该图片都可能违反国际法，商标法，隐私权法，通讯、通信等法律法规。浏览者可以下载本网站上显示的资料，但这些资料只限用于个人学习研究使用，不得用于任何商业用途，无论是否在资料上明示，所有此等资料都是受到著作权法的法律保护。浏览者没有获得喜地或各自的著作权所有者明确的书面同意下，不得分发、修改、散布、再使用、再传递或使用本网站的内容用于任何公众商业用途。</p>
+                    <h3 class="f14 mb12 mt48">知识产权声明</h3>
+                    <p>喜地版权所有。喜地拥有网站内所有信息内容（除其它权利人发布的信息外，包括但不限于文字、图片、软件、音频、视频）的知识产权。任何被授权浏览、复制、打印和传播喜地拥有知识产权的信息时，都不得用于商业目的。所有的权利均在全世界范围内受到法律保护，除非有其他的标注或在此等条款和规则中被允许使用，本网站上可阅读和可见的所有资料都受到知识产权法的保护。</p>
+                    <p class="mt12">喜地商标或标识都是上海源产喜递电子商务有限公司（简称“喜地公司/喜地”）的商品及服务商标和商号。所有其他喜地公司没有主张权利的商标和产品名称则可能是它们各自所有权人的商标或注册商标，未获得喜地或其他在本网站上有权使用商标的第三方的书面同意下，本网站不应理解为授权使用被展示于本网站的任何商标。</p>
+                    <h3 class="f14 mb12 mt48">个人资料的取得</h3>
+                    <p>当您访问喜地网站时，并不需要输入个人数据，例如姓名或电子邮件地址等。除非您打算注册成为喜地网站会员，否则我们不会在您不知情的情况下取得您的个人数据。喜地网站有可能自动接收并记录您的浏览器和计算机上的信息，包括但不限于您的IP地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据。</p>
+                    <h3 class="f14 mb12 mt48">个人信息的使用和披露</h3>
+                    <p>除非事先得到您的允准或依照中国或相关国家法律规定，否则我们不会将用户的个人信息提供给任何无关第三方，出售、出租、分享和交易用户的个人信息，但为方便您使用喜地网站服务及喜地关联公司或其他组织的服务， 您同意并授权喜地将您的个人信息传递给您同时接受其他服务的喜地关联公司或其他组织获取您的个人信息。 </p>
+                    <p class="mt12">您同意我们可披露或使用您的个人信息用于识别或确认您的身份，或解决争议，或有助于确保网站安全、限制欺诈、非法或其他刑事犯罪活动。</p>
+                    <p class="mt12">您同意我们可披露或使用您的个人信息用以保护您的生命、财产安全或为防止严重侵害他人合法权益或为公共利益的需要。</p>
+                    <p class="mt12">您的个人信息将在下述情况下部分或全部被披露：</p>
+                    <p class="help_p"><span class="list_suo"> 1</span>经您同意后向第三方披露；</p>
+                    <p class="help_p"><span class="list_suo"> 2</span>披露或使用您的个人信息以改进我们的服务使您得到更好的使用体验，并使我们的服务更能符合您的要求；</p>
+                    <p class="help_p"><span class="list_suo"> 3</span>根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；</p>
+                    <p class="help_p"><span class="list_suo"> 4</span>如果您出现违反中国有关法律或者网站政策的情况需要向第三方披露之时；</p>
+                    <p class="help_p"><span class="list_suo"> 5</span>为向您提供所要求的产品和服务而必须和第三方分享您的个人信息；</p>
+                    <p class="help_p"><span class="list_suo"> 6</span>喜地根据法律或者网站政策认为合适的披露。</p>
+                    <h3 class="f14 mb12 mt48">信息安全</h3>
+                    <p>喜地网站有相应的安全措施来确保喜地掌握的个人信息不丢失，不被变造和滥用，这些安全措施包括但不限于在部分情况下与喜地合作的网站会采用SSL(Secure Socket Layer)128bit传输加密机制，以保障您数据传送时的安全。尽管我们有这些安全措施，但请注意在网络上不存在完善的安全措施。</p>
+                    <h3 class="f14 mb12 mt48">Cookies的使用</h3>
+                    <p>我们使用cookies来储存您访问我们网站的相关数据来记录您的喜欢和浏览信息，在您访问或再次访问我们的网站时，我们可以通过分析数据为您提供更好更个性化的服务。您可以通过设置您的浏览器以接受或者拒绝全部或部分的cookies，但如果您选择拒绝接受cookies，您可能无法登录或使用依赖于cookies的我们网站的部分功能。</p>
+                    <h3 class="f14 mb12 mt48">未成年人保护</h3>
+                    <p>为确保儿童及青少年使用网络的安全并避免隐私权受到侵犯，家长（或监护人）应谨慎选择合适网站供儿童及青少年浏览。未满十八周岁的儿童或青少年使用喜地公司服务，父母或监护人应全程在旁陪伴，未经父母或监护人同意，儿童及青少年不可泄漏自己或家人的任何数据（包括姓名、地址、电话、电子邮件信箱、照片、信用卡号等）给任何人，也不可以单独接受网友的邀请或赠送礼物或与之见面。</p>
+                    <h3 class="f14 mb12 mt48">政策的变更</h3>
+                    <p>我们可能对本法律声明不时进行修改。如果我们进行任何修改，我们将在喜地网站主页上发布为期30天的通知以使用户知道被修改内容的类型以及指示用户审阅更新后的内容。如果您在对本法律声明任何细微修改发布后继续使用网站，则表示您同意遵守任何该等修改。</p>
+                    <h3 class="f14 mb12 mt48">免责声明</h3>
+                    <p>当您使用喜地服务前请您务必仔细阅读并透彻理解喜地所有条款，如果您使用喜地网站，您的行为将被视为对喜地条款全部内容的认可。我们根据需要不时地制定、修改喜地条款的内容或各类规则，对于变更将在本网站上以公式形式告知，任何修订或新规则一经公布即自行生效，建议您随时注意该等修改或变更。</p>
+                    <p class="mt12">喜地在此特别声明对如下事宜不承担任何法律责任：</p>
+                    <p class="help_p mt12"><span class="list_suo"> 1</span>地公司不保证本网站所载述的任何内容的准确性、及时性、完整性、可靠性以及使用这些内容可能得出的任何结果；不保证网站服务器及网络的稳定性，不保证本网站在任何时候均可供浏览、阅读、复制、使用；</p>
+                    <p class="help_p"><span class="list_suo"> 2</span>对您使用网站、与本网站相关的任何内容、服务或其它链接至本网站的站点、内容均不作直接、间接、法定、约定的保证；</p>
+                    <p class="help_p"><span class="list_suo"> 3</span>无论在任何原因下（包括但不限于疏忽原因），对您或任何人通过使用本网站上的信息或由本网站链接的信息，或其他与本网站链接的网站信息所 导致的损失或损害（包括直接、间接、特别或后果性的损失或损害，例如收入或利润之损失，电脑系统之损坏或数据丢失等后果），责任均由使用者自行承担（包括 但不限于疏忽责任）；</p>
+                    <p class="help_p"><span class="list_suo"> 4</span>由于不确定因素，喜地网站及软件对所涉及的技术和信息的有效性，正确性，质量，稳定，完整和及时性均不作承诺和保证稳定，喜地均不对由于网络连接故障，电脑、通讯或其他系统的故障，电力故障，罢工，劳动争议，暴乱，起义，不可抗力，政府行为，国际、国内法院的命令或第三方的不作为而造成的不能服务或延迟服务承担责任；</p>
+                    <p class="help_p"><span class="list_suo"> 5</span>喜地在此明确声明对喜地所提供的服务不作任何明示或暗示的保证，包括但不限于对服务的可适用性，没有错误或疏漏，持续性，准确性，可靠性；</p>
+                    <p class="help_p"><span class="list_suo"> 6</span>您经由喜地网站购买或取得任何产品、服务、信息或其他数据前请务必全面了解产品信息；</p>
+                    <p class="help_p"><span class="list_suo"> 7</span>任何软件中的错误未必及时被修正。经由喜地网站及软件的使用下载或取得任何数据，应由您自行考虑且自负风险。任何数据的下载而导致您计算机系统、网络存取、下载或播放设备之任何损坏或数据流失的，您应自负完全责任。</p>
+                    <p  class="mt12">使用者对喜地网站的使用即表明同意承担浏览本网站的全部风险，由喜地公司或其关联公司未参与建设、制作或发展的本网站或提供内容，对使用者在本网站存取资料所导致的任何直接、相关的、后果性的、间接的或金钱上的损失喜地公司不承担任何责任。</p>
+                    <h3 class="f14 mb12 mt48">法律适用和管辖</h3>
+                    <p>任何有关本网站和网站声明的争议，应由有管辖权的人民法院管辖，并且适用中华人民共和国法律。我们保留随时更改我们的网站和上述各项条款的权利。</p>
+                    <p class="mt12">本声明的解释权及对本网站使用的解释权归喜地公司所有。</p>
+                    <h3 class="f14 mb12 mt48">联系我们</h3>
+                    <p>如果您对本法律声明或喜地的各项措施，以及您在使用中的问题有任何意见和建议，请联系<a class="eee color-blue"></a></p>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="float_sidebar">
+    <ul>
+        <li class="top"></li>
+        <li class="service"></li>
+        <li class="feedback"></li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	XD = {};
+	DOMAIN = 'http://www.xidibuy.com/';
+	
+	if(location.href.indexOf('dev') > 0)
+	{
+        JS_DOMAIN = '/webfiles/xidi-files/';
+		SEAJS_VERSION = 'src';
+    }
+	else
+	{
+    	JS_DOMAIN = 'http://static.xidibuy.com/';
+		SEAJS_VERSION = '1.0.0';
+    }
+	
+    seajs.config({
+		base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+		vars: {
+			'url': JS_DOMAIN + 'static/',
+			'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+		},
+		paths:{
+			'dev': '../../../static/'
+		}
+    });
+    
+	seajs.use([
+		'{common}common'
+	]);    
+	
+	seajs.flush();
+    var mt='mailto:',s='service',m='market',b='brands',me='media',a='@',d='xidibuy.com';
+    $('.eee').text(s+a+d).attr('href',mt+s+a+d);
+</script>
+
+
+</body>
+</html>
