@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>Document</title>
+	<style>	
+		*{
+			margin: 0;	
+			padding: 0;	
+		}
+
+	/***垂直居中提示层**/
+	.tips {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	}
+	.tips {
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  z-index: 9999;
+	  -webkit-box-pack: center;
+	  -ms-flex-pack: center;
+	  -webkit-justify-content: center;
+	  justify-content: center;
+	  -webkit-box-align: center;
+	  -ms-flex-align: center;
+	  -webkit-align-items: center;
+	  align-items: center;
+	}
+
+	.tipscon {
+	  -webkit-transition: all 0.3s ease-in-out;
+	  transition: all 0.3s ease-in-out;
+	}
+	.tipscon {
+	  padding:15px;
+	  border-radius: 5px;
+	  margin: 0 10px;
+	  overflow: hidden;
+	  opacity: 1;
+	  color:#FFF;
+	  background-color:rgba(0, 0, 0, 0.8) ;
+	  font-size: 1.2rem;
+	  letter-spacing:2px;
+	
+	}
+	.loading{
+	  width:90px;
+	  height: 90px;
+	  background:url(circle_loading2.png) no-repeat center center;
+	  background-size:cover;
+	  animation:loading 1s linear infinite;
+	  -webkit-animation:loading .7s linear infinite;
+	}
+	@-webkit-keyframes loading{
+		from{
+			-webkit-transform:rotate(0deg);
+		}
+		to{
+			-webkit-transform:rotate(360deg);
+		}
+	}
+	@keyframes loading{
+		from{
+			-webkit-transform:rotate(0deg);
+		}
+		to{
+			-webkit-transform:rotate(360deg);
+		}
+	}
+	</style>
+</head>
+<body>
+
+	<div class="tips">
+	    <div class="tipscon">
+	    	<div class="loading"></div>
+	    </div>
+	</div>
+
+</body>
+</html>
