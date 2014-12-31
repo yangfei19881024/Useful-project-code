@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-line-pack取值为center的效果</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.flexbox {
+			margin:0.25em 5em;
+			border: 1px solid hsla(120,30%,50%,.8);
+			background-color:  hsla(10,80%,10%,.2);
+			height: 250px;
+		}
+		.flexbox:nth-child(2n){
+			margin-bottom: 200px;
+		}
+		.flexbox > div {
+			border: 1px solid hsla(120,30%,50%,.8);
+			font: bold 2em arial;
+			color: #fff;
+			width: 150px;
+			padding: .2em;
+		}
+		.flexbox > div:nth-child(odd){
+			background-color: hsla(120,30%,50%,.8);
+		}
+		.flexbox > div:nth-child(even){
+			background-color: hsla(120,30%,10%,.8);
+		}		
+		.flexbox > div:last-child{
+			background-color: hsla(20,10%,60%,.8);
+		}
+		/*设置伸缩容器*/
+		.flexbox {
+			display: -ms-flexbox;
+			-ms-flex-wrap: wrap;
+		}
+
+		.flex-direction-column {
+			-ms-flex-direction: column;
+		}
+		/*flex line-pack*/
+		.flex-line-pack-center {
+			-ms-flex-line-pack:center;
+		}
+	
+	</style>
+</head>
+<body>
+	<div class="flexbox flex-line-pack-center">
+		<div>box1</div>
+		<div>box2</div>
+		<div>box3</div>
+		<div>box4</div>
+		<div>box5</div>
+		<div>box6</div>
+		<div>box7</div>
+		<div>box8</div>
+		<div>Start</div>
+	</div>
+	<div class="flexbox flex-line-pack-center flex-direction-column">
+		<div>box1</div>
+		<div>box2</div>
+		<div>box3</div>
+		<div>box4</div>
+		<div>box5</div>
+		<div>box6</div>
+		<div>box7</div>
+		<div>box8</div>
+		<div>Start</div>
+	</div>
+	
+</body>
+</html>

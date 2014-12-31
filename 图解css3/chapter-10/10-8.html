@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3线性渐变——从左上角到右下角渐变</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 450px;
+			height: 150px;
+			border: 1px solid #666;
+			line-height: 150px;
+			text-align: center;
+			font-weight: 900;
+			font-size: 30px;
+			color: #fff;
+			margin: 10px auto;
+		}
+		.toBottomRight {
+			background-image:-webkit-linear-gradient(to bottom right, orange, green);
+			background-image:linear-gradient(to bottom right,orange,green);
+		}
+		.toBottomRight-deg{
+			background-image:-webkit-linear-gradient(135deg, orange, green);
+			background-image:linear-gradient(135deg,orange,green);
+		}
+		.toBottomRight-deg2{
+			background-image:-webkit-linear-gradient(-225deg, orange, green);
+			background-image:linear-gradient(-225deg,orange,green);
+		}
+	</style>
+</head>
+<body>
+	<div class="toBottomRight">使用关键词：to Bottom Right</div>
+	<div class="toBottomRight-deg">使用角度：225 deg</div>
+	<div class="toBottomRight-deg2">使用角度：-135 deg</div>
+</body>
+</html>

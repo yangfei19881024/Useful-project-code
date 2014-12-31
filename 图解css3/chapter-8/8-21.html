@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>box-ordinal-group的基本使用</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			color: #fff;
+			font-size: 20px;
+		}
+		.box-flex {
+			border: 1px solid red;
+			background: gray;
+			margin: 100px;
+			display: -webkit-box;
+			display: -moz-box;
+			display: box;
+		}
+		.box-flex div {
+			background: #f36;
+			padding: 20px;
+			margin: 5px;
+		}
+		.box-flex div:nth-child(1),
+		.box-flex div:nth-child(4){
+			background-color: orange;
+			-moz-box-ordinal-group: 2;
+			-webkit-box-ordinal-group: 2;
+			box-ordinal-group:2;
+		}
+		.box-flex div:nth-child(3){
+			background-color: green;
+			-moz-box-ordinal-group: 3;
+			-webkit-box-ordinal-group: 3;
+			box-ordinal-group:3;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box-flex">
+		<div>Box1</div>
+		<div>Box2</div>
+		<div>Box3</div>
+		<div>Box4</div>
+		<div>Box5</div>	
+	</div>
+</body>
+</html>

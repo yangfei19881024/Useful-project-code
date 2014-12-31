@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Metro Demo</title>
+<style type="text/css" media="screen">
+	*{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}	
+	html,body {
+		height: 100%;
+		width: 100%;
+	}
+	header,section,article,aside {
+		display: block;
+	}
+	body {
+		background: #004050;
+		color: #fff;
+		font-family: "Segoe WP", "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	}
+	.tile {
+		cursor: default;
+		height: 120px;
+		width: 120px;
+		display: block;
+		margin: 1px;
+		border: 3px solid rgba(255,255,255,.01);
+		box-shadow: inset 0 0 -1px rgba(255,255,255,.1);
+		color: #fff;
+		background-clip: padding-box;
+		position: relative;
+		background-image: -webkit-linear-gradient(to right,rgba(255,255,255,.0),rgba(255,255,255,.1));
+		background-image: linear-gradient(to right,rgba(255,255,255,.0),rgba(255,255,255,.1));
+	}
+	.tile:hover { 
+		margin: 1px; 
+		border-color: rgba(255,255,255,.125);
+	}
+	.tile-icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+		background: url(images/tile-app-icon.png) no-repeat center center;
+	}
+	.tile-title {
+		position: absolute;
+		font-size: 12px;
+		line-height: 12px;
+		color: #fff;
+		display: block;
+		top: auto;
+		bottom: 7px;
+		left: 16px;
+		right: 8px;
+	}
+	/*icon*/
+	.app-store .tile-icon{
+		background-image: url(images/icon-app-store.png);
+	}
+	.app-xbox .tile-icon {
+		background-image: url(images/icon-app-xbox.png);
+	}
+	.app-photos .tile-icon {
+		background-image: url(images/icon-app-photos.png);
+	}
+	.app-calendar .tile-icon {
+		background-image: url(images/icon-app-calendar.png);
+	}
+	.app-maps .tile-icon {
+		background-image: url(images/icon-app-maps.png);
+	}
+	.app-ie .tile-icon {
+		background-image: url(images/icon-app-ie.png);
+	}
+	.app-messaging .tile-icon {
+		background-image: url(images/icon-app-messaging.png);
+	}
+	.app-people .tile-icon {
+		background-image: url(images/icon-app-people.png);
+	}
+	.app-video .tile-icon {
+		background-image: url(images/icon-app-video.png);
+	}
+	.app-mail .tile-icon {
+		background-image: url(images/icon-app-mail.png);
+	}
+	.app-search .tile-icon {
+		background-image: url(images/icon-charm-search.png);
+	}
+	.app-solitaire .tile-icon {
+		background-image: url(images/icon-app-solitaire.png);
+	}
+	.app-weather .tile-icon {
+		background-image: url(images/icon-app-weather.png);
+	}
+	.app-camera .tile-icon {
+		background-image: url(images/icon-app-camera.png);
+	}
+	.app-setting .tile-icon {
+		background-image: url(images/icon-charm-settings.png);
+	}
+	.app-xboxcompanion .tile-icon {
+		background-image: url(images/icon-app-xboxcompanion.png);
+	}
+	.app-music .tile-icon {
+		background-image: url(images/icon-app-music.png);
+	}
+	.app-skydrive .tile-icon {
+		background-image: url(images/icon-app-skydrive.png);
+	}
+	.app-remote .tile-icon {
+		background-image: url(images/icon-app-remote.png);
+	}
+	.app-finance .tile-icon {
+		background-image: url(images/icon-app-finance.png);
+	}
+	.app-reader .tile-icon {
+		background-image: url(images/icon-app-reader.png);
+	}
+	.app-share .tile-icon {
+		background-image: url(images/icon-charm-share.png);
+	}
+	/*background-color for tile*/
+	.bg-color-blue {
+	  background-color: #2d89ef !important;
+	}
+	.bg-color-blueLight {
+	  background-color: #eff4ff !important;
+	}
+	.bg-color-blueDark {
+	  background-color: #2b5797 !important;
+	}
+	.bg-color-green {
+	  background-color: #00a300 !important;
+	}
+	.bg-color-greenLight {
+	  background-color: #99b433 !important;
+	}
+	.bg-color-greenDark {
+	  background-color: #1e7145 !important;
+	}
+	.bg-color-red {
+	  background-color: #b91d47 !important;
+	}
+	.bg-color-yellow {
+	  background-color: #ffc40d !important;
+	}
+	.bg-color-orange {
+	  background-color: #e3a21a !important;
+	}
+	.bg-color-orangeDark {
+	  background-color: #da532c !important;
+	}
+	.bg-color-pink {
+	  background-color: #9f00a7 !important;
+	}
+	.bg-color-pinkDark {
+	  background-color: #7e3878 !important;
+	}
+	.bg-color-purple {
+	  background-color: #603cba !important;
+	}
+	.bg-color-darken {
+	  background-color: #1d1d1d !important;
+	}
+	.bg-color-lighten {
+	  background-color: #d5e7ec !important;
+	}
+	.bg-color-white {
+	  background-color: #ffffff !important;
+	}
+	.bg-color-grayDark {
+	  background-color: #525252 !important;
+	}
+	/*flexbox*/
+	body {
+		padding: 0 5%;
+		
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-moz-box-orient: vertical;
+		-webkit-box-orient: vertical;
+		-moz-box-direction: normal;
+		-webkit-box-direction: normal;
+		-moz-box-lines: multiple;
+		-webkit-box-lines: multiple;
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
+	}
+	header {
+		min-height: 100px;
+		min-width: 100%;
+		padding: 20px 0;
+	}
+	section {
+		min-width: 100%;
+		
+		display: -moz-box;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-ms-flex: 1;
+		-webkit-flex: 1;
+		flex: 1;
+		-moz-box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		-moz-box-direction: normal;
+		-webkit-box-direction: normal;
+		-moz-box-lines: multiple;
+		-webkit-box-lines: multiple;
+		-ms-flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		
+		-moz-box-pack: justify;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+	article {
+	
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-moz-box-orient: vertical;
+		-webkit-box-orient: vertical;
+		-moz-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-lines: multiple;
+		-webkit-box-lines: multiple;
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
+		
+		-moz-box-flex: 1;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		-webkit-flex: 1;
+		flex: 1;
+		
+	}
+	
+	.tile-row {
+		width: 100%;
+		
+		display: -moz-box;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+
+		-moz-box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+		-moz-box-direction: normal;
+		-webkit-box-direction: normal;
+		-moz-box-lines: multiple;
+		-webkit-box-lines: multiple;
+		-ms-flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		
+		-moz-box-pack: justify;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+	
+	article .tile-row:nth-child(3),
+	article .tile-row:nth-child(4){
+		-moz-box-direction: reverse;
+		-webkit-box-direction: reverse;
+		-ms-flex-flow: row-reverse wrap;
+		-webkit-flex-flow: row-reverse wrap;
+		flex-flow: row-reverse wrap;
+	}
+	.tile-row .tile {
+		-moz-box-flex: 1;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		-webkit-flex: 1;
+		flex: 1;		
+	}
+	.tile-row .tile:nth-child(3),
+	.tile-row .tile:nth-child(4){
+		-moz-box-flex: 2;
+		-webkit-box-flex: 2;
+		-ms-flex: 2;
+		-webkit-flex: 2;
+		flex: 2;
+	}
+	aside {
+		width: 250px;
+		margin-left: 5%;
+		
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-moz-box-orient: vertical;
+		-webkit-box-orient: vertical;
+		-moz-box-direction: normal;
+		-webkit-box-direction: normal;
+		-moz-box-lines: multiple;
+		-webkit-box-lines: multiple;
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
+
+	}
+	
+	aside > div:nth-child(1),
+	aside > div:nth-child(4){
+		width: 100%;
+	}
+</style>	
+</head>
+<body>
+	<header>
+		<h1>Metro Demo</h1>
+	</header>
+	<section>
+		<article>
+			<div class="tile-row">
+				<div class="tile tile-small app-store bg-color-greenLight">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Store</span>
+				</div>
+				<div class="tile tile-small app-xbox bg-color-blueDark">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Xbox Live Games</span>
+				</div>
+				<div class="tile app-photos bg-color-green">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Photos</span>
+				</div>
+				<div class="tile app-calendar bg-color-red">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Calendar</span>
+				</div>
+			</div>
+			<div class="tile-row">
+				<div class="tile tile-small app-maps bg-color-yellow">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Maps</span>
+				</div>
+				<div class="tile tile-small app-ie bg-color-blue">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Internet Explorer</span>
+				</div>
+				<div class="tile app-messaging bg-color-pink">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Messaging</span>
+				</div>
+				<div class="tile app-people bg-color-red">
+					<span class="tile-icon"></span>
+					<span class="tile-title">People</span>
+				</div>
+			</div>
+			<div class="tile-row">
+				<div class="tile tile-small app-video bg-color-orangeDark">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Video</span>
+				</div>
+				<div class="tile tile-small app-mail bg-color-greenLight">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Mail</span>
+				</div>
+				<div class="tile app-search bg-color-yellow">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Search</span>
+				</div>
+				<div class="tile app-solitaire bg-color-greenLight">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Solitaire</span>
+				</div>
+			</div>
+			<div class="tile-row">
+				<div class="tile tile-small app-weather bg-color-blue">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Weather</span>
+				</div>
+				<div class="tile tile-small app-camera bg-color-red">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Camera</span>
+				</div>
+				<div class="tile app-setting bg-color-pink ">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Setting</span>
+				</div>
+				<div class="tile app-xboxcompanion bg-color-blueDark">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Xbox Companion</span>
+				</div>
+			</div>
+		</article>
+		<aside>
+			<div class="tile-row">
+				<div class="tile tile-small app-music bg-color-greenDark">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Music</span>
+				</div>
+			</div>
+			<div class="tile-row">
+				<div class="tile tile-small app-skydrive bg-color-pinkDark">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Skydrive</span>
+				</div>
+				<div class="tile app-remote bg-color-blue">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Remote Desktop</span>
+				</div>
+			</div>
+			<div class="tile-row">
+				<div class="tile app-finance bg-color-orangeDark">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Finance</span>
+				</div>
+			</div>
+			<div class="tile-row">
+				<div class="tile app-reader bg-color-green">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Reader</span>
+				</div>
+				<div class="tile app-share bg-color-yellow">
+					<span class="tile-icon"></span>
+					<span class="tile-title">Share</span>
+				</div>
+			</div>
+			
+		</aside>
+	</section>
+	
+</body>
+</html>

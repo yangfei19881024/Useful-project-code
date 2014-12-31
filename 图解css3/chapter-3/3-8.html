@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3的border-image制作tabs效果</title>
+  <style type="text/css">
+  .tabs-box {
+     border-bottom: 3px solid #9eaab6;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     zoom: 1;
+  }
+  .tabs-box li {
+    float: left;
+    display: inline;
+    margin: 0 12px 0 0;
+    list-style: none outside none;
+    border: 1px solid #9EAAB6;
+    padding: 5px;
+    border-image: url("border-image-tab.png") 0 5 0 5;
+    -moz-border-image: url("border-image-tab.png") 0 5 0 5;
+    -webkit-border-image: url("border-image-tab.png") 0 5 0 5;
+    -o-border-image: url("border-image-tab.png") 0 5 0 5;
+    -ms-border-image: url("border-image-tab.png") 0 5 0 5;
+    border-width: 0 5px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+    color: rgba(0, 125, 200, 0.3);
+  }
+  </style>
+</head>
+<body>
+	<ul class="tabs-box">
+		<li>Home</li>
+		<li>CSS3</li>
+		<li>Html5</li>
+		<li>JavaScript</li>
+		<li>jQuery</li>
+	</ul>
+</body>
+</html>

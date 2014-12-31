@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>align-self的基本使用</title>
+<style type="text/css" media="screen">
+*{
+  margin: 0;
+  padding: 0;
+}
+.flex-container {
+  border: 1px solid hsla(120,30%,50%,0.8);
+  margin: 50px;
+  background-color:hsla(10,80%,10%,0.2);
+  height: 300px;
+  width: 565px;
+  /*声明伸缩容器*/
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  webkit-flex-flow: row wrap;
+  -webkit-align-items: start;
+  align-items:start;
+}
+.flex-container > div {
+  width: 100px;
+  min-height: 100px;
+  border: 1px solid hsla(120,30%,50%,0.8);
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  font-weight:bold;
+ }
+.flex-container > div:nth-child(1){
+  background-color: hsla(120,30%,50%,0.8);
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+.flex-container > div:nth-child(2){
+  background-color: hsla(120,30%,10%,0.8);
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  
+}
+.flex-container > div:nth-child(3) {
+  background-color: hsla(20,30%,50%,0.8);
+  -webkit-align-self: center;
+  align-self: center;
+}
+.flex-container > div:nth-child(4){
+  background-color:hsla(20,80%,50%,0.8);
+  -webkit-align-self: baseline;
+  align-self: baseline;
+}
+.flex-container > div:nth-child(5) {
+  background-color: hsla(320,80%,50%,0.8);
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+
+	
+</style>	
+</head>
+<body>
+	<div class="flex-container">
+		<div>flex-start</div>
+		<div>flex-end</div>
+		<div>center</div>
+		<div>baseline</div>
+		<div>stretch</div>
+	</div>
+</body>
+</html>

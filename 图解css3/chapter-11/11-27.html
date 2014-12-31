@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>scaleZ()</title>
+	<style type="text/css">
+		.stage {
+			width: 300px;
+			height: 300px;
+			float: left;
+			margin: 15px;
+			position: relative;
+			background: url(images/bg-grid.jpg) no-repeat center center;
+			background-size: 100% 100%;
+			
+			-webkit-perspective: 1200px;
+			-moz-perspective: 1200px;
+			-ms-perspective: 1200px;
+			-o-perspective: 1200px;
+			perspective: 1200px;
+		}
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+		}
+		.container img {
+			position: absolute;
+			margin-left: -70px;
+			margin-top: -100px; 
+		}
+		.container img:nth-child(1){
+			z-index: 1;
+			opacity: .6;
+		}
+		.s1 img:nth-child(2){
+			z-index: 2;	
+			-webkit-transform: scaleZ(5) rotateX(45deg);
+			-moz-transform: scaleZ(5) rotateX(45deg);
+			-ms-transform: scaleZ(5) rotateX(45deg);
+			-o-transform: scaleZ(5) rotateX(45deg);
+			transform: scaleZ(5) rotateX(45deg);
+		}
+		.s2 img:nth-child(2){
+			z-index: 2;	
+			-webkit-transform: scaleZ(.25) rotateX(45deg);
+			-moz-transform: scaleZ(.25) rotateX(45deg);
+			-ms-transform: scaleZ(.25) rotateX(45deg);
+			-o-transform: scaleZ(.25) rotateX(45deg);
+			transform: scaleZ(.25) rotateX(45deg);
+		}
+		
+	</style>
+</head>
+<body>
+<div class="stage s1">
+	<div class="container">
+		<img src="images/cardKingClub.png" alt="" width="140" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="140" height="200" />
+	</div>
+</div>
+<div class="stage s2">
+	<div class="container">
+		<img src="images/cardKingClub.png" alt="" width="140" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="140" height="200" />
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>transform-origin改变元素原点前后skew()倾斜图像效果</title>
+	<style type="text/css">
+		div {
+			width: 500px;
+			height: 300px;
+			margin: 30px auto;
+			position: relative;
+			background: url(images/bg-grid.jpg) no-repeat center center;
+			background-size: 100% 100%;
+		}
+		div img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -71px;
+			margin-top: -100px; 
+		}
+		div img:nth-child(1){
+			opacity: .5;
+			z-index: 1;
+			-webkit-transform: skewX(10deg);
+			-moz-transform: skewX(10deg);
+			-ms-transform: skewX(10deg);
+			-o-transform: skewX(10deg);
+			transform: skewX(60deg);
+		}
+		div img:nth-child(2){
+			opacity: .6;
+			z-index: 2;
+			-webkit-transform: skewX(15deg);
+			-moz-transform: skewX(15deg);
+			-ms-transform: skewX(15deg);
+			-o-transform: skewX(15deg);
+			transform: skewX(15deg);
+		}
+		div img:nth-child(3){
+			opacity: .7;
+			z-index: 3;
+			-webkit-transform: skewX(20deg);
+			-moz-transform: skewX(20deg);
+			-ms-transform: skewX(20deg);
+			-o-transform: skewX(20deg);
+			transform: skewX(20deg);
+		}
+		div img:nth-child(4){
+			opacity: .8;
+			z-index: 4;
+			-webkit-transform: skewX(25deg);
+			-moz-transform: skewX(25deg);
+			-ms-transform: skewX(25deg);
+			-o-transform: skewX(25deg);
+			transform: skewX(25deg);
+		}
+		div img:nth-child(5){
+			z-index: 5;
+			-webkit-transform: skewX(30deg);
+			-moz-transform: skewX(30deg);
+			-ms-transform: skewX(30deg);
+			-o-transform: skewX(30deg);
+			transform: skewX(30deg);
+		}
+		div:nth-of-type(2) img {
+			-webkit-transform-origin: bottom;
+			-moz-transform-origin: bottom;
+			-o-transform-origin: bottom;
+			-ms-transform-origin: bottom;
+			transform-origin: bottom;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<!--<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />-->
+	</div>
+	<div>
+		<!--<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />-->
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+	</div>
+</body>
+</html>

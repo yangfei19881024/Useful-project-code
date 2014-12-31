@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		ul {
+			list-style: none outside none;
+			padding: 10px;
+			background: green;
+			width: 400px;
+		}
+		li {margin-bottom: 10px;border: 1px solid orange;}
+		div {margin-bottom: 10px;border: 1px solid blue;}
+		/*
+		ul>li:nth-child(5) {background-color: yellow;}
+		
+		ul> li:nth-child(2n){background-color: #fff}
+		*/
+		ul>li:nth-of-type(3){background-color:orange;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<div>div</div>
+		<div>div</div>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+</body>
+</html>

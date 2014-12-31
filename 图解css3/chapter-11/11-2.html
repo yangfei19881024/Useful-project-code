@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>transform-origin改变元素原点前后rotate()旋转图像效果</title>
+	<style type="text/css">
+		div {
+			width: 500px;
+			height: 300px;
+			margin: 30px auto;
+			position: relative;
+			background: url(images/bg-grid.jpg) no-repeat center center;
+			background-size: 100% 100%;
+		}
+		div img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -71px;
+			margin-top: -100px;
+
+		}
+		div img:nth-child(1){
+			opacity: .5;
+			z-index: 1;
+			-webkit-transform: rotate(10deg);
+			-moz-transform: rotate(10deg);
+			-ms-transform: rotate(10deg);
+			-o-transform: rotate(10deg);
+			transform: rotate(10deg);
+		}
+		div img:nth-child(2){
+			opacity: .6;
+			z-index: 2;
+			-webkit-transform: rotate(25deg);
+			-moz-transform: rotate(25deg);
+			-ms-transform: rotate(25deg);
+			-o-transform: rotate(25deg);
+			transform: rotate(25deg);
+		}
+		div img:nth-child(3){
+			opacity: .7;
+			z-index: 3;
+			-webkit-transform: rotate(35deg);
+			-moz-transform: rotate(35deg);
+			-ms-transform: rotate(35deg);
+			-o-transform: rotate(35deg);
+			transform: rotate(35deg);
+		}
+		div img:nth-child(4){
+			opacity: .8;
+			z-index: 4;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		div img:nth-child(5){
+			z-index: 5;
+			-webkit-transform: rotate(60deg);
+			-moz-transform: rotate(60deg);
+			-ms-transform: rotate(60deg);
+			-o-transform: rotate(60deg);
+			transform: rotate(60deg);
+		}
+		div:nth-of-type(2) img {
+			-webkit-transform-origin: bottom;
+			-moz-transform-origin: bottom;
+			-o-transform-origin: bottom;
+			-ms-transform-origin: bottom;
+			transform-origin: bottom;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+	</div>
+	<div>
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+	</div>
+</body>
+</html>

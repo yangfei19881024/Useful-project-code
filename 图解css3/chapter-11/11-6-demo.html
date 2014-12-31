@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>transform-origin改变元素原点前后scale()缩放图像效果</title>
+	<style type="text/css">
+		div.box {
+			width: 500px;
+			height: 300px;
+			margin: 30px auto;
+			position: relative;
+			background: url(images/bg-grid.jpg) no-repeat center center;
+			background-size: 100% 100%;
+
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform-origin: 50% 50%;
+
+			-webkit-perspective:800px;
+
+		}
+		.con{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -71px;
+			margin-top: -100px;
+
+			-webkit-transform:rotateX(45deg);
+
+			-webkit-transform-origin:top;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="box">
+
+	<div class="con">
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+	</div>
+
+</div>
+
+</body>
+</html>

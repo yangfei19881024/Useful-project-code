@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>径向渐变｜关键词制作径向渐变效果</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrapper {
+			width: 650px;
+			margin: 20px auto;
+		}
+		.row:before,
+		.row:after {
+			content:"";
+			display: table;
+		}
+		.row:after{
+			clear: both;
+			overflow: hidden;
+		}
+		.row > div {
+			width: 150px;
+			height: 150px;
+			margin: 20px;
+			border-radius: 150px;
+			float: left;
+			text-align: center;
+			line-height: 150px;
+			color: #fff;
+			font-weight: bold;
+		}
+		.row:first-child > div{
+			color: #000;
+			font-weight: bold;
+			height: auto;
+			line-height: 28px;
+			border-radius: 0;
+			text-align: left;
+		}
+		.row>div:first-child{
+			color: #000;
+			text-align: left;
+			font-weight: bold;
+		}
+		/* at center*/
+		.center .circle {
+			background-image: -webkit-radial-gradient(circle at center, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at center, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.center .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at center, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at center, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at top*/
+		.top .circle {
+			background-image: -webkit-radial-gradient(circle at top, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at top, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.top .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at top, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at top, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at right */
+		.right .circle {
+			background-image: -webkit-radial-gradient(circle at right, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at right, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.right .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at right, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at right, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at bottom */
+		.bottom .circle {
+			background-image: -webkit-radial-gradient(circle at bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.bottom .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at left */
+		.left .circle {
+			background-image: -webkit-radial-gradient(circle at left, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at left, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.left .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at left, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at left, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at top left*/
+		.top-left .circle {
+			background-image: -webkit-radial-gradient(circle at top left, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at top left, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.top-left .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at top left, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at top left, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at left top*/
+		.left-top .circle {
+			background-image: -webkit-radial-gradient(circle at left top, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at left top, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.left-top .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at left top, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at left top, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/*at top right*/
+		.top-right .circle {
+			background-image: -webkit-radial-gradient(circle at top right, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at top right, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.top-right .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at top right, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at top right, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at right top*/
+		.right-top .circle {
+			background-image: -webkit-radial-gradient(circle at right top, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at right top, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.right-top .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at right top, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at right top, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at bottom right*/
+		.bottom-right .circle {
+			background-image: -webkit-radial-gradient(circle at bottom right, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at bottom right, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.bottom-right .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at bottom right, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at bottom right, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at right bottom*/
+		.right-bottom .circle {
+			background-image: -webkit-radial-gradient(circle at right bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at right bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.right-bottom .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at right bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at right bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at bottom left*/
+		.bottom-left .circle {
+			background-image: -webkit-radial-gradient(circle at bottom left, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at bottom left, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.bottom-left .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at bottom left, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at bottom left, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* at left bottom*/
+		.left-bottom .circle {
+			background-image: -webkit-radial-gradient(circle at left bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(circle at left bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.left-bottom .ellipse {
+			background-image: -webkit-radial-gradient(ellipse at left bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(ellipse at left bottom, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="row title">
+			<div>关键词</div>
+			<div>圆形径向渐变</div>
+			<div>椭圆形径向渐变</div>
+		</div>
+		<div class="row center">
+			<div>Center</div>
+			<div class="circle">center</div>
+			<div class="ellipse">center</div>
+		</div>
+		<div class="row top">
+			<div>Top</div>
+			<div class="circle">top</div>
+			<div class="ellipse">top</div>
+		</div>
+		<div class="row right">
+			<div>Right</div>
+			<div class="circle">right</div>
+			<div class="ellipse">right</div>
+		</div>
+		<div class="row bottom">
+			<div>Bottom</div>
+			<div class="circle">bottom</div>
+			<div class="ellipse">bottom</div>
+		</div>
+		<div class="row left">
+			<div>Left</div>
+			<div class="circle">left</div>
+			<div class="ellipse">left</div>
+		</div>
+		<div class="row top-left">
+			<div>Top Left</div>
+			<div class="circle">top left</div>
+			<div class="ellipse">top left</div>
+		</div>
+		<div class="row left-top">
+			<div>Left top</div>
+			<div class="circle">left top</div>
+			<div class="ellipse">left top</div>
+		</div>
+		<div class="row top-right">
+			<div>Top right</div>
+			<div class="circle">top right</div>
+			<div class="ellipse">top right</div>
+		</div>
+		<div class="row right-top">
+			<div>Right top</div>
+			<div class="circle">right top</div>
+			<div class="ellipse">right top</div>
+		</div>
+		<div class="row bottom-right">
+			<div>Bottom right</div>
+			<div class="circle">bottom right</div>
+			<div class="ellipse">bottom right</div>
+		</div>
+		<div class="row right-bottom">
+			<div>Right bottom</div>
+			<div class="circle">right bottom</div>
+			<div class="ellipse">right bottom</div>
+		</div>
+		<div class="row bottom-left">
+			<div>Bottom left</div>
+			<div class="circle">bottom left</div>
+			<div class="ellipse">bottom left</div>
+		</div>
+		<div class="row left-bottom">
+			<div>Left bottom</div>
+			<div class="circle">left bottom</div>
+			<div class="ellipse">left bottom</div>
+		</div>
+		
+	</div>
+</body>
+</html>

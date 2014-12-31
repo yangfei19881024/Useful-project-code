@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RGBA制作过渡色块</title>
+	<style>
+		.row {
+			overflow: hidden;
+		}
+		.row div {
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;		
+			float: left;	
+		}
+		.row:nth-of-type(1) div {
+			background: #000;
+			color: #fff;
+		}
+		.row:nth-of-type(2) div {
+			background: rgb(255, 0, 0);
+		}
+		.row:nth-of-type(3) div{
+			background: rgb(0, 128, 0);
+		}
+		.row:nth-of-type(4) div{
+			background: rgb(0, 0, 255);
+		}
+		.row div:nth-child(1){
+			background: #000;
+			color: #fff;
+		}
+
+		.row:nth-of-type(2) div:nth-child(3){
+			background: rgba(255, 0, 0,0.8);
+		}
+		.row:nth-of-type(2) div:nth-child(4){
+			background: rgba(255, 0, 0,0.6);
+		}
+		.row:nth-of-type(2) div:nth-child(5){
+			background: rgba(255, 0, 0,0.4);
+		}
+		.row:nth-of-type(2) div:nth-child(6){
+			background: rgba(255, 0, 0,0.2);
+		}
+		.row:nth-of-type(3) div:nth-child(3){
+			background: rgba(0, 128, 0,0.8);
+		}
+		.row:nth-of-type(3) div:nth-child(4){
+			background: rgba(0, 128, 0,0.6);
+		}
+		.row:nth-of-type(3) div:nth-child(5){
+			background: rgba(0, 128, 0,0.4);
+		}
+		.row:nth-of-type(3) div:nth-child(6){
+			background: rgba(0, 128, 0,0.2);
+		}
+		.row:nth-of-type(4) div:nth-child(3){
+			background: rgba(0, 0, 255,0.8);
+		}
+		.row:nth-of-type(4) div:nth-child(4){
+			background: rgba(0, 0, 255,0.6);
+		}
+		.row:nth-of-type(4) div:nth-child(5){
+			background: rgba(0, 0, 255,0.4);
+		}
+		.row:nth-of-type(4) div:nth-child(6){
+			background: rgba(0, 0, 255,0.2);
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		<div class="row">
+			<div></div>
+			<div>1</div>
+			<div>0.8</div>
+			<div>0.6</div>
+			<div>0.4</div>
+			<div>0.2</div>
+		</div>
+		<div class="row">
+			<div>red</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div>green</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div>blue</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</body>
+</html>

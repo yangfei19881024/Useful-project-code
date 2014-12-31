@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3线性渐变——自定义线性渐变</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 600px;
+			height: 150px;
+			border: 1px solid #666;
+			line-height: 150px;
+			text-align: center;
+			font-weight: 900;
+			font-size: 30px;
+			color: #fff;
+			margin: 10px auto;
+		}
+		.toLeft {
+			background-image:-webkit-linear-gradient(
+			to left, 
+			rgba(255,0,0,0) 0%, 
+			rgba(255,0,0,0.8) 7%, 
+			rgba(255,0,0,1) 11%, 
+			rgba(255,0,0,1) 12%, 
+			rgba(255,252,0,1) 28%, 
+			rgba(1,180,7,1) 45%, 
+			rgba(0,234,255,1) 60%, 
+			rgba(0,3,144,1) 75%, 
+			rgba(255,0,198,1) 88%, 
+			rgba(255,0,198,0.8) 93%, 
+			rgba(255,0,198,0) 100%); 
+			background-image:linear-gradient(
+			to left, 
+			rgba(255,0,0,0) 0%, 
+			rgba(255,0,0,0.8) 7%, 
+			rgba(255,0,0,1) 11%, 
+			rgba(255,0,0,1) 12%, 
+			rgba(255,252,0,1) 28%, 
+			rgba(1,180,7,1) 45%, 
+			rgba(0,234,255,1) 60%, 
+			rgba(0,3,144,1) 75%, 
+			rgba(255,0,198,1) 88%, 
+			rgba(255,0,198,0.8) 93%, 
+			rgba(255,0,198,0) 100%); 
+		}
+
+		.toRight {
+			background-image:-webkit-linear-gradient(
+			to right, 
+			rgba(255,0,0,0) 0%, 
+			rgba(255,0,0,0.8) 7%, 
+			rgba(255,0,0,1) 11%, 
+			rgba(255,0,0,1) 12%, 
+			rgba(255,252,0,1) 28%, 
+			rgba(1,180,7,1) 45%, 
+			rgba(0,234,255,1) 60%, 
+			rgba(0,3,144,1) 75%, 
+			rgba(255,0,198,1) 88%, 
+			rgba(255,0,198,0.8) 93%, 
+			rgba(255,0,198,0) 100%);
+			background-image: linear-gradient(
+			to right, 
+			rgba(255,0,0,0) 0%, 
+			rgba(255,0,0,0.8) 7%, 
+			rgba(255,0,0,1) 11%, 
+			rgba(255,0,0,1) 12%, 
+			rgba(255,252,0,1) 28%, 
+			rgba(1,180,7,1) 45%, 
+			rgba(0,234,255,1) 60%, 
+			rgba(0,3,144,1) 75%, 
+			rgba(255,0,198,1) 88%, 
+			rgba(255,0,198,0.8) 93%, 
+			rgba(255,0,198,0) 100%);
+		
+		}
+
+	</style>
+</head>
+<body>
+	<div class="toLeft">自定义直线渐变</div>
+	<div class="toRight">自定义直线渐变</div>
+</body>
+</html>

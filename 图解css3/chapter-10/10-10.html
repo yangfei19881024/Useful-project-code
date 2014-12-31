@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3线性渐变——制作五彩渐变</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 600px;
+			height: 150px;
+			border: 1px solid #666;
+			line-height: 150px;
+			text-align: center;
+			font-weight: 900;
+			font-size: 30px;
+			color: #fff;
+			margin: 10px auto;
+		}
+		.toLeft {
+			background-image:-webkit-linear-gradient(to left, red, orange,yellow,green,blue,indigo,violet);
+			background-image:linear-gradient(to left, red, orange,yellow,green,blue,indigo,violet);
+		}
+		.toRight {
+			background-image:-webkit-linear-gradient(to right, red, orange,yellow,green,blue,indigo,violet);
+			background-image:linear-gradient(to right, red, orange,yellow,green,blue,indigo,violet);
+		}
+		.toTop {
+			background-image:-webkit-linear-gradient(to top, red, orange,yellow,green,blue,indigo,violet);
+			background-image:linear-gradient(to top, red, orange,yellow,green,blue,indigo,violet);
+		}
+		.toBottom {
+			background-image:-webkit-linear-gradient(to bottom, red, orange,yellow,green,blue,indigo,violet);
+			background-image:linear-gradient(to bottom, red, orange,yellow,green,blue,indigo,violet);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="toLeft">制作五彩渐变</div>
+	<div class="toRight">制作五彩渐变</div>
+	<div class="toBottom">制作五彩渐变</div>
+	<div class="toTop">制作五彩渐变</div>
+</body>
+</html>

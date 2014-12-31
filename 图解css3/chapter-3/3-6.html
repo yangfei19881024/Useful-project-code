@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>border-image的垂直repeat效果</title>
+  <style type="text/css">
+    .border-image {
+      width: 150px;
+      height: 100px;
+      border: 27px solid;
+      -webkit-border-image: url(border.png) 27 stretch repeat;
+      -moz-border-image: url(border.png) 27 stretch repeat;
+      -o-border-image: url(border.png) 27 stretch repeat;
+      -ms-border-image: url(border.png) 27 stretch repeat;
+      border-image: url(border.png) 27 stretch repeat;
+    }
+  </style>
+</head>
+<body>
+	<div class="border-image"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>:only-child的使用</title>
+	<style type="text/css">
+		.post {
+			width: 300px;
+			margin: 20px auto;
+			padding: 5px;
+			border: 1px solid #ccc;
+		}
+		p {
+			background: green;
+			color: #fff;
+			border: 1px solid orange;
+			padding: 5px;
+		}
+		.post>p:only-child{
+			border-width: 2px;
+			background-color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="post">
+		<p>我是第一个段落</p>
+		<p>我是第二个段落</p>
+	</div>
+	<div class="post">
+		<p>我就一个段落</p>
+	</div>
+</body>
+</html>

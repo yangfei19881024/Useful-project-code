@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3的border-image制作按钮</title>
+  <style type="text/css">
+.border-image-btn {
+  display: inline-block;
+  border: 18px solid green;
+  border-width: 0 18px;
+    border-image: url("button_sprite.png") 0 18 50 18;
+  -webkit-border-image: url("button_sprite.png") 0 18 50 18;
+  -moz-border-image: url("button_sprite.png") 0 18 50 18;
+  -o-border-image: url("button_sprite.png") 0 18 50 18;
+  -ms-border-image: url("button_sprite.png") 0 18 50 18;
+
+  padding: 13px 10px 17px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration:none;
+  line-height: 15px;
+  margin: 10px;
+}
+
+.border-image-btn:hover {
+  border-image: url("button_sprite.png") 50 18 0 18;
+  -webkit-border-image: url("button_sprite.png") 50 18 0 18;
+  -moz-border-image: url("button_sprite.png") 50 18 0 18;
+  -o-border-image: url("button_sprite.png") 50 18 0 18;
+  -ms-border-image: url("button_sprite.png") 50 18 0 18;
+
+  color: #000;
+  border-color: yellow;
+  text-decoration: none;
+}
+  </style>
+</head>
+<body>
+	<a href="#" class="border-image-btn">Click Me!</a>
+	<a href="#" class="border-image-btn">用力点击我吧！</a>
+	<a href="#" class="border-image-btn">CSS3 Border-image Button</a>
+</body>
+</html>

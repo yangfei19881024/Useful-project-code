@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3线性渐变——从顶部到底部渐变</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 400px;
+			height: 150px;
+			border: 1px solid #666;
+			line-height: 150px;
+			text-align: center;
+			font-weight: 900;
+			font-size: 30px;
+			color: #fff;
+			margin: 10px auto;
+		}
+		.toTop {
+			background-image:-webkit-linear-gradient(to top, orange, green);
+			background-image:linear-gradient(to top,orange,green);
+		}
+		.toTop-deg{
+			background-image:-webkit-linear-gradient(0deg, orange, green);
+			background-image:linear-gradient(0deg,orange,green);
+		}
+		.toTop-deg2{
+			background-image:-webkit-linear-gradient(360deg, orange, green);
+			background-image:linear-gradient(360deg,orange,green);
+		}
+		.toTop-deg3 {
+			background-image:-webkit-linear-gradient(-360deg, orange, green);
+			background-image:linear-gradient(-360deg,orange,green);
+		}
+	</style>
+</head>
+<body>
+	<div class="toTop">使用关键词：to top</div>
+	<div class="toTop-deg">使用角度：0 deg</div>
+	<div class="toTop-deg2">使用角度：360deg</div>
+	<div class="toTop-deg3">使用角度：-360deg</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>box-align取值为end的基本使用</title>
+	<style type="text/css" media="screen">
+		.box {
+			width: 330px;
+			height: 200px;
+			margin: 20px;
+			border: 1px solid #ccc;
+			font-size: 20px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.box > div {
+			padding: 10px;
+		}
+		.box div:nth-child(1){
+			background-color: #305ed5;
+			line-height: 50px;
+		}
+		.box div:nth-child(2){
+			background-color: #e727b3;
+			line-height: 80px;
+		}
+		.box div:nth-child(3) {
+			background-color: #3f8514;
+			line-height: 100px;
+		}
+		.box div:nth-child(4) {
+			background-color: #e6b710;
+		}
+		.box div:nth-child(5){
+			background-color: #f96;
+		}
+		/*box*/
+		.box {
+			display: -webkit-box;
+			display: -moz-box;
+			display: box;
+			-webkit-box-align: end;
+			-moz-box-align: end;
+			box-align: end;
+
+		}
+
+		.box-orient-vertical{
+			-webkit-box-orient: vertical;
+			-moz-box-orient: vertical;
+			box-orient: vertical;
+			height:400px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box box-pack-start">
+		<div class="box-item">box1</div>
+		<div class="box-item">box2</div>
+		<div class="box-item">box3</div>
+		<div class="box-item">box4</div>
+		<div class="box-item">start</div>
+	</div>
+	<div class="box box-pack-start box-orient-vertical">
+		<div class="box-item">box1</div>
+		<div class="box-item">box2</div>
+		<div class="box-item">box3</div>
+		<div class="box-item">box4</div>
+		<div class="box-item">start</div>
+	</div>
+</body>
+</html>

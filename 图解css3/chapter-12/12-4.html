@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>transition-delay的基本应用</title>
+	<style type="text/css" media="screen">
+		.transition{
+		  background: #8ec63f;
+		  width: 100px;
+		  height: 100px;
+		  border-radius: .5em;
+		  -webkit-transition-property: background,border-radius;
+		  -webkit-transition-duration: 2s,3s;
+		  -webkit-transition-timing-function: linear,ease-in;
+		  -webkit-transition-delay: 2s,4s;
+		  -moz-transition-property: background,border-radius;
+		  -moz-transition-duration: 2s,3s;
+		  -moz-transition-timing-function: linear,ease-in;
+		  -moz-transition-delay: 2s,4s;
+		  -o-transition-property: background,border-radius;
+		  -o-transition-duration: 2s,3s;
+		  -o-transition-timing-function: linear,ease-in;
+		  -o-transition-delay: 2s,4s;
+		  -ms-transition-property: background,border-radius;
+		  -ms-transition-duration: 2s,3s;
+		  -ms-transition-timing-function: linear,ease-in;
+		  -ms-transition-delay: 2s,4s;
+		  transition-property: background,border-radius;
+		  transition-duration: 2s,3s;
+		  transition-timing-function: linear,ease-in;
+		  transition-delay: 2s,4s;
+		}
+		.transition:hover {
+			background:#f7941d;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="transition"></div>
+</body>
+</html>

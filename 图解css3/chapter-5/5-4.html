@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>text-overflow制作固定区域的博客列表</title>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+	<style type="text/css">
+	.block {
+		margin: 0 auto;
+		margin-top: 20px;
+		width: 318px;
+		line-height: 20px;
+		border: 1px solid #fc9;
+	}
+	.block ol {
+		padding-left:23px;
+		width: 14em;
+		background:url(bg.png) no-repeat 2px 4px;
+	}
+	.block li {
+		clear:both;
+		margin: 0;
+		padding: 0;
+		list-style: none outside none;
+	}
+	.block li a {
+		float:left;
+		_display:inline;
+		max-width:14em;
+		white-space: nowrap;
+		_white-space:noraml;/*超长就换行，第二行被裁掉 @ie6*/
+		_height: 20px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		color: #333;
+		_background:transparent;/*解决莫名占据高度bug @ie6*/
+	}
+	.block li span {
+		_position: relative;/*应付父容器hacLayout裁切bug @ie6 */
+		float: left;
+		_display: inline;
+		margin-right: -99px;
+		padding-left: 10px;
+		font-size: 10px;
+		color: #999;
+	}
+	</style>
+</head>
+<body>
+<div class="block">
+	<h3>最新博文</h3>
+	<ol class="clearfix">
+		<li><a href="#">如何和何时使用CSS的!important</a><span>2013-02-19</span></li>
+		<li><a href="#">社交媒体网站设计尺寸参考</a><span>2013-02-19</span></li>
+		<li><a href="#">10个简单有效的方法帮你改善jQuery代码与性能</a><span>2013-01-28</span></li>
+		<li><a href="#">预处理器的对比——Sass、LESS和Stylus</a><span>2013-01-26</span></li>
+		<li><a href="#">43个处理触摸事件的jQuery插件</a><span>2013-01-09</span></li>
+		<li><a href="#">2012年国外优秀前端网站</a><span>2013-01-02</span></li>
+		<li><a href="#">CSS团队精神：CSS最佳实践团队开发</a><span>2012-12-31</span></li>
+		<li><a href="#">使用CSS3的background-size优化苹果的Retina屏幕的图像显示</a><span>2012-12-26</span></li>
+		<li><a href="#">你应该知道的一些事情——CSS权重</a><span>2012-12-21</span></li>
+		<li><a href="#">使用CSS Scriptes来优化你的网站在Retina屏幕下显示</a><span>2012-12-18</span></li>
+	</ol>
+</div>
+</body>
+</html>

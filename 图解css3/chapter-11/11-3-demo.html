@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .box{
+
+            width:100px;
+            height: 100px;
+            margin:100px auto;
+            background:red;
+            color:#FFF;
+
+            -webkit-transform:skewX(30deg);
+            transform:skewX(30deg);
+
+        }
+
+        .box div:nth-child(1){
+            -webkit-transform:skewX(-30deg);
+            transform:skewX(-30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>里面的文字</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>flex的基本使用</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.flex-container {
+			width: 960px;
+			margin: 20px auto;
+			min-height: 300px;
+			color: #fff;
+			font-weight: bold;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-flow: row nowrap;
+			flex-flow: row nowrap;
+			-webkit-justify-content: space-around;
+			justify-content: space-around;
+			-webkit-align-items: stretch;
+			align-items: stretch;
+		}
+		.flex-container > div {
+			padding: 10px;
+		}
+		.flex-container > div:nth-child(1) {
+			background-color: hsla(230,30%,80%,.9);
+			-webkit-flex: 1;
+			flex: 1;
+		}
+		.flex-container > div:nth-child(2){
+			background-color: hsla(30,80%,10%,.9);
+			-webkit-flex: 1;
+			flex:1;
+		}
+		.flex-container > div:nth-child(3){
+			background-color: hsla(100,30%,30%,.9);
+			-webkit-flex: 1;
+			flex:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div>Left Sidebar Content</div>
+		<div>Main Content</div>
+		<div>Right Sidebar Content</div>
+	</div>
+</body>
+</html>

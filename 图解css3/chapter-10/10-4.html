@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3线性渐变——从右到左渐变</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 400px;
+			height: 150px;
+			border: 1px solid #666;
+			line-height: 150px;
+			text-align: center;
+			font-weight: 900;
+			font-size: 30px;
+			color: #fff;
+			margin: 10px auto;
+		}
+		.toRight {
+			background-image:-webkit-linear-gradient(to right, orange, green);
+			background-image:linear-gradient(to right,orange,green);
+		}
+		.toRight-deg{
+			background-image:-webkit-linear-gradient(90deg, orange, green);
+			background-image:linear-gradient(90deg,orange,green);
+		}
+		.toRight-deg2{
+			background-image:-webkit-linear-gradient(-270deg, orange, green);
+			background-image:linear-gradient(-270deg,orange,green);
+		}
+	</style>
+</head>
+<body>
+	<div class="toRight">使用关键词：to Right</div>
+	<div class="toRight-deg">使用角度：90 deg</div>
+	<div class="toRight-deg2">使用角度：-270 deg</div>
+</body>
+</html>

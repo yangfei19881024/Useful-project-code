@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>案例实战：box制作自适应的三列布局</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		#header,
+		#footer {
+			width: 100%;
+			padding: 10px;
+			background-color: #ccc;
+		}
+		#sidebar-left,
+		#sidebar-right {
+			width: 220px;
+			padding: 10px;
+			background-color: #f36;
+		}
+		#main {
+			background-color: #e66;
+			padding: 10px;
+			margin: 0 10px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Header</h1>
+	</div>
+	<div id="page">
+		<div id="main">
+			<h1>主内容</h1>
+		</div>
+		<div id="sidebar-left">
+			<h1>左边栏</h1>
+		</div>
+		<div id="sidebar-right">
+			<h1>右边栏</h1>
+		</div>
+	</div>
+	<div id="footer">
+		<p>我是页面页脚</p>
+	</div>
+</body>
+</html>

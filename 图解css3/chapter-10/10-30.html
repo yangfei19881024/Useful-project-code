@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>重复渐变制作纸张背景</title>
+	<style type="text/css">
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  background: -webkit-repeating-linear-gradient(to top, #f9f9f9, #f9f9f9 29px, #ccc 30px);
+  background: repeating-linear-gradient( to top, #f9f9f9, #f9f9f9 29px, #ccc 30px );
+  background-size: 100% 30px;
+  position: relative;
+}
+body:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 4px;
+  border-left: 4px double #FCA1A1;
+  position: absolute;
+  left: 30px;
+}
+
+	</style>
+</head>
+<body>
+
+</body>
+</html>

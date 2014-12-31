@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>order属性修改布局顺序</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html,
+		body {
+			height: 100%;
+			color: #fff;
+		}
+		body {
+			min-width: 100%;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-flow: column wrap;
+			flex-flow: column wrap;
+			-webkit-justify-content: start;
+			justify-content: start;
+			
+		}
+		header,
+		section,
+		nav,
+		aside,
+		footer {
+			display: block;
+		}
+		header {
+			background-color: hsla(200,10%,70%,.5);
+			min-height: 100px;
+			padding: 10px 20px;
+			width: 100%;
+			-webkit-order:1;
+			order: 1;
+		}
+		section{
+			min-width: 100%;
+			margin: 20px 0;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-order: 2;
+			order: 2;
+			-webkit-flex: 1;
+			flex:1;
+		}
+		nav {
+			background-color: hsla(300,60%,20%,.9);
+			padding: 1%;
+			width: 220px;
+			-webkit-order: 1;
+			order: 1;
+		}
+		article {
+			background-color: hsla(120,50%,50%,.9);
+			padding: 1%;
+			margin-left: 2%;
+			margin-right: 2%;
+			-webkit-flex: 1;
+			flex: 1;
+			-webkit-order: 2;
+			order: 2;
+		}
+		aside {
+			background-color: hsla(20,80%,80%,.9);
+			padding: 1%;
+			width: 220px;
+			-webkit-order: 3;
+			order: 3;
+		}
+		footer {
+			background-color: hsla(250,50%,80%,.9);
+			min-height: 60px;
+			padding: 1%;
+			min-width: 100%;
+			-webkit-order: 3;
+			order: 3;
+		}
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<section>
+		<article>article</article>
+		<nav>nav</nav>
+		<aside>aside</aside>
+	</section>
+	<footer>footer</footer>
+</body>
+</html>

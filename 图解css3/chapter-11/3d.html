@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .outer{
+
+            -webkit-perspective:800px;
+            -webkit-perspective-origin:50% 50%;
+
+            -webkit-transform-style:preserve-3d;
+
+
+        }
+
+        .box{
+            width:150px;
+            height: 150px;
+            background: #0066cc;
+
+            margin:200px auto;
+
+            -webkit-transform:rotateZ(45deg);
+
+            /*-webkit-transform-origin:left;*/
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="box"></div>
+</div>
+</body>
+</html>

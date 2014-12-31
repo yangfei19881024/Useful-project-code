@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3的border-image制作圆角和阴影效果</title>
+  <style type="text/css">
+  .border-image-drop-boxshadow {
+   width: 150px;
+   height: 50px;
+   padding: 10px;
+   margin: 10px;
+   border: 1px solid #ccc;
+   border-width: 7px 7px 16px;
+   border-image: url("border-image-box-shadow.png") 7 7 16 7;		  
+   -moz-border-image: url("border-image-box-shadow.png") 7 7 16 7;
+   -webkit-border-image: url("border-image-box-shadow.png") 7 7 16 7;
+   -o-border-image: url("border-image-box-shadow.png") 7 7 16 7;
+   -ms-border-image: url("border-image-box-shadow.png") 7 7 16 7;
+ }
+ .box2{
+  width: 200px;
+  height: 100px;
+ }
+  </style>
+</head>
+<body>
+	<div class="border-image-drop-boxshadow box1">小框</div>
+  <div class="border-image-drop-boxshadow box2">大框</div>
+</body>
+</html>

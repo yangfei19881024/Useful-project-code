@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3线性渐变——关键词实现不同渐变效果</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 250px;
+			height: 150px;
+			border: 1px solid #666;
+			line-height: 150px;
+			text-align: center;
+			font-weight: 900;
+			font-size: 15px;
+			color: #fff;
+			margin: 10px;
+			float:left;
+		}
+		div:nth-child(2n+1){
+			clear:left
+		}
+		/*向左上角渐变*/
+		.toTopLeft {
+			background-image:-webkit-linear-gradient(to top left, orange, green);
+			background-image:linear-gradient(to top left,orange,green);
+		}
+		.toLeftTop {
+			background-image:-webkit-linear-gradient(to left top, orange, green);
+			background-image:linear-gradient(to left top,orange,green);
+		}
+		/*向右上角渐变*/
+		.toTopRight{
+			background-image:-webkit-linear-gradient(to top right, orange, green);
+			background-image:linear-gradient(to top right,orange,green);
+		}
+		.toRightTop {
+			background-image:-webkit-linear-gradient(to right top, orange, green);
+			background-image:linear-gradient(to right top,orange,green);
+		}
+		/*向左下角渐变*/
+		.toBottomLeft {
+			background-image:-webkit-linear-gradient(to bottom left, orange, green);
+			background-image:linear-gradient(to bottom left,orange,green);
+		}
+		.toLeftBottom {
+			background-image:-webkit-linear-gradient(to left bottom, orange, green);
+			background-image:linear-gradient(to left bottom,orange,green);
+		}
+		/*向右下角渐变*/
+		.toBottomRight {
+			background-image:-webkit-linear-gradient(to bottom right, orange, green);
+			background-image:linear-gradient(to bottom right,orange,green);
+		}
+		.toRightBottom {
+			background-image:-webkit-linear-gradient(to right bottom, orange, green);
+			background-image:linear-gradient(to right bottom,orange,green);
+		}
+	</style>
+</head>
+<body>
+	<div class="toTopLeft">使用关键词：to Top Left</div>
+	<div class="toLeftTop">使用关键词：to Left Top</div>
+	<div class="toTopRight">使用关键词：to Top Right</div>
+	<div class="toRightTop">使用关键词：to Right Top</div>
+	<div class="toBottomLeft">使用关键词：to Bottom Left</div>
+	<div class="toLeftBottom">使用关键词：to Left Bottom</div>
+	<div class="toBottomRight">使用关键词：to Bottom Right</div>
+	<div class="toRightBottom">使用关键词：to Right Bottom</div>
+</body>
+</html>

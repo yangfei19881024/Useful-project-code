@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>perspective-origin属性的基本使用</title>
+<style type="text/css" media="screen">
+.wrapper {
+  width: 30%;
+  display: inline-block;
+  padding-bottom: 1em;
+}
+.wrapper h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.cube {
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  margin: .5em auto;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 250px;
+  -moz-perspective: 250px;
+  -o-perspective: 250px;
+  -ms-perspective: 250px;
+  perspective: 250px;
+}
+.w1 .cube { 
+  -moz-perspective-origin: top left; 
+  -webkit-perspective-origin: top left; 
+  -o-perspective-origin: top left; 
+  -ms-perspective-origin: top left; 
+  perspective-origin: top left; 
+}
+.w2 .cube {
+  -webkit-perspective-origin: top;
+  -moz-perspective-origin: top;
+  -o-perspective-origin: top;
+  -ms-perspective-origin: top; 
+  perspective-origin: top; 
+}
+.w3 .cube {
+  -webkit-perspective-origin: top right;
+  -moz-perspective-origin: top right;
+  -o-perspective-origin: top right;
+  -ms-perspective-origin: top right; 
+  perspective-origin: top right; 
+}
+.w4 .cube {
+  -webkit-perspective-origin: left;
+  -moz-perspective-origin: left;
+  -o-perspective-origin: left;
+  -ms-perspective-origin: left; 
+  perspective-origin: left; 
+}
+.w5 .cube { 
+  -webkit-perspective-origin: center;
+  -moz-perspective-origin: center;
+  -o-perspective-origin: center;
+  -ms-perspective-origin: center;
+  perspective-origin: center; 
+}
+.w6 .cube {
+  -webkit-perspective-origin: right;
+  -moz-perspective-origin: right;
+  -o-perspective-origin: right;
+  -ms-perspective-origin: right; 
+  perspective-origin: right; 
+}
+.w7 .cube {
+  -webkit-perspective-origin: bottom left;
+  -moz-perspective-origin: bottom left;
+  -o-perspective-origin: bottom left;
+  -ms-perspective-origin: bottom left; 
+  perspective-origin: bottom left; 
+}
+.w8 .cube {
+  -webkit-perspective-origin: bottom;
+  -moz-perspective-origin: bottom;
+  -o-perspective-origin: bottom;
+  -ms-perspective-origin: bottom; 
+  perspective-origin: bottom; 
+}
+.w9 .cube {
+  -webkit-perspective-origin: bottom right;
+  -moz-perspective-origin: bottom right;
+  -o-perspective-origin: bottom right;
+  -ms-perspective-origin: bottom right; 
+  perspective-origin: bottom right; 
+}
+.side {
+  position: absolute; 
+  width: 2em;
+  height: 2em;
+  background: rgba(255, 99, 71, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  line-height: 2em;
+}
+.front{
+  -webkit-transform:translateZ(1em);
+  -moz-transform:translateZ(1em);
+  -o-transform:translateZ(1em);
+  -ms-transform:translateZ(1em); 
+  transform:translateZ(1em);
+}
+.top{
+  -webkit-transform: rotateX( 90deg)  translateZ(1em);
+  -moz-transform: rotateX( 90deg)  translateZ(1em);
+  -o-transform: rotateX( 90deg)  translateZ(1em);
+  -ms-transform: rotateX( 90deg)  translateZ(1em); 
+  transform: rotateX( 90deg)  translateZ(1em); 
+}
+.right{
+  -webkit-transform: rotateY( 90deg)  translateZ(1em);
+  -moz-transform: rotateY( 90deg)  translateZ(1em);
+  -o-transform: rotateY( 90deg)  translateZ(1em);
+  -ms-transform: rotateY( 90deg)  translateZ(1em); 
+  transform: rotateY( 90deg)  translateZ(1em); 
+}
+.left{
+  -webkit-transform: rotateY(-90deg)  translateZ(1em);
+  -moz-transform: rotateY(-90deg)  translateZ(1em);
+  -o-transform: rotateY(-90deg)  translateZ(1em);
+  -ms-transform: rotateY(-90deg)  translateZ(1em); 
+  transform: rotateY(-90deg)  translateZ(1em); 
+}
+.bottom {
+  -webkit-transform: rotateX(-90deg)  translateZ(1em);
+  -moz-transform: rotateX(-90deg)  translateZ(1em);
+  -o-transform: rotateX(-90deg)  translateZ(1em);
+  -ms-transform: rotateX(-90deg)  translateZ(1em); 
+  transform: rotateX(-90deg)  translateZ(1em); 
+}
+.back{
+  -webkit-transform: rotateY(-180deg) translateZ(1em);
+  -moz-transform: rotateY(-180deg) translateZ(1em);
+  -o-transform: rotateY(-180deg) translateZ(1em);
+  -ms-transform: rotateY(-180deg) translateZ(1em); 
+  transform: rotateY(-180deg) translateZ(1em); 
+}	
+</style>	
+</head>
+<body>
+<div class="wrapper w1">
+  <h1><code>top left</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w2">
+  <h1><code>top</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w3">
+  <h1><code>top right</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w4">
+  <h1><code>left</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w5">
+  <h1><code>center</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w6">
+  <h1><code>right</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w7">
+  <h1><code>bottom left</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w8">
+  <h1><code>bottom</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w9">
+  <h1><code>bottom right</code></h1>
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>	
+</body>
+</html>

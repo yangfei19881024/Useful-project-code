@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            background: #0055cc;
+        }
+        .rotate_clockwise{
+            -webkit-transform:rotate(45deg);
+            -moz-transform:rotate(45deg);
+            position:absolute;
+            left:10px;
+            top:80px;
+        }
+        .rotate_anticlockwise{
+            -webkit-transform:rotate(-45deg);
+            -moz-transform:rotate(-45deg);
+            position:absolute;
+            left:200px;
+            top:80px;
+        }
+        .rotateX{
+            -webkit-transform:perspective(800px) rotateX(60deg);
+            -moz-transform:perspective(800px) rotateX(60deg);
+            position:absolute;
+            left:400px;
+            top:80px;
+        }
+        .rotateY{
+
+            -webkit-transform:perspective(800px) rotateY(30deg);
+            -moz-transform:perspective(800px) rotateY(30deg);
+            position:absolute;
+            left:600px;
+            top:80px;
+        }
+        .rotateZ{
+            -webkit-transform:perspective(800px) rotateZ(60deg);
+            -moz-transform:perspective(800px) rotateZ(60deg);
+            position:absolute;
+            left:800px;
+            top:80px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--<div class="demo_box rotate_clockwise">顺时针旋转45度</div>-->
+    <!--<div class="demo_box rotate_anticlockwise">逆时针旋转45度</div>-->
+    <div class="demo_box rotateX">3维空间内X轴旋转60度</div>
+    <div class="demo_box rotateY">3维空间内Y轴旋转60度</div>
+    <!--<div class="demo_box rotateZ">3维空间内Z轴旋转60度</div>-->
+</body>
+</html>

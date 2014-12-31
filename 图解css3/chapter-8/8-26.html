@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>案例实战：box制作自适应的三列布局</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		html,
+		body {
+			height: 100%;
+		}
+		body {
+			display: -webkit-box;
+			display: -moz-box;
+			display: box;
+			-moz-box-orient: vertical;
+			-webkit-box-orient: vertical;
+			box-orient: vertical;
+			width: 100%;
+		}
+		#page{
+			-moz-box-flex:1;
+			-webkit-box-flex:1;
+			box-flex:1;
+		}
+		#header,
+		#footer {
+			width: 100%;
+			padding: 10px;
+			background-color: #ccc;
+		}
+		#sidebar-left,
+		#sidebar-right {
+			width: 220px;
+			padding: 10px;
+			background-color: #f36;
+		}
+		#main {
+			background-color: #e66;
+			padding: 10px;
+			margin: 0 10px;
+		}
+		/*box制作三列布局*/
+		#page {
+			width: 100%;
+			display: -moz-box;
+			display: -webkit-box;
+			display: box;
+		}
+		#main {
+			-moz-box-flex:1;
+			-webkit-box-flex:1;
+			box-flex:1;
+			
+			-moz-box-ordinal-group: 2;
+			-webkit-box-ordinal-group: 2;
+			box-ordinal-group: 2;
+		}
+		
+		#sidebar-right{
+			-moz-box-ordinal-group: 3;
+			-webkit-box-ordinal-group: 3;
+			box-ordinal-group: 3;
+		}
+		
+		#page  {
+			-moz-box-align: stretch;
+			-webkit-box-align: stretch;
+			box-align: stretch;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Header</h1>
+	</div>
+	<div id="page">
+		<div id="main">
+			<h1>主内容</h1>
+		</div>
+		<div id="sidebar-left">
+			<h1>左边栏</h1>
+		</div>
+		<div id="sidebar-right">
+			<h1>右边栏</h1>
+		</div>
+	</div>
+	<div id="footer">
+		<p>我是页面页脚</p>
+	</div>
+</body>
+</html>

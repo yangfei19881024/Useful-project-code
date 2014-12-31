@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>transition简写基本应用</title>
+	<style type="text/css" media="screen">
+		.transition{
+		  background: #8ec63f;
+		  width: 100px;
+		  height: 100px;
+		  border-radius: .5em;
+		  -webkit-transition: background 2s linear 2s, border-radius 3s ease-in 4s;
+		  -moz-transition: background 2s linear 2s, border-radius 3s ease-in 4s;
+		  -o-transition: background 2s linear 2s, border-radius 3s ease-in 4s;
+		  -ms-transition: background 2s linear 2s, border-radius 3s ease-in 4s;
+		  transition: background 2s linear 2s, border-radius 3s ease-in 4s;
+		}
+		.transition:hover {
+			background:#f7941d;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="transition"></div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3制作旋转icon</title>
+	<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	padding: 100px;
+}
+ul:before,
+ul:after {
+	display: table;
+	content: "";
+}
+ul:after {
+	clear: both;
+	overflow: hidden;
+}
+
+ul {
+	zoom: 1;
+	list-style: none outside none;
+	margin-bottom: 30px;
+}
+
+ul li {
+	float: left:
+	margin: 10px;
+}
+ul a {
+	display: block;
+	float: left;
+	text-decoration: none;
+}
+ul img {
+	border: 0;
+}
+h1 {
+	margin: 2em 0;
+}
+
+#socialicons img,
+#socialicons2 img{ 
+	-moz-transition: all 0.8s ease-in-out;
+	-webkit-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	-ms-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+#socialicons img:hover{
+
+
+	-moz-transform:rotate(360deg) scale(1.5);
+	-webkit-transform:rotate(360deg) scale(1.5);
+
+	-o-transform:rotate(360deg) scale(1.5);
+
+	-ms-transform:rotate(360deg) scale(1.5);
+
+	transform:rotate(360deg) scale(1.5);
+
+
+}
+
+
+
+#socialicons2 img:hover{ 
+	-moz-transform: rotate(-360deg) scale(.7);
+	-webkit-transform: rotate(-360deg) scale(.7);
+	-o-transform: rotate(-360deg) scale(.7);
+	-ms-transform: rotate(-360deg) scale(.7);
+	transform: rotate(-360deg) scale(.7);
+}
+
+	</style>
+</head>
+<body>
+	<h1>顺时针旋转360度放大1.2倍</h1>
+	<ul id="socialicons">
+		<li><a href="#"><img src="images/rss.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/delicious.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/facebook.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/twitter.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/yahoo.png" alt="" /></a></li>
+	</ul>
+	<h1>逆时针旋转360度缩小0.7倍</h1>
+	<ul id="socialicons2">
+		<li><a href="#"><img src="images/rss.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/delicious.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/facebook.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/twitter.png" alt="" /></a></li>
+		<li><a href="#"><img src="images/yahoo.png" alt="" /></a></li>
+	</ul>
+</body>
+</html>

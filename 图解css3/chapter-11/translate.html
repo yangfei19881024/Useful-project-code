@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .translate_1{
+            -webkit-transition:1s ease all;
+            -moz-transition:1s ease all;
+            position:absolute;
+            left:250px;
+            top:10px;
+            background:#4d6ea6;
+        }
+        .translate_1:hover{
+            -webkit-transform:translate(100px);
+            -moz-transform:translate(100px);
+        }
+        .translate_2{
+            -webkit-transition:1s ease all;
+            -moz-transition:1s ease all;
+            position:absolute;
+            left:250px;
+            top:150px;
+            background:#b9f9cb;
+            color:#000;
+        }
+        .translate_2:hover{
+            -webkit-transform:translate(-100px);
+            -moz-transform:translate(-100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo_box translate_1">鼠标经过向右移动100像素</div>
+    <div class="demo_box translate_2">鼠标经过向相反方向移动100像素</div>
+</body>
+</html>

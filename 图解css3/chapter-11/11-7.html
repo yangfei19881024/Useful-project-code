@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>perspective的使用</title>
+	<style type="text/css">
+		div {
+			width: 500px;
+			height: 300px;
+			margin: 30px auto;
+			position: relative;
+			background: url(images/bg-grid.jpg) no-repeat center center;
+			background-size: 100% 100%;
+
+		}
+		div img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -71px;
+			margin-top: -100px;
+
+			-webkit-transform-origin: bottom;
+			-moz-transform-origin: bottom;
+			-o-transform-origin: bottom;
+			-ms-transform-origin: bottom;
+			transform-origin: bottom;
+		}
+		div img:nth-child(1){
+			opacity: .5;
+			z-index: 1;
+		}
+		div img:nth-child(2){
+			z-index: 2;
+			-webkit-transform: rotateX(45deg);
+			-moz-transform: rotateX(45deg);
+			-ms-transform: rotateX(45deg);
+			-o-transform: rotateX(45deg);
+			transform: rotateX(45deg);
+
+		}
+		
+		div:nth-of-type(2){
+			-webkit-perspective: 500px;
+			-moz-perspective: 500px;
+			-ms-perspective: 500px;
+			-o-perspective: 500px;
+			perspective: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+	</div>
+	<div>
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="142" height="200" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-ms-flex的基本使用</title>
+	<style type="text/css" media="screen">
+*{
+  margin: 0;
+  padding: 0;
+}
+.flexbox-container {
+  border: 1px solid hsla(120,30%,50%,0.8);
+  margin: 50px;
+  background-color:hsla(10,80%,10%,0.2);
+  height: 300px;
+}
+.flexbox-container > div {
+  border: 1px solid hsla(120,30%,50%,0.8);
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight:bold;
+ }
+.flexbox-container > div:nth-child(1){
+  background-color: hsla(120,30%,50%,0.8);
+}
+.flexbox-container > div:nth-child(2){
+  background-color: hsla(120,30%,10%,0.8);
+}
+.flexbox-container > div:nth-child(3) {
+  background-color: hsla(20,30%,50%,0.8);
+}
+.flexbox-container > div:nth-child(4){
+  background-color:hsla(20,80%,50%,0.8);
+}
+
+/*声明伸缩容器*/
+.flexbox-container {
+  display: -ms-flexbox;
+  -ms-flex-direction:row;
+  -ms-flex-wrap: wrap;
+  -ms-flex-pack:center;
+  -ms-flex-align:center;
+}
+.flexbox-container > div {
+  -ms-flex:1;
+}
+.flexbox-container > div:hover {
+  -ms-flex:2;
+}
+	</style>
+</head>
+<body>
+	<div class="flexbox-container">
+	  <div>Box1</div>
+	  <div>Box2</div>
+	  <div>Box3</div>
+	  <div>Box4</div>
+	</div>
+</body>
+</html>

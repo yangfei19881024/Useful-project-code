@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>径向渐变｜关键词制作径向渐变大小效果</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrapper {
+			width: 650px;
+			margin: 20px auto;
+		}
+		.row:before,
+		.row:after {
+			content:"";
+			display: table;
+		}
+		.row:after{
+			clear: both;
+			overflow: hidden;
+		}
+		.row > div {
+			width: 150px;
+			height: 150px;
+			margin: 20px;
+			float: left;
+			text-align: center;
+			line-height: 150px;
+			color: #fff;
+			font-weight: bold;
+		}
+		.row:first-child > div{
+			color: #000;
+			font-weight: bold;
+			height: auto;
+			line-height: 28px;
+			border-radius: 0;
+			text-align: left;
+		}
+		.row>div:first-child{
+			color: #000;
+			text-align: left;
+			font-weight: bold;
+		}
+		/* closest-side*/
+		.closest-side .circle {
+			background-image: -webkit-radial-gradient(closest-side circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(closest-side circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.closest-side .ellipse {
+			background-image: -webkit-radial-gradient(closest-side ellipse at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(closest-side ellipse at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* closest-corner*/
+		.closest-corner .circle {
+			background-image: -webkit-radial-gradient(closest-corner circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(closest-corner circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.closest-corner .ellipse {
+			background-image: -webkit-radial-gradient(closest-corner at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(closest-corner ellipse at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* farthest-side */
+		.farthest-side .circle {
+			background-image: -webkit-radial-gradient(farthest-side circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(farthest-side circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.farthest-side .ellipse {
+			background-image: -webkit-radial-gradient(farthest-side ellipse at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(farthest-side ellipse at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		/* farthest-corner */
+		.farthest-corner .circle {
+			background-image: -webkit-radial-gradient(farthest-corner circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(farthest-corner circle at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+		.farthest-corner .ellipse {
+			background-image: -webkit-radial-gradient(farthest-corner ellipse at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+			background-image: radial-gradient(farthest-corner ellipse at 50% 75%, rgb(220, 75, 200),rgb(0, 0, 75));
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="row title">
+			<div>关键词</div>
+			<div>圆形径向渐变</div>
+			<div>椭圆形径向渐变</div>
+		</div>
+		<div class="row closest-side">
+			<div>closest-side</div>
+			<div class="circle">closest-side</div>
+			<div class="ellipse">closest-side</div>
+		</div>
+		<div class="row closest-corner">
+			<div>closest-corner</div>
+			<div class="circle">closest-corner</div>
+			<div class="ellipse">closest-corner</div>
+		</div>
+		<div class="row farthest-side">
+			<div>forthest-side</div>
+			<div class="circle">forthest-side</div>
+			<div class="ellipse">forthest-side</div>
+		</div>
+		<div class="row farthest-corner">
+			<div>forthest-corner</div>
+			<div class="circle">farthest-corner</div>
+			<div class="ellipse">farthest-corner</div>
+		</div>	
+	</div>
+</body>
+</html>

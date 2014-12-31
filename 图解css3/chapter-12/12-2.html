@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>多个过渡属性的过渡使用</title>
+	<style type="text/css" media="screen">
+		.transition{
+		  background: #8ec63f;
+		  width: 100px;
+		  height: 100px;
+		  border-radius: .5em;
+		  -webkit-transition-property: background,height,width;
+		  -webkit-transition-duration: 1s,1s,1s;
+		  -webkit-transition-timing-function: linear,linear,linear;
+		  -webkit-transition-delay: 1s,0s,1s;
+		  -moz-transition-property: background,height,width;
+		  -moz-transition-duration: 1s,1s,1s;
+		  -moz-transition-timing-function: linear,linear,linear;
+		  -moz-transition-delay: 1s,0s,1s;
+		  -o-transition-property: background,height,width;
+		  -o-transition-duration: 1s,1s,1s;
+		  -o-transition-timing-function: linear,linear,linear;
+		  -o-transition-delay: 1s,0s,1s;
+		  -ms-transition-property: background,height,width;
+		  -ms-transition-duration: 1s,1s,1s;
+		  -ms-transition-timing-function: linear,linear,linear;
+		  -ms-transition-delay: 1s,0s,1s;
+		  transition-property: background,height,width;
+		  transition-duration: 1s,1s,1s;
+		  transition-timing-function: linear,linear,linear;
+		  transition-delay: 1s,0s,1s;
+		}
+		.transition:hover {
+			background:#f7941d;
+			width: 300px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="transition"></div>
+</body>
+</html>

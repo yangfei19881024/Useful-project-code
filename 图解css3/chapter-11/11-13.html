@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Backface Visibility</title>
+<style type="text/css" media="screen">
+.container {
+  width: 500px;
+  height: 300px;
+  float: left;
+  position: relative;
+  margin: 30px;
+  border: 1px solid #CCC;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-animation: spinCube 8s infinite ease-in-out;
+  -moz-animation: spinCube 8s infinite ease-in-out;
+  -o-animation: spinCube 8s infinite ease-in-out;
+  animation: spinCube 8s infinite ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ( -100px );
+  -moz-transform: translateZ( -100px );
+  -o-transform: translateZ( -100px );
+  transform: translateZ( -100px );
+}
+@-webkit-keyframes spinCube {
+  0% { -webkit-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+  100% { -webkit-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+}
+@-moz-keyframes spinCube {
+  0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+  100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+}
+@-o-keyframes spinCube {
+  0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+  100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+}
+@-ms-keyframes spinCube {
+  0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+  100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+}
+@keyframes spinCube {
+  0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+  100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+}
+
+.side {
+ display: block;
+ position: absolute;
+ width: 196px;
+ height: 196px;
+ border: 2px solid black;
+ line-height: 196px;
+ font-size: 120px;
+ font-weight: bold;
+ color: white;
+ text-align: center;
+}
+
+.cube.backface-visibility-visible .side {
+ -webkit-backface-visibility: visible;
+ -moz-backface-visibility: visible;
+ -o-backface-visibility: visible;
+ backface-visibility: visible;
+}
+.cube.backface-visibility-hidden .side {
+ -webkit-backface-visibility: hidden;
+ -moz-backface-visibility: hidden;
+ -o-backface-visibility: hidden;
+ backface-visibility: hidden;
+}
+
+.cube .front  { background: hsla(   0, 100%, 50%, 0.7 ); }
+.cube .back   { background: hsla(  60, 100%, 50%, 0.7 ); }
+.cube .right  { background: hsla( 120, 100%, 50%, 0.7 ); }
+.cube .left   { background: hsla( 180, 100%, 50%, 0.7 ); }
+.cube .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
+.cube .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
+
+.cube .front  {
+ -webkit-transform: translateZ( 100px );
+ -moz-transform: translateZ( 100px );
+ -o-transform: translateZ( 100px );
+ transform: translateZ( 100px );
+}
+.cube .back {
+ -webkit-transform: rotateX( -180deg ) translateZ( 100px );
+ -moz-transform: rotateX( -180deg ) translateZ( 100px );
+ -o-transform: rotateX( -180deg ) translateZ( 100px );
+ transform: rotateX( -180deg ) translateZ( 100px );
+}
+.cube .right {
+ -webkit-transform: rotateY(   90deg ) translateZ( 100px );
+ -moz-transform: rotateY(   90deg ) translateZ( 100px );
+ -o-transform: rotateY(   90deg ) translateZ( 100px );
+ transform: rotateY(   90deg ) translateZ( 100px );
+}
+.cube .left {
+ -webkit-transform: rotateY(  -90deg ) translateZ( 100px );
+ -moz-transform: rotateY(  -90deg ) translateZ( 100px );
+ -o-transform: rotateY(  -90deg ) translateZ( 100px );
+ transform: rotateY(  -90deg ) translateZ( 100px );
+}
+.cube .top {
+ -webkit-transform: rotateX(   90deg ) translateZ( 100px );
+ -moz-transform: rotateX(   90deg ) translateZ( 100px );
+ -o-transform: rotateX(   90deg ) translateZ( 100px );
+ transform: rotateX(   90deg ) translateZ( 100px );
+}
+.cube .bottom {
+ -webkit-transform: rotateX(  -90deg ) translateZ( 100px );
+ -moz-transform: rotateX(  -90deg ) translateZ( 100px );
+ -o-transform: rotateX(  -90deg ) translateZ( 100px );
+ transform: rotateX(  -90deg ) translateZ( 100px );
+}	
+</style>	
+</head>
+<body>
+  <div class="container">
+  	<h1>backface-visibility:visible</h1>
+    <div class="cube backface-visibility-visible">
+      <div class="side front">1</div>
+      <div class="side back">2</div>
+      <div class="side right">3</div>
+      <div class="side left">4</div>
+      <div class="side top">5</div>
+      <div class="side bottom">6</div>
+    </div>
+  </div>	
+  
+  <div class="container">
+  	<h1>backface-visibility:hidden</h1>
+    <div class="cube backface-visibility-hidden">
+      <div class="side front">1</div>
+      <div class="side back">2</div>
+      <div class="side right">3</div>
+      <div class="side left">4</div>
+      <div class="side top">5</div>
+      <div class="side bottom">6</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3美化表格</title>
+	<style type="text/css">
+*{margin: 0;padding: 0;}
+body {
+	padding: 40px 100px;
+}
+.demo {
+	width: 600px;
+	margin: 40px auto;
+	font-family: 'trebuchet MS', 'Lucida sans', Arial;
+	font-size: 14px;
+	color: #444;
+}
+/*表格的默认设置*/    
+table {
+  *border-collapse: collapse; /* IE7 and lower */
+  border-spacing: 0;
+  width: 100%;
+}
+
+/*========制作圆角表格========*/
+.bordered {
+  border: solid #ccc 1px;/*给表格添加边框*/
+  border-radius: 6px;/*设置表格圆角*/
+  box-shadow: 0 1px 1px #ccc;/*表格阴影设置*/
+}
+    
+.bordered tr {
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;        
+}
+.bordered .highlight,
+.bordered tr:hover {
+  background: #fbf8e9;/*表格行的悬浮状态效果*/        
+}
+.bordered td, 
+.bordered th {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.bordered th {
+	/*表格表头添加渐变背景色*/
+  background-color: #dce9f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+  background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9)";	
+  box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;/*表格表头设置内阴影*/
+  border-top: none;	
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);/*表格表头设置文字阴影*/
+}
+/*使用:first-child去除表格每行的第一个单元格的左边框*/
+.bordered td:first-child, 
+.bordered th:first-child {
+  border-left: none;
+}
+/*使用:first-child设置表格表头第一个单元格仅左上角为圆角*/
+.bordered th:first-child {
+  border-radius: 6px 0 0 0;
+}
+/*使用:last-child设置表格表头最后一个单元格仅右上角为圆角*/
+.bordered th:last-child {
+  border-radius: 0 6px 0 0;
+}
+/*使用:first-child和:last-child设置表格最后一行的第一个单元格左下角为圆角*/
+.bordered tr:last-child td:first-child {
+  border-radius: 0 0 0 6px;
+}
+/*使用:last-child设置表格最后一行的最后一个单元格右上角为圆角*/
+.bordered tr:last-child td:last-child {
+  border-radius: 0 0 6px 0;
+}
+
+/*=======制作Zebra表格（斑马线表格）效果==========*/
+.zebra td, 
+.zebra th {
+  padding: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+/*使用:nth-child(even)给表格的奇数行添加背景和阴影效果*/
+.zebra .alternate,
+.zebra tbody tr:nth-child(even) {
+  background: #f5f5f5;
+  box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+.zebra th {
+  text-align: left;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  border-bottom: 1px solid #ccc;
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+  background-image: -moz-linear-gradient(top, #f5f5f5, #eee);
+  background-image: -ms-linear-gradient(top, #f5f5f5, #eee);
+  background-image: -o-linear-gradient(top, #f5f5f5, #eee);
+  background-image: linear-gradient(top, #f5f5f5, #eee);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#f5f5f5, endColorstr=#eeeeee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#f5f5f5, endColorstr=#eeeeee)";
+}
+/*使用 :first-child设置表格表头第一个单元格左上角为圆角*/
+.zebra th:first-child {
+  border-radius: 6px 0 0 0;
+}
+/*使用 :last-child设置表格表头最后一个单元格右上角为圆角*/
+.zebra th:last-child {
+  border-radius: 0 6px 0 0;
+}
+.zebra tfoot td {
+  border-bottom: 0;
+  border-top: 1px solid #fff;
+  background-color: #f1f1f1;
+}
+/*使用 :first-child设置表格脚部第一个单元格左下角为圆角*/
+.zebra tfoot td:first-child {
+  border-radius: 0 0 0 6px;
+}
+/*使用 :last-child设置表格脚部最后一个单元格右下角为圆角*/
+.zebra tfoot td:last-child {
+  border-radius: 0 0 6px 0;
+}
+​	
+	</style>
+</head>
+<body>
+<div class="demo">
+	<table class="bordered">
+		<thead>
+			<tr>
+				<th>#</th>        
+				<th>IMDB Top 10 Movies</th>
+				<th>Year</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>        
+				<td>The Shawshank Redemption</td>
+				<td>1994</td>
+			</tr>        
+			<tr>
+				<td>2</td>         
+				<td>The Godfather</td>
+				<td>1972</td>
+			</tr>
+			<tr>
+				<td>3</td>         
+				<td>The Godfather: Part II</td>
+				<td>1974</td>
+			</tr>    
+			<tr>
+				<td>4</td> 
+				<td>The Good, the Bad and the Ugly</td>
+				<td>1966</td>
+			</tr>            
+		</tbody>
+	</table>
+	<p style="height: 50px"></p>
+	<table class="zebra">
+		<thead>
+			<tr>
+				<th>#</th>        
+				<th>IMDB Top 10 Movies</th>
+				<th>Year</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>        
+				<td>The Shawshank Redemption</td>
+				<td>1994</td>
+			</tr>        
+			<tr>
+				<td>2</td>         
+				<td>The Godfather</td>
+				<td>1972</td>
+			</tr>
+			<tr>
+				<td>3</td>         
+				<td>The Godfather: Part II</td>
+				<td>1974</td>
+			</tr>    
+			<tr>
+				<td>4</td> 
+				<td>The Good, the Bad and the Ugly</td>
+				<td>1966</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>&nbsp;</td>        
+				<td></td>
+				<td></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+​</body>
+</html>

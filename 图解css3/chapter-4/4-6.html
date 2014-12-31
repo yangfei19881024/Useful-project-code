@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3多背景制作花边框</title>
+	<style type="text/css">
+		.demo { 
+			width: 240px; 
+			border: 20px solid rgba(104, 104, 142,0.5); 
+			border-radius: 10px;
+			padding: 80px 60px; 
+			color: #f36; 
+			font-size: 25px; 
+			line-height: 1.5; 
+			text-align:center; 
+		}
+			.multipleBg {
+	    background: url("bg-tl.png") no-repeat left top,url("bg-tr.png") no-repeat right top,url("bg-bl.png") no-repeat left bottom,url("bg-br.png") no-repeat right bottom,url("bg-repeat.png") repeat left top;
+	   /*改变背景图片的position起始点，四朵花都是border边缘处起，而平铺背景是在paddin内边缘起*/
+	   -webkit-background-origin: border-box, border-box,border-box,border-box,padding-box;
+	   -moz-background-origin: border-box, border-box,border-box,border-box,padding-box;
+	   -o-background-origin: border-box, border-box,border-box,border-box,padding-box;
+	   background-origin: border-box, border-box,border-box,border-box,padding-box;
+	   /*控制背景图片的显示区域，所有背景图片超边border外边缘都将被剪切掉*/
+	   -moz-background-clip: border-box;
+	   -webkit-background-clip: border-box;
+	   -o-background-clip: border-box;
+	   background-clip: border-box;			
+	 }
+	</style>
+</head>
+<body>
+	<div class="demo multipleBg">我使用了五张背景图片。制作这样的效果</div>
+</body>
+</html>

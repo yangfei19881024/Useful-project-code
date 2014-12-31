@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>box-flex的基本使用</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			color: #fff;
+			font-size: 20px;
+		}
+		.box-flex {
+			width: 410px;
+			border: 1px solid red;
+			background: gray;
+			margin: 100px;
+			display: -webkit-box;
+			display: -moz-box;
+			display: box;
+		}
+		.box-flex p:first-child{
+			background: green;
+		}
+		.box-flex p:last-child{
+			background: orange;
+		}
+		.box-flex p {
+			-moz-box-flex: 1;
+			-webkit-box-flex: 1;
+			box-flex:1;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box-flex">
+		<p>我是一个绿色的伸缩项目。</p>
+		<p>我是一个橙色的伸缩项目，我是用来测试box-flex的使用。</p>
+	</div>
+</body>
+</html>

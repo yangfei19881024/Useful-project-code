@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>将容器设置为伸缩容器</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body>div {
+			border: 1px solid #ccc;
+			margin: 20px;
+			padding: 10px;
+		}
+		div > div {
+			border: 1px solid #f36;
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+		}
+		.box {
+			display: -moz-box;
+			display: -webkit-box;
+			display: box;
+		}
+		.inline-box {
+			display: -moz-inline-box;
+			display: -webkit-inline-box;
+			display: inline-box;
+		}
+	</style>	
+</head>
+<body>
+	<div class="box">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="inline-box">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>rotate()函数</title>
+	<style type="text/css">
+		div {
+			width: 500px;
+			height: 300px;
+			margin: 30px auto;
+			position: relative;
+			background: url(images/bg-grid.jpg) no-repeat center center;
+			background-size: 100% 100%;
+		}
+		div img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -70px;
+			margin-top: -100px; 
+		}
+		div img:nth-child(1){
+			z-index: １;
+			opacity: .6;
+		}
+		div img:nth-child(2){
+			z-index: 2;	
+			-webkit-transform-origin: top left;
+			-moz-transform-origin: top left;
+			-o-transform-origin: top left;
+			-ms-transform-origin: top left;
+			transform-origin: top left;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/cardKingClub.png" alt="" width="140" height="200" />
+		<img src="images/cardKingClub.png" alt="" width="140" height="200" />
+	</div>
+	
+</body>
+</html>

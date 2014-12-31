@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>perspective的使用</title>
+	<style type="text/css">
+		.wrapper {
+			width: 50%;
+			float: left;
+		}
+		.cube {
+			font-size: 4em;
+			width: 2em;
+			margin: 1.5em auto;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+
+			/*-webkit-transform: rotateX(-40deg) rotateY(32deg);
+			-moz-transform: rotateX(-40deg) rotateY(32deg);
+			-ms-transform: rotateX(-40deg) rotateY(32deg);
+			-o-transform: rotateX(-40deg) rotateY(32deg);
+			transform: rotateX(-40deg) rotateY(32deg);*/
+		}
+		.side {
+			position: absolute;
+			width: 2em;
+			height: 2em;
+			background: rgba(255, 99, 71, 0.6);
+			border: 1px solid rgba(0, 0, 0, 0.5);
+			color: white;
+			text-align: center;
+			line-height: 2em;
+		}
+		.front {
+			-webkit-transform: translateZ(1em);
+			-moz-transform: translateZ(1em);
+			-o-transform: translateZ(1em);
+			-ms-transform: translateZ(1em);
+			transform: translateZ(1em);
+		}
+		.top {
+		   -webkit-transform: rotateX(90deg) translateZ(1em);
+		   -moz-transform: rotateX(90deg) translateZ(1em);
+		   -o-transform: rotateX(90deg) translateZ(1em);
+		   -ms-transform: rotateX(90deg) translateZ(1em);
+		   transform: rotateX(90deg) translateZ(1em);
+		}
+
+		.right {
+		   -webkit-transform: rotateY(90deg) translateZ(1em);
+		   -moz-transform: rotateY(90deg) translateZ(1em);
+		   -o-transform: rotateY(90deg) translateZ(1em);
+		   -ms-transform: rotateY(90deg) translateZ(1em);
+		   transform: rotateY(90deg) translateZ(1em);
+		}
+
+		.left {
+		   -webkit-transform: rotateY(-90deg) translateZ(1em);
+		   -ms-transform: rotateY(-90deg) translateZ(1em);
+		   -moz-transform: rotateY(-90deg) translateZ(1em);
+		   -o-transform: rotateY(-90deg) translateZ(1em);
+		   transform: rotateY(-90deg) translateZ(1em);
+		}
+
+		.bottom {
+		   -webkit-transform: rotateX(-90deg) translateZ(1em);
+		   -moz-transform: rotateX(-90deg) translateZ(1em);
+		   -o-transform: rotateX(-90deg) translateZ(1em);
+		   -ms-transform: rotateX(-90deg) translateZ(1em);
+		   transform: rotateX(-90deg) translateZ(1em);
+		}
+
+		.back {
+		   -webkit-transform: rotateY(-180deg) translateZ(1em);
+		   -moz-transform: rotateY(-180deg) translateZ(1em);
+		   -o-transform: rotateY(-180deg) translateZ(1em);
+		   -ms-transform: rotateY(-180deg) translateZ(1em);
+		   transform: rotateY(-180deg) translateZ(1em);
+		}
+		.w1 {
+			-webkit-perspective: 100px;
+			-moz-perspective: 100px;
+			-o-perspective: 100px;
+			-ms-perspective: 100px;
+			perspective: 100px;
+		}
+		.w2{
+			-webkit-perspective: 1000px;
+			-moz-perspective: 1000px;
+			-o-perspective: 1000px;
+			-ms-perspective: 1000px;
+			perspective: 1000px;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper w2">
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+<div class="wrapper w1">
+  <div class="cube">
+    <div class="side  front">1</div>
+    <div class="side   back">6</div>
+    <div class="side  right">4</div>
+    <div class="side   left">3</div>
+    <div class="side    top">5</div>
+    <div class="side bottom">2</div>
+  </div>
+</div>
+</body>
+</html>
