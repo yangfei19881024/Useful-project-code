@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../../static/global/reset/src/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/global/common/src/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/message/src/message-btn.css" />
+</head>
+<body>
+
+    <div class="msg-box">
+    	
+    	<a href="javascript:;" class="dialog-btn">最新通话</a>
+
+    	<div class="dialog-list">
+			<div class="dialog-title">
+				<h3>最新通话</h3>
+				<a href="javascript:;" class="collspan"></a>
+			</div>
+
+			<ul>
+				<li>
+					<a href="javascript:;" class="cleafix">
+						<span class="shop-name">XXXX店铺名称</span>
+						<span class="msg-num">6</span>
+					</a>
+				</li>
+				<li >
+					<a href="javascript:;"class="cleafix">
+						<span class="shop-name">XXXX店铺名称</span>
+						<span class="msg-num">6</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cleafix">
+						<span class="shop-name">XXXX店铺名称</span>
+						<span class="msg-num">6</span>
+					</a>
+				</li>
+
+			</ul>
+			
+    	</div>
+
+    </div>
+
+</body>
+
+<script type="text/javascript" src="../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../sea-modules/seajs/seajs-flush.js"></script>
+
+
+<script type="text/javascript">
+    XD = {};
+    DOMAIN = 'http://www.xidibuy.com/';
+    
+    if(location.href.indexOf('dev') > 0)
+    {
+        JS_DOMAIN = '/webfiles/xidi-files/';
+        SEAJS_VERSION = 'src';
+    }
+    else
+    {
+        JS_DOMAIN = 'http://static.xidibuy.com/';
+        SEAJS_VERSION = '1.0.0';
+    }
+    
+    seajs.config({
+        base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+        vars: {
+            'url': JS_DOMAIN + 'static/',
+            'message': JS_DOMAIN + 'static/message/'+ SEAJS_VERSION +'/'
+        },
+        paths:{
+            'dev': '../../../static/'
+        }
+    });
+    
+    seajs.use([
+        '{message}open_window'
+    ]);    
+    
+    seajs.flush();
+</script>
+
+</html>

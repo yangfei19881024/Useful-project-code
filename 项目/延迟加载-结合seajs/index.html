@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8"/>
+    <head>
+        <style>
+            *{
+                margin:0px;
+                padding:0px
+            }
+            ul,ol{
+                list-style: none;
+            }
+
+            .box{
+                width:500px;
+                margin:0 auto;
+                padding-bottom:100px;
+            }
+            .box li{
+                float:left;
+                padding:10px 0px 10px 10px;
+            }
+            .box li img{
+                width:200px;
+                height: 200px;
+            }
+            .box a{
+                display: block;
+                padding:10px;
+                border:1px solid #CCC;
+                border-radius:3px;
+                box-shadow: 1px 1px 1px #CCC;
+            }
+
+            .new_add img{
+                opacity:0;
+            }
+
+            .loading{
+                width:100%;
+                text-align: center;
+            }
+
+            .loading span{
+                background: url("images/loading.gif") no-repeat;
+                padding-left:60px;
+            }
+
+            .page{
+                width: 100%;
+                text-align: center;
+                display: none;
+            }
+
+            .clearfix:after{
+                content:"";
+                display: block;
+                overflow: hidden;
+                clear:both;
+            }
+        </style>
+        <script>
+          /* $(function(){
+               var $box = $(".box");
+               var count = 0;
+               var ajaxState = true;
+
+               window.onscroll = function(){
+                
+                   if( count < 4 ){
+                       if( ajaxState && checkScroll() ){
+
+                           ajaxState = false;
+
+                           $.ajax({
+                               type:"post",
+                               dataType:"json",
+                               url:"index.php",
+                               data:{"count":count++},
+                               beforeSend:function(){
+                                  var $lastItem = $(".box").find("li").last();
+
+
+                                  var load = '<p class="loading"><span>数据正在加载中..</span></p>';
+
+                                  $("body").append(load);
+
+                                  $(".loading").css({
+                                      "position":"absolute",
+                                      "top":($lastItem.outerHeight() + $lastItem.offset().top + 20)
+                                  });
+
+
+
+                               },
+                               success:function(data){
+                                    var scollTop = $(window).scrollTop();
+                                    var str = "";
+                                    for( var i=0;i<data.length;i++ ){
+
+                                        str += '<li class="item new_add">'
+                                            +    '<a href="javascript:;">'
+                                            +       '<img src="'+data[i].src+'" alt=""/>'
+                                            +    '</a>'
+                                            +   '</li>';
+                                    }
+
+                                   $(".box ul").append(str);
+
+                                   $(".new_add img").animate({"opacity":1},1000); //新加载的元素动画效果
+
+                                   //$(window).scrollTop( $(".box li").outerHeight()*2 + scollTop );
+
+                               },
+                               complete:function(){
+                                   $(".loading").remove();
+                                   ajaxState = true;
+
+                                   if(count == 3){
+                                       $(".page").show();
+                                   }
+
+                               }
+                           });
+
+                       }
+                   }
+
+               }
+
+               function checkScroll(){
+
+                   var $lastItem = $(".box").find("li").last();
+
+                   var lastItemH = $lastItem.outerHeight() + $lastItem.offset().top;
+
+                   var clientH = $(window).height() + $(window).scrollTop();
+
+                   return (lastItemH < clientH)?true:false;
+               }
+           });*/
+        </script>
+    </head>
+    <body>
+        <p class="pages">这是分页</p>
+        <div class="box clearfix">
+            <ul>
+                <li class="item"><a href="javascript:;"><img src="images/1.jpg" alt=""/></a></li>
+                <li class="item"><a href="javascript:;"><img src="images/2.jpg" alt=""/></a></li>
+                <li class="item"><a href="javascript:;"><img src="images/3.jpg" alt=""/></a></li>
+                <li class="item"><a href="javascript:;"><img src="images/4.jpg" alt=""/></a></li>
+                <li class="item"><a href="javascript:;"><img src="images/5.jpg" alt=""/></a></li>
+                <li class="item"><a href="javascript:;"><img src="images/6.jpg" alt=""/></a></li>
+            </ul>
+        </div>
+        <p class="page">这是分页</p>
+
+    </body>
+    
+
+  
+
+    <script src="seajs/seajs/seajs01/sea.js"></script>
+
+    <script>
+
+      seajs.config({
+
+          base:"./seajs",
+          alias:{
+            "jquery":"scripts/jquery.js"
+          }
+
+      });
+
+      seajs.use("./init");
+
+
+
+    </script>
+
+
+</html>

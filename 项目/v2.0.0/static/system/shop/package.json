@@ -1,0 +1,17 @@
+{
+	"family": "static/system",
+	"name": "shop",
+	"version": "2.0.0",
+	"author": "",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"shop.css",
+			"shop.brand.js",
+			"shop.list.js"
+		]
+	}
+}

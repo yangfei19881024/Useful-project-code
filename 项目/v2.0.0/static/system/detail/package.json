@@ -1,0 +1,16 @@
+{
+	"family": "static/system",
+	"name": "detail",
+	"version": "2.0.0",
+	"author": "",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"detail.css",
+			"detail.js"
+		]
+	}
+}

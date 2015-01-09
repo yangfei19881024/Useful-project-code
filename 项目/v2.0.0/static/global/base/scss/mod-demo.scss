@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+// @import: reset.scss
+//------------------------------------------------------------
+@import "reset.scss";
+
+// base
+//------------------------------------------------------------
+html, body {
+	line-height: 22px;
+	font-family: "Avenir", "Arial", "Hiragino Sans GB", "Microsoft YaHei", "SimSun", "sans-serif";
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+html, a {
+	color:#333;
+}
+.cb {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+// @import: _mixin.scss
+//------------------------------------------------------------
+@import "_mixin.scss";
+
+// header
+//------------------------------------------------------------
+#header {
+	@extend %clearfix;
+
+	margin-bottom: 36px;
+	min-width: 996px;
+}
+.hd-layout {
+	@extend %center-block;
+
+	width: 996px;
+}
+.hd-logo {
+	@extend %fl;
+
+	margin-top: 48px;
+	width: 130px;
+	height: 45px;
+}
+.hd-user-mod {
+	@extend %fr;
+
+	margin-top: 48px;
+}
+.hd-search {
+	@extend %fl;
+
+	position: relative;
+}
+.hd-search-box {
+	width: 460px;
+	height: 30px;
+	border: 1px solid #ddd;
+
+	&:hover {
+		border-color: #c3c3c3;
+	}
+}
+.hd-search-input {
+	@extend %fl;
+	@extend %input-419;
+
+	height: 20px;
+	line-height: 20px\0;
+	border-color: #fff;
+
+	&:hover {
+		border-color: #fff;
+	}
+
+	&:focus {
+		padding: 5px 11px;
+		border-width: 1px;
+		border-color: #fff;
+	}
+}
+.hd-search-button {
+	@extend %fr;
+}
+.hd-search-list {
+	@include position(absolute, 31px, none, none, -1px);
+
+	display: none;
+	width: 419px;
+	background-color: #FFF;
+	border: 1px solid #C3C3C3;
+	border-top: 0;
+	line-height: 30px;
+}
+.hd-search-history {
+	@extend %fl;
+
+	width: 218px;
+	border-right: 1px solid #C3C3C3;
+}
+.hd-search-interest {
+	@extend %fl;
+
+	width: 200px
+}
+.hd-search-suggest {
+	display: none;	
+}
+.hd-user-login {
+	@extend %fl;
+
+	margin-left: 24px;
+}
+.hd-user-login-mod {
+	margin-left: 12px;
+	color: #888;	
+}
+.hd-user-cart {
+	margin-left: 24px;
+	line-height: 32px;
+}
+
+// nav < site >
+//------------------------------------------------------------
+#main-nav {
+	@extend %clearfix;
+
+	border-bottom: 1px solid #fff;
+	font-size: 16px;
+	line-height: 24px;
+}
+.main-nav-item {
+	@extend %fl;
+
+	margin-right: 48px;
+}
+.main-nav-category {
+	padding-right: 24px;
+}
+.main-nav-list {	
+	@extend %fl;
+}
+.main-nav-current {
+	font-weight: 700;
+}
+
+// menu < member >
+//------------------------------------------------------------
+#main-menu {
+	@extend %clearfix;
+	
+	margin-bottom: 36px;
+}
+.main-menu-list {
+	height: 44px;
+	background-color: #535353;
+	line-height: 44px;
+	font-size: 14px;
+}
+.main-menu-item {
+	@extend %fl;
+}
+.main-menu-name {
+	@extend %anim;
+
+	display: block;
+	padding:0 24px;
+
+	&:hover {
+		background-color: #393939;
+		text-decoration: none;
+	}
+}
+.main-menu-current {
+	@extend .main-menu-name:hover;
+}
+#sub-menu {
+	@extend %clearfix;
+	
+	font-size: 13px;
+}
+.sub-menu-item {
+	margin: 24px 36px 0 0;
+}
+.sub-menu-current {
+	font-weight: 700;
+}
+
+// content
+//------------------------------------------------------------
+#content {
+	@extend %clearfix;
+	
+	margin-bottom: 60px;
+	min-width: 996px;
+}
+.ct-layout {
+	@extend %center-block;
+
+	width: 996px;
+}
+
+// footer
+//------------------------------------------------------------
+#footer {
+	@extend %clearfix;
+	
+	min-width: 996px;
+}
+.ft-layout {
+	@extend %center-block;
+
+	width: 996px;
+}
+.ft-info {
+	border-top: 1px solid #F1F1F1;
+}
+.ft-info-mod {
+	@extend %fl;
+
+	width: 249px;
+	font-size: 13px;
+}
+.ft-info-icon {
+	@extend %fl;
+
+	margin-right: 12px;
+}
+.ft-info-inner {
+	@extend %fl;
+}
+.ft-info-cate{
+	font-size: 16px;
+}
+.ft-info-des{
+	color: #999;
+}
+.ft-service {
+	background-color: #333;
+	color: #888;
+}
+.ft-menu {
+	@extend %fl;
+
+	width: 204px;
+	font-size: 13px;
+}
+.ft-menu-cate {
+	margin-bottom: 12px;
+	font-size: 16px;
+	color: #c5c5c5;
+}
+.ft-menu-name {
+	
+}
+.ft-ewm {
+	@extend %fr;
+
+	width: 180px;
+}
+.ft-nav {
+	@extend %fr;
+}
+.ft-copyright {
+	@extend %fl;
+}
+
+// site side
+//------------------------------------------------------------
+.site-side {
+	@include position(fixed, 0, none, none, 50%);
+}
+
+@include products-section();
+@include goods-amount();
+@include icons();
+@include main-notice();
+@include main-page();
+@include main-filter();
+@include main-category();
+@include main-sort();
+@include shop-info();
+@include D-Modules();
+@include header-cart-list();
+@include recommend-products();
+@include user-message();
+@include message-list();
+
+.triangle-top {
+	@include triangle(top, 5px, #FC6162);
+}
+
+.triangle-right {
+	@include triangle(right, 5px, #FC6162);
+}
+
+.triangle-bottom {
+	@include triangle(bottom, 5px, #FC6162);
+}
+
+.triangle-left {
+	@include triangle(left, 5px, #FC6162);
+}
+
+.arrow-top {
+	@include arrow(top, 5px, #FC6162, 1px);
+}
+
+.arrow-right {
+	@include arrow(right, 5px, #FC6162, 1px);
+}
+
+.arrow-bottom {
+	@include arrow(bottom, 5px, #FC6162, 1px);
+}
+
+.arrow-left {
+	@include arrow(left, 5px, #FC6162, 1px);
+}
+
+.button-default-50 {
+	@extend %button-default-50;
+}
+
+.button-default-80 {
+	@extend %button-default-80;
+}
+
+.button-default-100 {
+	@extend %button-default-100;
+}
+
+.button-default-130 {
+	@extend %button-default-130;
+}
+
+.button-default-146 {
+	@extend %button-default-146;
+}
+
+.button-default-231 {
+	@extend %button-default-231;
+}
+
+.button-default-256 {
+	@extend %button-default-256;
+}
+
+.button-default-291 {
+	@extend %button-default-291;
+}
+
+.button-light-50 {
+	@extend %button-light-50;
+}
+
+.button-light-80 {
+	@extend %button-light-80;
+}
+
+.button-light-100 {
+	@extend %button-light-100;
+}
+
+.button-light-130 {
+	@extend %button-light-130;
+}
+
+.button-light-146 {
+	@extend %button-light-146;
+}
+
+.button-light-231 {
+	@extend %button-light-231;
+}
+
+.button-light-256 {
+	@extend %button-light-256;
+}
+
+.button-light-291 {
+	@extend %button-light-291;
+}
+
+.button-orange-50 {
+	@extend %button-orange-50;
+}
+
+.button-orange-80 {
+	@extend %button-orange-80;
+}
+
+.button-orange-100 {
+	@extend %button-orange-100;
+}
+
+.button-orange-130 {
+	@extend %button-orange-130;
+}
+
+.button-orange-146 {
+	@extend %button-orange-146;
+}
+
+.button-orange-231 {
+	@extend %button-orange-231;
+}
+
+.button-orange-256 {
+	@extend %button-orange-256;
+}
+
+.button-orange-291 {
+	@extend %button-orange-291;
+}
+
+.button-disabled {
+	@extend %button-disabled;
+}
+
+// 所有痛 input 的尺寸为 40 ~ 996
+.input-150 {
+	@extend %input-150;
+}
+.input-256 {
+	@extend %input-256;
+}

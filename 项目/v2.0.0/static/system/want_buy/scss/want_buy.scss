@@ -1,0 +1,44 @@
+// @import: _mixin.scss
+//------------------------------------------------------------
+@import "../../../global/base/scss/_mixin.scss";
+
+// @import products module
+//------------------------------------------------------------
+@include products-section();
+@include main-notice();
+@include main-filter();
+@include main-sort();
+@include main-page();
+@include icons();
+
+.pro-category{
+  margin-top:30px;
+}
+
+.products-outer{
+  margin-bottom:72px;
+}
+
+.products-image{
+  border-bottom:none;
+}
+
+.main-modules {
+  @extend %clearfix;
+
+  padding: 24px 0;
+}
+.main-sort {
+  @extend %fl;
+
+  padding: 0;
+  border-bottom: none;
+}
+.main-page {
+  margin-bottom: 0;
+}
+
+.page{
+  padding-bottom:14px;
+  padding-top:15px;
+}

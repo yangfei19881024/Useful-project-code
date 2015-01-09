@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+Basic Stylesheet (for Firefox Chrome Opera Safari IE8+)
+
+project :xidi
+version	:1.0.0
+ author	:yanshaojing < 569363234@qq.com >
+  class :手持设备
+   page :all
+------------------------------------------------------------ */
+/*.control-list{
+	display:none;
+}
+.banner{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+.float_sidebar{
+	display:none;
+}
+.pro-item:hover{
+	position:relative;
+	z-index:2;
+}
+.pro-item:hover .pro-outer{
+	margin:-12px -12px auto;
+	padding:10px;
+	background-color:#FFF;
+	border:2px solid #EBEBEB;
+}
+.pro-item:hover .add-cart,
+.pro-item:hover .add-favorite{
+	display:none;
+}*/

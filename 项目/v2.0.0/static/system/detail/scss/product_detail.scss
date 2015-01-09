@@ -1,0 +1,236 @@
+// @import: _mixin.scss
+//------------------------------------------------------------
+
+@import "../../../global/base/scss/_mixin.scss";
+
+@include products-outer(0);
+@include notice_list();
+@include icons();
+
+
+.content{
+	@extend %two_column;
+	@extend %mt36;
+}
+
+.products-list {
+	@extend %clearfix;
+	margin-right: -24px;
+}
+
+.detail-self{
+	@extend %left_side;
+}
+
+.detail-relate{
+	@extend %right_side;
+}
+
+.pro-country{
+	position: relative;
+}
+
+.pro-country span{
+	@include position(absolute,5px,none,none,52px);
+	color:#888;
+	font-size:14px;
+}
+
+.pro-img-list{
+	text-align: center;
+}
+
+.pro-img-list img{
+	display:inline;
+	margin:24px 24px 0 0;
+}
+
+.pro-description p{
+	clear:both;
+	padding:24px 24px 0 0;
+}
+
+
+/**留言**/
+.message-list{
+	margin-top:24px;
+}
+
+.login_box{
+	padding:24px 0px;
+	text-align: center;
+	color:#919191;
+	background:#f1f1f1;
+	margin-top:60px;
+}
+
+.login_link{
+	color:#4a82b1;
+	padding:0px 5px;
+}
+
+.message-title{
+	 font-size: 16px;
+	 color: #333333;
+	 font-weight: bold;
+	 margin-bottom: 24px;
+}
+
+.message_input .input{
+	width:96%;
+	border:1px solid #dddddd;
+	padding:10px;
+	height: 120px;
+}
+
+.message_input .sub{
+	margin-top:25px;
+}
+
+.message_input .word_limit{
+	font-size: 12px;
+	color:#888;
+}
+
+/**商品详情右边**/
+.product-name{
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.product-info{
+	color:#888888;
+	line-height: 24px;
+	padding-top:14px;
+}
+
+.product-price{
+	color:#4fb1a1;
+	font-size:30px;
+	padding:24px 0;
+	display: inline-block;
+}
+
+.stock{
+	background: #f1f1f1;
+	padding:12px 12px;
+}
+.stock a{
+	font-size: 14px;
+	color:#4a82b1;
+	padding-left:6px;
+}
+
+.product-sns{
+	height: 46px;
+	line-height: 46px;
+	color:#898989;
+	position: relative;
+	margin-top:24px;
+	padding:0px 0px 24px 0px;
+	border-bottom:1px solid #e7e7e7;
+}
+
+.product-sns .people{
+	display: inline-block;
+	font-size: 18px;
+	color:#333333;
+	padding-right: 5px;
+}
+.product-sns .product-sns-share{
+	position: absolute;
+	right:12px;
+	top:16px;
+}
+
+.product-sns .border-bar{
+	width:236px;
+	border-right: 1px dotted #d3d7d7;
+}
+
+.product-shop{
+	padding:26px 0px 38px 0px;
+	border-bottom:1px solid #e7e7e7;
+}
+
+.product-shop-info{
+	padding-left:110px;
+}
+
+.product-shop-name{
+	font-size: 14px;
+	padding:8px 0 12px 0px;
+}
+
+.product-shop img{
+	position: absolute;
+}
+
+.product-brand-img{
+	padding:25px 0px 15px 0px;
+}
+
+.product-brand-desc{
+	color: #888888;
+	line-height: 22px;
+}
+
+.other-want-product{
+	font-size: 16px;
+	color:#333333;
+	padding:34px 0px 24px 0px;
+	border-top:1px solid #e7e7e7;
+	margin-top:60px;
+}
+
+.detail-more-item a{
+	margin-right: 12px;
+}
+
+.submit_success{
+	position:relative;
+}
+
+.submit_success_box{
+	border:1px solid #e7e7e7;
+	padding:12px 0px 12px 41px;
+}
+
+.icon-warning-21{
+	position:absolute;
+	top:13px;
+	left:12px;
+}
+
+.submit_success_box h3{
+	font-size: 14px;
+	color:#333;
+}
+
+.submit_success_box p{
+	color:#888888;
+	line-height: 24px;
+}
+
+.products-image{
+	border-bottom:none;
+}
+
+.want-buy-button{
+	@extend %button-orange-351;
+	letter-spacing: 2px;
+	margin-top:12px;
+	font-size:16px;
+}
+
+.want-buy-gray-button{
+	@extend .want-buy-button;
+
+	background:#999;
+	border:1px solid #999;
+
+	&:hover{
+		background:#999;
+		border:1px solid #999;
+	}
+}

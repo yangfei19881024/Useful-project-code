@@ -1,0 +1,19 @@
+{
+	"family": "static/global",
+	"name": "images",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"*.jpg",			
+			"*.png",
+			"*.gif",
+			"*.html",
+			"*.pdf"
+		]
+	}
+}

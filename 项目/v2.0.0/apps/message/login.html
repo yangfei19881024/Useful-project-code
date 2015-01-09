@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>喜地登录</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<link rel="stylesheet" type="text/css" href="../../static/global/reset/src/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/global/common/src/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/global/layout/src/layout.css" />
+		<style>
+			.plugs-section{
+				width:306px;
+				height: 500px;
+				border:1px solid #CCC; 
+				position: static;
+				margin:30px auto;
+				padding:0 36px;
+			}
+			.login-outer{
+				padding:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="plugs-section">
+		    <div class="plugs-header">
+		        <h2 class="plugs-title"> </h2>
+		            <a href="javascript:;" class="plugs-close" data-action="close"></a>
+		    </div>
+		    <div class="plugs-body">
+		        <div class="login-outer clearfix">
+		            <div class="login-head clearfix">
+		                <div class="login-logo sprites"></div>
+		                <span class="login_welcome">欢迎来到喜地</span>
+		            </div>
+		            <div class="login-body clearfix">
+		                <div class="pt24 clearfix login-user-outer">
+		                    <input type="text" name="user" class="textBox login-user" tabindex="0" data-id="login-user-error" placeholder="邮箱 / 手机 / 用户名">
+		                    <p class="login-error clearfix" id="login-user-error"></p>
+		                </div>
+		                <div class="pt24 clearfix login-pass-outer">
+		                    <input type="password" name="pass" class="textBox login-pass" tabindex="1" data-id="login-pass-error" placeholder="密码">
+		                    <p class="login-error clearfix" id="login-pass-error"></p>
+		                </div>
+		                <div class="pt24 clearfix login-code-outer" id="verifyCode">
+		                    <span class="fl">
+		                        <input type="text" name="code" class="textBox login-code" tabindex="2" data-id="login-code-error" maxlength="4" placeholder="验证码">
+		                    </span>
+		                    <span class="ml24 fl">
+		                        <a href="javascript:;" class="fl"><img src="" class="block" id="codeImage"></a>
+		                        <a href="javascript:;" class="login-reloadCode sprites fl"></a>
+		                    </span>
+		                    <div class="cb"></div>
+		                    <p class="login-error clearfix" id="login-code-error"></p>
+		                </div>
+		                <div class="pt24 clearfix">
+		                    <a href="javascript:;" tabindex="3" class="login-button anim-all">登录</a>
+		                </div>
+		                <div class="pt12 clearfix">
+		                    <label for="rememberMe" class="fl">
+		                        <input type="checkbox" name="rememberMe" id="rememberMe" tabindex="4"> 记住用户名
+		                    </label>
+		                    <div class="fr">
+		                        <a href="/signup/index" tabindex="5" class="color-blue">注册</a>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="login-foot pt12 clearfix">
+		                <div class="login-other clearfix">
+		                    <div class="login-line"></div>
+		                    <span class="login-oter-text">其他帐号登录</span>
+		                </div>
+		                <div class="pt24 clearfix">
+		                    <a href="/user/thirdLogin?type=sina" tabindex="7" class="sina-login fl">
+		                        <span class="login-sina-icon sprites"></span>
+		                        <span class="pl12">微博</span>
+		                    </a>
+		                    <a href="/user/thirdLogin?type=qq" tabindex="8" class="qq-login fr">
+		                        <span class="login-qq-icon sprites"></span>
+		                        <span class="pl12">QQ</span>
+		                    </a>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</body>
+	<!-- Javascript -->
+	<script type="text/javascript" src="../../sea-modules/jquery/jquery.js"></script>
+	<script type="text/javascript" src="../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+	<script type="text/javascript" src="../../sea-modules/seajs/seajs-flush.js"></script>
+	<script type="text/javascript">
+		console.log("this is xidi");
+
+		XD = {};
+		DOMAIN = 'http://www.xidibuy.com/';
+		
+		if(location.href.indexOf('dev') > 0)
+		{
+	        JS_DOMAIN = '/webfiles/xidi-files/';
+			SEAJS_VERSION = 'src';
+	    }
+		else
+		{
+	    	JS_DOMAIN = 'http://static.xidibuy.com/';
+			SEAJS_VERSION = '1.0.0';
+	    }
+		
+	    seajs.config({
+			base: JS_DOMAIN,
+	        alias:{
+	            '$': 'jquery/jquery/1.7.2/jquery',
+	            'jquery': 'jquery/jquery/1.7.2/jquery'
+	        },
+			vars: {
+				'url': JS_DOMAIN + 'static/',
+				'common': JS_DOMAIN + 'static/global/common/'+ SEAJS_VERSION +'/'
+			},
+			paths:{
+				'dev': '../../../static/'
+			}
+	    });
+	    
+		seajs.use([
+			'{common}common',
+			'{common}login',
+		]);    
+		
+		seajs.flush();
+	</script>
+</html>

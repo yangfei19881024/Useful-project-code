@@ -1,0 +1,405 @@
+﻿body {
+  background: #ffffff url("../../global/images/src/bg.jpg") center 0 repeat;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+  position:absolute;
+}
+
+.mod_im_box {
+  height: 560px;
+  width: 980px;
+  margin: 10px auto;
+  zoom: 1;
+  position: relative;
+}
+.mod_im_box .bar_box {
+  width: 227px;
+  height: 100%;
+  float: right;
+  background: rgba(255, 255, 255, 0.32);
+  background: #caa1ba\9;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-left: 2px solid #b49dba;
+  position: relative;
+}
+.mod_im_box .bar_box .buyer_info {
+  border-bottom: 1px solid #a896b5;
+  padding-bottom: 20px;
+}
+.mod_im_box .bar_box .buyer_info .user_img {
+  margin-left: 70px;
+  padding-top: 20px;
+  width: 90px;
+  height: 90px;
+  position: relative;
+}
+.mod_im_box .bar_box .buyer_info .user_img img {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+}
+.icon_online {
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background: #44b779;
+  position: absolute;
+  border: 2px solid #FFF;
+  right: 10px;
+  top: 93px;
+  display: block;
+}
+
+.icon_offline {
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background: #999;
+  position: absolute;
+  border: 2px solid #FFF;
+  right: 10px;
+  top: 93px;
+  display: block;
+}
+
+.shop_name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.shop_name a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bar_box .buy_pro h3 {
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.bar_box .buy_pro .pro_img {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.bar_box .buy_pro .pro_img,
+.bar_box .buy_pro .pro_img img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.buy_pro .price {
+  width: 150px;
+  margin-left: 40px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.buy_pro .price span {
+  font-weight: bold;
+  color: #c2252c;
+  float: left;
+}
+
+.buy_pro .pro_name {
+  width: 150px;
+  margin-left: 40px;
+  line-height: 1.5em;
+  height: 35px;
+  overflow: hidden;
+}
+
+.buy_pro .buy_btn a {
+  display: block;
+  width: 150px;
+  height: 28px;
+  border-radius: 3px;
+  background: #ff3c3c;
+  line-height: 28px;
+  text-align: center;
+  font-size: 14px;
+  color: #FFF;
+  margin-left: 42px;
+  margin-top: 10px;
+}
+
+.cont_box {
+  width: 750px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  background: #f8f0f0\9;
+  float: left;
+  border-left: 1px solid #CCC;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: relative;
+  border-left: 1px solid #a18ba4;
+}
+.cont_box .talk_box {
+  height: 440px;
+  overflow: auto;
+  margin-right: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+.talk_box .view_more {
+  margin-left: 350px;
+  margin-top: 10px;
+  position: fixed;
+  z-index: 9999;
+}
+.talk_box .view_more a {
+  color: #f38686;
+}
+
+.talk_box .view_more i {
+  background: url("../../global/images/src/chat_icon.png") no-repeat scroll -145px -37px rgba(0, 0, 0, 0);
+  float: left;
+  height: 25px;
+  margin-right: 5px;
+  width: 15px;
+}
+
+.talk_box .date {
+  margin-left: 275px;
+  margin-top: 10px;
+  zoom: 1;
+}
+
+.talk_box .date span {
+  display: block;
+  float: left;
+  z-index: 1;
+  color: #AAA;
+}
+
+.talk_box .date b {
+  float: left;
+  color: #CDCDCD;
+  margin-top: -5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  display: inline;
+}
+
+.talk_box .date:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: "";
+  visibility: hidden;
+}
+
+.talk_box .talk_a {
+  margin-top: 20px;
+  zoom: 1;
+  clear: both;
+  margin-left: 30px;
+  position: relative;
+}
+
+.talk_box .talk_a .post_date {
+  color: #999;
+}
+
+.talk_box .talk_a .corner {
+  width: 7px;
+  height: 6px;
+  background: url("../../global/images/src/chat_icon.png") -252px 0 no-repeat;
+  position: absolute;
+  left: -6px;
+  top: 0;
+  z-index: 1;
+}
+.mod_im_box .cont_box .talk_box .talk_a .text {
+  background: #f3d9dc;
+  display: inline;
+  _width: 400px;
+  max-width: 400px;
+  float: left;
+  padding: 8px 20px;
+  margin-top: 8px;
+  line-height: 1.6em;
+  color: #333;
+  border-radius: 3px;
+  position: relative;
+}
+.mod_im_box .cont_box .talk_box .talk_a .text img {
+  vertical-align: middle;
+}
+.mod_im_box .cont_box .talk_box .talk_a:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: "";
+  visibility: hidden;
+}
+.mod_im_box .cont_box .talk_box .talk_b {
+  margin-top: 20px;
+  margin-right: 30px;
+  zoom: 1;
+  clear: both;
+  padding-bottom: 5px;
+  position: relative;
+}
+.mod_im_box .cont_box .talk_box .talk_b .post_date {
+  color: #999;
+  text-align: right;
+}
+.mod_im_box .cont_box .talk_box .talk_b .corner {
+  width: 8px;
+  height: 8px;
+  background: url("../../global/images/src/chat_icon.png") -252px -20px no-repeat;
+  position: absolute;
+  right: -7px;
+  top: -1px;
+  z-index: 1;
+}
+.mod_im_box .cont_box .talk_box .talk_b .text {
+  background: #FFF;
+  display: inline;
+  _margin-left: 300px;
+  max-width: 400px;
+  float: right;
+  padding: 8px 20px;
+  margin-top: 8px;
+  line-height: 1.6em;
+  color: #333;
+  border-radius: 3px;
+  position: relative;
+}
+.mod_im_box .cont_box .talk_box .talk_b .text img {
+  vertical-align: middle;
+}
+
+.mod_im_box .cont_box .talk_box .talk_b:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: "";
+  visibility: hidden;
+}
+
+.cont_box .post_box {
+  border-top: 2px solid #e9e3e5;
+  margin-top: 5px;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  bottom: 0;
+  height: 106px;
+  width: 750px;
+  background: #f6eff0;
+}
+
+.post_box .write_msg {
+  padding: 20px 20px 0 30px;
+  zoom: 1;
+}
+
+.post_box .write_msg:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: "";
+  visibility: hidden;
+}
+
+.post_box #richEditor {
+  width: 593px;
+   /* min-height: 38px;
+      _height: 38px; */ 
+  height: 38px;
+  border: 0 none;
+  background: #FFF;
+  line-height: 1.5em;
+  padding: 2px 5px 0 5px;
+  border-radius: 3px;
+  overflow: auto;
+  float: left;
+  resize: none;
+}
+
+
+.post_box .btn_post , .post_box .btn_post_none {
+  width: 85px;
+  height: 40px;
+  border-radius: 3px;
+  border: 0 none;
+  font-size: 14px;
+  color: #FFF;
+  line-height: 40px;
+  font-family: 'Microsoft YaHei';
+  float: right;
+  cursor: pointer;
+}
+
+.post_box .btn_post{
+  background: #ff3c3c;
+}
+
+.post_box .btn_post_none{
+  background: #e6e6e6;
+  cursor:not-allowed;
+}
+
+.im_detailOrder{
+  background: #FFF;
+  margin: 10px 10px 0 10px;
+  padding: 10px 20px 10px 20px;
+
+}
+
+.im_detailOrder .order_no{
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.order_info{
+  margin-top: 10px;
+}
+
+.order_info .left_side{
+  float:left;
+}
+
+.order_info .right_side{
+  float:right;
+}
+
+.order_money{
+  padding:10px 0px;
+}
+
+.order_money,.has_payed{
+  text-align: right;
+}
+
+.order_img img{
+  width: 167px;
+}
+
+.order_title{
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.clearfix:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+*.clearfix{
+  zoom:1;
+}
+
+.red{
+  color:#ce282d;
+}

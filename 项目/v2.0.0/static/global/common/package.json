@@ -1,0 +1,20 @@
+{
+	"family": "static/global",
+	"name": "common",
+	"version": "2.0.0",
+	"author": "",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"common.fun.js",
+			"category.fun.js",
+			"lazyload.js",
+			"dialog.js",
+			"selects.js",
+			"slider.js"
+		]
+	}
+}

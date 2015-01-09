@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>列表页</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/want_buy/src/want_buy.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="#" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="#" class="user-lo">登录</a>
+            <a href="#" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="#" class="user-lo">Sheldon</a>
+            <a href="#" class="user-lo">我的订单</a>
+            <a href="#" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="#">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span><!--<a href="#" class="ml12 f14 color-888">箱包</a>-->
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="#" class="fl">女装</a>
+                            <a href="#" class="fl">男装</a>
+                            <a href="#" class="fl">羊毛衫</a>
+                            <a href="#" class="fl">羊毛呢外套</a>
+                            <a href="#" class="fl">羊毛围巾</a>
+                            <a href="#" class="fl">羊皮鞋</a>
+                            <a href="#" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="#" class="fl">有机护肤品</a>
+                            <a href="#" class="fl">薰衣草护肤品</a>
+                            <a href="#" class="fl">洗发</a>
+                            <a href="#" class="fl">薰衣草精华</a>
+                            <a href="#" class="fl">洁面乳</a>
+                            <a href="#" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="#" class="fl">女包</a>
+                            <a href="#" class="fl">男包</a>
+                            <a href="#" class="fl">手提包</a>
+                            <a href="#" class="fl">钱包</a>
+                            <a href="#" class="fl">旅行箱</a>
+                            <a href="#" class="fl">羊皮手提包</a>
+                            <a href="#" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="#" class="fl">母婴床上用品</a>
+                            <a href="#" class="fl">儿童玩具</a>
+                            <a href="#" class="fl">婴幼童服装</a>
+                            <a href="#" class="fl">儿童玩具</a>
+                            <a href="#" class="fl">无害湿纸巾</a>
+                            <a href="#" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="#" class="fl">餐具</a>
+                            <a href="#" class="fl">不锈钢锅</a>
+                            <a href="#" class="fl">刀具</a>
+                            <a href="#" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="#" class="fl">卧室饰品</a>
+                            <a href="#" class="fl">客厅装饰</a>
+                            <a href="#" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="#" class="fl">羊毛毯</a>
+                            <a href="#" class="fl">羊毛被套</a>
+                            <a href="#" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="#" title=" "><img src="#" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="#" title=" "><img src="#" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav fl">
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+    </div>
+    
+    <div class="hd-wantBuy">
+    	<div class="hd-wantBuy-title">
+        	<span class="icon-pack"></span>好货我想买
+        </div>
+        
+        <div class="hd-wantBuy-box">
+        	<em class="hd-arrow-top"></em>
+        	<p>登记你想买的商品，老板马上进货！</p>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content clearfix">   
+    <div class="main-notice">
+        <div class="main-notice-title">
+            <span class="icon-pack">&nbsp;</span>
+        </div>
+
+        <div class="main-notice-article">
+            好货我想买，喜大普奔，登记你想买的好货，分享亲朋好友，达到登记人数，老板马上进货！
+        </div>
+    </div>
+    
+	<!-- 分类 -->
+    <div class="main-filter">
+        <dl class="filter-box">
+            <dt class="filter-type">国家</dt>
+            <dd class="filer-list">
+                <span class="filter-button filter-select">澳大利亚</span>
+                <a href="" class="filter-button">日本</a>
+                <a href="" class="filter-button">德国</a>
+                <a href="" class="filter-button">英国</a>
+            </dd>
+        </dl>
+
+        <dl class="filter-box">
+            <dt class="filter-type">分类</dt>
+            <dd class="filer-list">
+                <span class="filter-button filter-select">不限</span>
+                <a href="" class="filter-button">个人护理</a>
+                <a href="" class="filter-button">鞋包配饰</a>
+                <a href="" class="filter-button">母婴用品</a>
+                <a href="" class="filter-button">家具家纺</a>
+                <a href="" class="filter-button">厨卫用品</a>
+                <a href="" class="filter-button">食品</a>
+            </dd>
+        </dl>
+    </div>
+    
+    <!-- 排序 -->
+    <div class="main-modules">
+    	 <div class="main-sort">
+            <a href="" class="sort-button sort-current">默认</a>
+            <a href="" class="sort-button">销量<span class="icon-down"></span></a>
+            <a href="" class="sort-button">价格<span class="icon-down"></span></a>
+         </div>
+         
+         <div class="main-page fr">
+         	<a href="#" class="pg-button pg-prev pg-disabled">&lt;</a>
+            <a href="#" class="pg-button pg-next">&gt;</a>
+         </div>
+    </div>
+    
+	<!-- 商品列表 -->
+	<div class="products-section">
+        <ul class="products-list">
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product01.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button want-buy-gray-button">好货我想买</a>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product02.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product03.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product04.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product05.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product06.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product07.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product08.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product09.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product10.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product11.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product12.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product04.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product03.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product02.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="products-outer">
+                <div class="products-box">
+                    <div class="products-image">
+                        <a href=""><img src="" width="231" height="231" data-class="lazyload" data-image="../../../static/temp-images/src/product01.jpg"></a>
+                    </div>
+
+                    <div class="products-pos-box">
+                        <a href="javascript:;" class="icon-unfavorite">&nbsp;</a>
+                    </div>
+    
+                    <div class="products-article">
+                        <h6 class="products-title"><a href="">澳大利亚馆·袋鼠皮、鳄鱼皮配饰</a></h6>
+
+                        <div class="products-section">
+                            <div class="products-price">&yen;<var>1600.00</var></div>
+                            <div class="products-country"><a href="javascript:;"><img src="" width="20" height="14" data-class="lazyload" data-image="../../../static/temp-images/src/NewZealand_small.jpg"></a></div>
+                        </div>
+                        
+                        <div class="products-tag">
+                            <div class="products-tag-count">45人想买</div>
+                            <div class="products-tag-cate"><a href="">创意生活馆</a></div>
+                        </div>
+                        <div class="products-button-box">
+                            <a href="javascript:" class="want-buy-button">好货我想买</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Page -->
+    
+    <div class="main-page">
+        <span class="pg-button pg-prev pg-disabled">&lt;</span>
+        <span class="pg-button pg-current">1</span>
+        <a href="" class="pg-button">2</a>
+        <a href="" class="pg-button">3</a>
+        <a href="" class="pg-button">4</a>
+        <a href="" class="pg-button">5</a>
+        <a href="" class="pg-button pg-next">&gt;</a>
+
+        <div class="pg-goto">到&nbsp;<span class="pg-outer"><input type="text" class="pg-input" value="1"><input type="submit" class="pg-submit"></span>&nbsp;页</div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix" style="text-align: center;">
+    <p><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	seajs.config({
+        base: 'http://static.xidibuy.com/',
+        alias: {
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+        vars: {
+            
+        },
+        paths: {
+            'dev': 'http://static-dev.xidibuy.com/static/'
+        }
+    });
+	
+	seajs.use([
+		'static/system/want_buy/2.0.0/want_buy.js'
+    ]);
+	
+	seajs.flush();
+</script>
+</body>
+</html>

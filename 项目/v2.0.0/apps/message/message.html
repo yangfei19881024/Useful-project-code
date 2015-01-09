@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>喜地-商家即时通讯</title>
+    <link rel="stylesheet" type="text/css" href="../../static/global/reset/src/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/global/common/src/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/message/src/message.css" />
+</head>
+
+<body id="imFront_showBody">
+    <div class="mod_im_box">
+        <div class="bar_box">
+            <div class="buyer_info">
+                <div class="user_img">
+                    <img src="../../static/temp-images/src/user.png" alt="新农哥品牌旗舰店"/>
+                    <i class="icon_online" title="在线"></i>
+                </div>
+                <p class="shop_name"><a href="#" target="_blank">新农哥品牌旗舰店</a></p>
+            </div>
+            
+            <div class="order_box">
+                <div class="pro_box">
+                    <div class="buy_pro">
+                        <h3 class="im_product">咨询的商品</h3>
+
+                        <p class="pro_img"><a target="_blank" href="#"><img src="../../static/temp-images/src/goods.png" alt=""/></a></p>
+
+                        <p class="price"><span>&yen;1</span></p>
+
+                        <p class="pro_name">
+                            <a target="_blank" href="#">
+                                新农哥 休闲零食 坚果干果 巴旦木88克(原大杏仁)炒
+                            </a>
+                        </p>
+
+                        <p class="buy_btn"><a target="_blank" href="#">立即购买</a></p>
+                    </div>
+                </div>
+                <!--订单信息  默认隐藏！-->
+                    <div class="buy_order" style="display: none;">
+                        <h3 class="order_title">订单信息</h3>
+                        
+                        <div class="im_detailOrder">
+                            
+                            <h4 class="order_no">订单号:4505670123409</h4>
+                            <div class="order_img"><a href=""><img src="../../static/temp-images/goods.png" alt=""></a></div>
+                            
+                            <div class="order_info clearfix">
+                                <p class="left_side">共<span>1</span>件商品</p>
+                                <p class="right_side">运费:<em class="red">￥0</em></p>
+                            </div>
+
+                            <div class="order_money">
+                                实收:<em class="red">￥29.9</em>
+                            </div>
+
+                            <div class="has_payed">
+                                <a href="#" class="red">已支付&gt;</a>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont_box">
+            <div class="talk_box">
+                <div class="im_view">
+                    <p class="view_more"><a href="#"><i></i>查看更多</a></p>
+                </div>
+                <div class="im_messageBox">
+                    <div class="talk_b">
+                        <p class="post_date">11:20:54&nbsp;&nbsp;上午</p>
+
+                        <div class="text">
+                            <i class="corner"></i>你好
+                        </div>
+                    </div>
+                    <div class="talk_a">
+                        <p class="post_date">11:32:15&nbsp;&nbsp;上午</p>
+
+                        <div class="text">
+                            <i class="corner"></i>您好，现在为离线服务模式，我们将尽快回复您的提问，谢谢支持！
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="post_box post_box_big">
+
+                <div class="write_msg">
+                   
+                    <textarea name="chat_msg" id="richEditor" cols="110" rows="5"></textarea>
+                    <button type="button" class="btn_post_none" id="btnPost">发送</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+ 
+<script type="text/javascript" src="../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../sea-modules/seajs/seajs-flush.js"></script>
+
+
+<script type="text/javascript">
+    XD = {};
+    DOMAIN = 'http://www.xidibuy.com/';
+    
+    if(location.href.indexOf('dev') > 0)
+    {
+        JS_DOMAIN = '/webfiles/xidi-files/';
+        SEAJS_VERSION = 'src';
+    }
+    else
+    {
+        JS_DOMAIN = 'http://static.xidibuy.com/';
+        SEAJS_VERSION = '1.0.0';
+    }
+    
+    seajs.config({
+        base: JS_DOMAIN,
+        alias:{
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+        vars: {
+            'url': JS_DOMAIN + 'static/',
+            'message': JS_DOMAIN + 'static/message/'+ SEAJS_VERSION +'/'
+        },
+        paths:{
+            'dev': '../../../static/'
+        }
+    });
+    
+    seajs.use([
+        '{message}message'
+    ]);    
+    
+    seajs.flush();
+</script>
+
+
+</html>

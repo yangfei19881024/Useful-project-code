@@ -1,0 +1,70 @@
+// @import: _mixin.scss
+//------------------------------------------------------------
+@import "../../../global/base/scss/_mixin.scss";
+
+// @import public module
+//------------------------------------------------------------
+@include want-buy-goods();
+@include products-section();
+@include main-notice();
+@include icons();
+@include main-page();
+@include main-filter();
+@include main-category();
+@include main-sort();
+@include shop-info();
+@include D-Modules();
+@include dialog-lightbox();
+
+// shop
+//------------------------------------------------------------
+.content {
+  @extend %clearfix;
+}
+
+.main-notice{
+  @extend %clearfix;
+}
+
+.brand-info-article{
+  .brand-info-photo {
+      @extend %mb36;
+  }
+
+  .brand-info-description {
+      @extend %mb36;
+  }
+}
+
+.main-sort-page{
+   @extend %clearfix;
+      .main-sort{
+          @extend %fl;
+      }
+
+      .main-page{
+          @extend %fr;
+          margin-bottom: 0;
+      }
+}
+
+.main-page{
+  @extend %mt24;
+}
+
+.shop-more-products {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.big-more-button {
+  @extend %button-light-256;
+}
+
+.dialog-lightbox-section {
+  padding: 36px;
+}
+.dialog-lightbox-header {
+  display: none;
+}
+  

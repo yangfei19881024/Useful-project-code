@@ -1,0 +1,50 @@
+.datetimepicker {
+	display:none;
+	position:absolute;
+	padding:6px 12px 12px;
+	width:196px;
+	background-color:#FFF;
+	border:1px solid #DDD;
+	font-family:'Microsoft Yahei';
+	color:#555;
+}
+.day, .hour, .minute, .month, .year{
+	width:28px;
+	height:28px;
+	cursor:pointer;
+	color:#666;
+	text-align:center;
+	line-height:28px;
+}
+.day:hover, .hour:hover, .minute:hover, .month:hover, .year:hover{
+	background-color:#33CC99;
+	color:#FFF;
+}
+.active,
+.active:hover{
+	background-color:#08B5A3;
+	color:#FFF;
+}
+.old, .new{
+	color:#CCC;
+}
+.hour, .minute, .month, .year{
+	float:left;
+	width:49px;
+	height:28px;
+}
+.next, .prev{
+	font:16px/46px 'Simsun';
+	cursor:pointer;
+	color:#BBB;
+}
+.prev .icon-arrow-left:after{
+	content:'<';
+}
+.next .icon-arrow-right:after{
+	content:'>';
+}
+.switch{
+	font-size:13px;
+	height:46px;
+}

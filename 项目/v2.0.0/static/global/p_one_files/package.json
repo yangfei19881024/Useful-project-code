@@ -1,0 +1,15 @@
+{
+	"family": "static/global",
+	"name": "p_one_files",
+	"version": "1.0.0",
+	"author": "yanshaojing",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"p_one_styles.css"
+		]
+	}
+}

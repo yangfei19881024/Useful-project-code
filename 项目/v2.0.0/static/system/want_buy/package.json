@@ -1,0 +1,16 @@
+{
+	"family": "static/system",
+	"name": "want_buy",
+	"version": "2.0.0",
+	"author": "",
+	
+	"spm": {
+		"alias": {
+			"jquery": "jquery"
+		},
+		"output": [
+			"want_buy.css",
+			"want_buy.js"
+		]
+	}
+}

@@ -1,0 +1,1 @@
+define("static/system/want_buy/2.0.0/want_buy",["static/global/common/2.0.0/lazyload","static/global/common/2.0.0/category.fun"],function(a,b,c){var d;a("static/global/common/2.0.0/lazyload.js")($),a("static/global/common/2.0.0/category.fun.js"),$.lazy_init(),c.exports=d});

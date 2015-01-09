@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>品牌介绍</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/reset/src/reset.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/common/src/common.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/global/layout/src/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../static/system/shop/src/shop.css" />
+</head>
+<body>
+<!-- Header -->
+<div class="header clearfix">
+    <a href="" class="logo sprites fl"></a>
+    
+    <div class="userSite fr">
+        <div class="searchBox pr fl">
+            <div class="search-bar f13 pa">                
+                <input type="text" class="searchkey fl" />
+                <input type="button" class="search-button sprites fr" />
+            </div>
+                
+            <div class="searchsugbox pa hide">
+                <ul class="search-sug fl">
+                    <li class="search-default">最近搜索<span class="icon-empty sprites pa"></span></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="cb search-line"></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+                
+                <ul class="search-interest fr">
+                    <li class="search-default">您可能感兴趣</li>
+                    <li class="search-item">澳大利亚 <strong>有机产品</strong><div class="search-notice pa"><var class="fr">123</var><span class="icon-delete sprites"></span></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--
+            登录之前显示的内容
+            开启登录之前模块需要把 fn-hide 类移出，方能正常显示
+        -->
+        <div class="userLogin fl hide">
+            <a href="" class="user-lo">登录</a>
+            <a href="" class="user-lo">注册</a>
+        </div>
+        
+        <!-- 登录之后显示的内容 -->
+        <div class="userLogin fl">
+            <span>您好，</span>
+            <a href="" class="user-lo">Sheldon</a>
+            <a href="" class="user-lo">我的订单</a>
+            <a href="" class="user-lo">退出</a>
+        </div>
+        
+        <div class="user-cart fl">
+            <a href="">
+                <em class="userCart-text sprites fl">购物车</em>
+                <span class="userCart-num anim-color fl"><i class="anim-color"></i><var id="top_cart">0</var></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Nav -->
+<div class="navBar clearfix">
+    <div class="prdSet fl">
+        <div class="prdSet-tit pr">
+        	<span class="pr24 pr f16 triangle" data-class="all-pro">所有商品</span><!--<a href="" class="ml12 f14 color-888">箱包</a>-->
+        </div>
+        
+        <div class="prdSet-con hide clearfix" data-class="all-pro">
+            <div class="prdSet-category fl">
+                <div class="prdSet-outer fl">
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>服装配饰</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女装</a>
+                            <a href="" class="fl">男装</a>
+                            <a href="" class="fl">羊毛衫</a>
+                            <a href="" class="fl">羊毛呢外套</a>
+                            <a href="" class="fl">羊毛围巾</a>
+                            <a href="" class="fl">羊皮鞋</a>
+                            <a href="" class="fl">袋鼠皮鞋</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>个人护理</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">有机护肤品</a>
+                            <a href="" class="fl">薰衣草护肤品</a>
+                            <a href="" class="fl">洗发</a>
+                            <a href="" class="fl">薰衣草精华</a>
+                            <a href="" class="fl">洁面乳</a>
+                            <a href="" class="fl">护理工具</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>箱包</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">女包</a>
+                            <a href="" class="fl">男包</a>
+                            <a href="" class="fl">手提包</a>
+                            <a href="" class="fl">钱包</a>
+                            <a href="" class="fl">旅行箱</a>
+                            <a href="" class="fl">羊皮手提包</a>
+                            <a href="" class="fl">袋鼠皮旅行箱</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>母婴用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">母婴床上用品</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">婴幼童服装</a>
+                            <a href="" class="fl">儿童玩具</a>
+                            <a href="" class="fl">无害湿纸巾</a>
+                            <a href="" class="fl">无尿不湿</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>厨卫用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">餐具</a>
+                            <a href="" class="fl">不锈钢锅</a>
+                            <a href="" class="fl">刀具</a>
+                            <a href="" class="fl">收纳</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家用饰品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">卧室饰品</a>
+                            <a href="" class="fl">客厅装饰</a>
+                            <a href="" class="fl">浴室挂件</a>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="prdSet-inner mb24 fl">
+                        <dt class="f16"><strong>家纺用品</strong></dt>
+                        <dd class="prdSet-list mt12 clearfix">
+                            <a href="" class="fl">羊毛毯</a>
+                            <a href="" class="fl">羊毛被套</a>
+                            <a href="" class="fl">羊毛抱枕</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="prdSet-act mt24 pl24 hidden fl">
+            	<div class="prdSer-act-box clearfix">
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">新品上市</div>
+                    </div>
+                    
+                    <div class="prdSet-actItem mt24 hidden">
+                        <a href="" title=" "><img src="" alt=" " title=" "/></a>
+                        <div class="prdSet-actTxt">80% Off</div>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="triangle pa"></div>
+        </div>
+    </div>
+    
+    <div class="nav fl">
+        <a href="" class="ml12 fl">澳大利亚</a>
+        <a href="" class="ml12 fl">美国</a>
+        <a href="" class="ml12 fl">意大利</a>
+        <a href="" class="ml12 fl">韩国</a>
+    </div>
+    
+    <div class="hd-wantBuy">
+    	<div class="hd-wantBuy-title">
+        	<span class="icon-pack"></span>好货我想买
+        </div>
+        
+        <div class="hd-wantBuy-box">
+        	<em class="hd-arrow-top"></em>
+        	<p>登记你想买的商品，老板马上进货！</p>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="content">
+    <!-- 品牌介绍 -->
+	<div class="shop-info">
+        <div class="shop-info-head">
+            <div class="shop-head-logo">
+                <a href=""><img src="" width="49" height="49" data-class="lazyload" data-image="../../../static/temp-images/src/2014082002.jpg"></a>
+            </div>
+            
+            <div class="shop-head-name">
+                 
+                <h4>grovemade 创意手工杂货店</h4>
+                <a href="" class="icon-mail"></a>
+         
+            </div>
+        </div>
+        
+        <div class="shop-info-brand">
+            <div class="shop-brand-logo">
+                <div class="middle-block"></div>
+                <div class="middle-block-box">
+                    <a href=""><img src="" width="132" height="60" data-class="lazyload" data-image="../../../static/temp-images/src/2014082001.jpg"></a>
+                </div>
+            </div>
+            
+            <div class="shop-brand-article">
+                <h6 class="shop-brand-name">ugmonk</h6>
+                <div class="shop-brand-description">
+                    <p>我们是一个创意团队，总部在美国波特兰，俄勒冈。标志代表着无限的智慧, 同时表现出优雅和现代的感觉我们使用优质材料制作漂亮的产品，用最纯正及稳定的配方, 帮助妳身体和灵魂回复至原本健康的状态.因为我们相信人性化的设计雕琢至细微之处，更见微知著。我们是一个创意团队，总部在美国波特兰，俄勒冈我标志代表着。</p>
+                </div>
+                <a class="shop-brand-more-button" href="">品牌更多商品</a>
+            </div>
+
+            <div class="shop-brand-relate">
+                <p class="shop-brand-watch-box"><span class="icon-unwatch">&nbsp;</span><var class="shop-watch-count">6</var></p>
+                <p title="原产商地址：213 Creeks Bend Dr. Downingtown, PA 19335(美国加州温泉工业区gello 56025蓬泰代拉)" class="shop-brand-address">原产商地址：213 Creeks Bend Dr. Downingtown, PA 19335&nbsp;&nbsp;&nbsp;&nbsp;美国加州温泉工业区gello 56025蓬泰代拉</p>
+                <p title="官网：cn.nongshim.com/main/index" class="elps">官网：<a href="">cn.nongshim.com/main/index</a></p>
+                <p title="相关网址：www.gongchang.com/nongshim" class="elps">相关网址：<a href="">www.gongchang.com/nongshim</a></p>
+            </div>
+        </div>      
+    </div>
+    
+    <!-- 商品更多介绍 -->
+    <div class="brand-info-article">
+        <ul>
+            <li>
+                <img src="" width="996" height="656" class="brand-info-photo" data-class="lazyload" data-image="../../../static/temp-images/src/shop_home_brand_hb_01.jpg" />
+                <p class="brand-info-description">
+                    1.品牌；理念反朴归真，纯净健康，自然、绿色、简约原始纯净运用天然植物，运用天然草药，精油、果蔬，天然产品和药材等健康材质，调制成既安全又经济的养颜护肤护理产品。
+                </p>
+            </li>
+
+            <li>
+                <img src="" width="996" height="995" class="brand-info-photo" data-class="lazyload" data-image="../../../static/temp-images/src/shop_home_brand_hb_02.jpg" />
+                <p class="brand-info-description">
+                    1.品牌；理念反朴归真，纯净健康，自然、绿色、简约原始纯净运用天然植物，运用天然草药，精油、果蔬，天然产品和药材等健康材质，调制成既安全又经济的养颜护肤护理产品。
+                </p>
+            </li>
+
+            <li>
+                <img src="" width="996" height="868" class="brand-info-photo" data-class="lazyload" data-image="../../../static/temp-images/src/shop_home_brand_hb_03.jpg" />
+                <p class="brand-info-description">
+                    1.品牌；理念反朴归真，纯净健康，自然、绿色、简约原始纯净运用天然植物，运用天然草药，精油、果蔬，天然产品和药材等健康材质，调制成既安全又经济的养颜护肤护理产品。
+                </p>
+            </li>
+
+            <li>
+                <img src="" width="996" height="996" class="brand-info-photo" data-class="lazyload" data-image="../../../static/temp-images/src/shop_home_brand_hb_04.jpg" />
+                <p class="brand-info-description">
+                    1.品牌；理念反朴归真，纯净健康，自然、绿色、简约原始纯净运用天然植物，运用天然草药，精油、果蔬，天然产品和药材等健康材质，调制成既安全又经济的养颜护肤护理产品。
+                </p>
+            </li>
+
+            <li>
+                <img src="" width="996" height="598" class="brand-info-photo" data-class="lazyload" data-image="../../../static/temp-images/src/shop_home_brand_hb_05.jpg" />
+                 <p class="brand-info-description">
+                    1.品牌；理念反朴归真，纯净健康，自然、绿色、简约原始纯净运用天然植物，运用天然草药，精油、果蔬，天然产品和药材等健康材质，调制成既安全又经济的养颜护肤护理产品。
+                </p>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- 更多品牌商品 -->
+    <div class="shop-more-products">
+        <a href="" class="big-more-button center-block">品牌更多商品</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer clearfix">
+    <p align="center"><img src="../../../static/temp-images/src/footer.png" width="1280" height="294" /></p>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="../../../sea-modules/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+<script type="text/javascript" src="../../../sea-modules/seajs/seajs-flush.js"></script>
+<script type="text/javascript">
+	seajs.config({
+        base: 'http://static.xidibuy.com/',
+        alias: {
+            '$': 'jquery/jquery/1.7.2/jquery',
+            'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+        vars: {
+            
+        },
+        paths: {
+            'dev': 'http://static-dev.xidibuy.com/static/'
+        }
+    });
+	
+	seajs.use([
+		'static/system/shop/2.0.0/shop.brand.js'
+    ]);
+	
+	seajs.flush();
+</script>
+
+</body>
+</html>
