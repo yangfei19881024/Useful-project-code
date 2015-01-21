@@ -1,5 +1,5 @@
-#2.5 简洁格式
-##这种模式一般用在只读任务中，只需要一个 src 属性而不需要 dest属性。简洁格式 也支持附加属性。
+2.5 简洁格式
+这种模式一般用在只读任务中，只需要一个 src 属性而不需要 dest属性。简洁格式 也支持附加属性。
 
 [javascript] view plaincopy
 grunt.initConfig({  
