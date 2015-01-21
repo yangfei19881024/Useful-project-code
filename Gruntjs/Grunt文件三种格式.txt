@@ -1,0 +1,63 @@
+2.5 简洁格式
+这种模式一般用在只读任务中，只需要一个 src 属性而不需要 dest属性。简洁格式 也支持附加属性。
+
+[javascript] view plaincopy
+grunt.initConfig({  
+  jshint: {  
+    foo: {  
+      src: ['src/aa.js', 'src/aaa.js']  
+    },  
+  },  
+  concat: {  
+    bar: {  
+      src: ['src/bb.js', 'src/bbb.js'],  
+      dest: 'dest/b.js',  
+    },  
+  },  
+});  
+
+
+2.6 文件对象格式
+这种格式可以在一个目标中配置多个 源文件到目标文件的映射。属性名是目标文件，属性值是源文件。对每个目标文件可以定义任意数量的源文件，但是不支持附加属性
+
+[javascript] view plaincopy
+grunt.initConfig({  
+  concat: {  
+    foo: {  
+      files: {  
+        'dest/a.js': ['src/aa.js', 'src/aaa.js'],  
+        'dest/a1.js': ['src/aa1.js', 'src/aaa1.js'],  
+      },  
+    },  
+    bar: {  
+      files: {  
+        'dest/b.js': ['src/bb.js', 'src/bbb.js'],  
+        'dest/b1.js': ['src/bb1.js', 'src/bbb1.js'],  
+      },  
+    },  
+  },  
+});  
+
+
+
+
+2.7 文件数组格式
+这种格式也可以在一个目标中配置多个 源文件到目标文件的映射。而且可以使用附加属性。
+
+[javascript] view plaincopy
+grunt.initConfig({  
+  concat: {  
+    foo: {  
+      files: [  
+        {src: ['src/aa.js', 'src/aaa.js'], dest: 'dest/a.js'},  
+        {src: ['src/aa1.js', 'src/aaa1.js'], dest: 'dest/a1.js'},  
+      ],  
+    },  
+    bar: {  
+      files: [  
+        {src: ['src/bb.js', 'src/bbb.js'], dest: 'dest/b/', nonull: true},  
+        {src: ['src/bb1.js', 'src/bbb1.js'], dest: 'dest/b1/', filter: 'isFile'},  
+      ],  
+    },  
+  },  
+});  
