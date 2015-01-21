@@ -1,0 +1,15 @@
+一、如何判断是否为微信内置浏览器？
+
+答：通过Header信息里的User-agent来判断，通过识别MicroMessenger这个关键字来确定是否来自微信。即微信的内置浏览器的user-agent信息中含有MicroMessenger。
+
+小米 2A手机微信内置浏览器中的useragent信息为：Mozilla/5.0(Linux;U;Android 4.1.1;zh-cn;MI 2A Build/JRO03L)AppleWebKit/534.30(KHTML,like Gecko) Version/4.0 Mobile Safri/534.30 MicroMessenger/5.0.3.354
+
+谷歌浏览器：Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+
+火狐浏览器：Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0
+
+IE浏览器：Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; EIE10;ZHCNMSN)
+
+
+详细见
+http://my.oschina.net/syc2013/blog/175043
