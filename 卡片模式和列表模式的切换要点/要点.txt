@@ -1,7 +1,11 @@
-1.Ҫ��֤ ���еĲ�ѯ���� ��ͬһ��� ����
+1.要保证 所有的查询条件 用同一入口 处理
 
-2.�б�ģʽ�Ϳ�Ƭģʽ ��ͬһ�� html����ӿڣ�ֻ���� ��Ƭģʽ ��ԭ���� �ṹ�� ���˸� class 
+2.列表模式和卡片模式 用同一个 html代码接口，只不过 卡片模式 在原来的 结构上 加了个 class 
 
-3.��localStorage ��cookie ��ʾ ���ڵ��б�״̬����Ƭģʽ�����б�ģʽ��
+3.用localStorage 或cookie 标示 现在的列表状态（卡片模式还是列表模式）
 
-4.��ϸ�μ� s.boqii.com goodList.js �ļ�
+4.详细参见 s.boqii.com goodList.js 文件
+
+5.因为图片 没有设置 具体宽高度 （width:100%还是要设置的！） 所有 一开始 img src 给一个 默认的空白图片，等 new Image 对象 onload的时候
+
+在用真是的src 地址 替换空白的图片，这样就保证了 下拉加载或 网速慢的时候 布局不会错乱
