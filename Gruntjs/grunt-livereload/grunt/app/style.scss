@@ -1,0 +1,13 @@
+@charset "utf-8";
+$color:yellow;
+.box{
+	width:400px;
+	height:400px;
+	background:$color;
+	color:$color;
+	border:1px solid blue;
+}
+.title{
+	font-family: "微软雅黑";
+	color:red;
+}

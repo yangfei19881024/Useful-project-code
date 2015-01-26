@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.box {
+  width: 400px;
+  height: 400px;
+  background: yellow;
+  color: yellow;
+  border: 1px solid blue; }
+
+.title {
+  font-family: "微软雅黑";
+  color: red; }
+
+/*# sourceMappingURL=style.css.map */
