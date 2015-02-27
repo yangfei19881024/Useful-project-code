@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>iScroll demo: simple</title>
+
+<script type="text/javascript" src="./libs/iscroll.js"></script>
+<script type="text/javascript" src="./libs/zepto.min.js"></script>
+
+<script type="text/javascript">
+
+var myScroll,myScroll1;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true });
+	myScroll1 = new IScroll('.newwrap', { mouseWheel: true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+</script>
+
+<style type="text/css">
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+
+html {
+	-ms-touch-action: none;
+}
+
+body,ul,li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: ubuntu, helvetica, arial;
+	overflow: hidden; /* this is important to prevent the whole page to bounce */
+}
+
+#header{
+	height: 48px;
+	line-height: 48px;
+	position: relative;
+	right:0;
+	left:0;
+	background: red;
+	text-align: center;
+	background: #CD235C;
+	color:white;
+	font-weight: bold;
+}
+
+#wrapper{
+	position: absolute;
+	left:0px;
+	right: 0px;
+	top:48px;
+	bottom:48px;
+	overflow: hidden;
+	background: #CCC;
+}
+
+#scroller li{
+	padding:10px;
+	border-bottom:1px solid #CCC;
+	background: #FFFFFF;
+}
+
+#footer{
+	height: 48px;
+	background: #CD235C;
+	position: absolute;
+	left: 0px;
+	right:0px;
+	bottom:0;
+	text-align: center;
+}
+#loadTask{
+	padding:10px;
+}
+
+.newLoad{
+	position: absolute;
+	left:0;
+	right:0;
+	background: #CCC;
+	top:0;
+	bottom:0;
+	transform:translate3d(0,-1000px,0);
+	-wekbit-transform:translate3d(0,-1000px,0);
+
+	transition:transform 0.5s linear;
+	-webkit-transition:-webkit-transform 0.5s linear;
+}
+.newLoad.active{
+	transform:translate3d(0,0,0);
+	-wekbit-transform:translate3d(0,0,0);
+}
+.newLoad h1{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	/*font-size: 20px;*/
+	border-bottom:1px solid black;
+}
+.newwrap{
+	position: absolute;
+	top:30px;
+	bottom:0px;
+	left:0;
+	right:0;
+	overflow: hidden;
+}
+.newscroll li{
+	padding:10px;
+	border-bottom: 1px solid red;
+}
+</style>
+</head>
+<body onload="loaded()">
+
+	<div class="rightSide">
+		<div id="header">iScroll</div>
+
+		<div id="wrapper">
+			<div id="scroller">
+				<ul>
+					<li>Pretty row 1</li>
+					<li>Pretty row 2</li>
+					<li>Pretty row 3</li>
+					<li>Pretty row 4</li>
+					<li>Pretty row 5</li>
+					<li>Pretty row 6</li>
+					<li>Pretty row 7</li>
+					<li>Pretty row 8</li>
+					<li>Pretty row 9</li>
+					<li>Pretty row 10</li>
+					<li>Pretty row 11</li>
+					<li>Pretty row 12</li>
+					<li>Pretty row 13</li>
+					<li>Pretty row 14</li>
+					<li>Pretty row 15</li>
+					<li>Pretty row 16</li>
+					<li>Pretty row 17</li>
+					<li>Pretty row 18</li>
+					<li>Pretty row 19</li>
+					<li>Pretty row 20</li>
+					<li>Pretty row 21</li>
+					<li>Pretty row 22</li>
+					<li>Pretty row 23</li>
+					<li>Pretty row 24</li>
+					<li>Pretty row 25</li>
+					<li>Pretty row 26</li>
+					<li>Pretty row 27</li>
+					<li>Pretty row 28</li>
+					<li>Pretty row 29</li>
+					<li>Pretty row 30</li>
+					<li>Pretty row 31</li>
+					<li>Pretty row 32</li>
+					<li>Pretty row 33</li>
+					<li>Pretty row 34</li>
+					<li>Pretty row 35</li>
+					<li>Pretty row 36</li>
+					<li>Pretty row 37</li>
+					<li>Pretty row 38</li>
+					<li>Pretty row 39</li>
+					<li>Pretty row 40</li>
+					<li>Pretty row 41</li>
+					<li>Pretty row 42</li>
+					<li>Pretty row 43</li>
+					<li>Pretty row 44</li>
+					<li>Pretty row 45</li>
+					<li>Pretty row 46</li>
+					<li>Pretty row 47</li>
+					<li>Pretty row 48</li>
+					<li>Pretty row 49</li>
+					<li>Pretty row 50</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="footer">
+			<input type="button" value="加载新层" id="loadTask"/>
+		</div>
+
+		<div class="newLoad">
+			<h1>新层标题 &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" id="cancle">取消</a></h1>
+			<div class="newwrap">
+				<div class="newscroll">
+					<ul>
+					<li>newPretty row 1</li>
+					<li>newPretty row 2</li>
+					<li>newPretty row 3</li>
+					<li>newPretty row 4</li>
+					<li>newPretty row 5</li>
+					<li>newPretty row 6</li>
+					<li>newPretty row 7</li>
+					<li>newPretty row 8</li>
+					<li>newPretty row 9</li>
+					<li>newPretty row 10</li>
+					<li>newPretty row 11</li>
+					<li>newPretty row 12</li>
+					<li>newPretty row 13</li>
+					<li>newPretty row 14</li>
+					<li>newPretty row 15</li>
+					<li>newPretty row 16</li>
+					<li>newPretty row 17</li>
+					<li>newPretty row 18</li>
+					<li>newPretty row 19</li>
+					<li>newPretty row 20</li>
+					<li>newPretty row 21</li>
+					<li>newPretty row 22</li>
+					<li>newPretty row 23</li>
+					<li>newPretty row 24</li>
+					<li>newPretty row 25</li>
+					<li>newPretty row 26</li>
+					<li>newPretty row 27</li>
+					<li>newPretty row 28</li>
+					<li>newPretty row 29</li>
+					<li>newPretty row 30</li>
+					<li>newPretty row 31</li>
+					<li>newPretty row 32</li>
+					<li>newPretty row 33</li>
+					<li>newPretty row 34</li>
+					<li>newPretty row 35</li>
+					<li>newPretty row 36</li>
+					<li>newPretty row 37</li>
+					<li>newPretty row 38</li>
+					<li>newPretty row 39</li>
+					<li>newPretty row 40</li>
+					<li>newPretty row 41</li>
+					<li>newPretty row 42</li>
+					<li>newPretty row 43</li>
+					<li>newPretty row 44</li>
+					<li>newPretty row 45</li>
+					<li>newPretty row 46</li>
+					<li>newPretty row 47</li>
+					<li>newPretty row 48</li>
+					<li>newPretty row 49</li>
+					<li>newPretty row 50</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+<script>
+		$(function(){
+
+			$("#loadTask").on("tap",function(){
+
+				$(".newLoad").addClass("active");
+
+			});
+
+			$("#cancle").on("tap",function(){
+				$(".newLoad").removeClass("active");
+			});
+		});
+	</script>
+</html>
