@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	<title>相册</title>
+	<script src="libs/zepto.min.js"></script>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background: #000;
+		}
+		ul{
+			list-style: none;
+		}
+		img{
+			width:100%;
+		}
+		#wrap{
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+		.box li{
+			position: absolute;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+
+			display: -webkit-box;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
+		}
+		.box ul{
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="wrap">
+
+	</div>
+</body>
+
+<script>
+	var list = [{
+		height: 950,
+		width: 800,
+		img: "imgs/1.jpg"
+	},
+	{
+		height: 1187,
+		width: 900,
+		img: "imgs/2.jpg"
+	},
+	{
+		height: 766,
+		width: 980,
+		img: "imgs/3.jpg"
+	},
+	{
+		height: 754,
+		width: 980,
+		img: "imgs/4.jpg"
+	},
+	{
+		height: 493,
+		img: "imgs/5.jpg",
+		width: 750
+	},
+	{
+		height: 500,
+		img: "imgs/6.jpg",
+		width: 750
+	},
+	{
+		height: 600,
+		img: "imgs/7.jpg",
+		width: 400
+	}];
+
+
+	function Slider(opts){
+
+		this.wrap = opts.dom;
+		this.data = opts.list;
+
+		this.init();
+		this.renderDOM();
+		// this.bindDOM();
+	}
+
+	Slider.prototype.init = function(){
+		this.ratio = window.innerHeight / window.innerWidth;
+		this.width = window.innerWidth;
+		this.index = 0;
+	}
+
+	Slider.prototype.renderDOM = function(){
+		var wrap = this.wrap;
+		var data = this.data;
+
+		var ulObj = $('<ul></ul>');
+
+		var listr = "";
+
+		for( var i=0;i<data.length;i++ ){
+			listr += '<li style="width:'+this.width+';transform:translate3d('+(i*this.width)+'px,0,0);"><img src="'+data[i].img+'"></li>'
+		}
+
+		ulObj.html(listr);
+
+		ulObj.css({
+			'width':this.width,
+			'height':window.innerHeight
+		});
+
+		$("#wrap").css({'width':this.width}).append(ulObj);
+	}
+
+	new Slider({
+		'dom':document.getElementById('wrap'),
+		'list':list
+	});
+
+</script>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="YES" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		box-sizing:border-box;
+	}
+	li,ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		overflow: hidden;
+	}
+	/* 使得图片居中 webkit-box */
+	#canvas li{
+		position: absolute;
+		display: -webkit-box;
+		-webkit-box-pack: center;
+		-webkit-box-align: center;
+	}
+	li img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	/* 隐藏画布外的内容 */
+	#canvas{
+		position: absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		background: #333;
+		overflow: hidden;
+		display: none;
+	}
+
+	.photo li{
+		width:25%;
+		padding:5px;
+		float: left;
+	}
+</style>
+</head>
+<body>
+
+	<ul class="photo">
+		<li><img src="imgs/1.jpg"></li>
+		<li><img src="imgs/2.jpg"></li>
+		<li><img src="imgs/3.jpg"></li>
+		<li><img src="imgs/4.jpg"></li>
+		<li><img src="imgs/5.jpg"></li>
+		<li><img src="imgs/6.jpg"></li>
+		<li><img src="imgs/7.jpg"></li>
+	</ul>
+
+	<!-- 外层画布 -->
+	<div id="canvas"></div>
+
+	<script src="photo.js"></script>
+	<script src="./libs/zepto.min.js"></script>
+	<script type="text/javascript">
+
+		//初始化Slider 实例
+		new Slider({
+			dom : document.getElementById('canvas'),
+			list : list
+		});
+
+		$(".photo li").tap(function(){
+			$("#canvas").show();
+		});
+
+		$('#canvas').tap(function(){
+			$("#canvas").hide();
+		});
+	</script>
+</body>
