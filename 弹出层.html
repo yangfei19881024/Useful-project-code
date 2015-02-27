@@ -1,0 +1,226 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="format-detection" content="telphone=no">
+  <title>modal测试</title>
+  <script src="./zepto.min.js"></script>
+
+<style id="jsbin-css">
+.header,.footer,.wrap-page{
+  position:absolute;
+  left:0;
+  right:0;
+  background-color: #fff;
+}
+.header,.footer{
+  height:44px;
+  background-color: #fff;
+  text-align: center;
+  z-index:900;
+  line-height:44px;
+}
+.header{
+  top: 0;
+  border-bottom: 1px solid #f00;
+}
+.footer{
+  bottom: 0;
+  border-top: 1px solid #f00;
+}
+.page-title{
+  line-height:44px;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float: right;
+}
+.wrap-page{
+  top: 44px;
+  bottom: 0;
+  overflow-y:auto;
+  -webkit-overflow-scrolling: touch;
+}
+.page{
+	position: relative;
+	padding: 10px;
+}
+.page p{
+	margin-bottom: 10px;
+}
+.modal-link{
+  background-color: #f00;
+  color:#fff;
+  padding: 10px;
+  border-radius:3px;
+  display: inline-block;
+  cursor: pointer;
+}
+/* overlay */
+.overlay,
+.modal .modal-ft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.overlay.active {
+  z-index: 980;
+}
+
+.modal {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0) scale(0.815);
+  transform: translate3d(0, 0, 0) scale(0.815);
+
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+}
+.modal.modal-in {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.modal .modal-hd {
+  text-align: center;
+  line-height: 40px;
+  background-color: #0078e7;
+  color: #fff;
+}
+.modal .modal-bd {
+  padding: 15px;
+}
+.modal .modal-ft {
+  border-top: 1px solid #cccccc;
+}
+.modal .modal-ft .btn-modal {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background-color: #fefefe;
+  text-align: center;
+  line-height: 40px;
+  color: #0078e7;
+}
+.modal .modal-ft .btn-modal:first-child {
+  border-right: 1px solid #cccccc;
+}
+.modal .modal-ft .btn-modal:last-child {
+  border-right: none;
+}
+.modal .modal-ft .btn-modal:hover, .modal .modal-ft .btn-modal:active {
+  background-color: #d9d9d9;
+}
+
+
+</style>
+<body>
+	<header id="header" class="header">
+		<h1 class="page-title">modal 测试</h1>
+	</header>
+	<div id="main" class="wrap-page">
+		<section class="page">
+		  <p><span class="modal-link" data-modal="modal-test">点击测试 modal</span></p>
+          <p>君子曰：学不可以已。</p>
+			<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+			<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+			<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+			<p>君子曰：学不可以已。</p>
+			<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+			<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+			<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+			<p>君子曰：学不可以已。</p>
+			<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+			<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+			<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+		</section>
+	</div>
+  <div class="overlay" id="overlay">
+    <section class="modal modal-test" >
+      <div class="modal-hd">标题</div>
+      <div class="modal-bd">
+        <p>1青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+        <p>2青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+        <p>3青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+      </div>
+      <div class="modal-ft">
+        <span class="btn-modal">确认</span><span class="btn-modal">取消</span>
+      </div>
+    </section>
+  </div>
+<script>
+$(function(){
+  alert('sss')
+  var $overlay = $('#overlay');
+
+  function modalHidden($ele) {
+    $ele.removeClass('modal-in');
+    $ele.one('transitionend',function(){
+      $ele.css({"display": "none"});
+      $overlay.removeClass('active');
+    });
+  }
+
+  $('.modal-link').tap(function(){
+    alert('ss')
+    var $that = $(this);
+
+    $overlay.addClass('active');
+
+    var $whichModal = $('.'+$(this).data('modal'));
+
+    $whichModal.animate({"display":"block"},100,function(){
+      $(this).addClass('modal-in');
+    });
+
+    $('.btn-modal').tap(function(e){
+      modalHidden($whichModal);
+      e.stopPropagation();
+    });
+
+    $overlay.tap(function(e){
+
+     if(e.target.classList.contains('overlay')){
+        modalHidden($whichModal);
+     }
+
+    });
+
+  });
+
+});
+</script>
