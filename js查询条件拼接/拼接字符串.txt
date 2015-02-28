@@ -1,0 +1,34 @@
+现在做网页，经常会碰到处理地址栏参数的问题，但一直是凭感觉做，之后漏洞百出也不知道从哪改起，因此，就专门做了一个修改地址栏参数的方法，这一下，就再也不用愁啦，哈哈！ 
+
+以下就是我编的方法，使用很简单的哦： 
+复制代码 代码如下:
+
+function changeURLPar(destiny, par, par_value) 
+{ 
+var pattern = par+'=([^&]*)'; 
+var replaceText = par+'='+par_value; 
+if (destiny.match(pattern)) 
+{ 
+var tmp = '/\\'+par+'=[^&]*/'; 
+tmp = destiny.replace(eval(tmp), replaceText); 
+return (tmp); 
+} 
+else 
+{ 
+if (destiny.match('[\?]')) 
+{ 
+return destiny+'&'+ replaceText; 
+} 
+else 
+{ 
+return destiny+'?'+replaceText; 
+} 
+} 
+return destiny+'\n'+par+'\n'+par_value; 
+} 
+
+destiny是目标字符串，比如是http://www.huistd.com/?id=3&ttt=3 
+par是参数名，par_value是参数要更改的值，调用结果如下： 
+changeURLPar(test, 'id', 99); // http://www.huistd.com/?id=99&ttt=3 
+changeURLPar(test, 'haha', 33); // http://www.huistd.com/?id=99&ttt=3&haha=33 
+怎么样，挺好用的吧！哈哈
