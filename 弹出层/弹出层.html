@@ -171,21 +171,35 @@
 			<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
 		</section>
 	</div>
-  <div class="overlay" id="overlay">
-    <section class="modal modal-test" >
-      <div class="modal-hd">标题</div>
-      <div class="modal-bd">
-        <p>1青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
-        <p>2青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
-        <p>3青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
-      </div>
-      <div class="modal-ft">
-        <span class="btn-modal">确认</span><span class="btn-modal">取消</span>
-      </div>
-    </section>
-  </div>
+  <!--<div class="overlay" id="overlay">-->
+    <!--<section class="modal modal-test" >-->
+      <!--<div class="modal-hd">标题</div>-->
+      <!--<div class="modal-bd">-->
+        <!--<p>1青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>-->
+        <!--<p>2青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>-->
+        <!--<p>3青，取之于蓝，而青于蓝；冰，水为之，而寒于水。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>-->
+      <!--</div>-->
+      <!--<div class="modal-ft">-->
+        <!--<span class="btn-modal">确认</span><span class="btn-modal">取消</span>-->
+      <!--</div>-->
+    <!--</section>-->
+  <!--</div>-->
+    <script src="modal.js"></script>
+    <script>
+        $(function(){
+            $(".modal-link").tap(function(){
+
+                new Modal({
+                    "title":'提醒',
+                    "content":'确认要删除这条信息吗?',
+                    "leftBtn":'确认',
+                    'rightBtn':'取消'
+                })
+            })
+        })
+    </script>
 <script>
-$(function(){
+/*$(function(){
   var $overlay = $('#overlay');
 
   function modalHidden($ele) {
@@ -225,5 +239,5 @@ $(function(){
 
   });
 
-});
+});*/
 </script>

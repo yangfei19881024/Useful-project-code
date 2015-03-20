@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title></title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        ul{
+            list-style: none;
+        }
+        .content{
+            position: relative;
+            background: red;
+            left:0;
+            right: 0;
+            top:0;
+            bottom:0px;
+
+        }
+        .rightSide{
+            width: 300px;
+            position: absolute;
+            top:0;
+            bottom:0;
+            background: burlywood;
+
+            right:-1000px;
+
+            transition: right .5s linear;
+            -webkit-transition: right .5s linear;
+
+        }
+        .rightSide.active{
+            right:0;
+        }
+        .rightSide h1{
+            text-align: center;
+            border-bottom: 1px solid #000000;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .rightContent{
+            position: absolute;
+            top:50px;
+            bottom:50px;
+            left:0px;
+            right: 0px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .rightContent li{
+            padding:10px;
+            border-bottom:1px solid red;
+        }
+        .rightCon{
+            position: absolute;
+            width:100%;
+        }
+        .footer{
+            background: red;
+            position: absolute;
+            bottom:0;
+            left:0px;
+            right:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div style="height: 30px;line-height: 30px;"><span id="menu" style="float:right;">右侧菜单</span></div>
+        </div>
+        <div class="rightSide">
+            <h1>右侧栏标题</h1>
+            <div class="rightContent">
+                <div class="rightCon">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>14</li>
+                        <li>12</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>11</li>
+                        <li>56</li>
+                        <li>4</li>
+                        <li>34</li>
+                        <li>22</li>
+                        <li>256</li>
+                        <li>76</li>
+                        <li>766</li>
+                        <li>988</li>
+                        <li>12</li>
+                        <li>32</li>
+                        <li>3455</li>
+                        <li>666</li>
+                        <li>988</li>
+                    </ul>
+                </div>
+            </div>
+            <h1 class="footer">底部栏目</h1>
+        </div>
+    </div>
+</body>
+<script src="../build/iscroll.js"></script>
+<script src="zepto.js"></script>
+<script>
+    $(function(){
+        var scroli = new IScroll(".rightContent");
+
+       $("#menu").tap(function () {
+
+           var $rightSide = $(".rightSide");
+
+           if( $rightSide.hasClass("active") ){
+                $rightSide.removeClass("active");
+           }else{
+               $rightSide.addClass("active");
+           }
+       });
+
+
+    });
+</script>
+</html>
