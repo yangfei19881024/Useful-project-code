@@ -11,32 +11,35 @@ module.exports = function(grunt){
 	grunt.initConfig({
 
         useminPrepare: {
-            html: ['app/tpl/**/*.html'],
+            html: ['app/tpl/index.html'],
             options: {
                 // 测试发现这里指定的dest，是usemin引入资源的相对路径的开始
                 // 在usemin中设置assetsDirs，不是指定的相对路径
                 // List of directories where we should start to look for revved version of the assets referenced in the currently looked at file
-                dest: 'build/tpl/'               // string type
+                // root:"app",
+
+                dest: 'build/tpl'               // string type
             }
         },
         usemin: {
             html: ['build/tpl/**/*.html'],      // 注意此处是build/
             options: {
-                assetsDirs: ['build/js','build/css']
+                // assetsDirs: ['build/js','build/css']
+                // assetsDirs: ['dist/assets']
             }
         },
         filerev: {
-	      options: {
-	        encoding: 'utf8',
-	        algorithm: 'md5',
-	        length: 12
-	      },
-	      dist: {
-	        src: [
-	          'build/js/*.js',
-	          'build/style/*.css',
-	        ]
-	      }
+  	      options: {
+  	        encoding: 'utf8',
+  	        algorithm: 'md5',
+  	        length: 12
+  	      },
+  	      dist: {
+  	        src: [
+  	          'build/js/*.js',
+  	          'build/style/*.css',
+  	        ]
+  	      }
 	    },
         copy: {
             html: {
