@@ -25,7 +25,7 @@ module.exports = function(grunt){
             html: ['build/tpl/**/*.html'],      // 注意此处是build/
             options: {
                 // assetsDirs: ['build/js','build/css']
-                // assetsDirs: ['dist/assets']
+                // assetsDirs:["dist/{js,css}"]
             }
         },
         filerev: {
@@ -48,8 +48,15 @@ module.exports = function(grunt){
                 src: ['tpl/**/*.html'],         // 会把tpl文件夹+文件复制过去
                 dest: 'build'
             }
+        },
+        autoprefixer:{
+          files:{
+            expand:true,
+            cwd:"build/",
+            src:"style/{,/*}*.css",
+            dest:"build/"
+          }
         }
-
     });
 
 
@@ -59,6 +66,7 @@ module.exports = function(grunt){
       'useminPrepare',
       'concat:generated',
       'cssmin:generated',
+      "autoprefixer",
       'uglify:generated',
       'filerev',
       'usemin'

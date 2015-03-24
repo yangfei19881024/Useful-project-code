@@ -1,4 +1,4 @@
 
-http://inching.org/2014/10/28/grunt-usemin/
+http://inching.org/2014/10/28/grunt-usemin/ ＃这篇是grunt-usemin 官方译文
 http://www.cnblogs.com/mackxu/p/grunt-usemin.html
 http://segmentfault.com/blog/jiyinyiyong/1190000000442070
