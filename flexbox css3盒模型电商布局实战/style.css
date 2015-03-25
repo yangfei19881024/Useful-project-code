@@ -1,0 +1,30 @@
+*{
+	margin:0px;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul{
+	list-style: none;
+}
+.list{
+	display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-flow:row wrap;
+        -ms-flex-flow:row wrap;
+            flex-flow:row wrap;
+    /*width:100%;*/
+}
+.list li{
+	/*flex:1;*/
+	width:30%;
+	border:1px solid red;
+	height: 200px;
+	/*justify-content:space-around;*/
+	margin-bottom: 10px;
+}
