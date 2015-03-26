@@ -28,3 +28,7 @@ ul{
 	/*justify-content:space-around;*/
 	margin-bottom: 10px;
 }
+
+div{
+	box-shadow: 1px 1px 3px 3px #CCC;
+}

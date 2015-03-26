@@ -7,10 +7,9 @@ ul{
 	list-style: none;
 }
 .list{
-	display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
+	display: flex;
     justify-content: space-between;
+    align-item:center;
     flex-flow:row wrap;
     /*width:100%;*/
 }
@@ -21,4 +20,9 @@ ul{
 	height: 200px;
 	/*justify-content:space-around;*/
 	margin-bottom: 10px;
+}
+
+div{
+		box-shadow: 1px 1px 3px 3px #CCC;
+
 }
