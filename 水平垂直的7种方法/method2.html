@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平垂直居中--translate</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+
+		.center {
+			background: hsl(180, 100%, 97%);
+			position: relative;
+			min-height: 500px;
+		}
+
+		.center img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 30%;
+			height: auto;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="center">
+		<img src="./images/img.png" alt="">
+	</div>
+
+</body>
+</html>
