@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平垂直居中--IE7不兼容</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+
+		.center-aligned {
+			display: table;
+			background: hsl(120, 100%, 97%);
+			width: 500px;
+			height: 500px;
+			border:1px solid red;
+		}
+		.center-core {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.center-core img {
+			width: 33%;
+			height: auto;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="center-aligned">
+		<div class="center-core">
+			<img src="./images/img.png">
+		</div>
+	</div>
+
+</body>
+</html>
