@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组去重</title>
+	<script>
+		var arr = [1,2,3,4,5,1,2,4,5,0];
+		var key = {};
+		var result = [];
+		for(var i=0,len=arr.length;i<len;i++){
+			if( typeof key[arr[i]] == "undefined" ){
+				key[arr[i]] = true;
+				result.push(arr[i]);
+			}
+		}
+		alert(result);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
