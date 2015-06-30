@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width;">
+    <title></title>
+    <style media="screen">
+
+      *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+      }
+
+      ul{
+        list-style: none;
+      }
+      img{
+        max-width: 100%;
+      }
+
+      .swipe {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+      }
+      .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+      }
+      .swipe-wrap > div {
+        float:left;
+        width:100%;
+        position: relative;
+      }
+
+      .mask_wrap{
+
+        position:fixed;
+
+        left:0px;
+        right: 0;
+        top:0;
+        bottom:0;
+        background: rgba(0, 0, 0, 0.5);
+
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-direction: row;
+        flex-direction: row;
+
+        -webkit-justify-content: center
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+      }
+      .mask{
+        display: none;
+      }
+      .mask.active{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id='slider' class='swipe'>
+      <div class='swipe-wrap'>
+        <div>
+          <img src="http://img.boqiicdn.com/Data/Shop/0/0/0/shoppicpath1435199292.jpg" alt="" />
+        </div>
+        <div>
+          <img src="http://img.boqiicdn.com/Data/Shop/0/0/0/shoppicpath1435316654.jpg" alt="" />
+        </div>
+        <div>
+          <img src="http://img.boqiicdn.com/Data/Shop/0/0/0/shoppicpath1434420002.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mask">
+
+      <div id='mask_slider' class='swipe'>
+        <div class='swipe-wrap mask_wrap'>
+          <div>
+            <img src="http://img.boqiicdn.com/Data/Shop/0/0/0/shoppicpath1435199292.jpg" alt="" />
+          </div>
+          <div>
+            <img src="http://img.boqiicdn.com/Data/Shop/0/0/0/shoppicpath1435316654.jpg" alt="" />
+          </div>
+          <div>
+            <img src="http://img.boqiicdn.com/Data/Shop/0/0/0/shoppicpath1434420002.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="swipe.js"></script>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js">
+
+    </script>
+    <script type="text/javascript">
+    window.mySwipe = new Swipe(document.getElementById('slider'), {
+      startSlide: 1,
+      speed: 400,
+      auto: 3000,
+      continuous: true,
+      disableScroll: false,
+      stopPropagation: false,
+      callback: function(index, elem) {},
+      transitionEnd: function(index, elem) {}
+    });
+
+    $("img").click(function(){
+
+      var index = 2;
+
+      $('.mask').addClass("active")
+
+      window.mySwipe = new Swipe(document.getElementById('mask_slider'), {
+        startSlide: index,
+        speed: 400,
+        auto: 3000,
+        disableScroll: false,
+        stopPropagation: false,
+        callback: function(index, elem) {},
+        transitionEnd: function(index, elem) {}
+      });
+
+
+
+    });
+
+
+    </script>
+  </body>
+</html>

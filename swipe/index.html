@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin:0px;
+        padding:0px;
+      }
+    .swipe {
+      overflow: hidden;
+      visibility: hidden;
+      position: relative;
+      }
+      .swipe-wrap {
+      overflow: hidden;
+      position: relative;
+      }
+      .swipe-wrap > div {
+      float:left;
+      width:100%;
+      position: relative;
+  }
+    </style>
+  </head>
+  <body>
+
+    <div id='slider' class='swipe'>
+      <div class='swipe-wrap'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://raw.githubusercontent.com/thebird/Swipe/master/swipe.js"></script>
+    <script type="text/javascript">
+
+    window.mySwipe = new Swipe(document.getElementById('slider'), {
+      startSlide: 2,
+      speed: 400,
+      auto: 3000,
+      continuous: true,
+      disableScroll: false,
+      stopPropagation: false,
+      callback: function(index, elem) {},
+      transitionEnd: function(index, elem) {}
+    });
+
+    </script>
+
+  </body>
+</html>

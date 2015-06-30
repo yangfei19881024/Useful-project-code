@@ -93,16 +93,20 @@
 	<!--Script-->
 
             $('select.changes').bind('change', function() {
-                var demo = $('#demo').val();
                 $(".demos").hide();
-                if (!($("#demo_"+demo).length))
-                    demo = 'default';
 
-                $("#demo_" + demo).show();
-                $('#test_'+demo).val('').scroller('destroy').scroller($.extend(opt[$('#demo').val()], { theme: $('#theme').val(), mode: $('#mode').val(), display: $('#display').val(), lang: $('#language').val() }));
+                var type = 'datetime';
+
+                $("#demo_default").show();
+                $('#test_default').val('').scroller('destroy').scroller($.extend(opt[type], { theme: 'android-ics light', mode: 'scroller', display: 'bottom', lang: 'zh' }));
             });
 
+
+            // $('#test_default').val('111').scroller($.extend(opt[$('#demo').val()], { theme: $('#theme').val(), mode: $('#mode').val(), display: $('#display').val(), lang: $('#language').val() }));
+
             $('#demo').trigger('change');
+
+
         });
     </script>
 </head>
@@ -112,70 +116,20 @@
         <h1>Mobiscroll</h1>
     </div>
 
-    <div class="content">
-        <div>
-            <label for="theme">Theme</label>
-            <select name="theme" id="theme" class="changes">
-                <option value="default">Default</option>
-                <option value="android">Android</option>
-	<option value="android-ics light">Android ICS Light</option>
-	<option value="android-ics">Android ICS</option>
-	<option value="ios">iOS</option>
-	<option value="jqm">Jquery Mobile</option>
-	<option value="sense-ui">Sense UI</option>
-	<option value="wp light">Windows Phone Light</option>
-	<option value="wp">Windows Phone</option>
-	<!--Themes-->
-            </select>
-        </div>
-        <div>
-            <label for="mode">Mode</label>
-            <select name="mode" id="mode" class="changes">
-                <option value="scroller">Scroller</option>
-                <option value="clickpick">Clickpick</option>
-                <option value="mixed">Mixed</option>
-            </select>
-        </div>
-        <div>
-            <label for="display">Display</label>
-            <select name="display" id="display" class="changes">
-                <option value="modal">Modal</option>
-                <option value="inline">Inline</option>
-                <option value="bubble">Bubble</option>
-                <option value="top">Top</option>
-                <option value="bottom">Bottom</option>
-            </select>
-        </div>
-        <div>
-            <label for="language">Language</label>
-            <select name="language" id="language" class="changes">
-                <option value="">English</option>
-                <option value="hu">Magyar</option>
-	<option value="de">Deutsch</option>
-	<option value="es">Español</option>
-	<option value="fr">Français</option>
-	<option value="it">Italiano</option>
-	<option value="no">Norsk</option>
-	<option value="pt-BR">Pr Brasileiro</option>
-	<option value="zh">Chinese</option>
-	<option value="nl">Nederlands</option>
-	<option value="tr">Türkçe</option>
-	<option value="ja">Japanese</option>
-	<!--Lang-->
-            </select>
-        </div>
+
         <div>
             <label for="demo">Demo</label>
             <select name="demo" id="demo" class="changes">
                 <option value="date" selected>Date</option>
-	<option value="datetime" >Datetime</option>
-	<option value="time" >Time</option>
-	<option value="tree_list" >Tree List</option>
-	<option value="image_text" >Image & Text</option>
-	<option value="select" >Select</option>
-	<!--Demos-->
+              	<option value="datetime" >Datetime</option>
+              	<option value="time" >Time</option>
+              	<option value="tree_list" >Tree List</option>
+              	<option value="image_text" >Image & Text</option>
+              	<option value="select" >Select</option>
             </select>
         </div>
+
+
         <div id="demo_default" class="demos">
             <label for="test_default">Click here to try</label>
             <input type="text" name="test_default" id="test_default" />
