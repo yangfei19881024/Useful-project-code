@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Underscore</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no"/>
+    <style media="screen">
+
+      .title{
+        color: #FFF;
+        border:1px solid #FFF;
+        padding:5px 10px;
+        width:200px;
+      }
+
+    </style>
+</head>
+
+<body style="background:red;">
+
+<h1 class="title">
+  <img src="life_btn_sel@2x.png" alt="" />
+  Title</h1>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="underscore-min.js"></script>
+
+<!--ace-template demo-->
+    <script id="t2" type="text/template">
+        <h1>111<%=_.isString(info.username)%></h1>
+        <%_.each(info.datas,function(item){ %>
+            <div class="outer">
+              <div class="title">
+                <span><%=item.film%></span>
+              </div>
+              <ul class="ul">
+                <%_.each(info.datas,function(item){ %>
+                  <li><%=item.title%></li>
+                <%});%>
+              </ul>
+            </div>
+      </script>
+        <%})%>
+
+<!--数据 -->
+    <script>
+        var datas = [
+            {
+                title: "一九四二",
+                url: "http://www.baidu.com",
+                film:"电影1"
+            },
+            {
+                title: "少年派的漂流",
+                url: "http://www.baidu.com",
+                film:"电影2"
+            },
+            {
+                title: "教父",
+                url: "http://www.baidu.com",
+                film:"电影3"
+            },
+            {
+                title: "肖申克的救赎",
+                url: "http://www.baidu.com",
+                film:"电影4"
+            },
+            {
+                title: "3d2012",
+                url: "http://www.baidu.com",
+                film:"电影5"
+            }
+        ];
+
+        var info = {
+
+          username:"yangfei",
+          datas:datas
+
+        }
+
+        $("body").html( _.template($("#t2").html(), info));
+
+    </script>
+
+  </body>
+</html>

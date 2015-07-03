@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+
+    <style media="screen">
+      *{
+        margin:0px;
+        padding:0px;
+      }
+      li{
+        list-style: none;
+      }
+      li{
+        padding:10px 0;
+      }
+      img{
+        width:56px;
+        height: 56px;
+        background: url(./image/loading.png) center center no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+      <ul id="bookList">
+        <li><img src="" _src="http://p15.qhimg.com/t018ee41ad1e181cc16.png" alt="" /></li>
+        <li><img src="" _src="http://p16.qhimg.com/t0192bc99b4e9f70aa0.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t0128b92cfe4bfacd32.png" alt="" /></li>
+        <li><img src="" _src="http://p16.qhimg.com/t01a30a92f82a9586b0.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01f3da0f6741d76b4b.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01b8bfcbe4f9afb613.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01772684519501658f.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01dec73aea6ae0c38e.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t018de82ea0d15eb1ce.png" alt="" /></li>
+        <li><img src="" _src="http://p16.qhimg.com/t016982ddf257df6b8d.png" alt="" /></li>
+        <li><img src="" _src="http://p19.qhimg.com/t019f2fc0197d08c529.png" alt="" /></li>
+        <li><img src="" _src="http://p15.qhimg.com/t018ee41ad1e181cc16.png" alt="" /></li>
+        <li><img src="" _src="http://p16.qhimg.com/t0192bc99b4e9f70aa0.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t0128b92cfe4bfacd32.png" alt="" /></li>
+        <li><img src="" _src="http://p16.qhimg.com/t01a30a92f82a9586b0.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01f3da0f6741d76b4b.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01b8bfcbe4f9afb613.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01772684519501658f.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t01dec73aea6ae0c38e.png" alt="" /></li>
+        <li><img src="" _src="http://p18.qhimg.com/t018de82ea0d15eb1ce.png" alt="" /></li>
+        <li><img src="" _src="http://p16.qhimg.com/t016982ddf257df6b8d.png" alt="" /></li>
+        <li><img src="" _src="http://p19.qhimg.com/t019f2fc0197d08c529.png" alt="" /></li>
+      </ul>
+
+      <script type="text/javascript" src="./dist/jquery.js"></script>
+      <script type="text/javascript" src="./dist/lazyLoad.js"></script>
+      <script type="text/javascript">
+        $(function(){
+
+          $().lazyLoad({
+            "obj":"#bookList li"
+          });
+
+
+
+
+        })
+      </script>
+  </body>
+</html>
