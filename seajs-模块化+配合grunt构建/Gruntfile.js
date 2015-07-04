@@ -25,7 +25,7 @@ module.exports = function(grunt){
         concat_file:{
           files:[{
             src:"./bulid/*.js",
-            dest:"./dev/main.js",
+            dest:"./dev/app.js",
           }]
         }
       },
@@ -37,8 +37,8 @@ module.exports = function(grunt){
         },
         scripts_file:{
           files:[{
-            src:"./dev/main.js",
-            dest:"./dev/main.min.js"
+            src:"./dev/app.js",
+            dest:"./dev/app.min.js"
           }]
         }
       }

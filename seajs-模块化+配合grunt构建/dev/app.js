@@ -1,3 +1,10 @@
+define("app", [ "./drag", "./range" ], function(require, exports, module) {
+    var box = document.getElementById("box");
+    var drag = require("./drag");
+    // console.log(drag);
+    drag.drag(box);
+});
+
 define("drag", [ "./range" ], function(require, exports, module) {
     function drag(obj) {
         document.onmousedown = function(event) {
@@ -18,13 +25,6 @@ define("drag", [ "./range" ], function(require, exports, module) {
         };
     }
     exports.drag = drag;
-});
-
-define("main", [ "./drag", "./range" ], function(require, exports, module) {
-    var box = document.getElementById("box");
-    var drag = require("./drag");
-    // console.log(drag);
-    drag.drag(box);
 });
 
 define("range", [], function(require, exports, module) {
