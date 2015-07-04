@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../sea-modules/seajs/seajs/2.2.0/sea.js"></script>
+    <style media="screen">
+      *{
+        margin:0px;
+        padding:0px;
+      }
+      .box{
+        cursor:move;
+        width:200px;
+        height: 200px;
+        background: red;
+        position:absolute;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box" id="box">
+
+    </div>
+    <script type="text/javascript">
+
+      seajs.config({
+
+        alias:{
+          jquery:"jquery/jquery/1.10.1/jquery.js"
+        }
+
+      });
+
+      seajs.use("../dev/main.min");
+
+    </script>
+  </body>
+</html>

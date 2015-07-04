@@ -1,0 +1,20 @@
+{
+  "name": "examples-master",
+  "version": "1.0.0",
+  "description": "<http://seajs.github.io/examples>",
+  "main": "index.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cmd-concat": "^0.2.8",
+    "grunt-cmd-transport": "^0.5.1",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "load-grunt-tasks": "^3.2.0",
+    "time-grunt": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
