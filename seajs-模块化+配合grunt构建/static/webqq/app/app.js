@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
     var box = document.getElementById("box");
-    var drag = require("./drag");
+    var drag = require("../drag/drag");
     // console.log(drag);
     drag.drag(box);
 });

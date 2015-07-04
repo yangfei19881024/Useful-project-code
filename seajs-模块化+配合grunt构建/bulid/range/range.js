@@ -1,4 +1,4 @@
-define("range", [], function(require, exports, module) {
+define("range/range", [], function(require, exports, module) {
     function range(val, max, min) {
         if (val >= max) {
             val = max;

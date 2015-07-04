@@ -10,8 +10,8 @@ define(function(require,exports,module){
         var leftx = event.clientX - startx;
         var lefty = event.clientY - starty;
 
-        var L = require("./range").range(leftx,document.documentElement.clientWidth-obj.offsetWidth,0);
-        var T = require("./range").range(lefty,document.documentElement.clientHeight-obj.offsetHeight,0);
+        var L = require("../range/range").range(leftx,document.documentElement.clientWidth-obj.offsetWidth,0);
+        var T = require("../range/range").range(lefty,document.documentElement.clientHeight-obj.offsetHeight,0);
 
         obj.style.left = L + "px";
         obj.style.top = T + "px";

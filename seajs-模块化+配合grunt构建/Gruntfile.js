@@ -15,16 +15,19 @@ module.exports = function(grunt){
           files:[{
             expand:true,
             cwd:"./static/webqq/",
-            src:"*.js",
+            src:"{,*/}*.js",
             dest:"./bulid/"
           }]
         }
       },
 
       concat:{
+        options:{
+          separator:";"
+        },
         concat_file:{
           files:[{
-            src:"./bulid/*.js",
+            src:"./bulid/{,*/}*.js",
             dest:"./dev/app.js",
           }]
         }
@@ -33,7 +36,8 @@ module.exports = function(grunt){
       uglify:{
         options:{
           mangle:false,
-          beautify:true
+          beautify:true,
+
         },
         scripts_file:{
           files:[{
