@@ -10,7 +10,7 @@
         padding:0px;
       }
       .box{
-        cursor:move;
+        cursor:move; 
         width:200px;
         height: 200px;
         background: red;
@@ -27,6 +27,7 @@
 
       seajs.config({
 
+        base:"../sea-modules",
         alias:{
           jquery:"jquery/jquery/1.10.1/jquery.js"
         }
@@ -34,6 +35,7 @@
       });
 
       seajs.use("../dev/app.min");
+      // seajs.use("../static/webqq/app/app")
 
     </script>
   </body>
