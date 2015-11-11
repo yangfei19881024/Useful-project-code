@@ -10,21 +10,50 @@
         height: 100px;
         border:1px solid red;
       }
+      button{
+        padding: 10px;
+      }
     </style>
     <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="plugs.js"></script>
+    <!-- // <script type="text/javascript" src="plugs.js"></script> -->
   </head>
-  <body>
+  <body style="height:20000px;">
 
     <div class="box">
-
+        <button id="test1">开始</button>
+        <button id="test2">结束</button>
     </div>
 
     <script type="text/javascript">
+      var timer = null;
 
-      $(".box").myPlugin({
-        name:'aa'
+      $("#test1").click(function(){
+        timer = setTimeout(function(){
+          console.log(timer);
+          console.log("yangfei")
+        },1000)
       });
+
+      $("#test2").click(function(){
+        console.log(timer);
+      });
+
+      // $(window).on("scroll",function(){
+      //   console.log("-------");
+      //   console.log(timer);
+      //   console.log("-------");
+      //   if( timer ){
+      //     clearInterval(timer);
+      //     timer = null;
+      //   }else{
+      //     timer = setTimeout(function(){
+      //       console.log("+++++");
+      //       console.log("hahha");
+      //       console.log("++++++");
+      //     },1000)
+      //   }
+
+      // })
 
     </script>
 
