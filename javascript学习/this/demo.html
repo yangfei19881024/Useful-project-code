@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		/*function foo(num){
+			console.log( "foo:"+num );
+			this.count++;
+			console.log(this);
+		}
+		
+		foo.count = 0;
+
+		for (var i=0;i<5;i++){
+			console.log( foo(i) )
+			// console.log( window.foo(i) ) //与上等同
+		}
+
+		console.log( count ); //NAN 此时的count 是全局作用域（window）下的变量
+		console.log( foo.count ); //0
+		*/
+
+
+		//--------要想count是foo下的变量------
+		function foo(num){
+			console.log( "foo:"+num );
+			this.count++;
+			// console.log(this);
+		}
+		
+		foo.count = 0;
+
+		for (var i=0;i<5;i++){
+			console.log( foo.call(foo,i) )
+		}
+
+		console.log( foo.count ); //5
+	</script>
+
+
+
+</body>
+</html>
