@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		// function foo(){
+		// 	var a =2;
+		// 	this.bar();
+		// }
+
+		// function bar(){
+		// 	console.log(this.a); //undefined
+		// }
+		// foo();
+
+
+		function foo(){
+			a =2;
+			this.bar();
+		}
+
+		function bar(){
+			console.log(this.a); //2
+		}
+		foo();
+
+
+	</script>
+</body>
+</html>
