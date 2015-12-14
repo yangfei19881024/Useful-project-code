@@ -1,0 +1,15 @@
+!(function(doc, win) {
+    var docEle = doc.documentElement,
+        evt = "onorientationchange" in window ? "orientationchange" : "resize",
+
+        fn = function() {
+            var width = docEle.clientWidth;
+						//默认是 640的设计稿，html默认定20px
+						//到时候量设计稿 得出的px 直接除以 20 就得到rem。然后的大小会根据 动态的html来计算
+            width && (docEle.style.fontSize = 20 * (width / 640) + "px");
+        };
+
+    win.addEventListener(evt, fn, false);
+    doc.addEventListener("DOMContentLoaded", fn, false);
+
+}(document, window));
